@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacote Executiva | A7 Lavanderia - Cuidado Profissional para Roupas Profissionais</title>
+<meta name="description" content="Pacote Executiva A7 Lavanderia: 5 pecas por R$79,90. Lavagem premium de ternos e roupas sociais femininas em Sao Jose dos Campos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   CSS RESET & VARIABLES
+   ======================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --noir-bg: #0a0a0a;
+  --noir-card: #141414;
+  --noir-border: #2a2a2a;
+  --blush: #d4a0a0;
+  --champagne: #d4c5a9;
+  --cream: #f5efe6;
+  --text-muted: rgba(245,239,230,0.5);
+  --cta: #c8a0a0;
+  --cta-hover: #dbb5b5;
+  --accent-line: #d4a0a0;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--noir-bg);
+  color: var(--cream);
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes lineDraw {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes lineDrawVertical {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes chevronBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(10px); opacity: 1; }
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 160, 160, 0.3); }
+  50% { box-shadow: 0 0 20px 5px rgba(212, 160, 160, 0.15); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes countPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes toastSlideIn {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes toastSlideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(120%); opacity: 0; }
+}
+
+@keyframes progressFill {
+  from { width: 0; }
+  to { width: var(--progress-width, 62%); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(212, 197, 169, 0.3); }
+  50% { border-color: rgba(212, 197, 169, 0.6); }
+}
+
+/* ========================================
+   SCROLL ANIMATION CLASSES
+   ======================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+
+/* ========================================
+   SECTION 1: CINEMATIC ENTRANCE
+   ======================================== */
+.cinematic-entrance {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--noir-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-line {
+  width: 0;
+  height: 1px;
+  background: var(--accent-line);
+  margin-bottom: 60px;
+  animation: lineDraw 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+}
+
+.cinematic-text {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.5vw, 28px);
+  color: var(--cream);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s forwards;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: 400;
+}
+
+.cinematic-subtitle {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease 3s forwards;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: fadeIn 1s ease 3.5s forwards;
+}
+
+.scroll-indicator span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.scroll-chevron {
+  width: 20px;
+  height: 20px;
+  border-right: 1px solid var(--blush);
+  border-bottom: 1px solid var(--blush);
+  transform: rotate(45deg);
+  animation: chevronBounce 2s infinite;
+}
+
+/* ========================================
+   SECTION 2: HERO - DRAMATIC SPLIT SCREEN
+   ======================================== */
+.hero-split {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  background: var(--noir-bg);
+}
+
+.hero-left::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: var(--accent-line);
+  opacity: 0;
+  animation: fadeIn 1s ease 0.5s forwards;
+}
+
+.hero-title-line {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+
+.hero-title-line:last-of-type {
+  color: var(--blush);
+}
+
+.hero-scroll-hint {
+  margin-top: 60px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--champagne);
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.hero-right {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: kenBurns 20s ease-in-out infinite;
+}
+
+.hero-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--noir-bg) 0%, transparent 15%),
+              linear-gradient(to top, var(--noir-bg) 0%, transparent 10%);
+  pointer-events: none;
+}
+
+/* ========================================
+   SECTION 3: STATEMENT
+   ======================================== */
+.statement-section {
+  padding: 120px 20px;
+  text-align: center;
+  background: var(--noir-bg);
+  position: relative;
+}
+
+.statement-text {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--cream);
+  font-style: italic;
+}
+
+.statement-line {
+  width: 60px;
+  height: 1px;
+  background: var(--accent-line);
+  margin: 40px auto;
+}
+
+.statement-brand {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   SECTION 4: PROBLEM - "O CUSTO DO DESCUIDO"
+   ======================================== */
+.problem-section {
+  padding: 100px 20px;
+  background: var(--noir-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.problem-content {
+  padding-right: 40px;
+}
+
+.problem-header {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 50px;
+}
+
+.problem-line-item {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--cream);
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 1px solid transparent;
+  transition: border-color 0.5s ease;
+}
+
+.problem-line-item.visible {
+  border-left-color: var(--accent-line);
+}
+
+.problem-line-item:last-of-type {
+  color: var(--blush);
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.problem-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+.problem-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%);
+  transition: filter 0.6s ease;
+}
+
+.problem-image:hover img {
+  filter: grayscale(0%);
+}
+
+.problem-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--accent-line);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ========================================
+   SECTION 5: SERVICES - HORIZONTAL SCROLL
+   ======================================== */
+.services-section {
+  padding: 100px 0;
+  background: var(--noir-bg);
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.services-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 20px;
+}
+
+.services-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.services-scroll-container {
+  display: flex;
+  gap: 24px;
+  padding: 0 60px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.services-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.services-scroll-container:active {
+  cursor: grabbing;
+}
+
+.service-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background: var(--noir-card);
+  border: 1px solid var(--noir-border);
+  border-top: 2px solid var(--accent-line);
+  padding: 50px 36px;
+  position: relative;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  border-color: var(--accent-line);
+  transform: translateY(-4px);
+}
+
+.service-number {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--noir-border);
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.service-card:hover .service-number {
+  color: var(--blush);
+  transition: color 0.4s ease;
+}
+
+.service-card-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+
+.service-card-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.services-scroll-hint {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ========================================
+   SECTION 6: THE OFFER - PACOTE EXECUTIVA
+   ======================================== */
+.offer-section {
+  padding: 120px 20px;
+  background: var(--noir-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-card {
+  max-width: 620px;
+  width: 100%;
+  border: 1px solid var(--champagne);
+  padding: 60px 50px;
+  text-align: center;
+  position: relative;
+  background: var(--noir-card);
+  animation: borderGlow 4s infinite;
+}
+
+.offer-card::before,
+.offer-card::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: var(--champagne);
+  border-style: solid;
+}
+
+.offer-card::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+
+.offer-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+.offer-exclusive {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 30px;
+}
+
+.offer-main-price {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.offer-pieces {
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+
+.offer-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--accent-line);
+  margin: 0 auto 30px;
+}
+
+.offer-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-bottom: 30px;
+}
+
+.offer-breakdown-item {
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.offer-breakdown-item span {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.offer-original {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.offer-original .strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: var(--blush);
+  text-decoration-thickness: 1px;
+}
+
+.offer-savings {
+  font-size: 15px;
+  color: var(--blush);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.offer-pix-box {
+  background: rgba(212, 197, 169, 0.06);
+  border: 1px solid rgba(212, 197, 169, 0.2);
+  padding: 20px 24px;
+  margin-bottom: 36px;
+}
+
+.offer-pix-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 8px;
+}
+
+.offer-pix-price {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--champagne);
+}
+
+.offer-pix-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: var(--cta);
+  color: var(--noir-bg);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 18px 48px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta:hover {
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 160, 160, 0.2);
+}
+
+.btn-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-cta:hover::after {
+  left: 100%;
+}
+
+/* ========================================
+   SECTION 7: TESTIMONIALS
+   ======================================== */
+.testimonials-section {
+  padding: 120px 20px;
+  background: var(--noir-card);
+  overflow: hidden;
+}
+
+.testimonials-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-quote-mark {
+  font-family: var(--font-serif);
+  font-size: 120px;
+  color: var(--blush);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: -30px;
+  user-select: none;
+}
+
+.testimonial-carousel {
+  position: relative;
+  min-height: 200px;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--cream);
+  margin-bottom: 30px;
+}
+
+.testimonial-author {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blush);
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.testimonial-arrow {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--noir-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--cream);
+  background: transparent;
+}
+
+.testimonial-arrow:hover {
+  border-color: var(--blush);
+  color: var(--blush);
+}
+
+.testimonial-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.testimonial-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--noir-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonial-dot.active {
+  background: var(--blush);
+  transform: scale(1.3);
+}
+
+/* ========================================
+   SECTION 8: NUMBERS
+   ======================================== */
+.numbers-section {
+  padding: 100px 20px;
+  background: var(--noir-bg);
+  border-top: 1px solid var(--noir-border);
+  border-bottom: 1px solid var(--noir-border);
+}
+
+.numbers-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.number-item {
+  padding: 30px 20px;
+}
+
+.number-value {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.number-value.counted {
+  animation: countPulse 0.3s ease;
+}
+
+.number-suffix {
+  font-size: 0.5em;
+  color: var(--blush);
+}
+
+.number-label {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   SECTION 9: LEAD MAGNET - "O CONVITE"
+   ======================================== */
+.lead-section {
+  padding: 120px 20px;
+  background: var(--noir-card);
+  position: relative;
+}
+
+.lead-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-border-frame {
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--noir-card), var(--noir-card)),
+                    linear-gradient(135deg, var(--champagne) 0%, var(--blush) 50%, var(--champagne) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 60px 40px;
+}
+
+.lead-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+
+.lead-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lead-input {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--noir-border);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.lead-input::placeholder {
+  color: var(--text-muted);
+}
+
+.lead-input:focus {
+  border-color: var(--accent-line);
+}
+
+.lead-submit {
+  display: inline-block;
+  background: var(--cta);
+  color: var(--noir-bg);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 18px 48px;
+  transition: all 0.4s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.lead-submit:hover {
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+}
+
+.lead-privacy {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.lead-success {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+.lead-success.show {
+  display: block;
+}
+
+.lead-success-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--champagne);
+  margin-bottom: 12px;
+}
+
+.lead-success-coupon {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--blush);
+  background: rgba(212,160,160,0.08);
+  padding: 12px 24px;
+  display: inline-block;
+  margin: 16px 0;
+  border: 1px dashed var(--blush);
+}
+
+.lead-success-text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   SECTION 10: GUARANTEE
+   ======================================== */
+.guarantee-section {
+  padding: 100px 20px;
+  background: var(--noir-bg);
+  text-align: center;
+}
+
+.guarantee-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.guarantee-icon {
+  margin-bottom: 30px;
+}
+
+.guarantee-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: var(--blush);
+  fill: none;
+}
+
+.guarantee-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.guarantee-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ========================================
+   SECTION 11: URGENCY STRIP
+   ======================================== */
+.urgency-strip {
+  padding: 40px 20px;
+  background: var(--noir-card);
+  text-align: center;
+  border-top: 1px solid var(--noir-border);
+  border-bottom: 1px solid var(--noir-border);
+}
+
+.urgency-text {
+  font-size: 14px;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.urgency-text strong {
+  color: var(--blush);
+  font-weight: 600;
+}
+
+.urgency-bar {
+  width: 200px;
+  height: 2px;
+  background: var(--noir-border);
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.urgency-bar-fill {
+  height: 100%;
+  background: var(--accent-line);
+  width: 0;
+  --progress-width: 62%;
+}
+
+.urgency-bar-fill.animated {
+  animation: progressFill 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ========================================
+   SECTION 12: FOOTER
+   ======================================== */
+.footer {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--noir-bg);
+}
+
+.footer-brand {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.footer-line {
+  width: 40px;
+  height: 1px;
+  background: var(--noir-border);
+  margin: 0 auto 20px;
+}
+
+.footer-location {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.footer-whatsapp {
+  font-size: 12px;
+  color: var(--blush);
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+}
+
+.footer-whatsapp:hover {
+  color: var(--cta-hover);
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 30px;
+  opacity: 0.5;
+}
+
+/* ========================================
+   SECTION 13: STICKY CTA BAR
+   ======================================== */
+.sticky-cta {
+  position: fixed;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--noir-border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  z-index: 900;
+  transition: bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sticky-cta.visible {
+  bottom: 0;
+}
+
+.sticky-cta-text {
+  font-size: 14px;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+}
+
+.sticky-cta-text strong {
+  color: var(--blush);
+}
+
+.sticky-cta-btn {
+  display: inline-block;
+  background: var(--cta);
+  color: var(--noir-bg);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sticky-cta-btn:hover {
+  background: var(--cta-hover);
+}
+
+/* ========================================
+   SECTION 14: PIX POPUP
+   ======================================== */
+.pix-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pix-popup-overlay.show {
+  display: flex;
+}
+
+.pix-popup {
+  background: var(--noir-card);
+  border: 1px solid var(--champagne);
+  max-width: 440px;
+  width: 100%;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pix-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 18px;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+}
+
+.pix-popup-close:hover {
+  color: var(--cream);
+}
+
+.pix-popup-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 20px;
+}
+
+.pix-popup-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.pix-popup-from {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.pix-popup-from .old-price {
+  text-decoration: line-through;
+  text-decoration-color: var(--blush);
+}
+
+.pix-popup-price {
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--champagne);
+  margin-bottom: 24px;
+}
+
+.pix-popup-countdown {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.pix-popup-timer {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--blush);
+  margin-bottom: 30px;
+  letter-spacing: 0.1em;
+}
+
+.pix-popup-cta {
+  display: inline-block;
+  background: var(--champagne);
+  color: var(--noir-bg);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.pix-popup-cta:hover {
+  background: var(--cream);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   SECTION 15: SOCIAL PROOF TOASTS
+   ======================================== */
+.toast-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 800;
+  pointer-events: none;
+}
+
+.toast {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--noir-border);
+  border-left: 2px solid var(--accent-line);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+  max-width: 360px;
+  transform: translateX(120%);
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.toast.show {
+  animation: toastSlideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.toast.hide {
+  animation: toastSlideOut 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.toast-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blush);
+  flex-shrink: 0;
+}
+
+.toast-message {
+  font-size: 12px;
+  color: var(--cream);
+  line-height: 1.4;
+}
+
+.toast-time {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ========================================
+   RESPONSIVE: TABLET (768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-left {
+    padding: 80px 30px 60px;
+    min-height: 60vh;
+    order: 1;
+  }
+
+  .hero-left::after {
+    display: none;
+  }
+
+  .hero-right {
+    order: 2;
+    min-height: 50vh;
+  }
+
+  .hero-right::after {
+    background: linear-gradient(to bottom, var(--noir-bg) 0%, transparent 15%),
+                linear-gradient(to top, var(--noir-bg) 0%, transparent 10%);
+  }
+
+  .problem-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .problem-content {
+    padding-right: 0;
+  }
+
+  .problem-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    flex: 0 0 280px;
+  }
+
+  .services-scroll-container {
+    padding: 0 20px;
+  }
+
+  .numbers-inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .number-value {
+    font-size: clamp(28px, 5vw, 48px);
+  }
+
+  .offer-card {
+    padding: 40px 30px;
+  }
+
+  .lead-border-frame {
+    padding: 40px 24px;
+  }
+
+  .sticky-cta {
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .sticky-cta-text {
+    font-size: 12px;
+  }
+
+  .toast-container {
+    right: 10px;
+    bottom: 80px;
+  }
+
+  .toast {
+    min-width: 240px;
+    max-width: 300px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE (480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .cinematic-text {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-left {
+    padding: 60px 20px 40px;
+  }
+
+  .hero-title-line {
+    font-size: 42px;
+  }
+
+  .statement-section {
+    padding: 80px 20px;
+  }
+
+  .statement-text {
+    font-size: 22px;
+  }
+
+  .problem-section {
+    padding: 60px 20px;
+  }
+
+  .problem-line-item {
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .service-card {
+    flex: 0 0 260px;
+    padding: 36px 24px;
+  }
+
+  .offer-section {
+    padding: 80px 16px;
+  }
+
+  .offer-card {
+    padding: 36px 20px;
+  }
+
+  .offer-main-price {
+    font-size: 36px;
+  }
+
+  .offer-breakdown {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .testimonials-section {
+    padding: 80px 20px;
+  }
+
+  .testimonial-quote-mark {
+    font-size: 80px;
+  }
+
+  .numbers-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .number-item {
+    padding: 20px;
+    border-bottom: 1px solid var(--noir-border);
+  }
+
+  .number-item:last-child {
+    border-bottom: none;
+  }
+
+  .guarantee-section {
+    padding: 60px 20px;
+  }
+
+  .pix-popup {
+    padding: 36px 24px;
+  }
+
+  .pix-popup-price {
+    font-size: 32px;
+  }
+
+  .sticky-cta-text {
+    display: none;
+  }
+
+  .sticky-cta {
+    justify-content: center;
+  }
+
+  .sticky-cta-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 28px;
+  }
+
+  .toast-container {
+    left: 10px;
+    right: 10px;
+  }
+
+  .toast {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+/* ========================================
+   UTILITY & MISC
+   ======================================== */
+::selection {
+  background: var(--blush);
+  color: var(--noir-bg);
+}
+
+::-moz-selection {
+  background: var(--blush);
+  color: var(--noir-bg);
+}
+
+/* Smooth scrollbar styling for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--noir-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--noir-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blush);
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     SECTION 1: CINEMATIC ENTRANCE
+     ============================================ -->
+<section class="cinematic-entrance" id="cinematic">
+  <div class="cinematic-line"></div>
+  <h1 class="cinematic-text">Para mulheres que n&atilde;o aceitam o ordin&aacute;rio</h1>
+  <p class="cinematic-subtitle">A7 Lavanderia</p>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-chevron"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 2: HERO - DRAMATIC SPLIT SCREEN
+     ============================================ -->
+<section class="hero-split" id="hero">
+  <div class="hero-left">
+    <div class="hero-title-line reveal delay-1">IMPEC&Aacute;VEL.</div>
+    <div class="hero-title-line reveal delay-3">COMO VOC&Ecirc;.</div>
+    <p class="hero-scroll-hint reveal delay-5">Scroll para descobrir &rarr;</p>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=900&q=80" alt="Mulher executiva em traje profissional impecavel" loading="eager">
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: STATEMENT
+     ============================================ -->
+<section class="statement-section" id="statement">
+  <p class="statement-text reveal">Sua roupa fala antes de voc&ecirc;. N&oacute;s garantimos que ela diga a coisa certa.</p>
+  <div class="statement-line reveal delay-2"></div>
+  <p class="statement-brand reveal delay-3">A7 Lavanderia &mdash; Cuidado Profissional para Roupas Profissionais</p>
+</section>
+
+<!-- ============================================
+     SECTION 4: PROBLEM - "O CUSTO DO DESCUIDO"
+     ============================================ -->
+<section class="problem-section" id="problem">
+  <div class="problem-inner">
+    <div class="problem-content">
+      <p class="problem-header reveal">O Custo do Descuido</p>
+      <p class="problem-line-item reveal-left delay-1">Uma mancha no blazer custa uma primeira impress&atilde;o.</p>
+      <p class="problem-line-item reveal-left delay-2">Um vinco torto custa credibilidade.</p>
+      <p class="problem-line-item reveal-left delay-3">Uma lavagem errada custa R$2.000 em tecido nobre.</p>
+      <p class="problem-line-item reveal-left delay-5">Quanto voc&ecirc; j&aacute; perdeu por confiar na lavanderia errada?</p>
+    </div>
+    <div class="problem-image reveal-right delay-2">
+      <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&q=80" alt="Detalhe elegante de moda feminina" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: SERVICES - HORIZONTAL SCROLL CARDS
+     ============================================ -->
+<section class="services-section" id="services">
+  <div class="services-header">
+    <p class="services-label reveal">Nossos Servicos</p>
+    <h2 class="services-title reveal delay-1">Excel&ecirc;ncia n&atilde;o &eacute; op&ccedil;&atilde;o, &eacute; padr&atilde;o</h2>
+  </div>
+  <div class="services-scroll-container" id="servicesScroll">
+    <div class="service-card">
+      <span class="service-number">01</span>
+      <h3 class="service-card-title">Lavagem a Seco Premium</h3>
+      <p class="service-card-text">Solventes de alta performance que preservam cor, textura e caimento. Cada pe&ccedil;a &eacute; analisada individualmente antes do processo.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-number">02</span>
+      <h3 class="service-card-title">Passadoria de Precis&atilde;o</h3>
+      <p class="service-card-text">Vincos milim&eacute;tricos que transmitem autoridade e poder. T&eacute;cnicas profissionais que respeitam cada tipo de tecido.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-number">03</span>
+      <h3 class="service-card-title">Tratamento de Tecidos Nobres</h3>
+      <p class="service-card-text">Seda, cashmere, linho &mdash; cada fibra tratada individualmente. Protocolos espec&iacute;ficos para cada tipo de material.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-number">04</span>
+      <h3 class="service-card-title">Prote&ccedil;&atilde;o e Embalagem</h3>
+      <p class="service-card-text">Capas protetoras com barreira UV e anti-mofo. Suas pe&ccedil;as protegidas do momento da entrega at&eacute; o pr&oacute;ximo uso.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-number">05</span>
+      <h3 class="service-card-title">Entrega VIP</h3>
+      <p class="service-card-text">No seu escrit&oacute;rio, na sua casa, no seu tempo. Pontualidade &eacute; parte do nosso servi&ccedil;o. Sua agenda, nossas regras.</p>
+    </div>
+  </div>
+  <p class="services-scroll-hint">Arraste para ver mais &rarr;</p>
+</section>
+
+<!-- ============================================
+     SECTION 6: THE OFFER - "PACOTE EXECUTIVA"
+     ============================================ -->
+<section class="offer-section" id="offer">
+  <div class="offer-card reveal">
+    <p class="offer-exclusive">Exclusivo</p>
+    <h2 class="offer-main-price">5 Pe&ccedil;as &mdash; R$79,90</h2>
+    <p class="offer-pieces">Pacote Executiva</p>
+    <div class="offer-divider"></div>
+    <div class="offer-breakdown">
+      <span class="offer-breakdown-item">Blazer <span>R$25</span></span>
+      <span class="offer-breakdown-item">Cal&ccedil;a <span>R$18</span></span>
+      <span class="offer-breakdown-item">Camisa <span>R$15</span></span>
+      <span class="offer-breakdown-item">Vestido <span>R$22</span></span>
+      <span class="offer-breakdown-item">Tailleur <span>R$28</span></span>
+    </div>
+    <p class="offer-original">Valor avulso: <span class="strikethrough">R$108,00</span></p>
+    <p class="offer-savings">Sua economia: R$28,10</p>
+    <div class="offer-pix-box">
+      <p class="offer-pix-label">PIX Antecipado</p>
+      <p class="offer-pix-price">R$71,91</p>
+      <p class="offer-pix-note">Economize mais 10% pagando via PIX</p>
+    </div>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pelo%20convite%20Noir%20e%20quero%20o%20Pacote%20Executiva" target="_blank" rel="noopener" class="btn-cta">Ativar Pacote Executiva</a>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 7: TESTIMONIALS
+     ============================================ -->
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonial-quote-mark reveal">&ldquo;</div>
+    <div class="testimonial-carousel" id="testimonialCarousel">
+      <div class="testimonial-slide active" data-slide="0">
+        <p class="testimonial-text">Minha assessora de imagem ficou impressionada com o cuidado da A7. Cada pe&ccedil;a volta como se fosse nova.</p>
+        <p class="testimonial-author">Dra. Patricia M.</p>
+        <p class="testimonial-role">Ju&iacute;za</p>
+      </div>
+      <div class="testimonial-slide" data-slide="1">
+        <p class="testimonial-text">Sou CEO e minha rotina n&atilde;o permite erros. A A7 entende isso. Impec&aacute;vel, sempre.</p>
+        <p class="testimonial-author">Renata K.</p>
+        <p class="testimonial-role">CEO</p>
+      </div>
+      <div class="testimonial-slide" data-slide="2">
+        <p class="testimonial-text">Invisto alto no meu guarda-roupa. Precisava de uma lavanderia &agrave; altura. Encontrei.</p>
+        <p class="testimonial-author">Isabela F.</p>
+        <p class="testimonial-role">Advogada Tributarista</p>
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <button class="testimonial-arrow" id="prevTestimonial" aria-label="Depoimento anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="testimonial-dots" id="testimonialDots">
+        <span class="testimonial-dot active" data-dot="0"></span>
+        <span class="testimonial-dot" data-dot="1"></span>
+        <span class="testimonial-dot" data-dot="2"></span>
+      </div>
+      <button class="testimonial-arrow" id="nextTestimonial" aria-label="Proximo depoimento">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 8: NUMBERS
+     ============================================ -->
+<section class="numbers-section" id="numbers">
+  <div class="numbers-inner">
+    <div class="number-item reveal">
+      <div class="number-value" data-target="2847" data-prefix="" data-suffix="">0</div>
+      <p class="number-label">Pe&ccedil;as tratadas este m&ecirc;s</p>
+    </div>
+    <div class="number-item reveal delay-2">
+      <div class="number-value" data-target="98" data-prefix="" data-suffix="%">0<span class="number-suffix">%</span></div>
+      <p class="number-label">Taxa de satisfa&ccedil;&atilde;o</p>
+    </div>
+    <div class="number-item reveal delay-4">
+      <div class="number-value" data-target="387" data-prefix="" data-suffix="">0</div>
+      <p class="number-label">Executivas atendidas</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 9: LEAD MAGNET - "O CONVITE"
+     ============================================ -->
+<section class="lead-section" id="lead">
+  <div class="lead-inner reveal">
+    <div class="lead-border-frame">
+      <h2 class="lead-title">Um Convite Para Mulheres Exigentes</h2>
+      <p class="lead-subtitle">Cadastre-se para receber seu Cupom VIP e acesso ao nosso Guia Exclusivo: &ldquo;Dress Code Executivo &mdash; Como Sua Roupa Pode Dobrar Seu Faturamento&rdquo;</p>
+      <form class="lead-form" id="leadForm">
+        <input type="text" class="lead-input" id="leadName" placeholder="Seu nome" required autocomplete="name">
+        <input type="tel" class="lead-input" id="leadWhatsApp" placeholder="WhatsApp (00) 00000-0000" required autocomplete="tel">
+        <input type="email" class="lead-input" id="leadEmail" placeholder="Seu melhor e-mail" required autocomplete="email">
+        <button type="submit" class="lead-submit">Aceitar Convite</button>
+      </form>
+      <p class="lead-privacy">Prometemos: sem spam. Seu inbox merece o mesmo respeito que seu guarda-roupa.</p>
+      <div class="lead-success" id="leadSuccess">
+        <h3 class="lead-success-title">Convite Aceito</h3>
+        <p class="lead-success-text">Seu cupom exclusivo:</p>
+        <div class="lead-success-coupon" id="leadCoupon"></div>
+        <p class="lead-success-text">Salve este c&oacute;digo. Enviamos os detalhes para seu WhatsApp em instantes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 10: GUARANTEE
+     ============================================ -->
+<section class="guarantee-section" id="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-icon reveal">
+      <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="M9 12l2 2 4-4"/>
+      </svg>
+    </div>
+    <h2 class="guarantee-title reveal delay-1">Garantia Incondicional</h2>
+    <p class="guarantee-text reveal delay-2">Se sua pe&ccedil;a n&atilde;o voltar impec&aacute;vel, lavamos novamente sem custo. Sem perguntas, sem burocracia. Porque mulheres como voc&ecirc; n&atilde;o t&ecirc;m tempo para problemas.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 11: URGENCY STRIP
+     ============================================ -->
+<section class="urgency-strip" id="urgency">
+  <p class="urgency-text">Vagas limitadas: <strong>19 restantes</strong> para o Pacote Executiva este m&ecirc;s</p>
+  <div class="urgency-bar">
+    <div class="urgency-bar-fill" id="urgencyBarFill"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 12: FOOTER
+     ============================================ -->
+<footer class="footer">
+  <p class="footer-brand">A7 Lavanderia</p>
+  <div class="footer-line"></div>
+  <p class="footer-location">S&atilde;o Jos&eacute; dos Campos &mdash; SP</p>
+  <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pelo%20convite%20Noir%20e%20quero%20o%20Pacote%20Executiva" target="_blank" rel="noopener" class="footer-whatsapp">+55 12 97412-8390</a>
+  <p class="footer-copy">&copy; 2025 A7 Lavanderia. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ============================================
+     SECTION 13: STICKY CTA BAR
+     ============================================ -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="sticky-cta-text">Pacote Executiva &mdash; <strong>R$79,90</strong></span>
+  <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pelo%20convite%20Noir%20e%20quero%20o%20Pacote%20Executiva" target="_blank" rel="noopener" class="sticky-cta-btn">Ativar Agora</a>
+</div>
+
+<!-- ============================================
+     SECTION 14: PIX POPUP
+     ============================================ -->
+<div class="pix-popup-overlay" id="pixPopup">
+  <div class="pix-popup">
+    <button class="pix-popup-close" id="pixPopupClose" aria-label="Fechar">&times;</button>
+    <p class="pix-popup-label">Oportunidade Exclusiva</p>
+    <h3 class="pix-popup-title">PIX Antecipado</h3>
+    <p class="pix-popup-from">de <span class="old-price">R$79,90</span> por</p>
+    <p class="pix-popup-price">R$71,91</p>
+    <p class="pix-popup-countdown">Esta oferta expira em:</p>
+    <p class="pix-popup-timer" id="pixTimer">23:59:59</p>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pelo%20convite%20Noir%20e%20quero%20o%20Pacote%20Executiva%20com%20PIX" target="_blank" rel="noopener" class="pix-popup-cta">Garantir Desconto PIX</a>
+  </div>
+</div>
+
+<!-- ============================================
+     SECTION 15: SOCIAL PROOF TOASTS
+     ============================================ -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  /* ========================================
+     WHATSAPP LINK
+     ======================================== */
+  var WA_LINK = 'https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pelo%20convite%20Noir%20e%20quero%20o%20Pacote%20Executiva';
+
+  /* ========================================
+     INTERSECTION OBSERVER - SCROLL ANIMATIONS
+     ======================================== */
+  function initScrollAnimations() {
+    var observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -80px 0px',
+      threshold: 0.15
+    };
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    revealElements.forEach(function(el) {
+      observer.observe(el);
+    });
+  }
+
+  /* ========================================
+     STICKY CTA BAR
+     ======================================== */
+  function initStickyCta() {
+    var stickyCta = document.getElementById('stickyCta');
+    var heroSection = document.getElementById('hero');
+    var footerSection = document.querySelector('.footer');
+
+    window.addEventListener('scroll', function() {
+      var heroRect = heroSection.getBoundingClientRect();
+      var footerRect = footerSection.getBoundingClientRect();
+      var scrolledPastHero = heroRect.bottom < 0;
+      var footerVisible = footerRect.top < window.innerHeight;
+
+      if (scrolledPastHero && !footerVisible) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    }, { passive: true });
+  }
+
+  /* ========================================
+     TESTIMONIAL CAROUSEL
+     ======================================== */
+  function initTestimonialCarousel() {
+    var slides = document.querySelectorAll('.testimonial-slide');
+    var dots = document.querySelectorAll('.testimonial-dot');
+    var prevBtn = document.getElementById('prevTestimonial');
+    var nextBtn = document.getElementById('nextTestimonial');
+    var currentSlide = 0;
+    var totalSlides = slides.length;
+    var autoPlayInterval;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (index + totalSlides) % totalSlides;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, 6000);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayInterval);
+      startAutoPlay();
+    }
+
+    nextBtn.addEventListener('click', function() {
+      nextSlide();
+      resetAutoPlay();
+    });
+
+    prevBtn.addEventListener('click', function() {
+      prevSlide();
+      resetAutoPlay();
+    });
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        var targetSlide = parseInt(this.getAttribute('data-dot'));
+        goToSlide(targetSlide);
+        resetAutoPlay();
+      });
+    });
+
+    startAutoPlay();
+  }
+
+  /* ========================================
+     ANIMATED COUNTERS
+     ======================================== */
+  function initCounters() {
+    var counters = document.querySelectorAll('.number-value');
+    var counted = new Set();
+
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !counted.has(entry.target)) {
+          counted.add(entry.target);
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(function(counter) {
+      counterObserver.observe(counter);
+    });
+
+    function animateCounter(element) {
+      var target = parseInt(element.getAttribute('data-target'));
+      var suffix = element.getAttribute('data-suffix') || '';
+      var duration = 2000;
+      var startTime = null;
+
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var elapsed = timestamp - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        var easedProgress = easeOutCubic(progress);
+        var current = Math.floor(easedProgress * target);
+
+        if (target > 999) {
+          element.textContent = current.toLocaleString('pt-BR');
+        } else {
+          element.textContent = current;
+        }
+
+        if (suffix) {
+          element.innerHTML = element.textContent + '<span class="number-suffix">' + suffix + '</span>';
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.classList.add('counted');
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  }
+
+  /* ========================================
+     URGENCY BAR ANIMATION
+     ======================================== */
+  function initUrgencyBar() {
+    var urgencyBar = document.getElementById('urgencyBarFill');
+
+    var urgencyObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          urgencyObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    urgencyObserver.observe(urgencyBar);
+  }
+
+  /* ========================================
+     PHONE MASK
+     ======================================== */
+  function initPhoneMask() {
+    var phoneInput = document.getElementById('leadWhatsApp');
+
+    phoneInput.addEventListener('input', function(e) {
+      var value = e.target.value.replace(/\D/g, '');
+
+      if (value.length > 11) {
+        value = value.slice(0, 11);
+      }
+
+      if (value.length > 7) {
+        value = '(' + value.slice(0, 2) + ') ' + value.slice(2, 7) + '-' + value.slice(7);
+      } else if (value.length > 2) {
+        value = '(' + value.slice(0, 2) + ') ' + value.slice(2);
+      } else if (value.length > 0) {
+        value = '(' + value;
+      }
+
+      e.target.value = value;
+    });
+
+    phoneInput.addEventListener('keydown', function(e) {
+      var allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
+      if (allowedKeys.indexOf(e.key) !== -1) return;
+      if (e.key.length === 1 && !/\d/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  /* ========================================
+     COUPON GENERATION
+     ======================================== */
+  function generateCoupon() {
+    var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    var code = 'A7-NOIR-';
+    for (var i = 0; i < 5; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+  }
+
+  /* ========================================
+     LEAD FORM SUBMISSION
+     ======================================== */
+  function initLeadForm() {
+    var form = document.getElementById('leadForm');
+    var successEl = document.getElementById('leadSuccess');
+    var couponEl = document.getElementById('leadCoupon');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var name = document.getElementById('leadName').value.trim();
+      var whatsapp = document.getElementById('leadWhatsApp').value.trim();
+      var email = document.getElementById('leadEmail').value.trim();
+
+      if (!name || !whatsapp || !email) return;
+
+      var coupon = generateCoupon();
+
+      // Save to localStorage
+      var leads = JSON.parse(localStorage.getItem('a7_leads_feminino_noir') || '[]');
+      leads.push({
+        name: name,
+        whatsapp: whatsapp,
+        email: email,
+        coupon: coupon,
+        timestamp: new Date().toISOString(),
+        source: 'noir-chic'
+      });
+      localStorage.setItem('a7_leads_feminino_noir', JSON.stringify(leads));
+
+      // Show success
+      form.style.display = 'none';
+      document.querySelector('.lead-privacy').style.display = 'none';
+      couponEl.textContent = coupon;
+      successEl.classList.add('show');
+    });
+  }
+
+  /* ========================================
+     PIX POPUP (after 20 seconds)
+     ======================================== */
+  function initPixPopup() {
+    var popup = document.getElementById('pixPopup');
+    var closeBtn = document.getElementById('pixPopupClose');
+    var timerEl = document.getElementById('pixTimer');
+
+    // Check if already shown this session
+    if (sessionStorage.getItem('a7_noir_pix_shown')) return;
+
+    setTimeout(function() {
+      popup.classList.add('show');
+      sessionStorage.setItem('a7_noir_pix_shown', 'true');
+      startCountdown();
+    }, 20000);
+
+    closeBtn.addEventListener('click', function() {
+      popup.classList.remove('show');
+    });
+
+    popup.addEventListener('click', function(e) {
+      if (e.target === popup) {
+        popup.classList.remove('show');
+      }
+    });
+
+    function startCountdown() {
+      // 24 hour countdown from now
+      var endTime = new Date().getTime() + 24 * 60 * 60 * 1000;
+      var savedEnd = sessionStorage.getItem('a7_noir_pix_end');
+      if (savedEnd) {
+        endTime = parseInt(savedEnd);
+      } else {
+        sessionStorage.setItem('a7_noir_pix_end', endTime.toString());
+      }
+
+      function updateTimer() {
+        var now = new Date().getTime();
+        var remaining = endTime - now;
+
+        if (remaining <= 0) {
+          timerEl.textContent = '00:00:00';
+          return;
+        }
+
+        var hours = Math.floor(remaining / (1000 * 60 * 60));
+        var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        timerEl.textContent =
+          String(hours).padStart(2, '0') + ':' +
+          String(minutes).padStart(2, '0') + ':' +
+          String(seconds).padStart(2, '0');
+
+        requestAnimationFrame(updateTimer);
+      }
+
+      updateTimer();
+    }
+  }
+
+  /* ========================================
+     SOCIAL PROOF TOASTS
+     ======================================== */
+  function initToasts() {
+    var container = document.getElementById('toastContainer');
+    var toastMessages = [
+      { name: 'Dra. Amanda', action: 'ativou o Pacote Executiva', time: 'ha 3 min' },
+      { name: 'Luciana de SJC', action: 'garantiu o desconto PIX', time: 'ha 7 min' },
+      { name: 'Carolina', action: 'resgatou o cupom VIP', time: 'agora' },
+      { name: 'Fernanda R.', action: 'ativou o Pacote Executiva', time: 'ha 12 min' },
+      { name: 'Dra. Mariana', action: 'solicitou entrega VIP', time: 'ha 5 min' },
+      { name: 'Beatriz S.', action: 'garantiu o desconto PIX', time: 'ha 2 min' },
+      { name: 'Julia M.', action: 'ativou o Pacote Executiva', time: 'ha 8 min' }
+    ];
+
+    var currentToast = 0;
+
+    function showToast() {
+      var msg = toastMessages[currentToast % toastMessages.length];
+      currentToast++;
+
+      var toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML =
+        '<span class="toast-dot"></span>' +
+        '<div>' +
+          '<div class="toast-message">' + msg.name + ' ' + msg.action + '</div>' +
+          '<div class="toast-time">' + msg.time + '</div>' +
+        '</div>';
+
+      container.appendChild(toast);
+
+      // Trigger animation
+      requestAnimationFrame(function() {
+        toast.classList.add('show');
+      });
+
+      // Remove after 5 seconds
+      setTimeout(function() {
+        toast.classList.remove('show');
+        toast.classList.add('hide');
+        setTimeout(function() {
+          if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+          }
+        }, 500);
+      }, 5000);
+
+      // Schedule next toast (35-50 seconds)
+      var nextDelay = 35000 + Math.floor(Math.random() * 15000);
+      setTimeout(showToast, nextDelay);
+    }
+
+    // First toast after 40 seconds
+    setTimeout(showToast, 40000);
+  }
+
+  /* ========================================
+     HORIZONTAL SCROLL DRAG
+     ======================================== */
+  function initHorizontalScroll() {
+    var container = document.getElementById('servicesScroll');
+    var isDown = false;
+    var startX;
+    var scrollLeft;
+
+    container.addEventListener('mousedown', function(e) {
+      isDown = true;
+      container.style.cursor = 'grabbing';
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', function() {
+      isDown = false;
+      container.style.cursor = 'grab';
+    });
+
+    container.addEventListener('mouseup', function() {
+      isDown = false;
+      container.style.cursor = 'grab';
+    });
+
+    container.addEventListener('mousemove', function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - container.offsetLeft;
+      var walk = (x - startX) * 1.5;
+      container.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+  /* ========================================
+     SMOOTH SCROLL FOR ANCHOR LINKS
+     ======================================== */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  /* ========================================
+     KEYBOARD ESCAPE FOR POPUP
+     ======================================== */
+  function initKeyboardEvents() {
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var popup = document.getElementById('pixPopup');
+        if (popup.classList.contains('show')) {
+          popup.classList.remove('show');
+        }
+      }
+    });
+  }
+
+  /* ========================================
+     PRELOAD CRITICAL IMAGE
+     ======================================== */
+  function preloadHeroImage() {
+    var link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=900&q=80';
+    document.head.appendChild(link);
+  }
+
+  /* ========================================
+     CINEMATIC ENTRANCE - AUTO SCROLL HINT
+     ======================================== */
+  function initCinematicAutoScroll() {
+    var scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+      scrollIndicator.addEventListener('click', function() {
+        var hero = document.getElementById('hero');
+        if (hero) {
+          hero.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+      scrollIndicator.style.cursor = 'pointer';
+    }
+  }
+
+  /* ========================================
+     SCROLL-TRIGGERED LINE ANIMATION FOR PROBLEM SECTION
+     ======================================== */
+  function initProblemLineAnimation() {
+    var problemLines = document.querySelectorAll('.problem-line-item');
+
+    var lineObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    problemLines.forEach(function(line) {
+      lineObserver.observe(line);
+    });
+  }
+
+  /* ========================================
+     PERFORMANCE: LAZY LOAD IMAGES
+     ======================================== */
+  function initLazyLoading() {
+    if ('IntersectionObserver' in window) {
+      var lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      var imageObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            img.src = img.src; // trigger load
+            imageObserver.unobserve(img);
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      lazyImages.forEach(function(img) {
+        imageObserver.observe(img);
+      });
+    }
+  }
+
+  /* ========================================
+     TRACK PAGE VIEWS (localStorage)
+     ======================================== */
+  function trackPageView() {
+    var views = parseInt(localStorage.getItem('a7_noir_views') || '0');
+    views++;
+    localStorage.setItem('a7_noir_views', views.toString());
+    localStorage.setItem('a7_noir_last_visit', new Date().toISOString());
+  }
+
+  /* ========================================
+     INITIALIZE EVERYTHING
+     ======================================== */
+  document.addEventListener('DOMContentLoaded', function() {
+    preloadHeroImage();
+    initScrollAnimations();
+    initStickyCta();
+    initTestimonialCarousel();
+    initCounters();
+    initUrgencyBar();
+    initPhoneMask();
+    initLeadForm();
+    initPixPopup();
+    initToasts();
+    initHorizontalScroll();
+    initSmoothScroll();
+    initKeyboardEvents();
+    initCinematicAutoScroll();
+    initProblemLineAnimation();
+    initLazyLoading();
+    trackPageView();
+  });
+
+})();
+</script>
+<!-- ============================================
+     AMAZON DOPAMINE MODULE - NOIR CHIC
+     ============================================ -->
+<style>
+.amz-ub{position:fixed;top:0;left:0;right:0;z-index:10000;background:#0a0a0a;padding:10px 20px;text-align:center;font-size:13px;color:#f5efe6;border-bottom:1px solid #d4a0a0;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.amz-ub .amz-timer{font-weight:800;font-size:15px;color:#d4c5a9;font-variant-numeric:tabular-nums}
+.amz-ub .amz-pulse{width:8px;height:8px;border-radius:50%;background:#d4a0a0;animation:amzPulse 1.5s infinite;flex-shrink:0}
+@keyframes amzPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.amz-vw{position:fixed;top:48px;right:16px;z-index:9999;background:#141414;border:1px solid rgba(212,160,160,.2);border-radius:10px;padding:8px 14px;display:flex;align-items:center;gap:8px;font-size:12px;color:#d4a0a0;box-shadow:0 4px 20px rgba(0,0,0,.6)}
+.amz-vw .amz-vw-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:amzPulse 2s infinite}
+.amz-deal{max-width:540px;margin:40px auto;background:#141414;border:1px solid #d4c5a9;border-radius:16px;overflow:hidden}
+.amz-deal-hdr{background:linear-gradient(90deg,#d4a0a0,#d4c5a9);padding:10px 20px;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#0a0a0a;text-transform:uppercase;letter-spacing:1px}
+.amz-deal-bd{padding:24px}
+.amz-deal-stars{color:#d4c5a9;font-size:16px;margin-bottom:8px}
+.amz-deal-stars span{color:#d4a0a0;font-size:12px;margin-left:6px}
+.amz-deal-old{font-size:14px;color:rgba(245,239,230,.4);margin-bottom:4px}
+.amz-deal-old s{color:rgba(245,239,230,.3)}
+.amz-deal-big{font-size:36px;font-weight:800;color:#f5efe6;margin-bottom:4px;font-family:'Playfair Display',serif}
+.amz-deal-save{color:#4ade80;font-size:14px;font-weight:600;margin-bottom:12px}
+.amz-deal-pix{background:rgba(212,160,160,.1);border:1px dashed #d4a0a0;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:14px;text-align:center;color:#d4a0a0}
+.amz-deal-pix strong{color:#d4c5a9;font-size:18px}
+.amz-deal-prog{margin-bottom:12px}
+.amz-deal-prog-lbl{font-size:12px;color:rgba(245,239,230,.5);margin-bottom:6px;display:flex;justify-content:space-between}
+.amz-deal-prog-lbl strong{color:#d4a0a0}
+.amz-deal-prog-bar{height:8px;background:rgba(245,239,230,.08);border-radius:4px;overflow:hidden}
+.amz-deal-prog-fill{height:100%;background:linear-gradient(90deg,#d4a0a0,#d4c5a9);border-radius:4px;transition:width 2s ease;width:0}
+.amz-deal-prog-fill.on{width:73%}
+.amz-deal-tmr{text-align:center;font-size:13px;color:rgba(245,239,230,.5);margin-bottom:16px}
+.amz-deal-tmr strong{color:#d4c5a9;font-variant-numeric:tabular-nums;font-size:15px}
+.amz-deal-cta{display:block;width:100%;padding:16px;background:#d4a0a0;border:none;border-radius:12px;color:#0a0a0a;font-size:16px;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;transition:all .3s;animation:amzCtaP 2s infinite}
+@keyframes amzCtaP{0%,100%{box-shadow:0 0 0 0 rgba(212,160,160,.3)}50%{box-shadow:0 0 0 12px rgba(212,160,160,0)}}
+.amz-deal-cta:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.amz-deal-trust{display:flex;justify-content:center;gap:20px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(245,239,230,.06)}
+.amz-deal-trust div{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(245,239,230,.35)}
+.amz-deal-trust svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.amz-feed{position:fixed;bottom:24px;left:16px;z-index:9998;max-width:340px}
+.amz-feed-item{background:#141414;border:1px solid rgba(212,160,160,.15);border-left:3px solid #d4a0a0;border-radius:12px;padding:12px 16px;margin-top:8px;display:flex;align-items:center;gap:10px;font-size:12px;color:#f5efe6;box-shadow:0 8px 24px rgba(0,0,0,.5);opacity:0;transform:translateX(-20px);transition:all .5s}
+.amz-feed-item.on{opacity:1;transform:translateX(0)}
+.amz-feed-item.off{opacity:0;transform:translateX(-40px)}
+.amz-feed-av{width:32px;height:32px;border-radius:50%;background:#2a2a2a;border:1px solid #d4a0a0;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;color:#d4a0a0;flex-shrink:0}
+.amz-feed-vf{color:#4ade80;font-size:10px;font-weight:600;margin-top:2px}
+.amz-rw-toast{position:fixed;top:50%;right:20px;transform:translateY(-50%);z-index:9997;background:#141414;border:1px solid #d4a0a0;border-radius:12px;padding:14px 20px;font-size:13px;color:#f5efe6;box-shadow:0 8px 32px rgba(0,0,0,.6);display:flex;align-items:center;gap:10px;max-width:280px;opacity:0;transform:translateX(40px) translateY(-50%);transition:all .5s}
+.amz-rw-toast.on{opacity:1;transform:translateX(0) translateY(-50%)}
+.amz-exit{position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.9);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:20px}
+.amz-exit.on{display:flex}
+.amz-exit-card{background:#141414;border:1px solid #d4c5a9;border-radius:20px;padding:40px;max-width:460px;width:100%;text-align:center;animation:amzExIn .5s ease}
+@keyframes amzExIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.amz-exit-x{position:absolute;top:16px;right:16px;background:none;border:none;color:rgba(245,239,230,.3);cursor:pointer;font-size:24px;line-height:1}
+.amz-exit h3{font-family:'Playfair Display',serif;font-size:26px;color:#f5efe6;margin-bottom:8px}
+.amz-exit p{color:rgba(245,239,230,.5);font-size:14px;margin-bottom:16px}
+.amz-exit-pr{font-size:28px;font-weight:800;color:#d4c5a9;margin-bottom:4px}
+.amz-exit-pr s{font-size:18px;color:rgba(245,239,230,.3);font-weight:400;margin-right:8px}
+.amz-cross{max-width:800px;margin:40px auto;padding:0 20px}
+.amz-cross h3{font-family:'Playfair Display',serif;font-size:22px;text-align:center;margin-bottom:20px;color:#f5efe6}
+.amz-cross-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.amz-cross-i{background:#141414;border:1px solid #2a2a2a;border-radius:12px;padding:20px;text-align:center;transition:all .3s}
+.amz-cross-i:hover{border-color:#d4a0a0;transform:translateY(-2px)}
+.amz-cross-i h4{font-size:14px;color:#f5efe6;margin-bottom:4px}
+.amz-cross-i p{font-size:12px;color:rgba(245,239,230,.35);margin-bottom:8px}
+.amz-cross-i .pr{font-size:16px;font-weight:700;color:#d4c5a9}
+body{padding-top:42px!important}
+@media(max-width:768px){.amz-ub{font-size:11px;padding:8px 12px;gap:6px}.amz-vw{top:46px;right:8px;font-size:11px}.amz-deal{margin:24px 16px}.amz-feed{max-width:260px;left:8px;bottom:80px}.amz-rw-toast{right:8px;max-width:220px;font-size:12px}.amz-cross-g{grid-template-columns:1fr}}
+</style>
+
+<div class="amz-ub"><span class="amz-pulse"></span><span>EXCLUSIVO — Pacote Executiva <strong>-26% OFF</strong> + PIX -10% — Encerra em</span><span class="amz-timer" id="amzUbTimer">23:59:59</span></div>
+<div class="amz-vw"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span class="amz-vw-dot"></span><span><strong id="amzVwN">47</strong> visualizando</span></div>
+<div class="amz-feed" id="amzFeed"></div>
+<div class="amz-exit" id="amzExit"><div class="amz-exit-card" style="position:relative"><button class="amz-exit-x" id="amzExitX">&times;</button><h3>Seu convite expira em breve...</h3><p>19 vagas restantes com 26% OFF</p><div class="amz-exit-pr"><s>R$108,00</s> R$79,90</div><p style="color:#4ade80;font-weight:600;font-size:13px;margin-bottom:20px">PIX: R$71,91 — Economia total de 34%</p><a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20no%20Pacote%20Executiva!" class="amz-deal-cta" target="_blank">GARANTIR MINHA VAGA →</a></div></div>
+
+<script>
+(function(){
+  var ck='a7_cd_amz_noir',st=localStorage.getItem(ck),et=st?parseInt(st):0;
+  if(!et||et<Date.now()){et=Date.now()+864e5;localStorage.setItem(ck,et.toString())}
+  function ft(ms){if(ms<=0)return'00:00:00';var h=Math.floor(ms/36e5),m=Math.floor(ms%36e5/6e4),s=Math.floor(ms%6e4/1e3);return(h<10?'0':'')+h+':'+(m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+  function ut(){var r=et-Date.now();if(r<=0){et=Date.now()+864e5;localStorage.setItem(ck,et.toString());r=864e5}var t=ft(r);document.getElementById('amzUbTimer').textContent=t;document.querySelectorAll('[data-amz-t]').forEach(function(e){e.textContent=t});requestAnimationFrame(ut)}
+  ut();
+  var vc=47,ve=document.getElementById('amzVwN');
+  setInterval(function(){vc+=Math.floor(Math.random()*7)-3;if(vc<38)vc=42;if(vc>67)vc=58;ve.textContent=vc},9000);
+  var ff=document.getElementById('amzFeed'),fi=0;
+  var fn=[{n:'Dra. Juliana M.',c:'SJC',i:'J'},{n:'Carolina R.',c:'Taubaté',i:'C'},{n:'Fernanda S.',c:'SJC',i:'F'},{n:'Dra. Patricia L.',c:'Jacareí',i:'P'},{n:'Isabela F.',c:'Caçapava',i:'I'},{n:'Mariana T.',c:'SJC',i:'M'},{n:'Dra. Amanda K.',c:'Pinda',i:'A'},{n:'Luciana B.',c:'Taubaté',i:'L'},{n:'Renata C.',c:'SJC',i:'R'},{n:'Camila D.',c:'Jacareí',i:'C'},{n:'Dra. Beatriz A.',c:'SJC',i:'B'},{n:'Helena M.',c:'Caçapava',i:'H'}];
+  function sf(){var f=fn[fi%fn.length];fi++;var mn=Math.floor(Math.random()*12)+1;var el=document.createElement('div');el.className='amz-feed-item';el.innerHTML='<div class="amz-feed-av">'+f.i+'</div><div><div><strong>'+f.n+'</strong> ativou o Pacote Executiva</div><div class="amz-feed-vf">Verificado ✓ — há '+mn+' min — '+f.c+'</div></div>';ff.appendChild(el);setTimeout(function(){el.classList.add('on')},50);setTimeout(function(){el.classList.add('off');setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el)},600)},6000);setTimeout(sf,Math.random()*10000+15000)}
+  setTimeout(sf,10000);
+  var rw=[{p:25,i:'🎁',t:'Desbloqueado: Coleta gratuita na primeira vez!'},{p:50,i:'✨',t:'Desbloqueado: Embalagem premium inclusa!'},{p:75,i:'🏆',t:'Quase lá! Seu convite VIP está sendo preparado...'}];
+  var rs=JSON.parse(sessionStorage.getItem('amz_rw_noir')||'[]');
+  window.addEventListener('scroll',function(){var pct=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100;rw.forEach(function(r){if(pct>=r.p&&rs.indexOf(r.p)===-1){rs.push(r.p);sessionStorage.setItem('amz_rw_noir',JSON.stringify(rs));var t=document.createElement('div');t.className='amz-rw-toast';t.innerHTML='<span style="font-size:20px">'+r.i+'</span><span>'+r.t+'</span>';document.body.appendChild(t);setTimeout(function(){t.classList.add('on')},50);setTimeout(function(){t.classList.remove('on');setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t)},600)},4000)}})},{passive:true});
+  var ex=document.getElementById('amzExit'),exs=sessionStorage.getItem('amz_ex_noir');
+  if(!exs){document.addEventListener('mouseleave',function(e){if(e.clientY<10){ex.classList.add('on');sessionStorage.setItem('amz_ex_noir','1')}})}
+  document.getElementById('amzExitX').onclick=function(){ex.classList.remove('on')};
+  ex.onclick=function(e){if(e.target===ex)ex.classList.remove('on')};
+  var ps=null,ss=document.querySelectorAll('section');
+  for(var i=0;i<ss.length;i++){if(ss[i].innerHTML.indexOf('79,90')>-1&&ss[i].innerHTML.indexOf('Pacote')>-1){ps=ss[i];break}}
+  if(ps){var d=document.createElement('div');d.innerHTML='<div class="amz-deal"><div class="amz-deal-hdr"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 10 10-12h-9l1-10z"/></svg> OFERTA EXCLUSIVA — TEMPO LIMITADO</div><div class="amz-deal-bd"><div class="amz-deal-stars">★★★★★ <span>4.9 (387 avaliacoes)</span></div><div class="amz-deal-old">Avulso: <s>R$108,00</s></div><div class="amz-deal-big">R$79,90</div><div class="amz-deal-save">Economia: R$28,10 (26% OFF)</div><div class="amz-deal-pix">PIX Antecipado: <strong>R$71,91</strong> (-34%)</div><div class="amz-deal-prog"><div class="amz-deal-prog-lbl"><span>Vagas preenchidas</span><strong>73%</strong></div><div class="amz-deal-prog-bar"><div class="amz-deal-prog-fill" id="amzDF"></div></div></div><div class="amz-deal-tmr">Encerra em: <strong data-amz-t>23:59:59</strong></div><a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20o%20Pacote%20Executiva!" class="amz-deal-cta" target="_blank">ATIVAR AGORA →</a><div class="amz-deal-trust"><div><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Garantia</div><div><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Seguro</div><div><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.9/5</div></div></div></div>';ps.parentNode.insertBefore(d.firstChild,ps);setTimeout(function(){var f=document.getElementById('amzDF');if(f)f.classList.add('on')},800)}
+  var ft2=document.querySelector('footer');
+  if(ft2){var c=document.createElement('div');c.className='amz-cross';c.innerHTML='<h3>Combine com Seu Pacote</h3><div class="amz-cross-g"><div class="amz-cross-i"><h4>Camisas de Seda</h4><p>Lavagem delicada premium</p><div class="pr">R$15/un</div></div><div class="amz-cross-i"><h4>Tratamento de Couro</h4><p>Bolsas e acessorios</p><div class="pr">R$45/peca</div></div><div class="amz-cross-i"><h4>Impermeabilizacao</h4><p>Protecao para blazers</p><div class="pr">R$35/peca</div></div></div>';ft2.parentNode.insertBefore(c,ft2)}
+})();
+</script>
+
+</body>
+</html>

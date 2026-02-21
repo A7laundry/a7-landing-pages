@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 Pares de Tenis por R$109,90 | A7 Lavanderia</title>
+<meta name="description" content="Promocao exclusiva: Lave 3 pares de tenis por apenas R$109,90. Limpeza manual especializada com coleta gratis. Seus kicks voltam zerados em 48h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-darker: #1e3a8a;
+  --primary-light: #60a5fa;
+  --primary-lighter: #93c5fd;
+  --accent: #06b6d4;
+  --accent-dark: #0891b2;
+  --accent-light: #22d3ee;
+  --cta: #f97316;
+  --cta-dark: #ea580c;
+  --cta-light: #fb923c;
+  --gradient-main: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%);
+  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0c4a6e 100%);
+  --gradient-cta: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  --dark: #0f172a;
+  --dark-card: #1e293b;
+  --dark-border: #334155;
+  --dark-lighter: #475569;
+  --light: #f8fafc;
+  --light-blue: #eff6ff;
+  --light-border: #dbeafe;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+  --success: #10b981;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  background: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', 'Inter', sans-serif; line-height: 1.15; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { cursor: pointer; border: none; font-family: inherit; }
+ul { list-style: none; }
+.container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+/* ANIMATIONS */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); } }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-20px) rotate(-5deg); } }
+@keyframes floatShadow { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(0.85); opacity: 0.15; } }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(60px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes borderRotate { 0% { --angle: 0deg; } 100% { --angle: 360deg; } }
+@keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes toastIn { from { transform: translateX(120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes toastOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(120%); opacity: 0; } }
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes tickPulse { 0%,100%{ transform: scale(1); } 50%{ transform: scale(1.15); } }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================
+   (a) URGENCY TOP BAR
+   ============================================ */
+.urgency-bar {
+  background: var(--gradient-cta);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1001;
+}
+.urgency-bar span { display: inline; }
+.urgency-bar .countdown { font-family: 'Space Grotesk', monospace; font-size: 15px; margin-left: 6px; }
+
+/* ============================================
+   (b) STICKY HEADER
+   ============================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all 0.35s ease;
+  background: transparent;
+}
+.header.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 10px 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+}
+.header-logo em { font-style: normal; color: var(--accent-light); }
+.header-cta {
+  background: var(--gradient-cta);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+}
+.header-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(249, 115, 22, 0.5); }
+
+/* ============================================
+   (c) HERO SPLIT
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  background: var(--gradient-dark);
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-left { animation: slideInLeft 0.9s ease-out; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: var(--accent-light);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.hero-badge::before { content: ''; width: 8px; height: 8px; background: var(--accent-light); border-radius: 50%; animation: pulse 2s infinite; }
+.hero h1 {
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.05;
+}
+.hero h1 .highlight {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.hero-prices {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.hero-price-old {
+  font-size: 22px;
+  color: var(--text-light);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.hero-price-new {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--white);
+}
+.hero-price-new small { font-size: 22px; color: var(--accent-light); }
+.hero-cta-wrap { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--gradient-cta);
+  color: var(--white);
+  padding: 18px 40px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4);
+  width: fit-content;
+}
+.btn-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(249, 115, 22, 0.55); }
+.btn-cta-sub { font-size: 12px; color: var(--text-light); }
+.hero-trust {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+.hero-trust-item svg { width: 18px; height: 18px; color: var(--accent-light); flex-shrink: 0; }
+.hero-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideInRight 0.9s ease-out;
+}
+.hero-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+.hero-img {
+  width: 100%;
+  border-radius: 24px;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+}
+.hero-img-shadow {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 30px;
+  background: radial-gradient(ellipse, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatShadow 5s ease-in-out infinite;
+}
+
+/* ============================================
+   (d) SOCIAL PROOF BAR
+   ============================================ */
+.social-proof-bar {
+  background: var(--dark-card);
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+  padding: 20px 0;
+}
+.social-proof-bar .container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.sp-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+.sp-item strong { color: var(--white); font-size: 18px; font-weight: 800; }
+.sp-item .sp-dot { width: 10px; height: 10px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
+
+/* ============================================
+   (e) PROGRESS BAR
+   ============================================ */
+.progress-section {
+  background: var(--dark);
+  padding: 32px 0;
+}
+.progress-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.progress-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.progress-label span { color: var(--cta); }
+.progress-track {
+  width: 100%;
+  height: 14px;
+  background: var(--dark-card);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--dark-border);
+}
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: var(--gradient-cta);
+  border-radius: 10px;
+  transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ============================================
+   (f) LIFESTYLE SPLIT
+   ============================================ */
+.lifestyle {
+  padding: 100px 0;
+  background: var(--dark);
+  position: relative;
+}
+.lifestyle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--dark);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+}
+.lifestyle .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.lifestyle-img-wrap { position: relative; border-radius: 20px; overflow: hidden; }
+.lifestyle-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.6s ease;
+}
+.lifestyle-img-wrap:hover .lifestyle-img { transform: scale(1.05); }
+.lifestyle-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.3) 0%, transparent 60%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+.lifestyle-content h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.lifestyle-content h2 .highlight {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.lifestyle-content p { color: var(--text-light); font-size: 16px; margin-bottom: 32px; line-height: 1.7; }
+.lifestyle-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.lifestyle-stat {
+  text-align: center;
+  padding: 20px 12px;
+  background: var(--dark-card);
+  border-radius: 16px;
+  border: 1px solid var(--dark-border);
+}
+.lifestyle-stat .stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-light);
+  display: block;
+}
+.lifestyle-stat .stat-label { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+
+/* ============================================
+   (g) PAIN POINTS
+   ============================================ */
+.pain-section {
+  padding: 100px 0;
+  background: var(--dark-card);
+  position: relative;
+  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  color: var(--accent-light);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: var(--white);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pain-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.pain-card:hover { transform: translateY(-6px); border-color: var(--primary-light); }
+.pain-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(37, 99, 235, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+}
+.pain-card h3 { font-size: 20px; color: var(--white); margin-bottom: 10px; font-family: 'Inter', sans-serif; font-weight: 700; }
+.pain-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+/* ============================================
+   (h) HOW IT WORKS
+   ============================================ */
+.how-section {
+  padding: 100px 0;
+  background: var(--dark);
+}
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.how-grid::before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-dark), var(--accent), var(--primary-dark));
+  z-index: 0;
+}
+.how-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.how-num {
+  width: 72px;
+  height: 72px;
+  background: var(--gradient-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.3);
+}
+.how-step h3 { font-size: 20px; color: var(--white); margin-bottom: 10px; font-family: 'Inter', sans-serif; font-weight: 700; }
+.how-step p { font-size: 14px; color: var(--text-light); line-height: 1.6; max-width: 260px; margin: 0 auto; }
+
+/* ============================================
+   (i) HORIZONTAL GALLERY
+   ============================================ */
+.gallery-section {
+  padding: 80px 0;
+  background: var(--dark-card);
+  overflow: hidden;
+}
+.gallery-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 20px 20px 30px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.gallery-scroll::-webkit-scrollbar { display: none; }
+.gallery-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+  border: 1px solid var(--dark-border);
+}
+.gallery-card:hover { transform: perspective(600px) rotateY(-5deg) scale(1.03); }
+.gallery-card img {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+}
+.gallery-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+}
+.gallery-card-overlay span { color: var(--white); font-weight: 700; font-size: 14px; }
+
+/* ============================================
+   (j) PRICING TABLE
+   ============================================ */
+.pricing-section {
+  padding: 100px 0;
+  background: var(--dark);
+}
+.pricing-table {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--dark-border);
+}
+.pricing-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--dark-border);
+  align-items: center;
+  transition: background 0.2s;
+}
+.pricing-row:last-child { border-bottom: none; }
+.pricing-row:hover { background: rgba(37, 99, 235, 0.06); }
+.pricing-row-head {
+  background: var(--gradient-main);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--white);
+}
+.pricing-row-head:hover { background: var(--gradient-main); }
+.pricing-row .type { font-size: 15px; color: var(--white); font-weight: 500; }
+.pricing-row .price { font-size: 16px; color: var(--accent-light); font-weight: 700; font-family: 'Space Grotesk', sans-serif; }
+.pricing-compare {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+}
+.pricing-compare p { color: var(--text-light); font-size: 15px; margin-bottom: 8px; }
+.pricing-compare .savings {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+/* ============================================
+   (k) OFFER CARD (animated border)
+   ============================================ */
+.offer-section {
+  padding: 100px 0;
+  background: var(--dark-card);
+  position: relative;
+  clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.offer-card {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 24px;
+  padding: 4px;
+  background: conic-gradient(from var(--border-angle, 0deg), var(--primary), var(--accent), var(--primary-light), var(--accent-light), var(--primary));
+  animation: rotateBorder 4s linear infinite;
+}
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes rotateBorder {
+  to { --border-angle: 360deg; }
+}
+.offer-card-inner {
+  background: var(--dark);
+  border-radius: 21px;
+  padding: 48px 40px;
+  text-align: center;
+}
+.offer-tag {
+  display: inline-block;
+  background: var(--gradient-main);
+  color: var(--white);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.offer-card-inner h2 {
+  font-size: 36px;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+.offer-checklist {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 32px;
+  display: grid;
+  gap: 14px;
+}
+.offer-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--white);
+}
+.offer-checklist li svg { width: 22px; height: 22px; color: var(--success); flex-shrink: 0; }
+.offer-prices {
+  margin-bottom: 28px;
+}
+.offer-price-old {
+  font-size: 20px;
+  color: var(--text-light);
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.offer-price-3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  color: var(--accent-light);
+  margin-bottom: 4px;
+}
+.offer-price-main {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin: 8px 0;
+}
+.offer-price-main small { font-size: 28px; }
+.offer-pix {
+  font-size: 16px;
+  color: var(--success);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.offer-card-inner .btn-cta { width: 100%; max-width: 400px; font-size: 20px; padding: 20px 40px; }
+
+/* ============================================
+   (l) BENEFITS
+   ============================================ */
+.benefits-section {
+  padding: 100px 0;
+  background: var(--dark);
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.benefit-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-light);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+}
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(6, 182, 212, 0.12);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 26px;
+}
+.benefit-card h3 { font-size: 17px; color: var(--white); margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 700; }
+.benefit-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+/* ============================================
+   (m) CTA BANNER
+   ============================================ */
+.cta-banner {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cta-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cta-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.88) 0%, rgba(6, 182, 212, 0.8) 100%);
+}
+.cta-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+.cta-banner-content h2 { font-size: clamp(28px, 4vw, 48px); color: var(--white); margin-bottom: 16px; }
+.cta-banner-content p { color: rgba(255,255,255,0.85); font-size: 18px; margin-bottom: 28px; }
+
+/* ============================================
+   (n) TESTIMONIALS
+   ============================================ */
+.testimonials-section {
+  padding: 100px 0;
+  background: var(--dark);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  padding: 32px;
+  transition: transform 0.3s;
+}
+.testimonial-card:hover { transform: translateY(-4px); }
+.testimonial-stars { color: #facc15; font-size: 16px; margin-bottom: 14px; letter-spacing: 2px; }
+.testimonial-text { font-size: 15px; color: var(--white); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--gradient-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+}
+.testimonial-name { font-weight: 700; color: var(--white); font-size: 14px; }
+.testimonial-location { font-size: 12px; color: var(--text-light); }
+
+/* ============================================
+   (o) LEAD FORM
+   ============================================ */
+.form-section {
+  padding: 100px 0;
+  background: var(--dark-card);
+}
+.form-wrap {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--dark);
+  border: 1px solid var(--dark-border);
+  border-radius: 24px;
+  padding: 48px 40px;
+}
+.form-wrap h2 { font-size: 28px; color: var(--white); text-align: center; margin-bottom: 8px; }
+.form-wrap .form-sub { color: var(--text-light); text-align: center; margin-bottom: 32px; font-size: 15px; }
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 12px;
+  color: var(--white);
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.form-group input::placeholder { color: var(--text-light); }
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.form-group select option { background: var(--dark-card); color: var(--white); }
+.form-btn {
+  width: 100%;
+  background: var(--gradient-cta);
+  color: var(--white);
+  padding: 18px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 25px rgba(249, 115, 22, 0.35);
+  margin-top: 8px;
+}
+.form-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(249, 115, 22, 0.5); }
+.coupon-wrap {
+  margin-top: 24px;
+  text-align: center;
+  display: none;
+}
+.coupon-wrap.active { display: block; animation: popIn 0.5s ease; }
+.coupon-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(6, 182, 212, 0.1);
+  border: 2px dashed var(--accent);
+  border-radius: 12px;
+  padding: 16px 24px;
+}
+.coupon-code {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-light);
+  letter-spacing: 2px;
+}
+.coupon-copy {
+  background: var(--accent);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.coupon-copy:hover { background: var(--accent-dark); }
+
+/* ============================================
+   (p) FAQ
+   ============================================ */
+.faq-section {
+  padding: 100px 0;
+  background: var(--dark);
+}
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.faq-item {
+  border: 1px solid var(--dark-border);
+  border-radius: 16px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--dark-card);
+  transition: border-color 0.3s;
+}
+.faq-item.active { border-color: var(--primary-light); }
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  transition: color 0.2s;
+}
+.faq-question:hover { color: var(--accent-light); }
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ============================================
+   (q) FINAL CTA
+   ============================================ */
+.final-cta {
+  padding: 100px 0;
+  background: var(--gradient-dark);
+  text-align: center;
+}
+.final-cta h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.final-cta p { color: var(--text-light); font-size: 18px; margin-bottom: 32px; max-width: 550px; margin-left: auto; margin-right: auto; }
+
+/* ============================================
+   (r) FOOTER
+   ============================================ */
+.footer {
+  background: var(--dark);
+  border-top: 1px solid var(--dark-border);
+  padding: 48px 0 32px;
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.footer-logo em { font-style: normal; color: var(--accent-light); }
+.footer p { color: var(--text-light); font-size: 13px; margin-bottom: 6px; }
+.footer a { color: var(--accent-light); }
+.footer a:hover { text-decoration: underline; }
+
+/* ============================================
+   (s) WHATSAPP FLOAT
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  z-index: 998;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  animation: pulseGlow 2s infinite;
+  transition: transform 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float svg { width: 32px; height: 32px; fill: #fff; }
+
+/* ============================================
+   (t) SOCIAL PROOF TOASTS
+   ============================================ */
+.toast-container {
+  position: fixed;
+  bottom: 100px;
+  left: 24px;
+  z-index: 997;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.toast {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: toastIn 0.5s ease;
+}
+.toast.hiding { animation: toastOut 0.5s ease forwards; }
+.toast-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gradient-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.toast-text { font-size: 13px; color: var(--white); }
+.toast-text strong { color: var(--accent-light); }
+.toast-time { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+
+/* ============================================
+   (u) PIX POPUP
+   ============================================ */
+.pix-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.pix-overlay.active { display: flex; }
+.pix-modal {
+  background: var(--dark);
+  border: 2px solid var(--primary);
+  border-radius: 24px;
+  padding: 48px 40px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.4s ease;
+}
+.pix-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.pix-close:hover { background: var(--dark-border); }
+.pix-badge {
+  display: inline-block;
+  background: var(--gradient-main);
+  color: var(--white);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.pix-modal h3 { font-size: 24px; color: var(--white); margin-bottom: 12px; }
+.pix-modal .pix-desc { color: var(--text-light); font-size: 15px; margin-bottom: 20px; }
+.pix-prices { margin-bottom: 20px; }
+.pix-old { font-size: 18px; color: var(--text-light); text-decoration: line-through; }
+.pix-new {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--success);
+  line-height: 1.1;
+}
+.pix-new small { font-size: 22px; }
+.pix-timer { font-size: 14px; color: var(--cta-light); font-weight: 600; margin-bottom: 20px; }
+.pix-timer span { font-family: 'Space Grotesk', monospace; font-size: 18px; }
+.pix-modal .btn-cta { width: 100%; font-size: 16px; padding: 16px; }
+
+/* ============================================
+   (v) STICKY BOTTOM BAR
+   ============================================ */
+.sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--dark-border);
+  padding: 12px 0;
+  z-index: 999;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.sticky-bottom.visible { transform: translateY(0); }
+.sticky-bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sticky-bottom-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+}
+.sticky-bottom-text span {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--accent-light);
+}
+.sticky-bottom .btn-cta {
+  padding: 12px 28px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero .container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-right { order: -1; }
+  .hero-badge { margin: 0 auto 24px; }
+  .hero-prices { justify-content: center; }
+  .hero-cta-wrap { align-items: center; }
+  .hero-trust { justify-content: center; }
+  .hero-img-wrap { max-width: 350px; margin: 0 auto; }
+  .social-proof-bar .container { gap: 20px; }
+  .lifestyle .container { grid-template-columns: 1fr; gap: 40px; }
+  .lifestyle-img { height: 300px; }
+  .lifestyle-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .lifestyle-stat .stat-num { font-size: 24px; }
+  .pain-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .how-grid { grid-template-columns: 1fr; max-width: 350px; margin: 0 auto; }
+  .how-grid::before { display: none; }
+  .gallery-card { flex: 0 0 240px; }
+  .gallery-card img { width: 240px; height: 280px; }
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+  .pricing-row { padding: 14px 20px; }
+  .offer-card-inner { padding: 36px 24px; }
+  .offer-price-main { font-size: 48px; }
+  .form-wrap { padding: 36px 24px; }
+  .sticky-bottom-text { font-size: 13px; }
+  .sticky-bottom .btn-cta { padding: 10px 20px; font-size: 13px; }
+  .toast-container { left: 12px; right: 12px; }
+  .toast { min-width: auto; }
+  .pix-modal { padding: 36px 24px; }
+  .pix-new { font-size: 40px; }
+}
+@media (max-width: 480px) {
+  .urgency-bar { font-size: 11px; padding: 8px 12px; }
+  .urgency-bar .countdown { font-size: 13px; }
+  .hero { padding: 100px 0 60px; }
+  .hero-price-new { font-size: 40px; }
+  .btn-cta { font-size: 16px; padding: 16px 30px; }
+  .sp-item { font-size: 12px; }
+  .sp-item strong { font-size: 15px; }
+  .benefits-grid { grid-template-columns: 1fr; max-width: 350px; margin: 0 auto; }
+  .lifestyle-stats { grid-template-columns: 1fr; }
+  .cta-banner { height: 320px; }
+  .whatsapp-float { width: 52px; height: 52px; bottom: 80px; right: 16px; }
+  .whatsapp-float svg { width: 28px; height: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- (a) URGENCY TOP BAR -->
+<div class="urgency-bar" id="urgencyBar">
+  <span>Oferta relampago: 3 pares de tenis por R$109,90</span>
+  <span class="countdown" id="topCountdown">00:00:00</span>
+</div>
+
+<!-- (b) STICKY HEADER -->
+<header class="header" id="mainHeader">
+  <div class="container">
+    <a href="#" class="header-logo"><em>A7</em> Lavanderia</a>
+    <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="header-cta" target="_blank" rel="noopener">Agendar agora</a>
+  </div>
+</header>
+
+<!-- (c) HERO SPLIT -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-left">
+      <div class="hero-badge">Promo limitada - vagas acabando</div>
+      <h1>Lave 3 Pares<br>de <span class="highlight">Tenis.</span></h1>
+      <p class="hero-sub">Seus kicks merecem mais. Limpeza manual especializada que devolve a vida dos seus tenis favoritos.</p>
+      <div class="hero-prices">
+        <span class="hero-price-old">De ~R$150,00</span>
+        <span class="hero-price-new"><small>por</small> R$109<small>,90</small></span>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="btn-cta" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.25 0-4.336-.65-6.102-1.768l-.427-.27-3.157 1.058 1.058-3.157-.27-.427A9.947 9.947 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          Quero meus 3 pares limpos
+        </a>
+        <span class="btn-cta-sub">Resposta em menos de 5 minutos</span>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantia de cor
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Pronto em 48h
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polyline points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Coleta gratis
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format" alt="Tenis limpo e brilhante" class="hero-img" loading="eager">
+        <div class="hero-img-shadow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (d) SOCIAL PROOF BAR -->
+<div class="social-proof-bar reveal">
+  <div class="container">
+    <div class="sp-item">
+      <strong><span class="counter" data-target="94">0</span>+</strong> compraram hoje
+    </div>
+    <div class="sp-item">
+      <span class="sp-dot"></span>
+      <strong><span class="counter" data-target="9">0</span></strong> pessoas vendo agora
+    </div>
+    <div class="sp-item">
+      <strong>4.9</strong>
+      <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> no Google
+    </div>
+  </div>
+</div>
+
+<!-- (e) PROGRESS BAR -->
+<div class="progress-section reveal">
+  <div class="container">
+    <div class="progress-wrap">
+      <div class="progress-label">Vagas preenchidas: <span id="progressNum">0%</span></div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (f) LIFESTYLE SPLIT -->
+<section class="lifestyle reveal">
+  <div class="container">
+    <div class="lifestyle-img-wrap">
+      <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80&auto=format" alt="Tenis lifestyle" class="lifestyle-img" loading="lazy">
+      <div class="lifestyle-img-overlay"></div>
+    </div>
+    <div class="lifestyle-content">
+      <div class="section-tag">Resultado garantido</div>
+      <h2>Seu tenis volta <span class="highlight">zerado.</span></h2>
+      <p>Nosso processo manual garante que cada detalhe e tratado com cuidado. Da sola ao cadarco, seus kicks voltam como novos, sem quimicos agressivos.</p>
+      <div class="lifestyle-stats">
+        <div class="lifestyle-stat">
+          <span class="stat-num counter" data-target="100">0</span>
+          <span class="stat-label">% Cor preservada</span>
+        </div>
+        <div class="lifestyle-stat">
+          <span class="stat-num">48h</span>
+          <span class="stat-label">Prazo de entrega</span>
+        </div>
+        <div class="lifestyle-stat">
+          <span class="stat-num counter" data-target="3000">0</span>
+          <span class="stat-label">+ Pares lavados</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (g) PAIN POINTS -->
+<section class="pain-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Problemas comuns</div>
+    </div>
+    <h2 class="section-title reveal">Reconhece algum desses?</h2>
+    <p class="section-subtitle reveal">A maioria das pessoas tenta resolver sozinha e acaba piorando. Deixe com quem entende.</p>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon">&#128555;</div>
+        <h3>Amarelado e encardido</h3>
+        <p>Aquela sola branca que virou amarela e o tecido que nao volta ao tom original, mesmo lavando mil vezes em casa.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">&#128560;</div>
+        <h3>Medo de danificar</h3>
+        <p>Colocar na maquina e ver o tenis sair deformado, descolar a sola ou perder a estrutura. Ninguem quer isso.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">&#129326;</div>
+        <h3>Cheiro persistente</h3>
+        <p>Aquele odor que nao sai de jeito nenhum, nem com desodorante, nem com talco. So um tratamento profissional resolve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (h) HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Como funciona</div>
+    </div>
+    <h2 class="section-title reveal">Simples assim: 3 passos</h2>
+    <p class="section-subtitle reveal">Voce nao precisa fazer quase nada. A gente cuida de tudo.</p>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="how-num">1</div>
+        <h3>Agende pelo WhatsApp</h3>
+        <p>Manda um oi pra gente. Combinamos dia e horario pra coletar seus tenis.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-num">2</div>
+        <h3>Coletamos na sua porta</h3>
+        <p>A gente busca os 3 pares no conforto da sua casa. Coleta 100% gratis.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-num">3</div>
+        <h3>Receba tenis zerados</h3>
+        <p>Em ate 48h, seus kicks voltam limpos, cheirosos e embalados. Como novos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (i) HORIZONTAL GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Nosso trabalho</div>
+    </div>
+    <h2 class="section-title reveal">Resultados que falam por si</h2>
+    <p class="section-subtitle reveal">Deslize para ver alguns dos pares que ja passaram pela A7.</p>
+  </div>
+  <div class="gallery-scroll">
+    <div style="flex:0 0 20px"></div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80&auto=format" alt="Tenis branco restaurado" loading="lazy">
+      <div class="gallery-card-overlay"><span>Restauracao completa</span></div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&q=80&auto=format" alt="Tenis colorido limpo" loading="lazy">
+      <div class="gallery-card-overlay"><span>Cores preservadas</span></div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=500&q=80&auto=format" alt="Tenis esportivo limpo" loading="lazy">
+      <div class="gallery-card-overlay"><span>Limpeza profunda</span></div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80&auto=format" alt="Tenis premium tratado" loading="lazy">
+      <div class="gallery-card-overlay"><span>Tratamento premium</span></div>
+    </div>
+    <div style="flex:0 0 20px"></div>
+  </div>
+</section>
+
+<!-- (j) PRICING TABLE -->
+<section class="pricing-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Precos individuais</div>
+    </div>
+    <h2 class="section-title reveal">Tabela de precos</h2>
+    <p class="section-subtitle reveal">Veja os precos por par e compare com a promo de 3 pares.</p>
+    <div class="pricing-table reveal">
+      <div class="pricing-row pricing-row-head">
+        <span>Tipo de tenis</span>
+        <span>Preco / par</span>
+      </div>
+      <div class="pricing-row">
+        <span class="type">Tenis tecido / lona</span>
+        <span class="price">R$ 45,00</span>
+      </div>
+      <div class="pricing-row">
+        <span class="type">Tenis couro / sintetico</span>
+        <span class="price">R$ 50,00</span>
+      </div>
+      <div class="pricing-row">
+        <span class="type">Tenis premium / importado</span>
+        <span class="price">R$ 55,00</span>
+      </div>
+      <div class="pricing-row">
+        <span class="type">Bota / sapatenis</span>
+        <span class="price">R$ 60,00</span>
+      </div>
+    </div>
+    <div class="pricing-compare reveal">
+      <p>Exemplo: 3 pares couro/sintetico = 3 x R$50 = <strong style="color:var(--text-light);text-decoration:line-through">R$150,00</strong></p>
+      <p>Na promo: <strong style="color:var(--white)">R$109,90</strong></p>
+      <div class="savings">Economia de R$40,10</div>
+    </div>
+  </div>
+</section>
+
+<!-- (k) OFFER CARD (animated border) -->
+<section class="offer-section" id="oferta">
+  <div class="container">
+    <div class="offer-card reveal">
+      <div class="offer-card-inner">
+        <div class="offer-tag">Oferta especial</div>
+        <h2>3 Pares de Tenis</h2>
+        <ul class="offer-checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            Limpeza manual especializada
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            Remocao de manchas e encardidos
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            Desodorizacao completa
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            Hidratacao do material
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            Embalagem individual
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            Coleta e entrega gratis
+          </li>
+        </ul>
+        <div class="offer-prices">
+          <div class="offer-price-old">De ~R$150,00</div>
+          <div class="offer-price-3">3 pares por apenas</div>
+          <div class="offer-price-main">R$109<small>,90</small></div>
+          <div class="offer-pix">No PIX: R$98,91</div>
+        </div>
+        <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="btn-cta" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.25 0-4.336-.65-6.102-1.768l-.427-.27-3.157 1.058 1.058-3.157-.27-.427A9.947 9.947 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          Quero essa promo agora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (l) BENEFITS -->
+<section class="benefits-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Diferenciais A7</div>
+    </div>
+    <h2 class="section-title reveal">Por que a A7?</h2>
+    <p class="section-subtitle reveal">Nao e so lavar. E cuidar dos seus tenis como voce cuida.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#9995;</div>
+        <h3>Limpeza manual</h3>
+        <p>Nada de maquina. Cada par e tratado a mao com produtos especificos para cada material.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#128666;</div>
+        <h3>Coleta gratis</h3>
+        <p>A gente busca e entrega na sua porta. Voce nao precisa sair de casa.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#9889;</div>
+        <h3>Pronto em 48h</h3>
+        <p>Rapido e sem enrolacao. Seus tenis voltam em ate 2 dias uteis.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#127912;</div>
+        <h3>Garantia de cor</h3>
+        <p>Preservamos 100% das cores originais. Se nao ficar satisfeito, refazemos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (m) CTA BANNER -->
+<section class="cta-banner reveal">
+  <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=1400&q=80&auto=format" alt="Tenis fundo" class="cta-banner-bg" loading="lazy">
+  <div class="cta-banner-overlay"></div>
+  <div class="cta-banner-content">
+    <h2>Seus kicks merecem o melhor tratamento</h2>
+    <p>Aproveite a promo de 3 pares e economize. Vagas limitadas.</p>
+    <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="btn-cta" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  </div>
+</section>
+
+<!-- (n) TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Depoimentos</div>
+    </div>
+    <h2 class="section-title reveal">O que nossos clientes dizem</h2>
+    <p class="section-subtitle reveal">Quem experimentou, nao volta a lavar em casa.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Mandei meu Air Force 1 branco todo encardido e voltou absurdamente limpo. Parecia que eu tinha acabado de tirar da caixa. Recomendo demais!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RM</div>
+          <div>
+            <div class="testimonial-name">Rafael M.</div>
+            <div class="testimonial-location">Sao Jose dos Campos, SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Tinha medo de mandar meu Jordan lavar, mas a A7 cuidou com muito carinho. Voltou impecavel, sem nenhuma deformacao. Agora sou cliente fixo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JC</div>
+          <div>
+            <div class="testimonial-name">Juliana C.</div>
+            <div class="testimonial-location">Taubate, SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Mandei 3 pares na promo e todos voltaram perfeitos. O cheiro de novo e a melhor parte. Coleta na porta de casa? Genial. Servico nota 10!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">LA</div>
+          <div>
+            <div class="testimonial-name">Lucas A.</div>
+            <div class="testimonial-location">Jacarei, SP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (o) LEAD FORM -->
+<section class="form-section" id="formulario">
+  <div class="container">
+    <div class="form-wrap">
+      <h2>Garanta sua vaga</h2>
+      <p class="form-sub">Preencha e receba seu cupom exclusivo + atendimento prioritario.</p>
+      <form id="leadForm" autocomplete="off">
+        <div class="form-group">
+          <label for="formName">Nome completo</label>
+          <input type="text" id="formName" name="name" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="formPhone">WhatsApp</label>
+          <input type="tel" id="formPhone" name="phone" placeholder="(12) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="formEmail">E-mail</label>
+          <input type="email" id="formEmail" name="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="formPairs">Quantos pares pretende lavar?</label>
+          <select id="formPairs" name="pairs" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="1-3">1 a 3 pares</option>
+            <option value="4-6">4 a 6 pares</option>
+            <option value="7+">7 ou mais pares</option>
+          </select>
+        </div>
+        <button type="submit" class="form-btn">Garantir meu cupom</button>
+      </form>
+      <div class="coupon-wrap" id="couponWrap">
+        <p style="color:var(--success);font-weight:700;margin-bottom:12px;">Cupom gerado com sucesso!</p>
+        <div class="coupon-box">
+          <span class="coupon-code" id="couponCode"></span>
+          <button class="coupon-copy" id="couponCopy">Copiar</button>
+        </div>
+        <p style="color:var(--text-light);font-size:13px;margin-top:12px;">Apresente no WhatsApp para atendimento VIP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (p) FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Duvidas frequentes</div>
+    </div>
+    <h2 class="section-title reveal">Perguntas frequentes</h2>
+    <p class="section-subtitle reveal">Tire suas duvidas antes de agendar.</p>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Lavam qualquer tipo de tenis?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim! Trabalhamos com todos os tipos: tecido, lona, couro, sintetico, camurca, nubuck e ate modelos premium e importados. Cada material recebe tratamento especifico.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Quanto tempo demora?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">O prazo padrao e de ate 48 horas uteis apos a coleta. Em casos de limpeza mais complexa, pode levar ate 72h, mas sempre avisamos antes.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Limpam por dentro tambem?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Com certeza! A limpeza interna e parte essencial do processo. Removemos odores, bacterias e sujeira acumulada na palmilha e forro interno.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          E se a mancha nao sair?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Trabalhamos para remover 100% das manchas. Caso alguma mancha muito antiga ou profunda persista, avisamos sobre o progresso e oferecemos alternativas. Satisfacao garantida.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Buscam em casa mesmo?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim! Coleta e entrega 100% gratis na regiao de Sao Jose dos Campos e cidades proximas. Basta agendar pelo WhatsApp e a gente vai ate voce.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (q) FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Nao deixe seus kicks esperando</h2>
+    <p>3 pares por R$109,90. Coleta gratis. Pronto em 48h. Vagas limitadas.</p>
+    <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="btn-cta" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.25 0-4.336-.65-6.102-1.768l-.427-.27-3.157 1.058 1.058-3.157-.27-.427A9.947 9.947 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Quero meus 3 pares limpos
+    </a>
+  </div>
+</section>
+
+<!-- (r) FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo"><em>A7</em> Lavanderia</div>
+    <p>Especialistas em limpeza de tenis - Sao Jose dos Campos e regiao</p>
+    <p>WhatsApp: <a href="https://wa.me/5512974128390" target="_blank" rel="noopener">(12) 97412-8390</a></p>
+    <p style="margin-top:16px;font-size:11px;color:var(--dark-lighter);">&copy; 2026 A7 Lavanderia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- (s) WHATSAPP FLOAT -->
+<a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.25 0-4.336-.65-6.102-1.768l-.427-.27-3.157 1.058 1.058-3.157-.27-.427A9.947 9.947 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+</a>
+
+<!-- (t) TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- (u) PIX POPUP -->
+<div class="pix-overlay" id="pixOverlay">
+  <div class="pix-modal">
+    <button class="pix-close" id="pixClose">&times;</button>
+    <div class="pix-badge">Desconto PIX</div>
+    <h3>Pague no PIX e economize mais!</h3>
+    <p class="pix-desc">Desconto exclusivo de 10% para pagamento via PIX. Oferta por tempo limitado.</p>
+    <div class="pix-prices">
+      <div class="pix-old">De R$109,90</div>
+      <div class="pix-new">R$98<small>,91</small></div>
+    </div>
+    <div class="pix-timer">Expira em: <span id="pixTimer">24:00:00</span></div>
+    <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20pagar%20no%20PIX%20a%20promo%20de%203%20pares%20por%20R%2498%2C91" class="btn-cta" target="_blank" rel="noopener">Quero pagar no PIX</a>
+  </div>
+</div>
+
+<!-- (v) STICKY BOTTOM BAR -->
+<div class="sticky-bottom" id="stickyBottom">
+  <div class="container">
+    <div class="sticky-bottom-text">3 Pares por <span>R$109,90</span></div>
+    <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20a%20promo%20de%203%20pares%20de%20t%C3%AAnis%20por%20R%24109%2C90" class="btn-cta" target="_blank" rel="noopener">Quero agora</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ============================================
+     COUNTDOWN TIMER
+     ============================================ */
+  function initCountdown() {
+    var key = 'a7_blue_countdown_end';
+    var stored = localStorage.getItem(key);
+    var endTime;
+    if (stored && parseInt(stored) > Date.now()) {
+      endTime = parseInt(stored);
+    } else {
+      endTime = Date.now() + 24 * 60 * 60 * 1000;
+      localStorage.setItem(key, endTime.toString());
+    }
+    function update() {
+      var diff = endTime - Date.now();
+      if (diff <= 0) {
+        endTime = Date.now() + 24 * 60 * 60 * 1000;
+        localStorage.setItem(key, endTime.toString());
+        diff = endTime - Date.now();
+      }
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      var str = pad(h) + ':' + pad(m) + ':' + pad(s);
+      var el = document.getElementById('topCountdown');
+      if (el) el.textContent = str;
+    }
+    function pad(n) { return n < 10 ? '0' + n : n; }
+    update();
+    setInterval(update, 1000);
+  }
+
+  /* ============================================
+     PIX COUNTDOWN (24h)
+     ============================================ */
+  function initPixCountdown() {
+    var key = 'a7_blue_pix_end';
+    var stored = sessionStorage.getItem(key);
+    var endTime;
+    if (stored && parseInt(stored) > Date.now()) {
+      endTime = parseInt(stored);
+    } else {
+      endTime = Date.now() + 24 * 60 * 60 * 1000;
+      sessionStorage.setItem(key, endTime.toString());
+    }
+    function update() {
+      var diff = endTime - Date.now();
+      if (diff <= 0) diff = 0;
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      var el = document.getElementById('pixTimer');
+      if (el) el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+    }
+    function pad(n) { return n < 10 ? '0' + n : n; }
+    update();
+    setInterval(update, 1000);
+  }
+
+  /* ============================================
+     PIX POPUP (15s delay, sessionStorage)
+     ============================================ */
+  function initPixPopup() {
+    if (sessionStorage.getItem('a7_blue_pix_shown')) return;
+    setTimeout(function() {
+      if (sessionStorage.getItem('a7_blue_pix_shown')) return;
+      var overlay = document.getElementById('pixOverlay');
+      if (overlay) {
+        overlay.classList.add('active');
+        sessionStorage.setItem('a7_blue_pix_shown', '1');
+      }
+    }, 15000);
+    var closeBtn = document.getElementById('pixClose');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        document.getElementById('pixOverlay').classList.remove('active');
+      });
+    }
+    var overlay = document.getElementById('pixOverlay');
+    if (overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) overlay.classList.remove('active');
+      });
+    }
+  }
+
+  /* ============================================
+     HEADER SCROLL
+     ============================================ */
+  function initHeader() {
+    var header = document.getElementById('mainHeader');
+    var urgency = document.getElementById('urgencyBar');
+    var scrolled = false;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 80) {
+        if (!scrolled) { header.classList.add('scrolled'); scrolled = true; }
+      } else {
+        if (scrolled) { header.classList.remove('scrolled'); scrolled = false; }
+      }
+    });
+  }
+
+  /* ============================================
+     STICKY BOTTOM BAR
+     ============================================ */
+  function initStickyBottom() {
+    var bar = document.getElementById('stickyBottom');
+    var shown = false;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 600) {
+        if (!shown) { bar.classList.add('visible'); shown = true; }
+      } else {
+        if (shown) { bar.classList.remove('visible'); shown = false; }
+      }
+    });
+  }
+
+  /* ============================================
+     SCROLL REVEAL
+     ============================================ */
+  function initReveal() {
+    var els = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el) { observer.observe(el); });
+  }
+
+  /* ============================================
+     ANIMATED COUNTERS
+     ============================================ */
+  function initCounters() {
+    var counters = document.querySelectorAll('.counter');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function(c) { observer.observe(c); });
+  }
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'));
+    if (!target) return;
+    var duration = 2000;
+    var start = 0;
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ============================================
+     PROGRESS BAR
+     ============================================ */
+  function initProgress() {
+    var fill = document.getElementById('progressFill');
+    var num = document.getElementById('progressNum');
+    if (!fill) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          fill.style.width = '91%';
+          animateProgressNum(num, 91);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(fill.parentElement);
+  }
+  function animateProgressNum(el, target) {
+    var duration = 2000;
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target) + '%';
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target + '%';
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ============================================
+     PHONE MASK
+     ============================================ */
+  function initPhoneMask() {
+    var phone = document.getElementById('formPhone');
+    if (!phone) return;
+    phone.addEventListener('input', function(e) {
+      var v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 6) {
+        v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      } else if (v.length > 2) {
+        v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      } else if (v.length > 0) {
+        v = '(' + v;
+      }
+      e.target.value = v;
+    });
+  }
+
+  /* ============================================
+     FORM / COUPON / LOCALSTORAGE
+     ============================================ */
+  function initForm() {
+    var form = document.getElementById('leadForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('formName').value.trim();
+      var phone = document.getElementById('formPhone').value.trim();
+      var email = document.getElementById('formEmail').value.trim();
+      var pairs = document.getElementById('formPairs').value;
+      if (!name || !phone || !email || !pairs) return;
+      var coupon = generateCoupon();
+      var lead = { name: name, phone: phone, email: email, pairs: pairs, coupon: coupon, date: new Date().toISOString() };
+      var leads = JSON.parse(localStorage.getItem('a7_leads_tenis_blue') || '[]');
+      leads.push(lead);
+      localStorage.setItem('a7_leads_tenis_blue', JSON.stringify(leads));
+      form.style.display = 'none';
+      var wrap = document.getElementById('couponWrap');
+      var code = document.getElementById('couponCode');
+      code.textContent = coupon;
+      wrap.classList.add('active');
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'form', event_label: 'tenis_blue' });
+    });
+  }
+  function generateCoupon() {
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var code = 'A7-';
+    for (var i = 0; i < 5; i++) code += chars.charAt(Math.floor(Math.random() * chars.length));
+    return code;
+  }
+
+  /* ============================================
+     COPY COUPON
+     ============================================ */
+  function initCopy() {
+    var btn = document.getElementById('couponCopy');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      var code = document.getElementById('couponCode').textContent;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(function() { btn.textContent = 'Copiado!'; setTimeout(function() { btn.textContent = 'Copiar'; }, 2000); });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'Copiado!';
+        setTimeout(function() { btn.textContent = 'Copiar'; }, 2000);
+      }
+    });
+  }
+
+  /* ============================================
+     FAQ ACCORDION
+     ============================================ */
+  function initFaq() {
+    var items = document.querySelectorAll('.faq-item');
+    items.forEach(function(item) {
+      var btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', function() {
+        var isActive = item.classList.contains('active');
+        items.forEach(function(i) {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          var answer = item.querySelector('.faq-answer');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+
+  /* ============================================
+     SOCIAL PROOF TOASTS
+     ============================================ */
+  function initToasts() {
+    var names = [
+      { name: 'Marcos R.', city: 'SJC', pairs: '3 pares de Nike' },
+      { name: 'Camila S.', city: 'Taubate', pairs: '2 pares de Adidas' },
+      { name: 'Bruno L.', city: 'Jacarei', pairs: '3 pares de Jordan' },
+      { name: 'Fernanda M.', city: 'Cacapava', pairs: '1 par de New Balance' },
+      { name: 'Diego P.', city: 'SJC', pairs: '3 pares de Vans' },
+      { name: 'Amanda K.', city: 'Taubate', pairs: '2 pares de Puma' },
+      { name: 'Rodrigo A.', city: 'SJC', pairs: '3 pares variados' },
+      { name: 'Priscila F.', city: 'Jacarei', pairs: '1 par de Asics' }
+    ];
+    var times = ['agora mesmo', 'ha 2 min', 'ha 5 min', 'ha 8 min', 'ha 12 min', 'ha 15 min'];
+    var container = document.getElementById('toastContainer');
+    var idx = 0;
+    function showToast() {
+      var data = names[idx % names.length];
+      var time = times[Math.floor(Math.random() * times.length)];
+      var toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = '<div class="toast-icon">&#128095;</div><div><div class="toast-text"><strong>' + data.name + '</strong> de ' + data.city + ' agendou ' + data.pairs + '</div><div class="toast-time">' + time + '</div></div>';
+      container.appendChild(toast);
+      setTimeout(function() {
+        toast.classList.add('hiding');
+        setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 500);
+      }, 4500);
+      idx++;
+    }
+    setTimeout(showToast, 8000);
+    setInterval(showToast, 18000);
+  }
+
+  /* ============================================
+     SMOOTH SCROLL
+     ============================================ */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  /* ============================================
+     ANALYTICS TRACKING
+     ============================================ */
+  function initAnalytics() {
+    document.querySelectorAll('.btn-cta, .header-cta').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'cta_click', { event_category: 'engagement', event_label: 'tenis_blue_cta' });
+        }
+      });
+    });
+    var wa = document.querySelector('.whatsapp-float');
+    if (wa) {
+      wa.addEventListener('click', function() {
+        if (typeof gtag === 'function') gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: 'tenis_blue_float' });
+      });
+    }
+  }
+
+  /* ============================================
+     INIT ALL
+     ============================================ */
+  document.addEventListener('DOMContentLoaded', function() {
+    initCountdown();
+    initPixCountdown();
+    initPixPopup();
+    initHeader();
+    initStickyBottom();
+    initReveal();
+    initCounters();
+    initProgress();
+    initPhoneMask();
+    initForm();
+    initCopy();
+    initFaq();
+    initToasts();
+    initSmoothScroll();
+    initAnalytics();
+  });
+
+})();
+</script>
+</body>
+</html>

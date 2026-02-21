@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacote Executivo - 5 Pecas Sociais por R$79,90 | A7 Lavanderia</title>
+<meta name="description" content="Lavagem premium de ternos e roupas sociais. Pacote Executivo: 5 pecas por R$79,90 com coleta gratis no seu escritorio. A7 Lavanderia.">
+<meta property="og:title" content="Pacote Executivo - Ternos e Roupas Sociais | A7 Lavanderia">
+<meta property="og:description" content="5 pecas sociais por R$79,90. Coleta gratis no escritorio. Lavagem premium com entrega em 48h.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-darker: #1e3a8a;
+  --primary-light: #60a5fa;
+  --primary-lighter: #93c5fd;
+  --accent: #06b6d4;
+  --accent-dark: #0891b2;
+  --accent-light: #22d3ee;
+  --cta: #f97316;
+  --cta-dark: #ea580c;
+  --cta-light: #fb923c;
+  --gradient-main: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%);
+  --gradient-dark: linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+  --gradient-cta: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  --dark: #0f172a;
+  --dark-card: #1e293b;
+  --dark-border: #334155;
+  --light: #f8fafc;
+  --light-blue: #eff6ff;
+  --light-border: #dbeafe;
+  --text-dark: #0f172a;
+  --text-mid: #64748b;
+  --text-light: #94a3b8;
+  --white: #ffffff;
+  --success: #10b981;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk','Inter',sans-serif; line-height: 1.15; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { cursor: pointer; border: none; font-family: inherit; }
+ul { list-style: none; }
+.container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.sr-only { position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0); }
+
+/* ANIMATIONS */
+@keyframes fadeInUp { from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)} }
+@keyframes fadeInLeft { from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)} }
+@keyframes fadeInRight { from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)} }
+@keyframes pulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.05)} }
+@keyframes pulseGlow { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)} }
+@keyframes shimmer { 0%{background-position:-200% 0}100%{background-position:200% 0} }
+@keyframes toastIn { from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1} }
+@keyframes toastOut { from{transform:translateX(0);opacity:1}to{transform:translateX(120%);opacity:0} }
+@keyframes tickPulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.15)} }
+@keyframes slideRight { from{transform:translateX(100%)}to{transform:translateX(0)} }
+@keyframes slideLeft { from{transform:translateX(0)}to{transform:translateX(100%)} }
+@keyframes marqueeScroll { 0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
+@keyframes countUp { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)} }
+@keyframes borderPulse { 0%,100%{border-color:var(--primary-light)}50%{border-color:var(--accent)} }
+
+.reveal { opacity:0; transform:translateY(40px); transition:all .8s cubic-bezier(.16,1,.3,1); }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ===== (a) TOP BAR ===== */
+.top-bar {
+  background: var(--gradient-main);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  position: relative;
+  z-index: 1001;
+  overflow: hidden;
+}
+.top-bar::before {
+  content:'';position:absolute;top:0;left:-100%;width:200%;height:100%;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.1) 50%,transparent 100%);
+  animation:shimmer 3s infinite;
+}
+.top-bar span { position:relative; z-index:1; }
+.top-bar .countdown {
+  display:inline-block;background:rgba(255,255,255,.2);
+  padding:2px 10px;border-radius:20px;margin-left:8px;
+  font-variant-numeric:tabular-nums;border:1px solid rgba(255,255,255,.3);
+  font-family:'Space Grotesk',monospace;
+}
+
+/* ===== (b) STICKY HEADER ===== */
+.header {
+  background:var(--white);padding:14px 0;position:fixed;top:0;left:0;right:0;z-index:900;
+  transition:background .3s,box-shadow .3s,padding .3s;
+  border-bottom:1px solid transparent;
+}
+.header.scrolled {
+  background:rgba(255,255,255,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:0 2px 20px rgba(0,0,0,.08);padding:10px 0;
+  border-bottom:1px solid var(--light-border);
+}
+.header .container { display:flex;align-items:center;justify-content:space-between; }
+.header-logo { font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--primary-dark); }
+.header-logo em { font-style:normal;color:var(--accent); }
+.header-cta {
+  background:var(--gradient-cta);color:var(--white);padding:10px 24px;border-radius:50px;
+  font-weight:700;font-size:14px;transition:transform .2s,box-shadow .2s;
+  box-shadow:0 4px 15px rgba(249,115,22,.35);display:inline-flex;align-items:center;gap:8px;
+}
+.header-cta:hover { transform:translateY(-2px);box-shadow:0 6px 25px rgba(249,115,22,.5); }
+.header-cta svg { width:16px;height:16px; }
+
+/* ===== (c) HERO ===== */
+.hero {
+  min-height:100vh;position:relative;display:flex;align-items:center;
+  padding:140px 0 80px;overflow:hidden;
+  background:linear-gradient(135deg,rgba(30,64,175,.88) 0%,rgba(6,182,212,.75) 100%),
+    url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=85&auto=format') center/cover no-repeat;
+}
+.hero::after {
+  content:'';position:absolute;bottom:0;left:0;width:100%;height:120px;
+  background:linear-gradient(to top,var(--white),transparent);pointer-events:none;
+}
+.hero .container { position:relative;z-index:2;max-width:800px;text-align:center; }
+.hero-badge {
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+  color:var(--white);padding:8px 20px;border-radius:50px;
+  font-size:13px;font-weight:600;margin-bottom:28px;backdrop-filter:blur(8px);
+}
+.hero-badge::before { content:'';width:8px;height:8px;background:var(--accent-light);border-radius:50%;animation:pulse 2s infinite; }
+.hero h1 {
+  font-size:clamp(36px,5.5vw,64px);font-weight:700;color:var(--white);
+  margin-bottom:16px;line-height:1.08;text-shadow:0 2px 20px rgba(0,0,0,.2);
+}
+.hero-sub { font-size:18px;color:rgba(255,255,255,.85);margin-bottom:28px;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto; }
+.hero-prices { display:flex;align-items:center;gap:16px;margin-bottom:28px;justify-content:center;flex-wrap:wrap; }
+.hero-price-old { font-size:22px;color:rgba(255,255,255,.5);text-decoration:line-through; }
+.hero-price-new {
+  font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:700;color:var(--white);
+  text-shadow:0 2px 15px rgba(0,0,0,.2);
+}
+.hero-price-new small { font-size:20px;color:var(--accent-light); }
+.hero-price-label { font-size:14px;color:rgba(255,255,255,.7); }
+.btn-cta {
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--gradient-cta);color:var(--white);padding:18px 44px;border-radius:14px;
+  font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+  transition:transform .25s,box-shadow .25s;box-shadow:0 8px 30px rgba(249,115,22,.45);
+}
+.btn-cta:hover { transform:translateY(-3px) scale(1.02);box-shadow:0 12px 40px rgba(249,115,22,.6); }
+.btn-cta svg { width:20px;height:20px; }
+.hero-cta-wrap { margin-bottom:32px; }
+.btn-cta-sub { font-size:12px;color:rgba(255,255,255,.6);margin-top:8px; }
+.hero-trust { display:flex;gap:24px;flex-wrap:wrap;justify-content:center; }
+.hero-trust-item { display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.8); }
+.hero-trust-item svg { width:18px;height:18px;color:var(--accent-light);flex-shrink:0; }
+
+/* ===== (d) SOCIAL PROOF BAR ===== */
+.social-proof-bar { background:var(--light);border-bottom:1px solid var(--light-border);padding:28px 0; }
+.social-proof-bar .container { display:flex;justify-content:center;gap:48px;flex-wrap:wrap; }
+.sp-item { display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-mid); }
+.sp-item strong { color:var(--primary);font-size:22px;font-weight:800;font-family:'Space Grotesk',sans-serif; }
+.sp-item .sp-dot { width:10px;height:10px;background:var(--success);border-radius:50%;animation:pulse 2s infinite; }
+
+/* ===== SECTION HELPERS ===== */
+.section-tag {
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);
+  color:var(--primary);padding:6px 16px;border-radius:50px;
+  font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;
+}
+.section-title { font-size:clamp(28px,3.5vw,42px);color:var(--text-dark);margin-bottom:16px;text-align:center; }
+.section-title .highlight { color:var(--primary); }
+.section-subtitle { font-size:16px;color:var(--text-mid);text-align:center;max-width:600px;margin:0 auto 48px; }
+.blue-divider { width:60px;height:3px;background:var(--gradient-main);border-radius:3px;margin:0 auto 20px; }
+
+/* ===== (e) MAGAZINE 1 - image RIGHT ===== */
+.magazine { padding:100px 0;position:relative; }
+.magazine-grid { display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center; }
+.magazine-img-wrap { position:relative;border-radius:20px;overflow:hidden; }
+.magazine-img { width:100%;height:480px;object-fit:cover;border-radius:20px;transition:transform .6s; }
+.magazine-img-wrap:hover .magazine-img { transform:scale(1.04); }
+.magazine-img-overlay { position:absolute;inset:0;border-radius:20px;pointer-events:none;
+  background:linear-gradient(135deg,rgba(30,64,175,.15) 0%,transparent 60%); }
+.magazine-content h2 { font-size:clamp(26px,3vw,38px);color:var(--text-dark);margin-bottom:20px; }
+.magazine-content h2 .highlight { color:var(--primary); }
+.magazine-content p { color:var(--text-mid);font-size:16px;margin-bottom:24px;line-height:1.7; }
+.magazine-content .accent-line { width:50px;height:3px;background:var(--gradient-main);border-radius:3px;margin-bottom:20px; }
+.magazine-list { display:flex;flex-direction:column;gap:14px; }
+.magazine-list li { display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text-mid); }
+.magazine-list li svg { width:20px;height:20px;color:var(--primary);flex-shrink:0;margin-top:2px; }
+.magazine.alt { background:var(--light-blue); }
+.magazine.alt .magazine-grid { direction:rtl; }
+.magazine.alt .magazine-grid > * { direction:ltr; }
+
+/* ===== (g) PAIN POINTS ===== */
+.pain-section { padding:100px 0;background:var(--white); }
+.pain-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px; }
+.pain-card {
+  background:var(--white);border:1px solid var(--light-border);border-radius:20px;
+  padding:36px 28px;text-align:center;transition:transform .3s,border-color .3s,box-shadow .3s;
+}
+.pain-card:hover { transform:translateY(-6px);border-color:var(--primary-light);box-shadow:0 12px 40px rgba(37,99,235,.1); }
+.pain-icon {
+  width:64px;height:64px;background:var(--light-blue);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;
+}
+.pain-icon svg { width:28px;height:28px;stroke:var(--primary);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+.pain-card h3 { font-size:18px;color:var(--text-dark);margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:700; }
+.pain-card p { font-size:14px;color:var(--text-mid);line-height:1.6; }
+
+/* ===== (h) HOW IT WORKS ===== */
+.how-section { padding:100px 0;background:var(--light-blue); }
+.steps-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative; }
+.steps-grid::before {
+  content:'';position:absolute;top:36px;left:12%;right:12%;height:2px;
+  background:var(--light-border);z-index:0;
+}
+.step-card { text-align:center;position:relative;z-index:1; }
+.step-num {
+  width:72px;height:72px;border-radius:50%;
+  background:var(--gradient-main);color:var(--white);
+  font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;
+  box-shadow:0 4px 20px rgba(37,99,235,.3);
+}
+.step-card h3 { font-size:16px;color:var(--text-dark);margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:700; }
+.step-card p { font-size:13px;color:var(--text-mid);line-height:1.5; }
+
+/* ===== (i) MARQUEE STRIP ===== */
+.marquee-section { padding:60px 0;background:var(--white);overflow:hidden; }
+.marquee-track { display:flex;width:max-content;animation:marqueeScroll 30s linear infinite; }
+.marquee-track:hover { animation-play-state:paused; }
+.marquee-item { flex-shrink:0;width:300px;height:220px;margin:0 12px;border-radius:16px;overflow:hidden; }
+.marquee-item img { width:100%;height:100%;object-fit:cover;transition:transform .4s; }
+.marquee-item:hover img { transform:scale(1.05); }
+
+/* ===== (j) PRICING ===== */
+.pricing-section { padding:100px 0;background:var(--light); }
+.pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:32px; }
+.price-card {
+  background:var(--white);border:1px solid var(--light-border);border-radius:20px;
+  padding:28px 24px;text-align:center;transition:transform .3s,border-color .3s,box-shadow .3s;
+}
+.price-card:hover { transform:translateY(-4px);border-color:var(--primary-light);box-shadow:0 8px 30px rgba(37,99,235,.1); }
+.price-card h3 { font-size:16px;color:var(--text-dark);margin-bottom:4px;font-family:'Inter',sans-serif;font-weight:700; }
+.price-card .price-value {
+  font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;color:var(--primary);
+}
+.price-card .price-value small { font-size:14px;color:var(--text-mid);font-weight:400; }
+.price-card p { font-size:13px;color:var(--text-mid);margin-top:4px; }
+.pricing-comparison {
+  background:var(--white);border:2px solid var(--primary-light);border-radius:20px;
+  padding:32px;text-align:center;max-width:600px;margin:0 auto;
+}
+.pricing-comparison h3 { font-size:20px;color:var(--text-dark);margin-bottom:8px; }
+.pricing-comparison .comp-old { font-size:18px;color:var(--text-mid);text-decoration:line-through; }
+.pricing-comparison .comp-new { font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;color:var(--primary);margin:8px 0; }
+.pricing-comparison .comp-save { background:var(--light-blue);color:var(--primary);padding:6px 16px;border-radius:50px;font-size:14px;font-weight:600;display:inline-block; }
+
+/* ===== (k) OFFER CARD ===== */
+.offer-section { padding:100px 0;background:var(--dark); }
+.offer-card {
+  max-width:700px;margin:0 auto;background:var(--dark-card);
+  border:2px solid transparent;border-radius:24px;padding:48px 40px;text-align:center;
+  position:relative;overflow:hidden;
+  background-image:linear-gradient(var(--dark-card),var(--dark-card)),var(--gradient-main);
+  background-origin:border-box;background-clip:padding-box,border-box;
+}
+.offer-card h2 { font-size:clamp(26px,3.5vw,36px);color:var(--white);margin-bottom:24px; }
+.offer-card h2 .highlight { color:var(--accent-light); }
+.offer-checklist { display:flex;flex-direction:column;gap:14px;margin-bottom:32px;text-align:left;max-width:400px;margin-left:auto;margin-right:auto; }
+.offer-checklist li { display:flex;align-items:center;gap:12px;font-size:15px;color:var(--text-light); }
+.offer-checklist li svg { width:20px;height:20px;color:var(--accent-light);flex-shrink:0; }
+.offer-prices { margin-bottom:28px; }
+.offer-prices .old { font-size:20px;color:var(--text-light);text-decoration:line-through; }
+.offer-prices .new { font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:700;color:var(--white);display:block;margin:8px 0; }
+.offer-prices .pix { font-size:15px;color:var(--accent-light); }
+
+/* ===== (l) BENEFITS ===== */
+.benefits-section { padding:100px 0;background:var(--white); }
+.benefits-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:24px; }
+.benefit-card {
+  background:var(--light);border:1px solid var(--light-border);border-radius:20px;
+  padding:32px 24px;text-align:center;transition:transform .3s,box-shadow .3s;
+}
+.benefit-card:hover { transform:translateY(-4px);box-shadow:0 8px 30px rgba(37,99,235,.08); }
+.benefit-icon {
+  width:56px;height:56px;background:var(--light-blue);border-radius:14px;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+}
+.benefit-icon svg { width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+.benefit-card h3 { font-size:16px;color:var(--text-dark);margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:700; }
+.benefit-card p { font-size:13px;color:var(--text-mid);line-height:1.5; }
+
+/* ===== (m) BANNER ===== */
+.banner-section {
+  padding:120px 0;position:relative;
+  background:linear-gradient(135deg,rgba(30,64,175,.85) 0%,rgba(6,182,212,.75) 100%),
+    url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1400&q=80&auto=format') center/cover no-repeat;
+}
+.banner-section .container { position:relative;z-index:2;text-align:center;max-width:700px; }
+.banner-section h2 { font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:16px; }
+.banner-section p { font-size:18px;color:rgba(255,255,255,.85);margin-bottom:32px; }
+
+/* ===== (n) TESTIMONIALS ===== */
+.testimonials-section { padding:100px 0;background:var(--light); }
+.testimonials-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px; }
+.testimonial-card {
+  background:var(--white);border:1px solid var(--light-border);border-radius:20px;
+  padding:32px 28px;transition:transform .3s,box-shadow .3s;
+}
+.testimonial-card:hover { transform:translateY(-4px);box-shadow:0 8px 30px rgba(37,99,235,.08); }
+.testimonial-stars { display:flex;gap:4px;margin-bottom:16px; }
+.testimonial-stars svg { width:18px;height:18px;fill:var(--cta);stroke:none; }
+.testimonial-quote { font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:20px; }
+.testimonial-author { display:flex;align-items:center;gap:12px; }
+.testimonial-avatar {
+  width:44px;height:44px;border-radius:50%;background:var(--gradient-main);
+  display:flex;align-items:center;justify-content:center;color:var(--white);
+  font-weight:700;font-size:16px;
+}
+.testimonial-name { font-size:14px;font-weight:700;color:var(--text-dark); }
+.testimonial-role { font-size:12px;color:var(--text-mid); }
+
+/* ===== (o) LEAD FORM ===== */
+.form-section { padding:100px 0;background:var(--primary-dark);color:var(--white); }
+.form-section .section-title { color:var(--white); }
+.form-section .section-subtitle { color:rgba(255,255,255,.7); }
+.form-wrap { max-width:560px;margin:0 auto;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:40px 32px; }
+.form-group { margin-bottom:18px; }
+.form-group label { display:block;font-size:13px;font-weight:600;color:rgba(255,255,255,.8);margin-bottom:6px; }
+.form-group input, .form-group select {
+  width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.08);color:var(--white);font-size:15px;font-family:inherit;
+  transition:border-color .3s;outline:none;
+}
+.form-group input::placeholder { color:rgba(255,255,255,.4); }
+.form-group select option { background:var(--dark-card);color:var(--white); }
+.form-group input:focus, .form-group select:focus { border-color:var(--accent-light); }
+.form-row { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+.coupon-wrap { display:flex;gap:8px; }
+.coupon-wrap input { flex:1; }
+.coupon-wrap button {
+  background:var(--accent);color:var(--white);padding:0 20px;border-radius:12px;
+  font-weight:700;font-size:14px;white-space:nowrap;transition:background .3s;
+}
+.coupon-wrap button:hover { background:var(--accent-dark); }
+.coupon-result { font-size:13px;margin-top:6px;display:none; }
+.coupon-result.valid { color:var(--success);display:block; }
+.coupon-result.invalid { color:#ef4444;display:block; }
+.btn-form {
+  width:100%;padding:16px;border-radius:14px;background:var(--gradient-cta);color:var(--white);
+  font-size:16px;font-weight:800;text-transform:uppercase;margin-top:8px;
+  transition:transform .2s,box-shadow .2s;box-shadow:0 6px 20px rgba(249,115,22,.4);
+}
+.btn-form:hover { transform:translateY(-2px);box-shadow:0 8px 30px rgba(249,115,22,.55); }
+.form-note { font-size:12px;color:rgba(255,255,255,.5);text-align:center;margin-top:12px; }
+
+/* ===== (p) FAQ ===== */
+.faq-section { padding:100px 0;background:var(--white); }
+.faq-list { max-width:700px;margin:0 auto; }
+.faq-item { border-bottom:1px solid var(--light-border); }
+.faq-question {
+  width:100%;background:none;text-align:left;padding:20px 0;font-size:16px;font-weight:600;
+  color:var(--text-dark);display:flex;align-items:center;justify-content:space-between;gap:16px;
+  cursor:pointer;transition:color .3s;
+}
+.faq-question:hover { color:var(--primary); }
+.faq-question svg { width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:2;flex-shrink:0;transition:transform .3s; }
+.faq-item.open .faq-question svg { transform:rotate(45deg); }
+.faq-answer { max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 0; }
+.faq-answer p { font-size:14px;color:var(--text-mid);line-height:1.7;padding-bottom:20px; }
+
+/* ===== (q) FINAL CTA ===== */
+.final-cta { padding:100px 0;background:var(--light-blue);text-align:center; }
+.final-cta h2 { font-size:clamp(26px,3.5vw,40px);color:var(--text-dark);margin-bottom:16px; }
+.final-cta p { font-size:17px;color:var(--text-mid);margin-bottom:32px;max-width:550px;margin-left:auto;margin-right:auto; }
+
+/* ===== (r) FOOTER ===== */
+.footer { background:var(--dark);color:var(--text-light);padding:48px 0 24px;text-align:center; }
+.footer-logo { font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:12px; }
+.footer-logo em { font-style:normal;color:var(--accent-light); }
+.footer p { font-size:13px;margin-bottom:8px; }
+.footer-links { display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap; }
+.footer-links a { font-size:13px;color:var(--text-light);transition:color .3s; }
+.footer-links a:hover { color:var(--accent-light); }
+.footer-copy { font-size:12px;color:var(--dark-border);margin-top:24px;padding-top:24px;border-top:1px solid var(--dark-border); }
+
+/* ===== (s) WHATSAPP FLOAT ===== */
+.whatsapp-float {
+  position:fixed;bottom:100px;right:24px;z-index:998;
+  width:60px;height:60px;background:#25d366;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);
+  transition:transform .3s,box-shadow .3s;animation:pulseGlow 2s infinite;
+}
+.whatsapp-float:hover { transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5); }
+.whatsapp-float svg { width:32px;height:32px;fill:var(--white); }
+
+/* ===== (t) TOASTS ===== */
+.toast-container { position:fixed;bottom:170px;right:24px;z-index:997;display:flex;flex-direction:column;gap:10px; }
+.toast {
+  background:var(--white);border:1px solid var(--light-border);border-radius:12px;
+  padding:14px 18px;box-shadow:0 8px 30px rgba(0,0,0,.12);
+  display:flex;align-items:center;gap:12px;min-width:260px;
+  animation:toastIn .5s ease forwards;font-size:13px;color:var(--text-dark);
+}
+.toast.out { animation:toastOut .4s ease forwards; }
+.toast-icon { width:36px;height:36px;border-radius:50%;background:var(--light-blue);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.toast-icon svg { width:18px;height:18px;stroke:var(--primary);fill:none;stroke-width:2; }
+.toast-text strong { display:block;font-weight:700;font-size:13px;color:var(--text-dark); }
+.toast-text span { font-size:12px;color:var(--text-mid); }
+
+/* ===== (u) PIX SLIDE PANEL ===== */
+.pix-overlay { position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1100;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s; }
+.pix-overlay.active { opacity:1;visibility:visible; }
+.pix-panel {
+  position:fixed;top:0;right:0;width:420px;max-width:100%;height:100vh;
+  background:var(--white);z-index:1101;transform:translateX(100%);
+  transition:transform .45s cubic-bezier(.4,0,.2,1);overflow-y:auto;
+  box-shadow:-10px 0 40px rgba(0,0,0,.15);
+}
+.pix-panel.active { transform:translateX(0); }
+.pix-header {
+  background:var(--gradient-main);padding:28px 24px;color:var(--white);position:relative;
+}
+.pix-close {
+  position:absolute;top:16px;right:16px;background:rgba(255,255,255,.2);
+  border:none;color:var(--white);width:36px;height:36px;border-radius:50%;
+  font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .3s;
+}
+.pix-close:hover { background:rgba(255,255,255,.3); }
+.pix-header h3 { font-size:20px;margin-bottom:4px; }
+.pix-header p { font-size:13px;opacity:.8; }
+.pix-body { padding:28px 24px; }
+.pix-price-block { text-align:center;margin-bottom:24px;padding:24px;background:var(--light-blue);border-radius:16px;border:1px solid var(--light-border); }
+.pix-price-old { font-size:18px;color:var(--text-mid);text-decoration:line-through; }
+.pix-price-new { font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:700;color:var(--primary);display:block;margin:4px 0; }
+.pix-price-badge { background:var(--primary);color:var(--white);padding:4px 14px;border-radius:50px;font-size:12px;font-weight:700;display:inline-block; }
+.pix-timer { text-align:center;font-size:14px;color:var(--text-mid);margin-bottom:24px; }
+.pix-timer strong { color:var(--primary);font-family:'Space Grotesk',monospace; }
+.pix-steps { display:flex;flex-direction:column;gap:16px;margin-bottom:24px; }
+.pix-step { display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--text-mid); }
+.pix-step-num {
+  width:28px;height:28px;border-radius:50%;background:var(--gradient-main);color:var(--white);
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.pix-code-block { background:var(--light);border:1px solid var(--light-border);border-radius:12px;padding:16px;margin-bottom:16px; }
+.pix-code-block code { font-size:12px;word-break:break-all;color:var(--text-dark);display:block;margin-bottom:10px; }
+.btn-copy {
+  width:100%;padding:12px;border-radius:10px;background:var(--gradient-main);color:var(--white);
+  font-size:14px;font-weight:700;transition:transform .2s;
+}
+.btn-copy:hover { transform:translateY(-1px); }
+.btn-copy.copied { background:var(--success); }
+.pix-whatsapp {
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  padding:14px;border-radius:12px;background:#25d366;color:var(--white);
+  font-size:15px;font-weight:700;transition:transform .2s;margin-top:12px;
+}
+.pix-whatsapp:hover { transform:translateY(-2px); }
+.pix-whatsapp svg { width:20px;height:20px;fill:var(--white); }
+
+/* ===== (v) STICKY BOTTOM BAR ===== */
+.sticky-bar {
+  position:fixed;bottom:0;left:0;right:0;z-index:999;
+  background:var(--white);border-top:1px solid var(--light-border);
+  padding:12px 24px;transform:translateY(100%);transition:transform .4s ease;
+  box-shadow:0 -4px 20px rgba(0,0,0,.08);
+}
+.sticky-bar.visible { transform:translateY(0); }
+.sticky-bar .container { display:flex;align-items:center;justify-content:space-between;gap:16px; }
+.sticky-bar-text { font-size:14px;font-weight:600;color:var(--text-dark); }
+.sticky-bar-text span { color:var(--primary);font-family:'Space Grotesk',sans-serif;font-size:18px; }
+.sticky-bar-cta {
+  background:var(--gradient-cta);color:var(--white);padding:12px 28px;border-radius:50px;
+  font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px;
+  transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(249,115,22,.35);
+  white-space:nowrap;
+}
+.sticky-bar-cta:hover { transform:translateY(-2px);box-shadow:0 6px 25px rgba(249,115,22,.5); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px) {
+  .hero { padding:120px 0 60px;min-height:auto; }
+  .hero-price-new { font-size:40px; }
+  .magazine-grid { grid-template-columns:1fr;gap:32px; }
+  .magazine.alt .magazine-grid { direction:ltr; }
+  .magazine-img { height:320px; }
+  .pain-grid { grid-template-columns:1fr; }
+  .steps-grid { grid-template-columns:repeat(2,1fr);gap:24px; }
+  .steps-grid::before { display:none; }
+  .pricing-grid { grid-template-columns:1fr; }
+  .benefits-grid { grid-template-columns:repeat(2,1fr); }
+  .testimonials-grid { grid-template-columns:1fr; }
+  .social-proof-bar .container { gap:24px; }
+  .form-row { grid-template-columns:1fr; }
+  .pix-panel { width:100%; }
+  .sticky-bar .container { flex-direction:column;gap:8px; }
+  .marquee-item { width:240px;height:180px; }
+  .offer-card { padding:36px 24px; }
+  .offer-prices .new { font-size:40px; }
+}
+@media(max-width:480px) {
+  .hero h1 { font-size:32px; }
+  .hero-sub { font-size:16px; }
+  .hero-price-new { font-size:36px; }
+  .hero-trust { flex-direction:column;gap:12px;align-items:center; }
+  .sp-item strong { font-size:18px; }
+  .steps-grid { grid-template-columns:1fr; }
+  .benefits-grid { grid-template-columns:1fr; }
+  .btn-cta { padding:16px 32px;font-size:16px; }
+  .section-title { font-size:26px; }
+  .marquee-item { width:200px;height:150px; }
+}
+</style>
+</head>
+<body>
+
+<!-- (a) TOP BAR -->
+<div class="top-bar">
+  <span>Coleta gratis no seu escritorio</span>
+  <span class="countdown" id="countdown">23:59:59</span>
+</div>
+
+<!-- (b) STICKY HEADER -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="#" class="header-logo">A7 <em>Lavanderia</em></a>
+    <a href="https://wa.me/5512974128390?text=Ola!%20Quero%20agendar%20a%20lavagem%20do%20meu%20terno%20(Pacote%20Executivo)" class="header-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Agendar Coleta
+    </a>
+  </div>
+</header>
+
+<!-- (c) HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-badge">Para quem nao tem tempo a perder</div>
+    <h1>Seu Terno Impecavel.<br>Sem Voce Mover um Dedo.</h1>
+    <p class="hero-sub">Lavagem premium de ternos e roupas sociais com coleta e entrega gratis no seu escritorio. Resultado impecavel em ate 48 horas.</p>
+    <div class="hero-prices">
+      <span class="hero-price-old">R$120+</span>
+      <span class="hero-price-new"><small>5 pecas por </small>R$79,90</span>
+    </div>
+    <div class="hero-cta-wrap">
+      <a href="https://wa.me/5512974128390?text=Ola!%20Quero%20o%20Pacote%20Executivo%20-%205%20pecas%20por%20R%2479%2C90" class="btn-cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.29 0-4.403-.764-6.1-2.05l-.427-.338-3.16 1.06 1.06-3.16-.338-.427A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        Quero o Pacote Executivo
+      </a>
+      <p class="btn-cta-sub">Resposta em menos de 5 minutos</p>
+    </div>
+    <div class="hero-trust">
+      <span class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Seguro total
+      </span>
+      <span class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Entrega em 48h
+      </span>
+      <span class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        +2.400 clientes
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- (d) SOCIAL PROOF BAR -->
+<section class="social-proof-bar">
+  <div class="container">
+    <div class="sp-item"><div class="sp-dot"></div> <strong>2.487</strong> pecas lavadas este mes</div>
+    <div class="sp-item"><strong>4.9</strong> avaliacao media</div>
+    <div class="sp-item"><strong>98%</strong> indicam para colegas</div>
+  </div>
+</section>
+
+<!-- (e) MAGAZINE 1 - image RIGHT -->
+<section class="magazine reveal">
+  <div class="container">
+    <div class="magazine-grid">
+      <div class="magazine-content">
+        <div class="accent-line"></div>
+        <h2>Para <span class="highlight">mulheres que lideram</span></h2>
+        <p>Sabemos que sua rotina nao permite perder tempo com lavanderia. Cuidamos dos seus tailleurs, blazers e vestidos sociais com o mesmo cuidado que voce dedica a sua carreira.</p>
+        <ul class="magazine-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Tratamento delicado para tecidos finos
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Passadoria profissional inclusa
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Coleta e entrega no seu horario
+          </li>
+        </ul>
+      </div>
+      <div class="magazine-img-wrap">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80&auto=format" alt="Executiva profissional" class="magazine-img" loading="lazy">
+        <div class="magazine-img-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (f) MAGAZINE 2 - image LEFT -->
+<section class="magazine alt reveal">
+  <div class="container">
+    <div class="magazine-grid">
+      <div class="magazine-content">
+        <div class="accent-line"></div>
+        <h2>Cuidado <span class="highlight">sob medida</span> para cada peca</h2>
+        <p>Cada tecido recebe um tratamento especifico. La fria, seda, linho, algodao egipcio -- nossa equipe identifica e aplica o processo ideal para preservar a qualidade original.</p>
+        <ul class="magazine-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Analise tecnica de cada tecido
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Produtos importados de alta performance
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Embalagem premium para transporte
+          </li>
+        </ul>
+      </div>
+      <div class="magazine-img-wrap">
+        <img src="https://images.unsplash.com/photo-1560243563-062bfc001d68?w=700&q=80&auto=format" alt="Cuidado com roupas sociais" class="magazine-img" loading="lazy">
+        <div class="magazine-img-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (g) PAIN POINTS -->
+<section class="pain-section reveal" id="problemas">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Problemas comuns</div>
+    </div>
+    <h2 class="section-title">Voce se <span class="highlight">identifica</span>?</h2>
+    <p class="section-subtitle">Situacoes que todo profissional enfrenta no dia a dia e que consomem tempo precioso.</p>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Falta de tempo</h3>
+        <p>Sua agenda esta cheia de reunioes, audiencias e compromissos. Ir a lavanderia e mais uma tarefa que voce nao precisa.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Roupas danificadas</h3>
+        <p>Lavanderias comuns nao sabem tratar tecidos nobres. Resultado: pecas encolhidas, desbotadas ou com acabamento ruim.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3>Custo alto</h3>
+        <p>Pagar individualmente por cada peca sai caro. Nosso pacote executivo reune 5 pecas com preco justo e qualidade superior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (h) HOW IT WORKS -->
+<section class="how-section reveal" id="como-funciona">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Como funciona</div>
+    </div>
+    <h2 class="section-title">Simples. Rapido. <span class="highlight">Sem esforco.</span></h2>
+    <p class="section-subtitle">Em 4 passos, suas roupas sociais voltam impecaveis -- sem voce sair do escritorio.</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Agende pelo WhatsApp</h3>
+        <p>Envie uma mensagem com dia e horario de sua preferencia.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3>Coletamos no seu endereco</h3>
+        <p>Nosso motorista vai ate o seu escritorio ou residencia.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3>Lavagem premium</h3>
+        <p>Cada peca passa por analise tecnica e processo adequado ao tecido.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">4</div>
+        <h3>Entrega impecavel</h3>
+        <p>Devolvemos suas roupas passadas, embaladas e prontas para uso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (i) MARQUEE STRIP -->
+<section class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&q=80&auto=format" alt="Terno executivo" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80&auto=format" alt="Roupa social" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="Executivo profissional" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&q=80&auto=format" alt="Moda executiva" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&q=80&auto=format" alt="Closet profissional" loading="lazy"></div>
+    <!-- duplicated for seamless loop -->
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&q=80&auto=format" alt="Terno executivo" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80&auto=format" alt="Roupa social" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="Executivo profissional" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&q=80&auto=format" alt="Moda executiva" loading="lazy"></div>
+    <div class="marquee-item"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&q=80&auto=format" alt="Closet profissional" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- (j) PRICING -->
+<section class="pricing-section reveal" id="precos">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Precos</div>
+    </div>
+    <h2 class="section-title">Tabela de <span class="highlight">precos avulsos</span></h2>
+    <p class="section-subtitle">Confira nossos precos individuais e veja como o Pacote Executivo vale a pena.</p>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <h3>Camisa Social</h3>
+        <div class="price-value">R$18<small>,00</small></div>
+        <p>Lavagem + passadoria</p>
+      </div>
+      <div class="price-card reveal">
+        <h3>Terno Completo</h3>
+        <div class="price-value">R$45<small>,00</small></div>
+        <p>Calca + blazer + colete</p>
+      </div>
+      <div class="price-card reveal">
+        <h3>Blazer Avulso</h3>
+        <div class="price-value">R$28<small>,00</small></div>
+        <p>Lavagem a seco premium</p>
+      </div>
+      <div class="price-card reveal">
+        <h3>Vestido Social</h3>
+        <div class="price-value">R$35<small>,00</small></div>
+        <p>Cuidado especial com tecido</p>
+      </div>
+      <div class="price-card reveal">
+        <h3>Gravata / Lenco</h3>
+        <div class="price-value">R$12<small>,00</small></div>
+        <p>Limpeza delicada</p>
+      </div>
+      <div class="price-card reveal" style="background:var(--light-blue);border-color:var(--primary-light)">
+        <h3 style="color:var(--primary)">Pacote Executivo</h3>
+        <div class="price-value">R$79<small>,90</small></div>
+        <p style="color:var(--primary);font-weight:600">5 pecas sociais</p>
+      </div>
+    </div>
+    <div class="pricing-comparison reveal">
+      <h3>Compare e economize</h3>
+      <div class="comp-old">Avulso: ~R$120+</div>
+      <div class="comp-new">Pacote: R$79,90</div>
+      <div class="comp-save">Economia de mais de R$40</div>
+    </div>
+  </div>
+</section>
+
+<!-- (k) OFFER CARD -->
+<section class="offer-section reveal" id="oferta">
+  <div class="container">
+    <div class="offer-card">
+      <h2>Pacote Executivo <span class="highlight">Completo</span></h2>
+      <ul class="offer-checklist">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          5 pecas sociais (terno, camisa, blazer, vestido, etc.)
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Coleta e entrega gratis no escritorio
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Passadoria profissional inclusa
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Embalagem premium protetora
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Entrega em ate 48 horas
+        </li>
+      </ul>
+      <div class="offer-prices">
+        <span class="old">De R$120+</span>
+        <span class="new">R$79,90</span>
+        <span class="pix">No PIX: R$71,91 (10% OFF)</span>
+      </div>
+      <a href="#" class="btn-cta" id="openPixBtn" onclick="event.preventDefault();openPixPanel()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Pagar com PIX - R$71,91
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- (l) BENEFITS -->
+<section class="benefits-section reveal" id="beneficios">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Vantagens</div>
+    </div>
+    <h2 class="section-title">Por que escolher a <span class="highlight">A7</span>?</h2>
+    <p class="section-subtitle">Mais do que uma lavanderia, somos o parceiro que cuida da sua imagem profissional.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Seguro total</h3>
+        <p>Todas as pecas sao seguradas durante o processo. Sua tranquilidade garantida.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Pontualidade</h3>
+        <p>Entregamos no prazo combinado. Seu tempo e respeitado como prioridade.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Atendimento VIP</h3>
+        <p>Canal direto no WhatsApp com resposta em ate 5 minutos. Sem burocracia.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>Qualidade superior</h3>
+        <p>Produtos premium e equipe treinada para cuidar dos tecidos mais nobres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (m) BANNER -->
+<section class="banner-section reveal">
+  <div class="container">
+    <h2>Sua imagem profissional merece o melhor cuidado</h2>
+    <p>Mais de 2.400 executivos ja confiam na A7 para manter suas roupas sociais impecaveis. Faca parte desse grupo.</p>
+    <a href="https://wa.me/5512974128390?text=Ola!%20Quero%20o%20Pacote%20Executivo%20-%205%20pecas%20por%20R%2479%2C90" class="btn-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.29 0-4.403-.764-6.1-2.05l-.427-.338-3.16 1.06 1.06-3.16-.338-.427A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Agendar Minha Coleta
+    </a>
+  </div>
+</section>
+
+<!-- (n) TESTIMONIALS -->
+<section class="testimonials-section reveal" id="depoimentos">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Depoimentos</div>
+    </div>
+    <h2 class="section-title">O que nossos <span class="highlight">clientes</span> dizem</h2>
+    <p class="section-subtitle">Profissionais que confiam na A7 para cuidar da sua imagem executiva.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Uso o servico toda semana. Meus ternos voltam impecaveis e eu nao perco nenhum minuto do meu dia. O pacote executivo e imbativel."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RM</div>
+          <div>
+            <div class="testimonial-name">Dr. Ricardo Mendes</div>
+            <div class="testimonial-role">Advogado Tributarista</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Finalmente uma lavanderia que entende roupas femininas de qualidade. Meus tailleurs e vestidos voltam perfeitos. Coleta no escritorio e um luxo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CF</div>
+          <div>
+            <div class="testimonial-name">Dra. Carolina Ferreira</div>
+            <div class="testimonial-role">Medica Dermatologista</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Recomendo para todos os socios do escritorio. O custo-beneficio do pacote e excelente e a qualidade e consistente. Ja somos clientes ha 8 meses."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PA</div>
+          <div>
+            <div class="testimonial-name">Dr. Paulo Andrade</div>
+            <div class="testimonial-role">Empresario - CEO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (o) LEAD FORM -->
+<section class="form-section reveal" id="formulario">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:var(--accent-light)">Cadastro</div>
+    </div>
+    <h2 class="section-title">Garanta sua <span class="highlight" style="color:var(--accent-light)">vaga</span></h2>
+    <p class="section-subtitle">Preencha seus dados e receba o cupom exclusivo para o Pacote Executivo.</p>
+    <div class="form-wrap">
+      <form id="leadForm" onsubmit="return handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefone">WhatsApp</label>
+            <input type="tel" id="telefone" placeholder="(12) 99999-9999" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="profissao">Profissao</label>
+          <select id="profissao" required>
+            <option value="">Selecione sua profissao</option>
+            <option value="advogado">Advogado(a)</option>
+            <option value="medico">Medico(a)</option>
+            <option value="empresario">Empresario(a)</option>
+            <option value="executivo">Executivo(a)</option>
+            <option value="engenheiro">Engenheiro(a)</option>
+            <option value="contador">Contador(a)</option>
+            <option value="consultor">Consultor(a)</option>
+            <option value="professor">Professor(a)</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cupom">Cupom de desconto (opcional)</label>
+          <div class="coupon-wrap">
+            <input type="text" id="cupom" placeholder="A7-XXXXX">
+            <button type="button" onclick="validateCoupon()">Validar</button>
+          </div>
+          <div class="coupon-result" id="couponResult"></div>
+        </div>
+        <button type="submit" class="btn-form">Garantir Minha Vaga</button>
+        <p class="form-note">Seus dados estao protegidos e nao serao compartilhados.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- (p) FAQ -->
+<section class="faq-section reveal" id="faq">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-tag">Duvidas</div>
+    </div>
+    <h2 class="section-title">Perguntas <span class="highlight">frequentes</span></h2>
+    <div class="blue-divider"></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Quais pecas estao incluidas no Pacote Executivo?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>O pacote inclui 5 pecas sociais a sua escolha: ternos, blazers, camisas sociais, vestidos, tailleurs, calcas sociais e gravatas. Voce monta a combinacao que preferir.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Qual o prazo de entrega?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>O prazo padrao e de 48 horas uteis apos a coleta. Para urgencias, temos servico expresso com entrega em 24 horas (consulte disponibilidade).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          A coleta e mesmo gratuita?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Sim. Coleta e entrega sao 100% gratuitas dentro da area de cobertura (Sao Jose dos Campos e regiao). Nosso motorista vai ate seu escritorio ou residencia.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Como funciona o pagamento via PIX?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Ao escolher PIX, voce recebe 10% de desconto automatico (de R$79,90 por R$71,91). Basta copiar o codigo, pagar pelo app do banco e nos enviar o comprovante pelo WhatsApp.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Voces trabalham com roupas delicadas (seda, la, linho)?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Sim. Nossa equipe e treinada para identificar e tratar cada tipo de tecido com o processo adequado. Utilizamos produtos importados especificos para tecidos nobres como seda, la fria, cashmere e linho.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (q) FINAL CTA -->
+<section class="final-cta reveal">
+  <div class="container">
+    <h2>Pronto para nunca mais se preocupar com a lavanderia?</h2>
+    <p>Junte-se a mais de 2.400 profissionais que ja confiam na A7. Pacote Executivo: 5 pecas por R$79,90.</p>
+    <a href="https://wa.me/5512974128390?text=Ola!%20Quero%20o%20Pacote%20Executivo%20-%205%20pecas%20por%20R%2479%2C90" class="btn-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.29 0-4.403-.764-6.1-2.05l-.427-.338-3.16 1.06 1.06-3.16-.338-.427A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Quero o Pacote Executivo
+    </a>
+  </div>
+</section>
+
+<!-- (r) FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">A7 <em>Lavanderia</em></div>
+    <p>Lavanderia premium para profissionais exigentes</p>
+    <p>Sao Jose dos Campos - SP | WhatsApp: (12) 97412-8390</p>
+    <div class="footer-links">
+      <a href="#hero">Inicio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#precos">Precos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Duvidas</a>
+      <a href="#formulario">Contato</a>
+    </div>
+    <p class="footer-copy">2024 A7 Lavanderia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- (s) WHATSAPP FLOAT -->
+<a href="https://wa.me/5512974128390?text=Ola!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Executivo" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.29 0-4.403-.764-6.1-2.05l-.427-.338-3.16 1.06 1.06-3.16-.338-.427A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+</a>
+
+<!-- (t) TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- (u) PIX SLIDE PANEL -->
+<div class="pix-overlay" id="pixOverlay" onclick="closePixPanel()"></div>
+<div class="pix-panel" id="pixPanel">
+  <div class="pix-header">
+    <button class="pix-close" onclick="closePixPanel()" aria-label="Fechar">&times;</button>
+    <h3>Pagamento via PIX</h3>
+    <p>10% de desconto aplicado automaticamente</p>
+  </div>
+  <div class="pix-body">
+    <div class="pix-price-block">
+      <div class="pix-price-old">R$79,90</div>
+      <div class="pix-price-new">R$71,91</div>
+      <div class="pix-price-badge">10% OFF - PIX</div>
+    </div>
+    <div class="pix-timer">
+      Oferta expira em <strong id="pixTimer">24:00:00</strong>
+    </div>
+    <div class="pix-steps">
+      <div class="pix-step">
+        <div class="pix-step-num">1</div>
+        <div>Copie o codigo PIX abaixo</div>
+      </div>
+      <div class="pix-step">
+        <div class="pix-step-num">2</div>
+        <div>Abra o app do seu banco e pague</div>
+      </div>
+      <div class="pix-step">
+        <div class="pix-step-num">3</div>
+        <div>Envie o comprovante pelo WhatsApp</div>
+      </div>
+    </div>
+    <div class="pix-code-block">
+      <code id="pixCode">00020126580014br.gov.bcb.pix0136a7lavanderia@exemplo.com.br520400005303986540571.915802BR5920A7 LAVANDERIA LTDA6014SAO JOSE CAMPO62070503***6304</code>
+      <button class="btn-copy" id="btnCopy" onclick="copyPixCode()">Copiar Codigo PIX</button>
+    </div>
+    <a href="https://wa.me/5512974128390?text=Ola!%20Fiz%20o%20PIX%20do%20Pacote%20Executivo%20(R%2471%2C91).%20Segue%20comprovante:" class="pix-whatsapp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.29 0-4.403-.764-6.1-2.05l-.427-.338-3.16 1.06 1.06-3.16-.338-.427A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Enviar Comprovante
+    </a>
+  </div>
+</div>
+
+<!-- (v) STICKY BOTTOM BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="container">
+    <div class="sticky-bar-text">Pacote Executivo: <span>R$79,90</span></div>
+    <a href="https://wa.me/5512974128390?text=Ola!%20Quero%20o%20Pacote%20Executivo%20-%205%20pecas%20por%20R%2479%2C90" class="sticky-bar-cta" target="_blank" rel="noopener">
+      Agendar Agora
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+/* ===== COUNTDOWN ===== */
+(function(){
+  var el=document.getElementById('countdown');
+  var h=23,m=59,s=59;
+  setInterval(function(){
+    s--;
+    if(s<0){s=59;m--;}
+    if(m<0){m=59;h--;}
+    if(h<0){h=23;m=59;s=59;}
+    el.textContent=(h<10?'0':'')+h+':'+(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  },1000);
+})();
+
+/* ===== PHONE MASK ===== */
+(function(){
+  var tel=document.getElementById('telefone');
+  if(!tel)return;
+  tel.addEventListener('input',function(e){
+    var v=e.target.value.replace(/\D/g,'');
+    if(v.length>11)v=v.slice(0,11);
+    if(v.length>6)v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+    else if(v.length>2)v='('+v.slice(0,2)+') '+v.slice(2);
+    else if(v.length>0)v='('+v;
+    e.target.value=v;
+  });
+})();
+
+/* ===== FORM SUBMIT + localStorage ===== */
+function handleFormSubmit(e){
+  e.preventDefault();
+  var data={
+    nome:document.getElementById('nome').value,
+    telefone:document.getElementById('telefone').value,
+    email:document.getElementById('email').value,
+    profissao:document.getElementById('profissao').value,
+    cupom:document.getElementById('cupom').value,
+    timestamp:new Date().toISOString()
+  };
+  var leads=JSON.parse(localStorage.getItem('a7_leads_ternos_blue')||'[]');
+  leads.push(data);
+  localStorage.setItem('a7_leads_ternos_blue',JSON.stringify(leads));
+  e.target.innerHTML='<div style="text-align:center;padding:32px 0"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" style="width:48px;height:48px;margin:0 auto 16px;display:block"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><h3 style="color:var(--white);margin-bottom:8px">Cadastro realizado!</h3><p style="color:rgba(255,255,255,.7);font-size:14px">Em breve entraremos em contato pelo WhatsApp.</p></div>';
+  if(typeof gtag==='function')gtag('event','lead_form_submit',{campaign:'ternos_blue'});
+  return false;
+}
+
+/* ===== COUPON VALIDATION ===== */
+function validateCoupon(){
+  var code=document.getElementById('cupom').value.trim().toUpperCase();
+  var result=document.getElementById('couponResult');
+  if(code.match(/^A7-[A-Z0-9]{5}$/)){
+    result.className='coupon-result valid';
+    result.textContent='Cupom valido! Desconto sera aplicado.';
+  }else if(code===''){
+    result.className='coupon-result';
+    result.textContent='';
+  }else{
+    result.className='coupon-result invalid';
+    result.textContent='Cupom invalido. Verifique o codigo.';
+  }
+}
+
+/* ===== FAQ TOGGLE ===== */
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var answer=item.querySelector('.faq-answer');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){
+    el.classList.remove('open');
+    el.querySelector('.faq-answer').style.maxHeight='0';
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    answer.style.maxHeight=answer.scrollHeight+'px';
+  }
+}
+
+/* ===== SOCIAL PROOF TOASTS ===== */
+(function(){
+  var toasts=[
+    {name:'Roberto S.',text:'agendou o Pacote Executivo',time:'3 min atras'},
+    {name:'Juliana M.',text:'contratou lavagem de ternos',time:'7 min atras'},
+    {name:'Fernando A.',text:'pagou via PIX com 10% OFF',time:'12 min atras'},
+    {name:'Mariana C.',text:'agendou coleta no escritorio',time:'15 min atras'},
+    {name:'Gustavo R.',text:'renovou o pacote mensal',time:'22 min atras'}
+  ];
+  var container=document.getElementById('toastContainer');
+  var idx=0;
+  function showToast(){
+    var t=toasts[idx%toasts.length];
+    var el=document.createElement('div');
+    el.className='toast';
+    el.innerHTML='<div class="toast-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="toast-text"><strong>'+t.name+'</strong><span>'+t.text+' - '+t.time+'</span></div>';
+    container.appendChild(el);
+    setTimeout(function(){el.classList.add('out');},4000);
+    setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},4500);
+    idx++;
+  }
+  setTimeout(showToast,5000);
+  setInterval(showToast,12000);
+})();
+
+/* ===== PIX SLIDE PANEL ===== */
+function openPixPanel(){
+  if(sessionStorage.getItem('pix_panel_shown_ternos_blue')){}
+  document.getElementById('pixOverlay').classList.add('active');
+  document.getElementById('pixPanel').classList.add('active');
+  document.body.style.overflow='hidden';
+  sessionStorage.setItem('pix_panel_shown_ternos_blue','1');
+}
+function closePixPanel(){
+  document.getElementById('pixOverlay').classList.remove('active');
+  document.getElementById('pixPanel').classList.remove('active');
+  document.body.style.overflow='';
+}
+
+/* ===== COPY PIX CODE ===== */
+function copyPixCode(){
+  var code=document.getElementById('pixCode').textContent;
+  var btn=document.getElementById('btnCopy');
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(code).then(function(){
+      btn.textContent='Copiado!';btn.classList.add('copied');
+      setTimeout(function(){btn.textContent='Copiar Codigo PIX';btn.classList.remove('copied');},3000);
+    });
+  }else{
+    var ta=document.createElement('textarea');
+    ta.value=code;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    btn.textContent='Copiado!';btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='Copiar Codigo PIX';btn.classList.remove('copied');},3000);
+  }
+  if(typeof gtag==='function')gtag('event','pix_code_copy',{campaign:'ternos_blue'});
+}
+
+/* ===== PIX TIMER (24h) ===== */
+(function(){
+  var el=document.getElementById('pixTimer');
+  var h=24,m=0,s=0;
+  setInterval(function(){
+    s--;
+    if(s<0){s=59;m--;}
+    if(m<0){m=59;h--;}
+    if(h<0){h=24;m=0;s=0;}
+    el.textContent=(h<10?'0':'')+h+':'+(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  },1000);
+})();
+
+/* ===== STICKY BOTTOM BAR ===== */
+(function(){
+  var bar=document.getElementById('stickyBar');
+  var hero=document.getElementById('hero');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>hero.offsetHeight){
+      bar.classList.add('visible');
+    }else{
+      bar.classList.remove('visible');
+    }
+  });
+})();
+
+/* ===== HEADER SCROLL ===== */
+(function(){
+  var header=document.getElementById('header');
+  var topBar=document.querySelector('.top-bar');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>50){
+      header.classList.add('scrolled');
+      header.style.top='0';
+    }else{
+      header.classList.remove('scrolled');
+      header.style.top=topBar.offsetHeight+'px';
+    }
+  });
+  header.style.top=topBar.offsetHeight+'px';
+})();
+
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+/* ===== SCROLL REVEAL ===== */
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+  els.forEach(function(el){obs.observe(el);});
+})();
+
+/* ===== ANALYTICS HELPERS ===== */
+document.querySelectorAll('.btn-cta, .header-cta, .sticky-bar-cta').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    if(typeof gtag==='function')gtag('event','cta_click',{campaign:'ternos_blue',label:this.textContent.trim()});
+  });
+});
+</script>
+</body>
+</html>

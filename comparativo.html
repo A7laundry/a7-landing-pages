@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Comparativo de Variações A/B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f13;
+      color: white;
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      padding: 48px 20px 32px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      color: rgba(255,255,255,0.5);
+      font-size: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    .card {
+      background: #1a1a22;
+      border: 1px solid #2a2a35;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #444;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+    .card-preview {
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-preview iframe {
+      width: 200%;
+      height: 200%;
+      border: none;
+      transform: scale(0.5);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .card-preview .preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.6) 100%);
+      pointer-events: none;
+    }
+    .card-body {
+      padding: 20px 24px 24px;
+    }
+    .card-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .badge-a { background: rgba(86, 54, 209, 0.2); color: #a78bfa; border: 1px solid rgba(86, 54, 209, 0.3); }
+    .badge-b { background: rgba(3, 105, 161, 0.2); color: #38bdf8; border: 1px solid rgba(3, 105, 161, 0.3); }
+    .badge-c { background: rgba(5, 150, 105, 0.2); color: #34d399; border: 1px solid rgba(5, 150, 105, 0.3); }
+    .badge-d { background: rgba(15, 118, 110, 0.2); color: #2dd4bf; border: 1px solid rgba(15, 118, 110, 0.3); }
+
+    .card-body h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .card-body p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .color-swatches {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+    .swatch-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      margin-left: 4px;
+    }
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .card:hover .open-btn {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .tip {
+      text-align: center;
+      padding: 0 20px 40px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>A7 Lavanderia - Painel de Campanhas</h1>
+    <p>Todas as landing pages e variacoes de cor. Clique para abrir cada versao.</p>
+  </div>
+
+  <!-- Campaign Navigation -->
+  <div style="display:flex; justify-content:center; gap:12px; padding:0 20px 32px; flex-wrap:wrap;">
+    <a href="tapete/comparativo.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#1a1a22;border:1px solid #2a2a35;border-radius:12px;color:white;text-decoration:none;font-size:14px;font-weight:600;transition:all 0.3s ease;" onmouseover="this.style.borderColor='#5636d1'" onmouseout="this.style.borderColor='#2a2a35'">
+      <span style="font-size:20px;">🧹</span> Campanha Tapetes →
+    </a>
+    <a href="tenis/comparativo.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#1a1a22;border:1px solid #2a2a35;border-radius:12px;color:white;text-decoration:none;font-size:14px;font-weight:600;transition:all 0.3s ease;" onmouseover="this.style.borderColor='#e2498a'" onmouseout="this.style.borderColor='#2a2a35'">
+      <span style="font-size:20px;">👟</span> Campanha Tenis →
+    </a>
+    <a href="ternos/comparativo.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#1a1a22;border:1px solid #2a2a35;border-radius:12px;color:white;text-decoration:none;font-size:14px;font-weight:600;transition:all 0.3s ease;" onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='#2a2a35'">
+      <span style="font-size:20px;">👔</span> Campanha Ternos →
+    </a>
+  </div>
+
+  <div style="text-align:center;padding:0 20px 16px;">
+    <span style="display:inline-block;background:rgba(86,54,209,0.15);color:#a78bfa;border:1px solid rgba(86,54,209,0.3);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Campanha Edredons - 4 variacoes</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- Variação A -->
+    <a href="variacao-a-original.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-a-original.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-a">Variacao A - Original</span>
+        <h2>Roxo Royal + Rosa Pink</h2>
+        <p>Paleta original da marca A7. Transmite sofisticacao, confianca e modernidade. Forte apelo feminino e premium.</p>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#5636d1;"></div>
+          <div class="swatch" style="background:#e2498a;"></div>
+          <div class="swatch" style="background:#1a1530;"></div>
+          <div class="swatch" style="background:#f8f6ff;"></div>
+          <span class="swatch-label">Roxo + Rosa</span>
+        </div>
+        <div class="open-btn">
+          Abrir pagina completa →
+        </div>
+      </div>
+    </a>
+
+    <!-- Variação B -->
+    <a href="variacao-b-ocean.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-b-ocean.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-b">Variacao B - Ocean</span>
+        <h2>Azul Ocean + Coral</h2>
+        <p>Transmite confianca, limpeza e frescor. Azul e a cor mais associada a higiene. Coral gera urgencia e energia.</p>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#0369a1;"></div>
+          <div class="swatch" style="background:#ea580c;"></div>
+          <div class="swatch" style="background:#0c2135;"></div>
+          <div class="swatch" style="background:#f0f9ff;"></div>
+          <span class="swatch-label">Azul + Coral</span>
+        </div>
+        <div class="open-btn">
+          Abrir pagina completa →
+        </div>
+      </div>
+    </a>
+
+    <!-- Variação C -->
+    <a href="variacao-c-emerald.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-c-emerald.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-c">Variacao C - Emerald</span>
+        <h2>Esmeralda + Dourado</h2>
+        <p>Remete a natureza, frescor e renovacao. Dourado agrega valor premium. Otimo para publico que busca sustentabilidade.</p>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#059669;"></div>
+          <div class="swatch" style="background:#d97706;"></div>
+          <div class="swatch" style="background:#052e16;"></div>
+          <div class="swatch" style="background:#f0fdf4;"></div>
+          <span class="swatch-label">Verde + Gold</span>
+        </div>
+        <div class="open-btn">
+          Abrir pagina completa →
+        </div>
+      </div>
+    </a>
+
+    <!-- Variação D -->
+    <a href="variacao-d-midnight.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-d-midnight.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-d">Variacao D - Midnight</span>
+        <h2>Teal Noturno + Rose</h2>
+        <p>Combina tranquilidade (teal = noite, sono) com energia (rose). Perfeito para vender conforto noturno e bem-estar.</p>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#0f766e;"></div>
+          <div class="swatch" style="background:#e11d48;"></div>
+          <div class="swatch" style="background:#042f2e;"></div>
+          <div class="swatch" style="background:#f0fdfa;"></div>
+          <span class="swatch-label">Teal + Rose</span>
+        </div>
+        <div class="open-btn">
+          Abrir pagina completa →
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <p class="tip">Dica: Rode cada variacao em campanhas separadas no Meta Ads com o mesmo orcamento e publico para medir qual converte mais.</p>
+
+</body>
+</html>

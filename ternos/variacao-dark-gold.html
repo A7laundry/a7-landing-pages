@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A7 Lavanderia | Lavagem Premium de Ternos e Roupas Sociais</title>
+<meta name="description" content="Servico premium de lavagem de ternos e roupas sociais. Pacote Executivo: 5 pecas por R$79,90. Atendimento exclusivo para executivos em Sao Jose dos Campos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & VARIABLES ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1a1a2e;--primary-dark:#0f0f1a;--primary-light:#2d2d4a;
+  --gold:#c9a84c;--gold-dark:#a8893d;--gold-light:#e8d48b;--gold-glow:rgba(201,168,76,0.3);
+  --accent:#c9a84c;
+  --gradient-main:linear-gradient(135deg,#1a1a2e 0%,#2d2d4a 100%);
+  --gradient-gold:linear-gradient(135deg,#c9a84c 0%,#e8d48b 50%,#c9a84c 100%);
+  --gradient-dark:linear-gradient(180deg,#0a0a14 0%,#1a1a2e 50%,#0a0a14 100%);
+  --dark:#0a0a14;--dark-card:#16162a;--dark-border:#2a2a44;--dark-surface:#1e1e36;
+  --light:#faf9f6;--light-warm:#f5f0e8;--cream:#f8f4ec;
+  --text-dark:#1a1a2e;--text-mid:#6b6580;--text-light:#9994a8;--text-gold:#c9a84c;
+  --white:#ffffff;--success:#10b981;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;color:var(--white);background:var(--dark);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul{list-style:none}
+input,select,textarea{font-family:inherit}
+
+/* ===== UTILITY ===== */
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.label-tag{font-family:'Inter',sans-serif;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--gold)}
+.section-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,5vw,48px);line-height:1.15}
+.gold-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:32px 0}
+.gold-divider::before,.gold-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dark),transparent)}
+.gold-divider svg{flex-shrink:0}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.sr.visible{opacity:1;transform:translateY(0)}
+
+/* ===== (a) TOP BAR ===== */
+.topbar{background:var(--dark);border-bottom:1px solid var(--dark-border);padding:8px 0;position:relative;z-index:101}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar-text{font-size:12px;font-weight:500;color:var(--gold-light);letter-spacing:.5px}
+.topbar-countdown{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--gold)}
+.topbar-countdown svg{width:14px;height:14px}
+
+/* ===== (b) STICKY HEADER ===== */
+.header{position:sticky;top:0;z-index:100;background:rgba(15,15,26,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border);height:56px;transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.5)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:100%}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--white)}
+.logo span{color:var(--gold)}
+.header-nav{display:flex;align-items:center;gap:24px}
+.header-nav a{font-size:13px;font-weight:500;color:var(--text-light);transition:color .3s;letter-spacing:.3px}
+.header-nav a:hover{color:var(--gold)}
+.header-cta{padding:8px 20px;font-size:13px;font-weight:600;color:var(--gold);border:1px solid var(--gold);border-radius:4px;transition:all .3s;letter-spacing:.5px}
+.header-cta:hover{background:var(--gold);color:var(--dark)}
+@media(max-width:768px){.header-nav a:not(.header-cta){display:none}}
+
+/* ===== (c) HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform .1s linear}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,20,.88) 0%,rgba(26,26,46,.82) 50%,rgba(10,10,20,.92) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:780px;padding:120px 20px 80px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 24px;border:1px solid var(--gold-dark);border-radius:50px;margin-bottom:28px;background:rgba(201,168,76,.08)}
+.hero-badge svg{width:16px;height:16px}
+.hero-badge span{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold)}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(32px,6vw,60px);line-height:1.1;color:var(--white);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:clamp(16px,2.5vw,20px);color:var(--cream);font-weight:400;margin-bottom:36px;opacity:.9;line-height:1.5}
+.hero-price{margin-bottom:36px}
+.hero-price .from{font-size:14px;color:var(--text-light);text-decoration:line-through;margin-bottom:4px}
+.hero-price .amount{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,6vw,56px);font-weight:700;background:var(--gradient-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-price .desc{font-size:14px;color:var(--gold-light);margin-top:4px;font-weight:500}
+.btn-gold{position:relative;display:inline-flex;align-items:center;gap:10px;padding:16px 40px;font-size:16px;font-weight:700;color:var(--dark);background:var(--gradient-gold);border-radius:6px;overflow:hidden;transition:transform .3s,box-shadow .3s;letter-spacing:.5px;text-transform:uppercase}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px var(--gold-glow)}
+.btn-gold .shimmer{position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);animation:shimmer 3s infinite}
+@keyframes shimmer{0%{left:-100%}100%{left:100%}}
+.btn-gold svg{width:18px;height:18px}
+.hero-trust{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:32px;flex-wrap:wrap}
+.hero-trust span{font-size:13px;color:var(--text-light);font-weight:400}
+.hero-trust .sep{width:1px;height:16px;background:var(--gold-dark);opacity:.5}
+
+/* ===== (d) SOCIAL PROOF BAR ===== */
+.social-proof{background:var(--dark);border-top:1px solid var(--dark-border);border-bottom:1px solid var(--dark-border);padding:40px 0}
+.social-proof .container{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.proof-item{text-align:center}
+.proof-item .number{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--gold);line-height:1}
+.proof-item .label{font-size:13px;color:var(--text-light);margin-top:6px;font-weight:500}
+
+/* ===== MAGAZINE SECTIONS ===== */
+.magazine{padding:80px 0;overflow:hidden}
+.magazine .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.magazine.dark-bg{background:var(--gradient-dark)}
+.magazine.light-bg{background:var(--cream);color:var(--text-dark)}
+.magazine-img{position:relative;border-radius:8px;overflow:hidden}
+.magazine-img img{width:100%;height:400px;object-fit:cover;border-radius:8px}
+.magazine-img.gold-frame{padding:4px;background:var(--gradient-gold);border-radius:12px}
+.magazine-img.gold-frame img{border-radius:8px}
+.magazine-text .label-tag{margin-bottom:16px;display:block}
+.magazine-text h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3.5vw,38px);line-height:1.2;margin-bottom:20px}
+.magazine-text p{font-size:16px;line-height:1.7;opacity:.85;margin-bottom:16px}
+.magazine.light-bg .magazine-text h2{color:var(--text-dark)}
+.magazine.light-bg .magazine-text p{color:var(--text-mid)}
+.magazine.img-right .magazine-img{order:2}
+.magazine.img-right .magazine-text{order:1}
+@media(max-width:768px){
+  .magazine .container{grid-template-columns:1fr;gap:32px}
+  .magazine.img-right .magazine-img{order:-1}
+  .magazine.img-right .magazine-text{order:1}
+}
+
+/* ===== (g) PAIN POINTS ===== */
+.pain-section{padding:80px 0;background:var(--gradient-dark)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.pain-card{background:rgba(22,22,42,.6);backdrop-filter:blur(10px);border:1px solid var(--dark-border);border-radius:12px;padding:36px 28px;text-align:center;transition:transform .3s,border-color .3s}
+.pain-card:hover{transform:translateY(-4px);border-color:var(--gold-dark)}
+.pain-icon{width:56px;height:56px;border-radius:50%;background:rgba(201,168,76,.1);border:1px solid var(--gold-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.pain-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.pain-card h3{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:12px;color:var(--white)}
+.pain-card p{font-size:14px;color:var(--text-light);line-height:1.6}
+@media(max-width:768px){.pain-grid{grid-template-columns:1fr}}
+
+/* ===== (h) HOW IT WORKS ===== */
+.how-section{padding:80px 0;background:var(--dark)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:28px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:1px;background:var(--gold-dark);opacity:.4}
+.step-item{text-align:center;position:relative;z-index:1}
+.step-number{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--gold);background:var(--dark)}
+.step-item h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--white)}
+.step-item p{font-size:13px;color:var(--text-light);line-height:1.5}
+@media(max-width:768px){
+  .steps-grid{grid-template-columns:1fr 1fr;gap:40px 24px}
+  .steps-grid::before{display:none}
+}
+@media(max-width:480px){.steps-grid{grid-template-columns:1fr}}
+
+/* ===== (i) MARQUEE ===== */
+.marquee-section{padding:0;border-top:2px solid var(--gold-dark);border-bottom:2px solid var(--gold-dark);overflow:hidden;background:var(--dark)}
+.marquee-track{display:flex;width:max-content;animation:marqueeScroll 30s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-track img{width:280px;height:200px;object-fit:cover;flex-shrink:0}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== (j) PRICING ===== */
+.pricing-section{padding:80px 0;background:var(--gradient-dark)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:48px}
+.price-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:10px;padding:24px;text-align:center;transition:border-color .3s,transform .3s}
+.price-card:hover{border-color:var(--gold-dark);transform:translateY(-2px)}
+.price-card h3{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px}
+.price-card .price{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--gold)}
+.price-card .price small{font-size:14px;color:var(--text-light);font-weight:400}
+.comparison-card{margin-top:40px;background:var(--dark-card);border:2px solid var(--gold-dark);border-radius:14px;padding:40px;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:32px}
+.comp-col{text-align:center}
+.comp-col .comp-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--text-light);margin-bottom:8px}
+.comp-col .comp-price{font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700}
+.comp-col .comp-price.old{color:var(--text-light);text-decoration:line-through}
+.comp-col .comp-price.new{color:var(--gold)}
+.comp-col .comp-save{font-size:13px;color:var(--success);font-weight:600;margin-top:4px}
+.comp-vs{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--gold-dark)}
+
+/* ===== (k) OFFER CARD ===== */
+.offer-section{padding:80px 0;background:var(--dark)}
+.offer-card{max-width:680px;margin:0 auto;position:relative;border-radius:16px;padding:3px;background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold),var(--gold-dark),var(--gold));background-size:300% 300%;animation:gradientBorder 4s ease infinite}
+@keyframes gradientBorder{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.offer-inner{background:var(--dark-card);border-radius:14px;padding:48px 40px;text-align:center}
+.offer-inner .label-tag{margin-bottom:16px;display:block}
+.offer-inner h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--white);margin-bottom:8px}
+.offer-inner .offer-price{font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,6vw,56px);font-weight:700;color:var(--gold);margin:16px 0 8px}
+.offer-inner .offer-from{font-size:14px;color:var(--text-light);text-decoration:line-through}
+.offer-inner .offer-pix{font-size:16px;color:var(--success);font-weight:600;margin-bottom:24px}
+.offer-checklist{text-align:left;max-width:360px;margin:0 auto 32px;display:flex;flex-direction:column;gap:12px}
+.offer-checklist li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--cream)}
+.offer-checklist li svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0}
+.offer-inner .btn-gold{width:100%;justify-content:center;font-size:15px;padding:16px 32px}
+@media(max-width:480px){.offer-inner{padding:32px 20px}}
+
+/* ===== (l) BENEFITS ===== */
+.benefits-section{padding:80px 0;background:var(--gradient-dark)}
+.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.benefit-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:12px;padding:32px 24px;text-align:center;transition:border-color .3s}
+.benefit-card:hover{border-color:var(--gold-dark)}
+.benefit-icon{width:52px;height:52px;border-radius:50%;background:rgba(201,168,76,.1);border:1px solid var(--gold-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.benefit-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.benefit-card h3{font-size:16px;font-weight:700;color:var(--white);margin-bottom:8px}
+.benefit-card p{font-size:13px;color:var(--text-light);line-height:1.5}
+@media(max-width:768px){.benefits-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.benefits-grid{grid-template-columns:1fr}}
+
+/* ===== (m) BANNER ===== */
+.banner-section{position:relative;padding:100px 0;overflow:hidden}
+.banner-section .banner-bg{position:absolute;inset:0}
+.banner-section .banner-bg img{width:100%;height:100%;object-fit:cover}
+.banner-section .banner-overlay{position:absolute;inset:0;background:rgba(10,10,20,.88)}
+.banner-section .container{position:relative;z-index:2;text-align:center}
+.banner-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,42px);font-weight:700;color:var(--white);margin-bottom:16px}
+.banner-section p{font-size:18px;color:var(--cream);margin-bottom:32px;opacity:.9}
+
+/* ===== (n) TESTIMONIALS ===== */
+.testimonials-section{padding:80px 0;background:var(--dark)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.test-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:12px;padding:32px;position:relative}
+.test-quote{position:absolute;top:16px;left:24px;font-family:Georgia,serif;font-size:64px;line-height:1;color:var(--gold);opacity:.3}
+.test-card blockquote{font-family:Georgia,serif;font-style:italic;font-size:15px;color:var(--cream);line-height:1.7;margin-bottom:20px;padding-top:24px}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{width:40px;height:40px;border-radius:50%;background:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--dark)}
+.test-info .name{font-size:14px;font-weight:600;color:var(--white)}
+.test-info .role{font-size:12px;color:var(--text-light)}
+.test-stars{display:flex;gap:2px;margin-bottom:12px;padding-top:20px}
+.test-stars svg{width:14px;height:14px;fill:var(--gold)}
+@media(max-width:768px){.test-grid{grid-template-columns:1fr}}
+
+/* ===== (o) LEAD FORM ===== */
+.form-section{padding:80px 0;background:var(--gradient-dark)}
+.form-wrapper{max-width:560px;margin:0 auto;background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:48px 40px}
+.form-wrapper h2{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--white);text-align:center;margin-bottom:8px}
+.form-wrapper .form-sub{font-size:14px;color:var(--text-light);text-align:center;margin-bottom:32px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;font-size:15px;color:var(--white);background:var(--dark-surface);border:1px solid var(--dark-border);border-radius:6px;outline:none;transition:border-color .3s}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-light)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%239994a8' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.form-group select option{background:var(--dark-card);color:var(--white)}
+.form-coupon{display:flex;gap:8px;margin-bottom:20px}
+.form-coupon input{flex:1}
+.form-coupon button{padding:12px 20px;font-size:13px;font-weight:600;color:var(--gold);border:1px solid var(--gold-dark);border-radius:6px;background:rgba(201,168,76,.08);white-space:nowrap;transition:background .3s}
+.form-coupon button:hover{background:rgba(201,168,76,.18)}
+.coupon-msg{font-size:12px;margin-top:-14px;margin-bottom:16px;font-weight:500}
+.coupon-msg.success{color:var(--success)}
+.coupon-msg.error{color:#ef4444}
+.form-submit{width:100%;padding:16px;font-size:16px;font-weight:700;color:var(--dark);background:var(--gradient-gold);border-radius:6px;text-transform:uppercase;letter-spacing:1px;transition:opacity .3s}
+.form-submit:hover{opacity:.9}
+.form-note{font-size:11px;color:var(--text-light);text-align:center;margin-top:16px}
+@media(max-width:480px){.form-wrapper{padding:32px 20px}}
+
+/* ===== (p) FAQ ===== */
+.faq-section{padding:80px 0;background:var(--dark)}
+.faq-list{max-width:720px;margin:48px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:10px;overflow:hidden;transition:border-color .3s}
+.faq-item.open{border-color:var(--gold-dark)}
+.faq-question{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;cursor:pointer;gap:16px}
+.faq-question span{font-size:15px;font-weight:600;color:var(--white);flex:1}
+.faq-question svg{width:20px;height:20px;stroke:var(--gold);stroke-width:2;fill:none;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-question svg{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-answer-inner{padding:0 24px 18px;font-size:14px;color:var(--text-light);line-height:1.7}
+
+/* ===== (q) FINAL CTA ===== */
+.final-cta{padding:80px 0;background:linear-gradient(135deg,var(--dark) 0%,var(--primary) 50%,var(--dark) 100%);text-align:center;border-top:1px solid var(--gold-dark);border-bottom:1px solid var(--gold-dark)}
+.final-cta h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4.5vw,44px);font-weight:700;color:var(--white);margin-bottom:16px}
+.final-cta p{font-size:18px;color:var(--cream);margin-bottom:36px;opacity:.85}
+.final-cta .price-row{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,5vw,48px);font-weight:700;color:var(--gold);margin-bottom:32px}
+
+/* ===== (r) FOOTER ===== */
+.footer{background:var(--dark);border-top:1px solid var(--dark-border);padding:48px 0 24px}
+.footer .container{text-align:center}
+.footer .logo{font-size:24px;margin-bottom:16px;display:inline-block}
+.footer p{font-size:13px;color:var(--text-light);margin-bottom:8px}
+.footer .footer-copy{font-size:11px;color:var(--text-light);opacity:.6;margin-top:24px}
+
+/* ===== (s) WHATSAPP FLOAT ===== */
+.whatsapp-float{position:fixed;bottom:80px;right:20px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.whatsapp-float svg{width:28px;height:28px;fill:white}
+
+/* ===== (t) TOAST ===== */
+.toast{position:fixed;bottom:140px;left:20px;z-index:95;background:var(--dark-card);border:1px solid var(--gold-dark);border-left:3px solid var(--gold);border-radius:8px;padding:14px 20px;max-width:320px;transform:translateX(-120%);transition:transform .5s ease;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.toast.show{transform:translateX(0)}
+.toast-text{font-size:13px;color:var(--cream);line-height:1.4}
+.toast-text strong{color:var(--gold);font-weight:600}
+.toast-time{font-size:11px;color:var(--text-light);margin-top:4px}
+
+/* ===== (u) PIX SLIDE PANEL ===== */
+.pix-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;opacity:0;pointer-events:none;transition:opacity .4s}
+.pix-overlay.active{opacity:1;pointer-events:auto}
+.pix-panel{position:fixed;top:0;right:-440px;bottom:0;width:420px;max-width:100vw;z-index:201;background:var(--dark-card);border-left:2px solid var(--gold-dark);overflow-y:auto;transition:right .4s ease;padding:40px 32px}
+.pix-panel.active{right:0}
+.pix-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:1px solid var(--dark-border);display:flex;align-items:center;justify-content:center;color:var(--text-light);font-size:20px;transition:border-color .3s}
+.pix-close:hover{border-color:var(--gold)}
+.pix-panel h3{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px}
+.pix-panel .pix-badge{display:inline-block;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--dark);background:var(--gradient-gold);margin-bottom:20px}
+.pix-prices{margin-bottom:24px}
+.pix-prices .old{font-size:18px;color:var(--text-light);text-decoration:line-through}
+.pix-prices .new{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:var(--gold)}
+.pix-prices .save{font-size:13px;color:var(--success);font-weight:600;margin-top:4px}
+.pix-countdown{background:var(--dark-surface);border:1px solid var(--dark-border);border-radius:8px;padding:16px;text-align:center;margin-bottom:24px}
+.pix-countdown .label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
+.pix-countdown .timer{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--white)}
+.pix-key{background:var(--dark-surface);border:1px solid var(--dark-border);border-radius:8px;padding:16px;margin-bottom:16px}
+.pix-key .label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px}
+.pix-key .key-row{display:flex;align-items:center;gap:8px}
+.pix-key .key-row input{flex:1;padding:10px;font-size:14px;color:var(--white);background:var(--dark);border:1px solid var(--dark-border);border-radius:4px;outline:none}
+.pix-key .key-row button{padding:10px 16px;font-size:13px;font-weight:600;color:var(--dark);background:var(--gradient-gold);border-radius:4px;white-space:nowrap}
+.pix-instructions{font-size:13px;color:var(--text-light);line-height:1.7}
+.pix-instructions ol{padding-left:20px;list-style:decimal}
+.pix-instructions li{margin-bottom:6px}
+.pix-whatsapp{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px;margin-top:24px;font-size:15px;font-weight:700;color:white;background:#25D366;border-radius:8px;transition:opacity .3s}
+.pix-whatsapp:hover{opacity:.9}
+.pix-whatsapp svg{width:20px;height:20px;fill:white}
+
+/* ===== (v) STICKY BOTTOM BAR ===== */
+.sticky-bottom{position:fixed;bottom:0;left:0;right:0;z-index:91;background:rgba(15,15,26,.95);backdrop-filter:blur(10px);border-top:1px solid var(--dark-border);padding:12px 0;transform:translateY(100%);transition:transform .4s}
+.sticky-bottom.visible{transform:translateY(0)}
+.sticky-bottom .container{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sticky-bottom .sb-text{font-size:14px;color:var(--cream)}
+.sticky-bottom .sb-text strong{color:var(--gold);font-weight:700}
+.sticky-bottom .btn-gold{padding:12px 28px;font-size:14px}
+@media(max-width:480px){
+  .sticky-bottom .sb-text{font-size:12px}
+  .sticky-bottom .btn-gold{padding:10px 18px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== (a) TOP BAR ===== -->
+<div class="topbar">
+  <div class="container">
+    <span class="topbar-text">Atendimento exclusivo para executivos</span>
+    <div class="topbar-countdown">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Oferta encerra em <strong id="topCountdown">23:59:59</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== (b) STICKY HEADER ===== -->
+<header class="header" id="mainHeader">
+  <div class="container">
+    <a href="#" class="logo">A7<span>.</span> Lavanderia</a>
+    <nav class="header-nav">
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#precos">Precos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato" class="header-cta">Agendar Agora</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== (c) HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=85&auto=format" alt="Executivo com terno impecavel" id="heroBg">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>Servico Premium</span>
+    </div>
+    <h1>Seu Terno <em>Impecavel</em>.<br>Sem Voce Mover um Dedo.</h1>
+    <p class="hero-sub">Lavagem profissional de ternos, blazers e roupas sociais com coleta e entrega no seu escritorio.</p>
+    <div class="hero-price">
+      <div class="from">De R$120,00</div>
+      <div class="amount">R$79,90</div>
+      <div class="desc">Pacote Executivo - 5 pecas sociais</div>
+    </div>
+    <a href="#contato" class="btn-gold" onclick="trackEvent('hero_cta_click')">
+      <span class="shimmer"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Quero Meu Pacote Executivo
+    </a>
+    <div class="hero-trust">
+      <span>Coleta gratuita</span>
+      <div class="sep"></div>
+      <span>Entrega em 24h</span>
+      <div class="sep"></div>
+      <span>Garantia de qualidade</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (d) SOCIAL PROOF ===== -->
+<section class="social-proof sr">
+  <div class="container">
+    <div class="proof-item">
+      <div class="number">+500</div>
+      <div class="label">Executivos atendidos</div>
+    </div>
+    <div class="proof-item">
+      <div class="number">4.9<small style="font-size:20px;color:var(--gold-light)"> / 5</small></div>
+      <div class="label">Avaliacao media</div>
+    </div>
+    <div class="proof-item">
+      <div class="number">24h</div>
+      <div class="label">Prazo de entrega</div>
+    </div>
+    <div class="proof-item">
+      <div class="number">98%</div>
+      <div class="label">Clientes recorrentes</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GOLD DIVIDER ===== -->
+<div class="gold-divider">
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="6" y="0" width="8.49" height="8.49" rx="1" transform="rotate(45 6 0)" fill="var(--gold-dark)"/></svg>
+</div>
+
+<!-- ===== (e) MAGAZINE 1 - Image Right ===== -->
+<section class="magazine dark-bg img-right sr">
+  <div class="container">
+    <div class="magazine-text">
+      <span class="label-tag">Para Quem Lidera</span>
+      <h2>Lideranca Comeca Pela Aparencia</h2>
+      <p>Sua imagem transmite autoridade antes mesmo de voce falar. Executivas e executivos que cuidam da apresentacao pessoal conquistam mais respeito e credibilidade em reunioes, tribunais e boardrooms.</p>
+      <p>Na A7, cada peca passa por inspecao individual, lavagem a seco premium e finalizacao impecavel que preserva corte, cor e estrutura do tecido.</p>
+    </div>
+    <div class="magazine-img gold-frame">
+      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80&auto=format" alt="Executiva profissional" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== GOLD DIVIDER ===== -->
+<div class="gold-divider" style="background:var(--cream)">
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="6" y="0" width="8.49" height="8.49" rx="1" transform="rotate(45 6 0)" fill="var(--gold-dark)"/></svg>
+</div>
+
+<!-- ===== (f) MAGAZINE 2 - Image Left, Light bg ===== -->
+<section class="magazine light-bg sr">
+  <div class="container">
+    <div class="magazine-img">
+      <img src="https://images.unsplash.com/photo-1560243563-062bfc001d68?w=700&q=80&auto=format" alt="Cuidado com roupas premium" loading="lazy">
+    </div>
+    <div class="magazine-text">
+      <span class="label-tag">Excelencia em Cada Detalhe</span>
+      <h2>Cada Fibra Tratada com Excelencia</h2>
+      <p>Utilizamos tecnologia europeia de lavagem a seco com solventes de ultima geracao que protegem os tecidos mais nobres: la fria, cashmere, seda e linho.</p>
+      <p>O processo inclui remocao de manchas localizada, vaporizacao controlada e prensagem profissional que devolve o caimento original da peca.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GOLD DIVIDER ===== -->
+<div class="gold-divider">
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="6" y="0" width="8.49" height="8.49" rx="1" transform="rotate(45 6 0)" fill="var(--gold-dark)"/></svg>
+</div>
+
+<!-- ===== (g) PAIN POINTS ===== -->
+<section class="pain-section sr">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="label-tag">O Problema</span>
+      <h2 class="section-title" style="color:var(--white);margin-top:12px">Reconhece Alguma Dessas Situacoes?</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Falta de Tempo</h3>
+        <p>Sua agenda e lotada de reunioes, audiencias e compromissos. Ir a lavanderia se torna mais uma tarefa impossivel de encaixar.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Roupas Danificadas</h3>
+        <p>Lavanderias comuns tratam seu terno de R$3.000 como uma camiseta basica. Resultado: tecido desgastado e caimento perdido.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Prazos Furados</h3>
+        <p>Voce precisa do terno para amanha, mas a lavanderia promete "3 a 5 dias uteis". Nunca esta pronto quando voce precisa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (h) HOW IT WORKS ===== -->
+<section class="how-section sr" id="como-funciona">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="label-tag">Processo Simples</span>
+      <h2 class="section-title" style="color:var(--white);margin-top:12px">Como Funciona</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <h3>Agende pelo WhatsApp</h3>
+        <p>Envie uma mensagem com as pecas que deseja lavar. Respondemos em minutos.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <h3>Coletamos no Seu Endereco</h3>
+        <p>Nosso motorista vai ate seu escritorio ou residencia no horario combinado.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <h3>Lavagem Premium</h3>
+        <p>Cada peca e tratada individualmente com processos adequados ao tecido.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <h3>Entrega em 24h</h3>
+        <p>Suas roupas voltam impecaveis, em cabide e protecao, prontas para usar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (i) MARQUEE IMAGE STRIP ===== -->
+<section class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&q=80&auto=format" alt="Ternos premium" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80&auto=format" alt="Roupas sociais" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="Executivo elegante" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&q=80&auto=format" alt="Moda executiva" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&q=80&auto=format" alt="Colecao de roupas" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&q=80&auto=format" alt="Ternos premium" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80&auto=format" alt="Roupas sociais" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="Executivo elegante" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&q=80&auto=format" alt="Moda executiva" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&q=80&auto=format" alt="Colecao de roupas" loading="lazy">
+  </div>
+</section>
+
+<!-- ===== (j) PRICING ===== -->
+<section class="pricing-section sr" id="precos">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="label-tag">Tabela de Precos</span>
+      <h2 class="section-title" style="color:var(--white);margin-top:12px">Investimento na Sua Imagem</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Camisa Social</h3>
+        <div class="price">R$18<small>,00</small></div>
+      </div>
+      <div class="price-card">
+        <h3>Terno Completo</h3>
+        <div class="price">R$45<small>,00</small></div>
+      </div>
+      <div class="price-card">
+        <h3>Blazer Avulso</h3>
+        <div class="price">R$28<small>,00</small></div>
+      </div>
+      <div class="price-card">
+        <h3>Vestido Social</h3>
+        <div class="price">R$35<small>,00</small></div>
+      </div>
+      <div class="price-card">
+        <h3>Gravata / Lenco</h3>
+        <div class="price">R$12<small>,00</small></div>
+      </div>
+    </div>
+    <!-- Comparison -->
+    <div class="comparison-card">
+      <div class="comp-col">
+        <div class="comp-label">Avulso (5 pecas)</div>
+        <div class="comp-price old">R$120+</div>
+      </div>
+      <div class="comp-vs">vs</div>
+      <div class="comp-col">
+        <div class="comp-label">Pacote Executivo</div>
+        <div class="comp-price new">R$79,90</div>
+        <div class="comp-save">Economia de mais de R$40</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (k) OFFER CARD ===== -->
+<section class="offer-section sr">
+  <div class="container">
+    <div class="offer-card">
+      <div class="offer-inner">
+        <span class="label-tag">Oferta por Tempo Limitado</span>
+        <h2>Pacote Executivo</h2>
+        <div class="offer-from">De R$120,00</div>
+        <div class="offer-price">R$79,90</div>
+        <div class="offer-pix">ou R$71,91 no PIX (10% OFF)</div>
+        <ul class="offer-checklist">
+          <li>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            5 pecas sociais (ternos, blazers, camisas)
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Coleta e entrega gratuitas
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Entrega em ate 24 horas
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Lavagem a seco premium
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantia de satisfacao total
+          </li>
+        </ul>
+        <button class="btn-gold" onclick="openPixPanel(); trackEvent('offer_cta_click')">
+          <span class="shimmer"></span>
+          Garantir Meu Pacote
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (l) BENEFITS ===== -->
+<section class="benefits-section sr">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="label-tag">Diferenciais</span>
+      <h2 class="section-title" style="color:var(--white);margin-top:12px">Por Que a A7?</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Tecidos Protegidos</h3>
+        <p>Solventes premium que preservam a integridade de la, seda, cashmere e linho.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Entrega Express</h3>
+        <p>Receba suas pecas em ate 24 horas, impecaveis e prontas para vestir.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Atendimento VIP</h3>
+        <p>Canal exclusivo no WhatsApp com resposta em minutos. Seu tempo vale ouro.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Garantia Total</h3>
+        <p>Se nao ficar satisfeito, refazemos o servico sem custo adicional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (m) BANNER ===== -->
+<section class="banner-section sr">
+  <div class="banner-bg">
+    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1400&q=80&auto=format" alt="Ambiente de trabalho executivo" loading="lazy">
+  </div>
+  <div class="banner-overlay"></div>
+  <div class="container">
+    <h2>Vista-se Para o Sucesso que Voce Merece</h2>
+    <p>Mais de 500 executivos ja confiam na A7 para manter sua imagem impecavel.</p>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Pacote%20Executivo%20de%20lavagem%20de%20ternos." class="btn-gold" target="_blank" onclick="trackEvent('banner_cta_click')">
+      <span class="shimmer"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Falar com Consultor
+    </a>
+  </div>
+</section>
+
+<!-- ===== (n) TESTIMONIALS ===== -->
+<section class="testimonials-section sr" id="depoimentos">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="label-tag">Depoimentos</span>
+      <h2 class="section-title" style="color:var(--white);margin-top:12px">O Que Nossos Clientes Dizem</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-quote">"</div>
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>Meus ternos nunca ficaram tao bem cuidados. A praticidade da coleta no escritorio mudou minha rotina. Nao preciso mais me preocupar com isso.</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">RM</div>
+          <div class="test-info">
+            <div class="name">Dr. Ricardo Mendes</div>
+            <div class="role">Advogado Tributarista</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"</div>
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>Qualidade impecavel e pontualidade que impressiona. Como CEO, preciso estar sempre apresentavel e a A7 garante isso sem eu perder tempo.</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">PA</div>
+          <div class="test-info">
+            <div class="name">Dra. Patricia Almeida</div>
+            <div class="role">CEO, Tech Company</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"</div>
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>O pacote executivo e imbativel. Pago menos do que pagava antes e o servico e infinitamente superior. Recomendo a todos os colegas do escritorio.</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">CF</div>
+          <div class="test-info">
+            <div class="name">Dr. Carlos Ferreira</div>
+            <div class="role">Diretor Financeiro</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (o) LEAD FORM ===== -->
+<section class="form-section sr" id="contato">
+  <div class="container">
+    <div class="form-wrapper">
+      <span class="label-tag" style="display:block;text-align:center;margin-bottom:8px">Contato</span>
+      <h2>Agende Seu Pacote Executivo</h2>
+      <p class="form-sub">Preencha o formulario e entraremos em contato em ate 30 minutos.</p>
+      <form id="leadForm" autocomplete="on">
+        <div class="form-group">
+          <label for="formName">Nome Completo</label>
+          <input type="text" id="formName" name="name" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="formPhone">WhatsApp</label>
+          <input type="tel" id="formPhone" name="phone" placeholder="(12) 97412-8390" required>
+        </div>
+        <div class="form-group">
+          <label for="formEmail">E-mail</label>
+          <input type="email" id="formEmail" name="email" placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="formProfession">Profissao</label>
+          <select id="formProfession" name="profession">
+            <option value="" disabled selected>Selecione sua profissao</option>
+            <option value="advogado">Advogado(a)</option>
+            <option value="medico">Medico(a)</option>
+            <option value="empresario">Empresario(a)</option>
+            <option value="executivo">Executivo(a) / Diretor(a)</option>
+            <option value="engenheiro">Engenheiro(a)</option>
+            <option value="consultor">Consultor(a)</option>
+            <option value="politico">Politico(a)</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="formPieces">Quantidade de Pecas (aprox.)</label>
+          <select id="formPieces" name="pieces">
+            <option value="" disabled selected>Selecione</option>
+            <option value="1-5">1 a 5 pecas</option>
+            <option value="6-10">6 a 10 pecas</option>
+            <option value="11-20">11 a 20 pecas</option>
+            <option value="20+">Mais de 20 pecas</option>
+          </select>
+        </div>
+        <div class="form-coupon">
+          <input type="text" id="couponInput" placeholder="Cupom de desconto">
+          <button type="button" id="couponBtn" onclick="applyCoupon()">Aplicar</button>
+        </div>
+        <div class="coupon-msg" id="couponMsg"></div>
+        <button type="submit" class="form-submit">Quero Meu Pacote Executivo</button>
+        <p class="form-note">Seus dados estao seguros. Nao compartilhamos com terceiros.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (p) FAQ ===== -->
+<section class="faq-section sr" id="faq">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="label-tag">Duvidas Frequentes</span>
+      <h2 class="section-title" style="color:var(--white);margin-top:12px">Perguntas e Respostas</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Quais tipos de pecas estao incluidas no pacote?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">O Pacote Executivo inclui qualquer combinacao de 5 pecas sociais: ternos completos (calca + blazer = 2 pecas), camisas sociais, blazers avulsos, vestidos sociais, gravatas e lencos. Voce escolhe a combinacao que preferir.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Qual o prazo de entrega?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">O prazo padrao e de 24 horas apos a coleta. Para situacoes urgentes, oferecemos servico express com entrega no mesmo dia mediante consulta de disponibilidade.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>A coleta e entrega sao realmente gratuitas?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Sim, a coleta e entrega sao totalmente gratuitas para o Pacote Executivo dentro da regiao de Sao Jose dos Campos e cidades vizinhas. Coletamos no seu escritorio, residencia ou onde preferir.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Posso pagar via PIX? Qual o desconto?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Sim. Pagamentos via PIX tem desconto adicional de 10%, reduzindo o Pacote Executivo de R$79,90 para R$71,91. A chave PIX e fornecida no momento do agendamento.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>E se eu nao ficar satisfeito com o resultado?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Oferecemos garantia de satisfacao total. Se alguma peca nao atender ao padrao de qualidade esperado, refazemos o servico sem custo adicional. Sua confianca e nossa prioridade.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== (q) FINAL CTA ===== -->
+<section class="final-cta sr">
+  <div class="container">
+    <span class="label-tag" style="display:block;margin-bottom:16px">Nao Perca Esta Oportunidade</span>
+    <h2>Seu Terno Impecavel Esta a Um Clique</h2>
+    <p>Pacote Executivo com 5 pecas sociais, coleta e entrega gratuitas.</p>
+    <div class="price-row">R$79,90 <span style="font-size:20px;color:var(--gold-light);font-weight:400">ou R$71,91 no PIX</span></div>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1%2C%20quero%20contratar%20o%20Pacote%20Executivo%20de%20lavagem%20de%20ternos%20por%20R%2479%2C90." class="btn-gold" target="_blank" onclick="trackEvent('final_cta_click')">
+      <span class="shimmer"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Contratar Pacote Executivo
+    </a>
+  </div>
+</section>
+
+<!-- ===== (r) FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="logo">A7<span>.</span> Lavanderia</div>
+    <p>Servico premium de lavagem de ternos e roupas sociais.</p>
+    <p>Sao Jose dos Campos - SP | WhatsApp: (12) 97412-8390</p>
+    <div class="footer-copy">A7 Lavanderia. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<!-- ===== (s) WHATSAPP FLOAT ===== -->
+<a href="https://wa.me/5512974128390?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20Pacote%20Executivo." class="whatsapp-float" target="_blank" aria-label="WhatsApp" onclick="trackEvent('whatsapp_float_click')">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===== (t) TOAST ===== -->
+<div class="toast" id="socialToast">
+  <div class="toast-text" id="toastText"></div>
+  <div class="toast-time" id="toastTime"></div>
+</div>
+
+<!-- ===== (u) PIX SLIDE PANEL ===== -->
+<div class="pix-overlay" id="pixOverlay" onclick="closePixPanel()"></div>
+<div class="pix-panel" id="pixPanel">
+  <button class="pix-close" onclick="closePixPanel()" aria-label="Fechar">&times;</button>
+  <span class="pix-badge">10% OFF no PIX</span>
+  <h3>Pagamento via PIX</h3>
+  <div class="pix-prices">
+    <div class="old">R$79,90</div>
+    <div class="new">R$71,91</div>
+    <div class="save">Voce economiza R$7,99</div>
+  </div>
+  <div class="pix-countdown">
+    <div class="label">Oferta PIX expira em</div>
+    <div class="timer" id="pixTimer">23:59:59</div>
+  </div>
+  <div class="pix-key">
+    <div class="label">Chave PIX (Telefone)</div>
+    <div class="key-row">
+      <input type="text" value="12974128390" id="pixKeyInput" readonly>
+      <button onclick="copyPixKey()">Copiar</button>
+    </div>
+  </div>
+  <div class="pix-instructions">
+    <ol>
+      <li>Copie a chave PIX acima</li>
+      <li>Abra o app do seu banco</li>
+      <li>Faca o PIX de <strong style="color:var(--gold)">R$71,91</strong></li>
+      <li>Envie o comprovante pelo WhatsApp</li>
+    </ol>
+  </div>
+  <a href="https://wa.me/5512974128390?text=Ol%C3%A1%2C%20fiz%20o%20PIX%20do%20Pacote%20Executivo%20(R%2471%2C91).%20Segue%20comprovante." class="pix-whatsapp" target="_blank" onclick="trackEvent('pix_whatsapp_click')">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Enviar Comprovante no WhatsApp
+  </a>
+</div>
+
+<!-- ===== (v) STICKY BOTTOM BAR ===== -->
+<div class="sticky-bottom" id="stickyBottom">
+  <div class="container">
+    <div class="sb-text">Pacote Executivo: <strong>5 pecas por R$79,90</strong></div>
+    <a href="#contato" class="btn-gold" onclick="trackEvent('sticky_bar_click')">
+      <span class="shimmer"></span>
+      Garantir Agora
+    </a>
+  </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function(){
+  'use strict';
+
+  // ===== COUNTDOWN TIMER =====
+  function initCountdown(){
+    var key = 'a7_ternos_gold_countdown_end';
+    var stored = sessionStorage.getItem(key);
+    var end;
+    if(stored){
+      end = parseInt(stored,10);
+    } else {
+      end = Date.now() + 24*60*60*1000;
+      sessionStorage.setItem(key, end.toString());
+    }
+    function update(){
+      var now = Date.now();
+      var diff = Math.max(0, end - now);
+      var h = Math.floor(diff/3600000);
+      var m = Math.floor((diff%3600000)/60000);
+      var s = Math.floor((diff%60000)/1000);
+      var str = pad(h)+':'+pad(m)+':'+pad(s);
+      var el1 = document.getElementById('topCountdown');
+      var el2 = document.getElementById('pixTimer');
+      if(el1) el1.textContent = str;
+      if(el2) el2.textContent = str;
+      if(diff <= 0){
+        sessionStorage.removeItem(key);
+        end = Date.now() + 24*60*60*1000;
+        sessionStorage.setItem(key, end.toString());
+      }
+    }
+    function pad(n){ return n < 10 ? '0'+n : n; }
+    update();
+    setInterval(update, 1000);
+  }
+
+  // ===== PHONE MASK =====
+  function initPhoneMask(){
+    var input = document.getElementById('formPhone');
+    if(!input) return;
+    input.addEventListener('input', function(e){
+      var v = e.target.value.replace(/\D/g,'');
+      if(v.length > 11) v = v.slice(0,11);
+      if(v.length > 6){
+        v = '('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+      } else if(v.length > 2){
+        v = '('+v.slice(0,2)+') '+v.slice(2);
+      } else if(v.length > 0){
+        v = '('+v;
+      }
+      e.target.value = v;
+    });
+  }
+
+  // ===== LEAD FORM =====
+  function initForm(){
+    var form = document.getElementById('leadForm');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var data = {
+        name: document.getElementById('formName').value,
+        phone: document.getElementById('formPhone').value,
+        email: document.getElementById('formEmail').value,
+        profession: document.getElementById('formProfession').value,
+        pieces: document.getElementById('formPieces').value,
+        coupon: document.getElementById('couponInput').value,
+        timestamp: new Date().toISOString(),
+        source: 'dark-gold'
+      };
+      // Save to localStorage
+      var leads = JSON.parse(localStorage.getItem('a7_leads_ternos_gold') || '[]');
+      leads.push(data);
+      localStorage.setItem('a7_leads_ternos_gold', JSON.stringify(leads));
+      trackEvent('form_submit');
+      // Redirect to WhatsApp
+      var msg = encodeURIComponent('Ola, sou '+data.name+' ('+data.profession+'). Quero contratar o Pacote Executivo de lavagem de ternos. Tenho aproximadamente '+data.pieces+' pecas.');
+      window.open('https://wa.me/5512974128390?text='+msg, '_blank');
+      form.reset();
+      alert('Obrigado! Redirecionando para o WhatsApp...');
+    });
+  }
+
+  // ===== COUPON =====
+  window.applyCoupon = function(){
+    var input = document.getElementById('couponInput');
+    var msg = document.getElementById('couponMsg');
+    var code = input.value.trim().toUpperCase();
+    var validCoupons = ['A7EXEC','PREMIUM10','TERNO20'];
+    if(validCoupons.indexOf(code) !== -1){
+      msg.className = 'coupon-msg success';
+      msg.textContent = 'Cupom "'+code+'" aplicado com sucesso!';
+      trackEvent('coupon_applied_'+code);
+    } else if(code === ''){
+      msg.className = 'coupon-msg error';
+      msg.textContent = 'Digite um cupom.';
+    } else {
+      msg.className = 'coupon-msg error';
+      msg.textContent = 'Cupom invalido. Verifique e tente novamente.';
+    }
+  };
+
+  // ===== FAQ TOGGLE =====
+  window.toggleFaq = function(el){
+    var item = el.parentElement;
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(function(fi){
+      fi.classList.remove('open');
+      fi.querySelector('.faq-answer').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  };
+
+  // ===== PIX PANEL =====
+  window.openPixPanel = function(){
+    document.getElementById('pixOverlay').classList.add('active');
+    document.getElementById('pixPanel').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    trackEvent('pix_panel_open');
+  };
+  window.closePixPanel = function(){
+    document.getElementById('pixOverlay').classList.remove('active');
+    document.getElementById('pixPanel').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // ===== COPY PIX KEY =====
+  window.copyPixKey = function(){
+    var input = document.getElementById('pixKeyInput');
+    input.select();
+    input.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(input.value).then(function(){
+      var btn = input.nextElementSibling;
+      btn.textContent = 'Copiado!';
+      setTimeout(function(){ btn.textContent = 'Copiar'; }, 2000);
+    });
+    trackEvent('pix_key_copied');
+  };
+
+  // ===== SOCIAL PROOF TOASTS =====
+  function initToasts(){
+    var messages = [
+      {text:'<strong>Dr. Marcos R.</strong> contratou o Pacote Executivo', time:'Agora mesmo'},
+      {text:'<strong>Dra. Lucia F.</strong> agendou coleta para amanha', time:'Ha 2 minutos'},
+      {text:'<strong>Carlos S.</strong> pagou via PIX com 10% OFF', time:'Ha 5 minutos'},
+      {text:'<strong>Ana P.</strong> renovou seu pacote mensal', time:'Ha 8 minutos'},
+      {text:'<strong>Roberto M.</strong> indicou 3 colegas do escritorio', time:'Ha 12 minutos'}
+    ];
+    var toast = document.getElementById('socialToast');
+    var textEl = document.getElementById('toastText');
+    var timeEl = document.getElementById('toastTime');
+    var idx = 0;
+    function showToast(){
+      var m = messages[idx % messages.length];
+      textEl.innerHTML = m.text;
+      timeEl.textContent = m.time;
+      toast.classList.add('show');
+      setTimeout(function(){ toast.classList.remove('show'); }, 4000);
+      idx++;
+    }
+    setTimeout(showToast, 8000);
+    setInterval(showToast, 18000);
+  }
+
+  // ===== STICKY BOTTOM BAR =====
+  function initStickyBottom(){
+    var bar = document.getElementById('stickyBottom');
+    var hero = document.getElementById('hero');
+    if(!bar || !hero) return;
+    function check(){
+      var rect = hero.getBoundingClientRect();
+      if(rect.bottom < 0){
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', check, {passive:true});
+  }
+
+  // ===== HEADER SCROLL =====
+  function initHeader(){
+    var header = document.getElementById('mainHeader');
+    if(!header) return;
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 50){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, {passive:true});
+  }
+
+  // ===== SMOOTH SCROLL =====
+  function initSmoothScroll(){
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var href = this.getAttribute('href');
+        if(href === '#') return;
+        var target = document.querySelector(href);
+        if(target){
+          e.preventDefault();
+          var offset = 70;
+          var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({top:y, behavior:'smooth'});
+        }
+      });
+    });
+  }
+
+  // ===== SCROLL REVEAL =====
+  function initScrollReveal(){
+    var items = document.querySelectorAll('.sr');
+    if(!items.length) return;
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(item){ observer.observe(item); });
+  }
+
+  // ===== PARALLAX HERO =====
+  function initParallax(){
+    var bg = document.getElementById('heroBg');
+    if(!bg) return;
+    window.addEventListener('scroll', function(){
+      var scroll = window.pageYOffset;
+      if(scroll < window.innerHeight){
+        bg.style.transform = 'scale(1.08) translateY('+scroll*0.25+'px)';
+      }
+    }, {passive:true});
+  }
+
+  // ===== PIX AUTO-SHOW (sessionStorage) =====
+  function initPixAutoShow(){
+    var key = 'a7_pix_shown_gold';
+    if(sessionStorage.getItem(key)) return;
+    setTimeout(function(){
+      if(!sessionStorage.getItem(key)){
+        openPixPanel();
+        sessionStorage.setItem(key, '1');
+      }
+    }, 45000);
+  }
+
+  // ===== ANALYTICS TRACKER =====
+  window.trackEvent = function(eventName){
+    if(typeof gtag === 'function'){
+      gtag('event', eventName, {event_category:'ternos_gold', event_label:eventName});
+    }
+    if(typeof fbq === 'function'){
+      fbq('trackCustom', eventName);
+    }
+    console.log('[A7 Track]', eventName);
+  };
+
+  // ===== INIT =====
+  document.addEventListener('DOMContentLoaded', function(){
+    initCountdown();
+    initPhoneMask();
+    initForm();
+    initToasts();
+    initStickyBottom();
+    initHeader();
+    initSmoothScroll();
+    initScrollReveal();
+    initParallax();
+    initPixAutoShow();
+    trackEvent('page_view');
+  });
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Teste A/B - Campanha Feminina Executiva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: white; min-height: 100vh; }
+
+    .header { text-align: center; padding: 48px 20px 16px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; margin-bottom: 16px; transition: color 0.3s; }
+    .back-link:hover { color: white; }
+
+    .header .campaign-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(183,110,121,0.2), rgba(212,165,116,0.2));
+      color: #d4a574;
+      border: 1px solid rgba(212,165,116,0.3);
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .header h1 span {
+      background: linear-gradient(135deg, #b76e79, #d4a574);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p { color: rgba(255,255,255,0.45); font-size: 15px; max-width: 550px; margin: 0 auto; line-height: 1.6; }
+
+    .target-box {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      padding: 20px 28px; margin: 28px auto; max-width: 560px;
+      background: linear-gradient(135deg, #141014, #1a1218);
+      border: 1px solid rgba(183,110,121,0.2);
+      border-radius: 14px;
+    }
+    .target-box .icon { font-size: 28px; }
+    .target-box .text { text-align: left; }
+    .target-box .text strong { font-size: 16px; display: block; font-weight: 700; }
+    .target-box .text span { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 36px auto 0;
+      padding: 0 24px 60px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+      position: relative;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: 16px 16px 0 0;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .card:nth-child(1)::before { background: linear-gradient(90deg, #b76e79, #d4a574); }
+    .card:nth-child(2)::before { background: linear-gradient(90deg, #d4a0a0, #d4c5a9); }
+    .card:nth-child(3)::before { background: linear-gradient(90deg, #8b2252, #b8860b); }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #333;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-preview { height: 280px; position: relative; overflow: hidden; }
+    .card-preview iframe {
+      width: 200%; height: 200%;
+      border: none;
+      transform: scale(0.5);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .card-preview .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.8) 100%);
+      pointer-events: none;
+    }
+
+    .card-body { padding: 22px 24px 28px; }
+
+    .card-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    .badge-rose {
+      background: rgba(183,110,121,0.15);
+      color: #d4a0a0;
+      border: 1px solid rgba(183,110,121,0.25);
+    }
+    .badge-noir {
+      background: rgba(212,160,160,0.1);
+      color: #c8a0a0;
+      border: 1px solid rgba(212,160,160,0.2);
+    }
+    .badge-ivory {
+      background: rgba(139,34,82,0.15);
+      color: #d4669a;
+      border: 1px solid rgba(139,34,82,0.25);
+    }
+
+    .card-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card-body .subtitle {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .card-body p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .swatches { display: flex; gap: 8px; align-items: center; }
+    .sw {
+      width: 24px; height: 24px;
+      border-radius: 6px;
+      border: 2px solid rgba(255,255,255,0.08);
+    }
+    .sw-label { font-size: 10px; color: rgba(255,255,255,0.3); margin-left: 4px; letter-spacing: 0.5px; }
+
+    .open-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 18px; padding: 10px 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50px;
+      color: rgba(255,255,255,0.7);
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+    .card:hover .open-btn {
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    .strategy-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+    }
+    .strategy-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 24px;
+      color: rgba(255,255,255,0.6);
+    }
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .strategy-card {
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .strategy-card h3 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .strategy-card:nth-child(1) h3 { color: #d4a0a0; }
+    .strategy-card:nth-child(2) h3 { color: #c8a0a0; }
+    .strategy-card:nth-child(3) h3 { color: #d4669a; }
+    .strategy-card p { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.5; }
+
+    .tip {
+      text-align: center;
+      padding: 0 20px 48px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+      font-style: italic;
+    }
+
+    @media (max-width: 900px) {
+      .grid, .strategy-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .header h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="comparativo.html" class="back-link">← Voltar ao painel Ternos</a>
+    <div class="campaign-badge">Campanha Feminina Executiva</div>
+    <h1>Teste A/B — <span>Mulher Executiva</span></h1>
+    <p>3 variacoes de design premium focadas 100% no publico feminino executivo. Cada uma com identidade visual, copy e estrategia unicos.</p>
+    <div class="target-box">
+      <div class="icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d4a574" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="text">
+        <strong>Pacote Executiva: 5 pecas por R$ 79,90</strong>
+        <span>PIX antecipado: R$ 71,91 (10% OFF extra)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- Rose Gold -->
+    <a href="feminino-rose-gold.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="feminino-rose-gold.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-rose">Variacao A — Rose Gold</span>
+        <div class="subtitle">Editorial de Moda</div>
+        <h2>Rose Gold + Champagne</h2>
+        <p>Design editorial estilo Vogue. Warm, fashion-forward, empoderador. Ideal para mulheres que se conectam com moda e lifestyle aspiracional.</p>
+        <div class="swatches">
+          <div class="sw" style="background:#b76e79;"></div>
+          <div class="sw" style="background:#e8a0b4;"></div>
+          <div class="sw" style="background:#d4a574;"></div>
+          <div class="sw" style="background:#1a1218;"></div>
+          <span class="sw-label">Rose + Gold</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+
+    <!-- Noir Chic -->
+    <a href="feminino-noir-chic.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="feminino-noir-chic.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-noir">Variacao B — Noir Chic</span>
+        <div class="subtitle">Alta Costura</div>
+        <h2>Noir + Blush + Champagne</h2>
+        <p>Estetica Chanel/Dior. Ultra-minimalista, dramatico, poderoso. Para mulheres que valorizam exclusividade e sofisticacao absoluta.</p>
+        <div class="swatches">
+          <div class="sw" style="background:#0a0a0a; border-color: rgba(255,255,255,0.15);"></div>
+          <div class="sw" style="background:#d4a0a0;"></div>
+          <div class="sw" style="background:#d4c5a9;"></div>
+          <div class="sw" style="background:#141414; border-color: rgba(255,255,255,0.15);"></div>
+          <span class="sw-label">Noir + Blush</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+
+    <!-- Ivory Luxe -->
+    <a href="feminino-ivory-luxe.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="feminino-ivory-luxe.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-ivory">Variacao C — Ivory Luxe</span>
+        <div class="subtitle">Harper's Bazaar</div>
+        <h2>Ivory + Berry + Gold</h2>
+        <p>Estetica luminosa e editorial. Clean, sofisticada, acolhedora. Perfeita para mulheres que preferem elegancia com leveza e claridade.</p>
+        <div class="swatches">
+          <div class="sw" style="background:#faf8f5; border-color: rgba(0,0,0,0.1);"></div>
+          <div class="sw" style="background:#8b2252;"></div>
+          <div class="sw" style="background:#b8860b;"></div>
+          <div class="sw" style="background:#f3ede4; border-color: rgba(0,0,0,0.1);"></div>
+          <span class="sw-label">Ivory + Berry</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="strategy-section">
+    <div class="strategy-title">Estrategia de Veiculacao</div>
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h3>Rose Gold — Instagram / Pinterest</h3>
+        <p>Visual fashion-forward ideal para anuncios em feeds visuais. Use em carrosséis e stories com foco em lifestyle e moda. Publico: mulheres 28-45, interesse em moda e carreira.</p>
+      </div>
+      <div class="strategy-card">
+        <h3>Noir Chic — LinkedIn / Google</h3>
+        <p>Estetica corporativa premium ideal para LinkedIn Ads e busca paga. Tom serio e exclusivo. Publico: executivas C-level, advogadas, consultoras, 32-55 anos.</p>
+      </div>
+      <div class="strategy-card">
+        <h3>Ivory Luxe — Meta Ads / Remarketing</h3>
+        <p>Design luminoso e acolhedor, otimo para Facebook/Instagram com publico frio e remarketing. Mais acessivel visualmente. Publico: profissionais 25-50, primeira conversao.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="tip">Dica: Teste cada variacao com o mesmo orcamento por 7 dias. Compare CTR, tempo na pagina e taxa de conversao para definir a campeã.</p>
+
+</body>
+</html>

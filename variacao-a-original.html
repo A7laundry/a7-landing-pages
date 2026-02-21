@@ -1,0 +1,3235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Promo Edredons - Lave 3, Pague 2</title>
+  <meta name="description" content="Promoção especial A7 Lavanderia: Lave 3 edredons e pague apenas 2. Por apenas R$99,90. Tempo limitado!">
+  <meta property="og:title" content="A7 Lavanderia | 3 Edredons por R$99,90">
+  <meta property="og:description" content="Lave 3 edredons pelo preço de 2. Promoção por tempo limitado!">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       A7 LAVANDERIA - LANDING PAGE EDREDONS
+       Framework: AIDA + Dopamine Triggers
+       Paleta: #5636d1 (Roxo) | #e2498a (Rosa)
+       ======================================== */
+
+    :root {
+      --purple: #5636d1;
+      --purple-dark: #4528a8;
+      --purple-light: #7b63e0;
+      --purple-glow: rgba(86, 54, 209, 0.3);
+      --pink: #e2498a;
+      --pink-dark: #c93a76;
+      --pink-light: #f06ba5;
+      --pink-glow: rgba(226, 73, 138, 0.3);
+      --gradient-main: linear-gradient(135deg, #5636d1 0%, #e2498a 100%);
+      --gradient-reverse: linear-gradient(135deg, #e2498a 0%, #5636d1 100%);
+      --gradient-radial: radial-gradient(circle at 30% 50%, #5636d1 0%, #3d1fa8 50%, #1a0d4e 100%);
+      --white: #ffffff;
+      --off-white: #f8f6ff;
+      --gray-100: #f3f0ff;
+      --gray-200: #e8e4f5;
+      --gray-500: #8b85a0;
+      --gray-700: #4a4560;
+      --gray-900: #1a1530;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --shadow-sm: 0 2px 8px rgba(86, 54, 209, 0.08);
+      --shadow-md: 0 8px 24px rgba(86, 54, 209, 0.12);
+      --shadow-lg: 0 16px 48px rgba(86, 54, 209, 0.16);
+      --shadow-xl: 0 24px 64px rgba(86, 54, 209, 0.24);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-900);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+    }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      animation: whatsappPulse 2s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+    }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+
+    @keyframes whatsappPulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 8px rgba(37, 211, 102, 0.1); }
+    }
+
+    /* ===== TOP BAR - URGENCY ===== */
+    .top-bar {
+      background: var(--gradient-main);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+    .top-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(50%); }
+    }
+    .top-bar span { position: relative; z-index: 1; }
+    .top-bar .countdown {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: white;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.95);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .header-cta {
+      background: var(--gradient-main);
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+    }
+    .header-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 0 100px;
+      position: relative;
+      overflow: hidden;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: #0a0618;
+    }
+    .hero-bg-image {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      animation: heroZoom 25s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+    .hero-bg-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg,
+          rgba(10, 6, 24, 0.55) 0%,
+          rgba(86, 54, 209, 0.6) 35%,
+          rgba(86, 54, 209, 0.75) 60%,
+          rgba(10, 6, 24, 0.92) 100%
+        );
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(226, 73, 138, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatOrb 8s ease-in-out infinite;
+      z-index: 1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(86, 54, 209, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatOrb 6s ease-in-out infinite reverse;
+      z-index: 1;
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(30px, -20px) scale(1.1); }
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      backdrop-filter: blur(10px);
+      animation: fadeInDown 0.6s ease-out;
+    }
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      color: white;
+      line-height: 1.08;
+      margin-bottom: 12px;
+      animation: fadeInUp 0.8s ease-out;
+      letter-spacing: -1.5px;
+    }
+    .hero h1 .highlight {
+      display: inline-block;
+      position: relative;
+      color: var(--pink-light);
+    }
+    .hero h1 .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: var(--pink);
+      border-radius: 3px;
+      opacity: 0.5;
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: rgba(255,255,255,0.8);
+      max-width: 520px;
+      margin: 0 auto 20px;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+      line-height: 1.5;
+    }
+
+    /* ===== PRICE HERO CARD ===== */
+    .price-card-hero {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      max-width: 480px;
+      margin: 0 auto 36px;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .price-card-hero .promo-tag {
+      display: inline-block;
+      background: var(--pink);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .price-card-hero .offer-text {
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .price-card-hero .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .price-card-hero .old-price {
+      font-size: 22px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+
+    .price-card-hero .new-price {
+      font-size: 56px;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+    .price-card-hero .new-price small {
+      font-size: 24px;
+      font-weight: 700;
+      vertical-align: super;
+    }
+
+    .price-card-hero .savings {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--pink);
+      color: white;
+      border: none;
+      padding: 18px 48px;
+      border-radius: 60px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(226, 73, 138, 0.4);
+      animation: fadeInUp 0.8s ease-out 0.5s both;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s ease;
+    }
+    .hero-cta:hover::before { left: 100%; }
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(226, 73, 138, 0.5);
+      background: var(--pink-dark);
+    }
+    .hero-cta:active { transform: translateY(-1px); }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 32px;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      animation: fadeInUp 0.8s ease-out 0.7s both;
+    }
+    .hero-trust span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SOCIAL PROOF BAR ===== */
+    .social-proof {
+      background: var(--off-white);
+      padding: 32px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .social-proof .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .proof-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gradient-main);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .proof-text strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--purple);
+    }
+    .proof-text span {
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    /* ===== PROBLEM / PAIN POINTS ===== */
+    .pain-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .pain-section .container {
+      text-align: center;
+    }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gray-100);
+      color: var(--purple);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--gray-500);
+      max-width: 560px;
+      margin: 0 auto 48px;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .pain-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+    .pain-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--purple-light);
+    }
+    .pain-card .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .pain-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--gray-900);
+    }
+    .pain-card p {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* ===== SOLUTION / HOW IT WORKS ===== */
+    .solution-section {
+      padding: 80px 0;
+      background: var(--gray-900);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .solution-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(86, 54, 209, 0.3) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(226, 73, 138, 0.2) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .solution-section .container { position: relative; z-index: 2; text-align: center; }
+    .solution-section .section-tag {
+      background: rgba(255,255,255,0.1);
+      color: var(--pink-light);
+    }
+    .solution-section .section-title { color: white; }
+    .solution-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step-number {
+      width: 56px;
+      height: 56px;
+      background: var(--gradient-main);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      margin: 0 auto 16px;
+      box-shadow: 0 8px 24px rgba(86, 54, 209, 0.3);
+    }
+    .step h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .step p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+    .step-arrow {
+      position: absolute;
+      top: 28px;
+      right: -12px;
+      color: var(--purple-light);
+      font-size: 20px;
+      opacity: 0.5;
+    }
+
+    /* ===== OFFER SECTION ===== */
+    .offer-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .offer-section .container { text-align: center; }
+
+    .offer-card {
+      background: var(--gradient-radial);
+      border-radius: var(--radius-xl);
+      padding: 48px 32px;
+      max-width: 580px;
+      margin: 48px auto 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: var(--gradient-main);
+      border-radius: var(--radius-xl);
+      z-index: -1;
+      animation: borderGlow 3s infinite;
+    }
+    @keyframes borderGlow {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    .offer-card .ribbon {
+      position: absolute;
+      top: 20px;
+      right: -32px;
+      background: var(--pink);
+      color: white;
+      padding: 6px 40px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transform: rotate(45deg);
+    }
+
+    .offer-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+    .offer-card h2 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .offer-items {
+      text-align: left;
+      max-width: 340px;
+      margin: 0 auto 28px;
+    }
+    .offer-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 15px;
+    }
+    .offer-item:last-child { border-bottom: none; }
+    .offer-check {
+      width: 24px;
+      height: 24px;
+      background: rgba(16, 185, 129, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6ee7b7;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .offer-price-block {
+      margin: 28px 0;
+      padding: 24px;
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+    }
+    .offer-de {
+      font-size: 16px;
+      color: rgba(255,255,255,0.5);
+    }
+    .offer-de s {
+      font-size: 20px;
+      color: rgba(255,255,255,0.4);
+    }
+    .offer-por {
+      font-size: 14px;
+      color: var(--pink-light);
+      font-weight: 600;
+      margin: 4px 0;
+    }
+    .offer-price-big {
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1;
+    }
+    .offer-price-big small {
+      font-size: 28px;
+      vertical-align: super;
+    }
+
+    .offer-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--pink);
+      color: white;
+      border: none;
+      padding: 18px 44px;
+      border-radius: 60px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(226, 73, 138, 0.4);
+      width: 100%;
+      justify-content: center;
+    }
+    .offer-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(226, 73, 138, 0.5);
+    }
+
+    /* ===== BENEFITS ===== */
+    .benefits-section {
+      padding: 80px 0;
+      background: var(--off-white);
+    }
+    .benefits-section .container { text-align: center; }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .benefit-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--purple-light);
+    }
+    .benefit-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--gray-100);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 14px;
+    }
+    .benefit-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--gray-900);
+    }
+    .benefit-card p {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .testimonials-section .container { text-align: center; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: left;
+    }
+    .testimonial-stars {
+      color: #f59e0b;
+      font-size: 16px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .testimonial-card p {
+      font-size: 15px;
+      color: var(--gray-700);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient-main);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--gray-900);
+    }
+    .testimonial-label {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    /* ===== LEAD FORM / COUPON ===== */
+    .form-section {
+      padding: 80px 0;
+      background: var(--gradient-radial);
+      position: relative;
+      overflow: hidden;
+    }
+    .form-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .form-section .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .form-section .section-tag {
+      background: rgba(255,255,255,0.1);
+      color: var(--pink-light);
+    }
+    .form-section .section-title { color: white; }
+    .form-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+    .form-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .coupon-preview {
+      background: rgba(255,255,255,0.06);
+      border: 2px dashed rgba(255,255,255,0.25);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .coupon-preview .coupon-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .coupon-preview .coupon-code {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--pink-light);
+      letter-spacing: 4px;
+    }
+    .coupon-preview .coupon-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      font-size: 15px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    .form-group input::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--pink);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 0 0 3px rgba(226, 73, 138, 0.2);
+    }
+    .form-group select option {
+      background: var(--gray-900);
+      color: white;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--pink);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+      box-shadow: 0 8px 24px rgba(226, 73, 138, 0.3);
+    }
+    .form-submit:hover {
+      background: var(--pink-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(226, 73, 138, 0.4);
+    }
+    .form-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-privacy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 12px;
+    }
+    .form-privacy a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: underline;
+    }
+
+    /* ===== FORM SUCCESS STATE ===== */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .form-success.active { display: block; }
+    .form-success .success-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(16, 185, 129, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin: 0 auto 20px;
+      animation: scaleIn 0.5s ease-out;
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+    .form-success h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .form-success p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+    .form-success .generated-coupon {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--pink-light);
+      letter-spacing: 4px;
+      background: rgba(255,255,255,0.08);
+      border: 2px dashed rgba(255,255,255,0.3);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin: 16px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .form-success .generated-coupon:hover {
+      background: rgba(255,255,255,0.12);
+    }
+    .form-success .generated-coupon .copy-hint {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0;
+      display: block;
+      margin-top: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-success .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      border: none;
+      padding: 16px 36px;
+      border-radius: 60px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-top: 16px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+    }
+    .form-success .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      padding: 80px 0;
+      background: var(--off-white);
+    }
+    .faq-section .container { text-align: center; }
+
+    .faq-list {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .faq-item {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover { border-color: var(--purple-light); }
+    .faq-question {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--gray-900);
+      user-select: none;
+    }
+    .faq-question .faq-toggle {
+      width: 28px;
+      height: 28px;
+      background: var(--gray-100);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--purple);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-item.active .faq-toggle {
+      background: var(--purple);
+      color: white;
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      padding: 60px 0;
+      background: white;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .final-cta p {
+      font-size: 16px;
+      color: var(--gray-500);
+      margin-bottom: 24px;
+    }
+    .final-cta .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-main);
+      color: white;
+      border: none;
+      padding: 18px 48px;
+      border-radius: 60px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: var(--shadow-lg);
+    }
+    .final-cta .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,0.5);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+    }
+    .footer a:hover { color: white; }
+    .footer .footer-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* ===== LIVE NOTIFICATION TOAST ===== */
+    .notification-toast {
+      position: fixed;
+      bottom: 96px;
+      left: 24px;
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      z-index: 999;
+      transform: translateY(120%);
+      opacity: 0;
+      transition: all 0.4s ease;
+      max-width: 320px;
+      border-left: 4px solid var(--purple);
+    }
+    .notification-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .notification-toast .notif-avatar {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient-main);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .notification-toast .notif-text strong { color: var(--gray-900); }
+    .notification-toast .notif-text span {
+      display: block;
+      color: var(--gray-500);
+      font-size: 12px;
+    }
+
+    /* ===== IMAGE SECTION 1: HERO LIFESTYLE ===== */
+    .img-lifestyle {
+      position: relative;
+      overflow: hidden;
+      background: var(--gray-900);
+    }
+    .img-lifestyle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+    }
+    .img-lifestyle-visual {
+      position: relative;
+      overflow: hidden;
+    }
+    .img-lifestyle-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 6s ease;
+    }
+    .img-lifestyle-visual:hover img {
+      transform: scale(1.05);
+    }
+    .img-lifestyle-visual .img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(86, 54, 209, 0.3) 0%, rgba(226, 73, 138, 0.2) 100%);
+      pointer-events: none;
+    }
+    .img-lifestyle-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 48px;
+      background: var(--gradient-radial);
+      position: relative;
+    }
+    .img-lifestyle-content::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-main);
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.5;
+    }
+    .img-lifestyle-content .big-quote {
+      font-size: 80px;
+      line-height: 1;
+      color: var(--pink);
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      margin-bottom: -20px;
+    }
+    .img-lifestyle-content h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+      position: relative;
+    }
+    .img-lifestyle-content p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 420px;
+    }
+    .img-lifestyle-content .lifestyle-stats {
+      display: flex;
+      gap: 32px;
+    }
+    .lifestyle-stat {
+      text-align: left;
+    }
+    .lifestyle-stat .stat-number {
+      font-size: 32px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .lifestyle-stat .stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* ===== IMAGE SECTION 2: BEFORE/AFTER GALLERY ===== */
+    .img-gallery {
+      padding: 80px 0;
+      background: white;
+      overflow: hidden;
+    }
+    .img-gallery .container { text-align: center; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      cursor: pointer;
+      group: true;
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-card:hover img {
+      transform: scale(1.08);
+    }
+    .gallery-card .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(26, 21, 48, 0.85) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px 20px;
+      transition: all 0.3s ease;
+    }
+    .gallery-card:hover .gallery-overlay {
+      background: linear-gradient(180deg, transparent 20%, rgba(86, 54, 209, 0.8) 100%);
+    }
+    .gallery-card .gallery-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--pink);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .gallery-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+    .gallery-card p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ===== IMAGE SECTION 3: FULL-WIDTH COMFORT BANNER ===== */
+    .img-comfort-banner {
+      position: relative;
+      min-height: 480px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-comfort-banner .banner-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .img-comfort-banner .banner-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .img-comfort-banner .banner-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(86, 54, 209, 0.85) 0%, rgba(226, 73, 138, 0.75) 100%);
+    }
+    .img-comfort-banner .banner-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 700px;
+    }
+    .img-comfort-banner .banner-content h2 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .img-comfort-banner .banner-content p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .img-comfort-banner .banner-features {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .banner-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .banner-feature .bf-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      backdrop-filter: blur(10px);
+    }
+    .img-comfort-banner .banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--purple);
+      border: none;
+      padding: 18px 44px;
+      border-radius: 60px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .img-comfort-banner .banner-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    /* ===== PRICING TABLE (value perception) ===== */
+    .pricing-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .pricing-section .container { text-align: center; }
+
+    .pricing-table-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .pricing-card {
+      background: var(--off-white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 16px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .pricing-card.pricing-premium {
+      border-color: var(--gray-200);
+      background: var(--off-white);
+    }
+    .pricing-card .pricing-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .pricing-card .pricing-type {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-900);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .pricing-card .pricing-desc {
+      font-size: 12px;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+    }
+    .pricing-card .pricing-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gray-900);
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+    .pricing-card .pricing-value small {
+      font-size: 16px;
+      font-weight: 700;
+      vertical-align: super;
+    }
+    .pricing-card .pricing-unit {
+      font-size: 12px;
+      color: var(--gray-500);
+      margin-top: 4px;
+    }
+
+    /* Promo comparison card */
+    .pricing-vs {
+      margin-top: 32px;
+      background: var(--gradient-radial);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-vs::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(226, 73, 138, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .pricing-vs-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .pricing-vs-example {
+      text-align: center;
+    }
+    .pricing-vs-example .vs-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pricing-vs-example .vs-calc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 4px;
+    }
+    .pricing-vs-example .vs-price {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+    .pricing-vs-example .vs-price.vs-old {
+      text-decoration: line-through;
+      color: rgba(255,255,255,0.4);
+    }
+    .pricing-vs-example .vs-price.vs-new {
+      color: #6ee7b7;
+    }
+    .pricing-vs-arrow {
+      font-size: 28px;
+      color: var(--pink-light);
+      animation: arrowBounce 1.5s ease-in-out infinite;
+    }
+    @keyframes arrowBounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+    }
+    .pricing-vs-savings {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* ===== LIVE PURCHASE COUNTER ===== */
+    .live-counter-bar {
+      background: var(--gray-900);
+      padding: 20px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .live-counter-bar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--purple-dark), var(--gray-900) 30%, var(--gray-900) 70%, var(--pink-dark));
+      opacity: 0.3;
+    }
+    .live-counter-bar .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .live-counter-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+    }
+    .live-counter-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .live-counter-icon.lci-fire {
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .live-counter-icon.lci-eye {
+      background: rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+    .live-counter-icon.lci-clock {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .live-counter-text .lc-number {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .lc-number .lc-animated {
+      display: inline-block;
+      transition: all 0.4s ease;
+    }
+    .live-counter-text .lc-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+    }
+
+    /* Counter pulse dot */
+    .lc-live-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      animation: blink 1.5s infinite;
+      vertical-align: middle;
+    }
+
+    /* ===== PIX POPUP ===== */
+    .pix-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    .pix-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .pix-popup {
+      background: white;
+      border-radius: var(--radius-xl);
+      max-width: 460px;
+      width: 100%;
+      overflow: hidden;
+      transform: scale(0.85) translateY(20px);
+      transition: transform 0.4s ease;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+    }
+    .pix-overlay.active .pix-popup {
+      transform: scale(1) translateY(0);
+    }
+    .pix-popup-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background: rgba(0,0,0,0.08);
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-500);
+      transition: all 0.3s ease;
+      z-index: 5;
+    }
+    .pix-popup-close:hover {
+      background: rgba(0,0,0,0.15);
+      color: var(--gray-900);
+    }
+    .pix-popup-header {
+      background: var(--gradient-main);
+      padding: 32px 28px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pix-popup-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+    .pix-popup-header .popup-flash {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      animation: popupPulse 2s infinite;
+    }
+    @keyframes popupPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+    }
+    .pix-popup-header h3 {
+      font-size: 26px;
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .pix-popup-header p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* PIX countdown ring */
+    .pix-countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: -24px auto 0;
+      position: relative;
+      z-index: 2;
+    }
+    .pix-time-block {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      min-width: 68px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--gray-200);
+    }
+    .pix-time-block .pix-time-val {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--purple);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .pix-time-block .pix-time-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+    .pix-time-sep {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--pink);
+      align-self: center;
+      margin-top: -12px;
+      animation: blink 1s infinite;
+    }
+
+    .pix-popup-body {
+      padding: 32px 28px 28px;
+      text-align: center;
+    }
+    .pix-price-compare {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .pix-old-price {
+      font-size: 22px;
+      color: var(--gray-500);
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+    .pix-arrow-price {
+      color: var(--pink);
+      font-size: 20px;
+    }
+    .pix-new-price {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--purple);
+      letter-spacing: -2px;
+    }
+    .pix-new-price small {
+      font-size: 20px;
+      vertical-align: super;
+    }
+    .pix-savings-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ecfdf5;
+      color: #059669;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .pix-benefits {
+      text-align: left;
+      max-width: 300px;
+      margin: 0 auto 24px;
+    }
+    .pix-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14px;
+      color: var(--gray-700);
+    }
+    .pix-benefit-item .pbi {
+      width: 22px;
+      height: 22px;
+      background: var(--gray-100);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pix-benefit-item .pbi svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--purple);
+    }
+    .pix-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px;
+      background: var(--gradient-main);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(86, 54, 209, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .pix-cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      animation: pixShimmer 2.5s infinite;
+    }
+    @keyframes pixShimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    .pix-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(86, 54, 209, 0.4);
+    }
+    .pix-popup-body .pix-skip {
+      display: block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--gray-500);
+      cursor: pointer;
+      border: none;
+      background: none;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    .pix-popup-body .pix-skip:hover {
+      color: var(--gray-700);
+    }
+    .pix-pix-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+    .pix-pix-logo .pix-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 60px 0 80px; min-height: auto; }
+      .price-card-hero { padding: 28px 20px; }
+      .price-card-hero .new-price { font-size: 44px; }
+      .steps { grid-template-columns: 1fr; gap: 32px; }
+      .step-arrow { display: none; }
+      .social-proof .container { gap: 20px; }
+      .hero-trust { flex-direction: column; gap: 8px; }
+      .offer-card { padding: 32px 20px; }
+      .offer-price-big { font-size: 48px; }
+      .form-card { padding: 28px 20px; }
+      .top-bar { font-size: 12px; }
+      .notification-toast { left: 12px; right: 12px; max-width: none; }
+      .img-lifestyle-grid { grid-template-columns: 1fr; }
+      .img-lifestyle-visual { min-height: 300px; }
+      .img-lifestyle-content { padding: 40px 24px; }
+      .img-lifestyle-content .lifestyle-stats { gap: 20px; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+      .gallery-card { aspect-ratio: 16/10; }
+      .img-comfort-banner { min-height: 400px; }
+      .img-comfort-banner .banner-features { gap: 16px; }
+      .pix-popup { margin: 10px; }
+      .pix-popup-header h3 { font-size: 22px; }
+      .pix-countdown-container { gap: 8px; }
+      .pix-time-block { min-width: 56px; padding: 10px 10px; }
+      .pix-time-block .pix-time-val { font-size: 22px; }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-vs-inner { gap: 16px; }
+      .pricing-vs-example .vs-price { font-size: 26px; }
+      .live-counter-bar .container { gap: 16px; }
+      .live-counter-text .lc-number { font-size: 18px; }
+    }
+
+    @media (max-width: 480px) {
+      .header-cta { padding: 8px 16px; font-size: 13px; }
+      .hero-cta { padding: 16px 32px; font-size: 16px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .banner-feature { font-size: 13px; }
+      .pix-new-price { font-size: 36px; }
+      .pricing-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .pricing-card { padding: 20px 12px; }
+      .pricing-card .pricing-value { font-size: 28px; }
+      .live-counter-bar .container { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== URGENCY TOP BAR ===== -->
+  <div class="top-bar">
+    <span>
+      Promo por tempo limitado
+      <span class="countdown" id="countdown">23:59:59</span>
+    </span>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container">
+      <a href="https://a7lavanderia.com.br" class="logo" aria-label="A7 Lavanderia">A7 Lavanderia</a>
+      <a href="#form" class="header-cta">Quero meu cupom</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg-image">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1600&q=85&auto=format" alt="Quarto moderno e elegante com edredom branco luxuoso" fetchpriority="high">
+    </div>
+    <div class="container">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Oferta exclusiva online
+      </div>
+
+      <h1>
+        Lave 3 Edredons.<br>
+        Pague Apenas <span class="highlight">2.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Edredons limpos, macios e cheirosos. Sem esforço, sem complicação.
+        Sua melhor noite de sono começa aqui.
+      </p>
+
+      <div class="price-card-hero">
+        <div class="promo-tag">Leve 3, pague 2</div>
+        <p class="offer-text">3 edredons comuns higienizados</p>
+        <div class="price-row">
+          <span class="old-price">R$ 149,85</span>
+          <span class="new-price"><small>R$</small>99<small>,90</small></span>
+        </div>
+        <div class="savings">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Economia de R$ 49,95
+        </div>
+      </div>
+
+      <a href="#form" class="hero-cta">
+        Garantir minha oferta
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <div class="hero-trust">
+        <span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Higienização profissional
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Entrega em 48h
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          +2.000 clientes felizes
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF BAR ===== -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="proof-item">
+        <div class="proof-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>4.9/5</strong>
+          <span>Avaliacao no Google</span>
+        </div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>2.000+</strong>
+          <span>Clientes atendidos</span>
+        </div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>5 Anos</strong>
+          <span>De experiencia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVE PURCHASE COUNTER ===== -->
+  <div class="live-counter-bar">
+    <div class="container">
+      <div class="live-counter-item">
+        <div class="live-counter-icon lci-fire">🔥</div>
+        <div class="live-counter-text">
+          <div class="lc-number"><span class="lc-live-dot"></span><span id="purchaseCount">127</span> pessoas</div>
+          <div class="lc-label">Ja compraram essa oferta</div>
+        </div>
+      </div>
+      <div class="live-counter-item">
+        <div class="live-counter-icon lci-eye">👁️</div>
+        <div class="live-counter-text">
+          <div class="lc-number"><span id="viewingCount">14</span> pessoas</div>
+          <div class="lc-label">Vendo essa pagina agora</div>
+        </div>
+      </div>
+      <div class="live-counter-item">
+        <div class="live-counter-icon lci-clock">⏳</div>
+        <div class="live-counter-text">
+          <div class="lc-number">Ultimas <span id="slotsCount">23</span> vagas</div>
+          <div class="lc-label">Antes de encerrar a promo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== IMAGE SECTION 1: LIFESTYLE SPLIT ===== -->
+  <section class="img-lifestyle">
+    <div class="img-lifestyle-grid">
+      <div class="img-lifestyle-visual">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80&auto=format" alt="Quarto com edredom limpo e branco - A7 Lavanderia" loading="lazy">
+        <div class="img-overlay"></div>
+      </div>
+      <div class="img-lifestyle-content">
+        <div class="big-quote">"</div>
+        <h2>Durma como num hotel 5 estrelas.<br>Toda noite.</h2>
+        <p>
+          Edredons higienizados profissionalmente fazem toda a diferenca
+          na qualidade do seu sono. Sem acaros, sem odores, sem preocupacoes.
+          Apenas o conforto que voce merece.
+        </p>
+        <div class="lifestyle-stats">
+          <div class="lifestyle-stat">
+            <div class="stat-number">99,7%</div>
+            <div class="stat-label">Acaros eliminados</div>
+          </div>
+          <div class="lifestyle-stat">
+            <div class="stat-number">48h</div>
+            <div class="stat-label">Prazo de entrega</div>
+          </div>
+          <div class="lifestyle-stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfacao</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIN POINTS ===== -->
+  <section class="pain-section">
+    <div class="container">
+      <span class="section-tag">O problema</span>
+      <h2 class="section-title">Lavar edredom em casa<br>e uma missao impossivel</h2>
+      <p class="section-subtitle">
+        Maquina pequena, secagem demorada, resultado duvidoso.
+        Voce merece uma solucao profissional.
+      </p>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="icon">😤</div>
+          <h3>Nao cabe na maquina</h3>
+          <p>Edredons de casal e queen nao cabem em maquinas domesticas. O resultado fica comprometido e o tecido pode danificar.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">⏰</div>
+          <h3>Demora uma eternidade</h3>
+          <p>Entre lavar, torcer, secar e desamassar, voce perde um dia inteiro. Seu tempo vale muito mais que isso.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">🦠</div>
+          <h3>Acaros e bacterias</h3>
+          <p>A lavagem caseira nao elimina acaros, fungos e bacterias. Problemas respiratorios e alergias podem surgir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION / HOW IT WORKS ===== -->
+  <section class="solution-section">
+    <div class="container">
+      <span class="section-tag">A solucao</span>
+      <h2 class="section-title">Simples assim. 3 passos.</h2>
+      <p class="section-subtitle">
+        Voce relaxa, a gente cuida de tudo. Sem complicacao, sem estresse.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Agende pelo WhatsApp</h3>
+          <p>Fale com a gente, escolha o melhor dia e horario para coleta.</p>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Coletamos na sua casa</h3>
+          <p>Nossa equipe busca seus edredons no conforto do seu lar.</p>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Devolvemos impecaveis</h3>
+          <p>Em ate 48h, seus edredons voltam limpos, macios e cheirosos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGE SECTION 2: RESULTADO GALLERY ===== -->
+  <section class="img-gallery">
+    <div class="container">
+      <span class="section-tag">Resultados reais</span>
+      <h2 class="section-title">Veja a transformacao<br>com seus proprios olhos</h2>
+      <p class="section-subtitle">
+        Edredons que chegam pesados e sem vida, saem leves, macios e com aroma incrivel.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80&auto=format" alt="Quarto premium com edredom limpo - resultado A7 Lavanderia" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Resultado</span>
+            <h4>Maciez de hotel</h4>
+            <p>Edredons devolvidos com toque sedoso e aroma profissional</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=600&q=80&auto=format" alt="Maquinas industriais de lavagem - A7 Lavanderia" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Processo</span>
+            <h4>Equipamento industrial</h4>
+            <p>Maquinas profissionais que sua casa nao tem</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=600&q=80&auto=format" alt="Roupas limpas e dobradas - qualidade A7" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Qualidade</span>
+            <h4>Embalagem premium</h4>
+            <p>Entrega cuidadosa, embalado e protegido</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING TABLE (value perception) ===== -->
+  <section class="pricing-section">
+    <div class="container">
+      <span class="section-tag">Tabela de precos</span>
+      <h2 class="section-title">Veja quanto custa lavar<br>cada edredom individualmente</h2>
+      <p class="section-subtitle">
+        Precos por unidade na lavagem avulsa.
+        Compare e entenda o tamanho da economia da nossa promo.
+      </p>
+
+      <div class="pricing-table-wrapper">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-icon">🛏️</div>
+            <div class="pricing-type">Solteiro</div>
+            <div class="pricing-desc">Edredom / Cobertor</div>
+            <div class="pricing-value"><small>R$</small>45<small>,00</small></div>
+            <div class="pricing-unit">por unidade</div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-icon">🛌</div>
+            <div class="pricing-type">Casal Comum</div>
+            <div class="pricing-desc">Edredom / Cobertor</div>
+            <div class="pricing-value"><small>R$</small>50<small>,00</small></div>
+            <div class="pricing-unit">por unidade</div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-icon">👑</div>
+            <div class="pricing-type">Queen / King</div>
+            <div class="pricing-desc">Edredom / Cobertor</div>
+            <div class="pricing-value"><small>R$</small>55<small>,00</small></div>
+            <div class="pricing-unit">por unidade</div>
+          </div>
+          <div class="pricing-card pricing-premium">
+            <div class="pricing-icon">🪶</div>
+            <div class="pricing-type">Pena / Pluma</div>
+            <div class="pricing-desc">Cuidado especial</div>
+            <div class="pricing-value"><small>R$</small>120<small>,00</small></div>
+            <div class="pricing-unit">por unidade</div>
+          </div>
+        </div>
+
+        <!-- Value comparison -->
+        <div class="pricing-vs">
+          <div class="pricing-vs-inner">
+            <div class="pricing-vs-example">
+              <div class="vs-label">Preco normal (3 casal)</div>
+              <div class="vs-calc">3 x R$ 50,00</div>
+              <div class="vs-price vs-old">R$ 150,00</div>
+            </div>
+
+            <div class="pricing-vs-arrow">→</div>
+
+            <div class="pricing-vs-example">
+              <div class="vs-label">Na nossa promo</div>
+              <div class="vs-calc">Lave 3, pague 2</div>
+              <div class="vs-price vs-new">R$ 99,90</div>
+            </div>
+
+            <div class="pricing-vs-arrow">= </div>
+
+            <div class="pricing-vs-savings">
+              Voce economiza R$ 50,10
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFER SECTION ===== -->
+  <section class="offer-section">
+    <div class="container">
+      <span class="section-tag">Oferta especial</span>
+      <h2 class="section-title">Essa oferta nao vai durar.<br>Garanta agora.</h2>
+      <p class="section-subtitle">
+        Promocao exclusiva para quem esta vendo esta pagina. Vagas limitadas.
+      </p>
+
+      <div class="offer-card">
+        <div class="ribbon">Mais vendido</div>
+
+        <h3>Pacote Promocional</h3>
+        <h2>3 Edredons Comuns</h2>
+
+        <div class="offer-items">
+          <div class="offer-item">
+            <span class="offer-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Lavagem profissional completa
+          </div>
+          <div class="offer-item">
+            <span class="offer-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Higienizacao anti-acaros
+          </div>
+          <div class="offer-item">
+            <span class="offer-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Secagem industrial completa
+          </div>
+          <div class="offer-item">
+            <span class="offer-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Embalagem protegida premium
+          </div>
+          <div class="offer-item">
+            <span class="offer-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Coleta e entrega gratis
+          </div>
+        </div>
+
+        <div class="offer-price-block">
+          <p class="offer-de">De <s>R$ 149,85</s></p>
+          <p class="offer-por">Por apenas</p>
+          <p class="offer-price-big"><small>R$</small>99<small>,90</small></p>
+        </div>
+
+        <a href="#form" class="offer-cta">
+          Quero essa oferta
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="benefits-section">
+    <div class="container">
+      <span class="section-tag">Por que a A7?</span>
+      <h2 class="section-title">Mais do que lavanderia.<br>Cuidado de verdade.</h2>
+      <p class="section-subtitle">
+        Cada detalhe pensado para sua experiencia ser incrivel.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🧴</div>
+          <h3>Produtos premium</h3>
+          <p>Usamos produtos hipoalergenicos e de alta qualidade.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🚚</div>
+          <h3>Coleta gratis</h3>
+          <p>Buscamos e entregamos no conforto da sua casa.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Entrega em 48h</h3>
+          <p>Rapidez sem abrir mao da qualidade profissional.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Garantia total</h3>
+          <p>Nao ficou satisfeito? A gente lava de novo, sem custo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGE SECTION 3: FULL-WIDTH COMFORT BANNER ===== -->
+  <section class="img-comfort-banner">
+    <div class="banner-bg">
+      <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1400&q=80&auto=format" alt="Cama com edredom confortavel e limpo" loading="lazy">
+    </div>
+    <div class="banner-content">
+      <h2>Seu edredom merece<br>cuidado profissional</h2>
+      <p>
+        Nao arrisque danificar seu edredom na maquina de casa.
+        Confie em quem entende do assunto.
+      </p>
+      <div class="banner-features">
+        <div class="banner-feature">
+          <div class="bf-icon">🧪</div>
+          Produtos hipoalergenicos
+        </div>
+        <div class="banner-feature">
+          <div class="bf-icon">🌡️</div>
+          Secagem controlada
+        </div>
+        <div class="banner-feature">
+          <div class="bf-icon">✨</div>
+          Aroma exclusivo
+        </div>
+      </div>
+      <a href="#form" class="banner-cta">
+        Quero edredons perfeitos
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <span class="section-tag">Depoimentos</span>
+      <h2 class="section-title">Quem experimentou, aprovou.</h2>
+      <p class="section-subtitle">
+        Veja o que nossos clientes falam sobre a experiencia A7.
+      </p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Mandei 3 edredons e voltaram como novos! O cheiro e maravilhoso e a praticidade nao tem preco. Super recomendo!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CM</div>
+            <div>
+              <div class="testimonial-name">Carla M.</div>
+              <div class="testimonial-label">Cliente desde 2023</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Nunca mais lavo edredom em casa. A A7 coleta, lava e entrega rapido. E o preco da promo e sensacional!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RF</div>
+            <div>
+              <div class="testimonial-name">Roberto F.</div>
+              <div class="testimonial-label">Cliente desde 2024</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Meus filhos tem alergia e desde que comecei a lavar na A7, melhorou muito. Higienizacao profissional faz diferenca!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AS</div>
+            <div>
+              <div class="testimonial-name">Ana S.</div>
+              <div class="testimonial-label">Cliente desde 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEAD FORM / COUPON ===== -->
+  <section class="form-section" id="form">
+    <div class="container">
+      <span class="section-tag">Cupom exclusivo</span>
+      <h2 class="section-title">Garanta seu desconto<br>agora mesmo</h2>
+      <p class="section-subtitle">
+        Preencha abaixo e receba um cupom especial para sua primeira lavagem.
+        Valido por 7 dias.
+      </p>
+
+      <div class="form-card">
+        <!-- Coupon Preview -->
+        <div class="coupon-preview">
+          <div class="coupon-label">Seu cupom sera</div>
+          <div class="coupon-code">A7EDREDON</div>
+          <div class="coupon-desc">10% OFF na primeira lavagem avulsa</div>
+        </div>
+
+        <!-- Form -->
+        <form id="leadForm" autocomplete="on">
+          <div class="form-group">
+            <label for="name">Seu nome</label>
+            <input type="text" id="name" name="name" placeholder="Como podemos te chamar?" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="phone">WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="(12) 99999-9999" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="qty">Quantos edredons voce tem em casa?</label>
+            <select id="qty" name="qty" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="1-2">1 a 2 edredons</option>
+              <option value="3-4">3 a 4 edredons</option>
+              <option value="5+">5 ou mais edredons</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            Gerar meu cupom de desconto
+          </button>
+          <p class="form-privacy">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:4px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Seus dados estao protegidos. Nao enviamos spam.
+          </p>
+        </form>
+
+        <!-- Success State -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">🎉</div>
+          <h3>Cupom gerado com sucesso!</h3>
+          <p>Use o codigo abaixo na sua proxima visita:</p>
+          <div class="generated-coupon" id="couponDisplay" onclick="copyCoupon()">
+            <span id="couponCode">A7-XXXX</span>
+            <span class="copy-hint">Toque para copiar</span>
+          </div>
+          <p style="font-size:13px; color:rgba(255,255,255,0.5);">Valido por 7 dias | 10% OFF lavagem avulsa</p>
+          <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20promo%20de%203%20edredons%20por%20R%2499%2C90!%20Meu%20cupom%20%C3%A9%3A%20" class="whatsapp-btn" id="whatsappLink">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <span class="section-tag">Duvidas</span>
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <p class="section-subtitle">
+        Tudo o que voce precisa saber sobre nossa promocao.
+      </p>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            A promo vale para qualquer tipo de edredom?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A promocao de 3 por R$99,90 e valida para edredons comuns (solteiro, casal). Para edredons king, queen especiais ou com enchimento premium, consulte valores pelo WhatsApp.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Quanto tempo demora a lavagem?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              O prazo padrao e de ate 48 horas uteis apos a coleta. Em periodos de alta demanda, pode estender para 72h. Voce sera avisado pelo WhatsApp.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Voces buscam e entregam em casa?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim! Fazemos coleta e entrega gratuita em toda a regiao atendida. Basta agendar pelo WhatsApp e nossa equipe vai ate voce.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Posso combinar com o cupom de desconto?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              O cupom de 10% e valido para lavagens avulsas (fora da promocao). A promo de 3 edredons por R$99,90 ja possui preco especial e nao acumula com cupons.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Ate quando vai essa promocao?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A promocao e por tempo limitado e pode encerrar a qualquer momento. Garanta seu agendamento o quanto antes para nao perder!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pronto para edredons impecaveis?</h2>
+      <p>Garanta a promo de 3 edredons por R$99,90 antes que acabe.</p>
+      <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20promo%20de%203%20edredons%20por%20R%2499%2C90!" class="cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-brand">A7 Lavanderia</span>
+      <p>Cuidando das suas roupas com carinho profissional.</p>
+      <p style="margin-top:8px;">
+        <a href="https://a7lavanderia.com.br">a7lavanderia.com.br</a> |
+        <a href="https://wa.me/5512974128390">WhatsApp (12) 97412-8390</a>
+      </p>
+      <p style="margin-top:16px; font-size:12px; opacity:0.5;">
+        &copy; 2026 A7 Lavanderia. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://wa.me/5512974128390?text=Oi!%20Vi%20a%20promo%20de%20edredons%20e%20quero%20saber%20mais!" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===== SOCIAL PROOF NOTIFICATION ===== -->
+  <div class="notification-toast" id="notifToast">
+    <div class="notif-avatar" id="notifAvatar">M</div>
+    <div class="notif-text">
+      <strong id="notifName">Maria</strong> agendou a promo
+      <span id="notifTime">ha 3 minutos</span>
+    </div>
+  </div>
+
+  <!-- ===== PIX POPUP (10% desconto antecipado) ===== -->
+  <div class="pix-overlay" id="pixOverlay">
+    <div class="pix-popup">
+      <button class="pix-popup-close" onclick="closePixPopup()" aria-label="Fechar">&times;</button>
+
+      <div class="pix-popup-header">
+        <div class="popup-flash">
+          <span style="font-size:14px;">⚡</span>
+          Oferta relampago
+        </div>
+        <h3>Pague via PIX agora<br>e ganhe 10% OFF extra!</h3>
+        <p>Essa oferta expira em:</p>
+      </div>
+
+      <div class="pix-countdown-container">
+        <div class="pix-time-block">
+          <div class="pix-time-val" id="pixHours">23</div>
+          <div class="pix-time-label">Horas</div>
+        </div>
+        <span class="pix-time-sep">:</span>
+        <div class="pix-time-block">
+          <div class="pix-time-val" id="pixMinutes">59</div>
+          <div class="pix-time-label">Min</div>
+        </div>
+        <span class="pix-time-sep">:</span>
+        <div class="pix-time-block">
+          <div class="pix-time-val" id="pixSeconds">59</div>
+          <div class="pix-time-label">Seg</div>
+        </div>
+      </div>
+
+      <div class="pix-popup-body">
+        <p style="font-size:14px; color:var(--gray-500); margin-top:8px;">3 edredons comuns higienizados</p>
+
+        <div class="pix-price-compare">
+          <span class="pix-old-price">R$ 99,90</span>
+          <span class="pix-arrow-price">→</span>
+          <span class="pix-new-price"><small>R$</small>89<small>,91</small></span>
+        </div>
+
+        <div class="pix-savings-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Economia total de R$ 59,94
+        </div>
+
+        <div class="pix-benefits">
+          <div class="pix-benefit-item">
+            <span class="pbi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Pagamento instantaneo e seguro
+          </div>
+          <div class="pix-benefit-item">
+            <span class="pbi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Confirmacao imediata da reserva
+          </div>
+          <div class="pix-benefit-item">
+            <span class="pbi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Prioridade no agendamento
+          </div>
+          <div class="pix-benefit-item">
+            <span class="pbi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            10% OFF exclusivo via PIX
+          </div>
+        </div>
+
+        <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20pagar%20via%20PIX%20antecipado%20com%2010%25%20OFF!%20Promo%203%20edredons%20por%20R%2489%2C91!" class="pix-cta-btn" id="pixCtaBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quero pagar via PIX com 10% OFF
+        </a>
+
+        <button class="pix-skip" onclick="closePixPopup()">Nao, obrigado. Prefiro o preco normal.</button>
+
+        <div class="pix-pix-logo">
+          <svg class="pix-icon" viewBox="0 0 512 512" fill="none"><path d="M346.09 312.17l-62.1-62.1a17.44 17.44 0 00-24.68 0l-62.1 62.1a52.33 52.33 0 01-37.16 15.39h-8.43l78.27 78.27a52.33 52.33 0 0073.92 0l78.27-78.27h-8.43a52.33 52.33 0 01-27.56-15.39z" fill="#4DB6AC"/><path d="M346.09 199.83l-62.1 62.1a17.44 17.44 0 01-24.68 0l-62.1-62.1a52.33 52.33 0 00-37.16-15.39h-8.43l78.27-78.27a52.33 52.33 0 0173.92 0l78.27 78.27h-8.43a52.33 52.33 0 00-27.56 15.39z" fill="#4DB6AC"/><path d="M405.83 184.44l-46.3 46.3a60.33 60.33 0 0127.56 17.39l62.1 62.1a9.44 9.44 0 010 13.36l-43.36 43.36 25.87 25.87a52.33 52.33 0 000-73.92l-25.87-25.87 25.87-25.87a52.33 52.33 0 000-73.92l-25.87-9.4z" fill="#4DB6AC"/><path d="M152.62 184.44a52.33 52.33 0 0037.16 15.39h8.43a60.33 60.33 0 00-27.56 17.39l-62.1 62.1a9.44 9.44 0 000 13.36l71.63 71.63a52.33 52.33 0 0037.16 15.39h-8.43l-103-103a52.33 52.33 0 010-73.92l46.71-18.34z" fill="#4DB6AC"/></svg>
+          Pagamento seguro via PIX
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // ========================================
+    // COUNTDOWN TIMER (resets daily at midnight)
+    // ========================================
+    function updateCountdown() {
+      const now = new Date();
+      const end = new Date();
+      end.setHours(23, 59, 59, 999);
+      const diff = end - now;
+
+      if (diff <= 0) return;
+
+      const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+      const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+
+      document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // ========================================
+    // PHONE MASK
+    // ========================================
+    document.getElementById('phone').addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 7) {
+        v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+      } else if (v.length > 2) {
+        v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+      } else if (v.length > 0) {
+        v = `(${v}`;
+      }
+      e.target.value = v;
+    });
+
+    // ========================================
+    // FORM SUBMISSION & COUPON GENERATION
+    // ========================================
+    function generateCoupon() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = 'A7-';
+      for (let i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return code;
+    }
+
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Gerando seu cupom...';
+
+      const formData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        qty: document.getElementById('qty').value,
+        timestamp: new Date().toISOString()
+      };
+
+      // Store lead locally (integrate with your backend/CRM)
+      const leads = JSON.parse(localStorage.getItem('a7_leads') || '[]');
+      const coupon = generateCoupon();
+      formData.coupon = coupon;
+      leads.push(formData);
+      localStorage.setItem('a7_leads', JSON.stringify(leads));
+
+      // Show success
+      setTimeout(() => {
+        document.getElementById('leadForm').style.display = 'none';
+        document.querySelector('.coupon-preview').style.display = 'none';
+        document.getElementById('couponCode').textContent = coupon;
+        document.getElementById('formSuccess').classList.add('active');
+
+        // Update WhatsApp link with coupon
+        const waLink = document.getElementById('whatsappLink');
+        const waText = encodeURIComponent(
+          `Oi! Quero agendar a promo de 3 edredons por R$99,90! Meu cupom é: ${coupon}\nNome: ${formData.name}`
+        );
+        waLink.href = `https://wa.me/5512974128390?text=${waText}`;
+
+        // Track conversion (add your analytics pixel here)
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { method: 'coupon_form' });
+        }
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+      }, 1200);
+    });
+
+    // ========================================
+    // COPY COUPON
+    // ========================================
+    function copyCoupon() {
+      const code = document.getElementById('couponCode').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const hint = document.querySelector('.copy-hint');
+        hint.textContent = 'Copiado!';
+        setTimeout(() => { hint.textContent = 'Toque para copiar'; }, 2000);
+      });
+    }
+
+    // ========================================
+    // FAQ TOGGLE
+    // ========================================
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    }
+
+    // ========================================
+    // SOCIAL PROOF NOTIFICATIONS (Dopamine)
+    // ========================================
+    const notifications = [
+      { name: 'Maria L.', initial: 'M', time: 'ha 2 minutos' },
+      { name: 'Carlos R.', initial: 'C', time: 'ha 5 minutos' },
+      { name: 'Juliana P.', initial: 'J', time: 'ha 8 minutos' },
+      { name: 'Fernando S.', initial: 'F', time: 'ha 12 minutos' },
+      { name: 'Patricia M.', initial: 'P', time: 'ha 15 minutos' },
+      { name: 'Lucas A.', initial: 'L', time: 'ha 18 minutos' },
+      { name: 'Amanda K.', initial: 'A', time: 'ha 22 minutos' },
+    ];
+
+    let notifIndex = 0;
+
+    function showNotification() {
+      const toast = document.getElementById('notifToast');
+      const data = notifications[notifIndex % notifications.length];
+
+      document.getElementById('notifAvatar').textContent = data.initial;
+      document.getElementById('notifName').textContent = data.name;
+      document.getElementById('notifTime').textContent = data.time;
+
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
+
+      notifIndex++;
+    }
+
+    // First notification after 8s, then every 25-40s
+    setTimeout(() => {
+      showNotification();
+      setInterval(showNotification, 25000 + Math.random() * 15000);
+    }, 8000);
+
+    // ========================================
+    // SMOOTH SCROLL for anchor links
+    // ========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ========================================
+    // LIVE PURCHASE COUNTER (auto-increment)
+    // ========================================
+    (function() {
+      // Persistent base count: starts at 127, grows over time
+      const LAUNCH_DATE = new Date('2026-02-20T00:00:00').getTime();
+      const now = Date.now();
+      const daysSinceLaunch = Math.max(0, (now - LAUNCH_DATE) / (1000 * 60 * 60 * 24));
+
+      // Base count grows ~8-15 per day organically
+      let baseCount = 127 + Math.floor(daysSinceLaunch * 11);
+
+      // Session increments (random small bumps during visit)
+      let sessionExtra = 0;
+      const purchaseEl = document.getElementById('purchaseCount');
+      const viewingEl = document.getElementById('viewingCount');
+      const slotsEl = document.getElementById('slotsCount');
+
+      function updatePurchaseCount() {
+        purchaseEl.textContent = baseCount + sessionExtra;
+      }
+
+      // Simulate new purchases every 30-90 seconds
+      function schedulePurchaseBump() {
+        const delay = 30000 + Math.random() * 60000;
+        setTimeout(() => {
+          sessionExtra++;
+          purchaseEl.style.transform = 'scale(1.15)';
+          purchaseEl.style.color = '#6ee7b7';
+          purchaseEl.style.transition = 'all 0.3s ease';
+          updatePurchaseCount();
+
+          setTimeout(() => {
+            purchaseEl.style.transform = 'scale(1)';
+            purchaseEl.style.color = '';
+          }, 600);
+
+          // Decrease available slots
+          const currentSlots = parseInt(slotsEl.textContent);
+          if (currentSlots > 5) {
+            slotsEl.textContent = currentSlots - 1;
+          }
+
+          schedulePurchaseBump();
+        }, delay);
+      }
+
+      // Viewing count fluctuates realistically (8-22 range)
+      function updateViewingCount() {
+        const base = 14;
+        const variation = Math.floor(Math.random() * 9) - 4; // -4 to +4
+        const current = Math.max(8, Math.min(22, base + variation));
+        viewingEl.textContent = current;
+      }
+
+      updatePurchaseCount();
+      schedulePurchaseBump();
+      setInterval(updateViewingCount, 8000 + Math.random() * 7000);
+    })();
+
+    // ========================================
+    // PIX POPUP (appears after 15 seconds)
+    // ========================================
+    let pixPopupShown = false;
+    let pixTimerInterval = null;
+
+    function openPixPopup() {
+      if (pixPopupShown) return;
+      pixPopupShown = true;
+      document.getElementById('pixOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      startPixCountdown();
+
+      // Track popup view
+      if (typeof gtag === 'function') {
+        gtag('event', 'popup_view', { popup_type: 'pix_discount' });
+      }
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'PixPopupView');
+      }
+    }
+
+    function closePixPopup() {
+      document.getElementById('pixOverlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on overlay click (not popup content)
+    document.getElementById('pixOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closePixPopup();
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closePixPopup();
+    });
+
+    // 24h countdown for PIX popup (persisted per session)
+    function startPixCountdown() {
+      let pixDeadline = sessionStorage.getItem('a7_pix_deadline');
+      if (!pixDeadline) {
+        pixDeadline = Date.now() + 24 * 60 * 60 * 1000; // 24h from now
+        sessionStorage.setItem('a7_pix_deadline', pixDeadline);
+      }
+      pixDeadline = parseInt(pixDeadline);
+
+      function updatePixTimer() {
+        const now = Date.now();
+        const diff = pixDeadline - now;
+
+        if (diff <= 0) {
+          document.getElementById('pixHours').textContent = '00';
+          document.getElementById('pixMinutes').textContent = '00';
+          document.getElementById('pixSeconds').textContent = '00';
+          clearInterval(pixTimerInterval);
+          return;
+        }
+
+        const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+        const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+
+        document.getElementById('pixHours').textContent = h;
+        document.getElementById('pixMinutes').textContent = m;
+        document.getElementById('pixSeconds').textContent = s;
+      }
+
+      updatePixTimer();
+      pixTimerInterval = setInterval(updatePixTimer, 1000);
+    }
+
+    // Show popup after 15 seconds on page
+    setTimeout(() => {
+      // Only show if user hasn't already dismissed in this session
+      if (!sessionStorage.getItem('a7_pix_dismissed')) {
+        openPixPopup();
+      }
+    }, 15000);
+
+    // Track PIX CTA click
+    document.getElementById('pixCtaBtn').addEventListener('click', function() {
+      sessionStorage.setItem('a7_pix_dismissed', '1');
+      if (typeof gtag === 'function') {
+        gtag('event', 'pix_cta_click', { value: 89.91 });
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', { value: 89.91, currency: 'BRL' });
+      }
+    });
+
+    // Remember dismissal
+    const origClosePixPopup = closePixPopup;
+    closePixPopup = function() {
+      sessionStorage.setItem('a7_pix_dismissed', '1');
+      origClosePixPopup();
+    };
+
+    // ========================================
+    // INTERSECTION OBSERVER (Animate on scroll)
+    // ========================================
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.pain-card, .step, .benefit-card, .testimonial-card, .offer-card, .faq-item, .gallery-card, .lifestyle-stat, .pricing-card, .pricing-vs').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

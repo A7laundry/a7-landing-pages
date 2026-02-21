@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Teste A/B - Campanha Tapetes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0f0f13; color: white; min-height: 100vh; }
+    .header { text-align: center; padding: 48px 20px 16px; }
+    .header .badge { display: inline-block; background: rgba(86,54,209,0.15); color: #a78bfa; border: 1px solid rgba(86,54,209,0.3); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header h1 span { background: linear-gradient(135deg, #5636d1, #e2498a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .header p { color: rgba(255,255,255,0.5); font-size: 15px; max-width: 500px; margin: 0 auto; }
+    .offer-tag { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px; margin: 24px auto; max-width: 500px; background: #1a1a22; border: 1px solid #2a2a35; border-radius: 12px; }
+    .offer-tag .ot-icon { font-size: 32px; }
+    .offer-tag .ot-text { text-align: left; }
+    .offer-tag .ot-text strong { font-size: 18px; display: block; }
+    .offer-tag .ot-text span { font-size: 13px; color: rgba(255,255,255,0.5); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 32px auto 0; padding: 0 24px 60px; }
+    .card { background: #1a1a22; border: 1px solid #2a2a35; border-radius: 16px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; text-decoration: none; color: white; display: block; }
+    .card:hover { transform: translateY(-4px); border-color: #444; box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+    .card-preview { height: 260px; position: relative; overflow: hidden; }
+    .card-preview iframe { width: 200%; height: 200%; border: none; transform: scale(0.5); transform-origin: top left; pointer-events: none; }
+    .card-preview .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7) 100%); pointer-events: none; }
+    .card-body { padding: 20px 24px 24px; }
+    .card-badge { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .badge-a7 { background: rgba(86,54,209,0.2); color: #a78bfa; border: 1px solid rgba(86,54,209,0.3); }
+    .badge-ocean { background: rgba(3,105,161,0.2); color: #38bdf8; border: 1px solid rgba(3,105,161,0.3); }
+    .card-body h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .card-body p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; margin-bottom: 16px; }
+    .swatches { display: flex; gap: 8px; align-items: center; }
+    .sw { width: 28px; height: 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.1); }
+    .sw-label { font-size: 11px; color: rgba(255,255,255,0.35); margin-left: 4px; }
+    .open-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; padding: 10px 20px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50px; color: white; font-size: 13px; font-weight: 600; transition: all 0.3s ease; }
+    .card:hover .open-btn { background: rgba(255,255,255,0.15); }
+    .tip { text-align: center; padding: 0 20px 40px; font-size: 13px; color: rgba(255,255,255,0.3); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; margin-bottom: 16px; transition: color 0.3s; }
+    .back-link:hover { color: white; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .header h1 { font-size: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="../comparativo.html" class="back-link">← Voltar ao painel geral</a>
+    <div class="badge">Campanha Tapetes</div>
+    <h1>Teste A/B - <span>Lavagem de Tapetes</span></h1>
+    <p>2 variacoes de cor para testar qual converte mais com seu publico.</p>
+    <div class="offer-tag">
+      <div class="ot-icon">🧹</div>
+      <div class="ot-text">
+        <strong>R$ 42,90/m² (era R$ 49,90)</strong>
+        <span>PIX antecipado: R$ 38,61/m² (10% OFF extra)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a href="variacao-a7-brand.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-a7-brand.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-a7">Variacao A - A7 Brand</span>
+        <h2>Roxo Royal + Rosa Pink</h2>
+        <p>Paleta oficial da marca A7 Lavanderia. Sofisticacao, confianca e identidade visual reconhecivel pelo publico existente.</p>
+        <div class="swatches">
+          <div class="sw" style="background:#5636d1;"></div>
+          <div class="sw" style="background:#e2498a;"></div>
+          <div class="sw" style="background:#1a1530;"></div>
+          <div class="sw" style="background:#f8f6ff;"></div>
+          <span class="sw-label">Roxo + Rosa (A7)</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+
+    <a href="variacao-ocean.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-ocean.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-ocean">Variacao B - Ocean</span>
+        <h2>Azul Ocean + Coral</h2>
+        <p>Azul transmite limpeza e confianca. Coral gera urgencia. Otimo para publico frio que nao conhece a marca.</p>
+        <div class="swatches">
+          <div class="sw" style="background:#0369a1;"></div>
+          <div class="sw" style="background:#ea580c;"></div>
+          <div class="sw" style="background:#0c2135;"></div>
+          <div class="sw" style="background:#f0f9ff;"></div>
+          <span class="sw-label">Azul + Coral</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+  </div>
+
+  <p class="tip">Dica: Use a Variacao A para remarketing (publico quente) e a Variacao B para prospecao (publico frio).</p>
+</body>
+</html>

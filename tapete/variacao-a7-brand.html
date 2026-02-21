@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Lavagem de Tapetes e Carpetes - R$42,90/m²</title>
+  <meta name="description" content="Lavagem profissional de tapetes e carpetes por apenas R$42,90/m². Coleta e entrega grátis. Higienização anti-ácaros. A7 Lavanderia.">
+  <meta property="og:title" content="A7 Lavanderia | Tapetes Limpos por R$42,90/m²">
+  <meta property="og:description" content="Lavagem profissional de tapetes com coleta grátis. De R$49,90 por R$42,90/m². Promoção por tempo limitado!">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #5636d1;
+      --purple-dark: #4528a8;
+      --purple-light: #7b63e0;
+      --purple-glow: rgba(86, 54, 209, 0.3);
+      --pink: #e2498a;
+      --pink-dark: #c93a76;
+      --pink-light: #f06ba5;
+      --pink-glow: rgba(226, 73, 138, 0.3);
+      --gradient-main: linear-gradient(135deg, #5636d1 0%, #e2498a 100%);
+      --gradient-reverse: linear-gradient(135deg, #e2498a 0%, #5636d1 100%);
+      --gradient-radial: radial-gradient(circle at 30% 50%, #5636d1 0%, #3d1fa8 50%, #1a0d4e 100%);
+      --white: #ffffff;
+      --off-white: #f8f6ff;
+      --gray-100: #f3f0ff;
+      --gray-200: #e8e4f5;
+      --gray-500: #8b85a0;
+      --gray-700: #4a4560;
+      --gray-900: #1a1530;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --shadow-sm: 0 2px 8px rgba(86, 54, 209, 0.08);
+      --shadow-md: 0 8px 24px rgba(86, 54, 209, 0.12);
+      --shadow-lg: 0 16px 48px rgba(86, 54, 209, 0.16);
+      --shadow-xl: 0 24px 64px rgba(86, 54, 209, 0.24);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-900);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .whatsapp-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1000;
+      width: 60px; height: 60px; background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4); cursor: pointer;
+      transition: transform .3s ease, box-shadow .3s ease;
+      text-decoration: none; animation: whatsappPulse 2s infinite;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+    @keyframes whatsappPulse {
+      0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6), 0 0 0 8px rgba(37,211,102,0.1); }
+    }
+
+    /* ===== TOP BAR ===== */
+    .top-bar {
+      background: var(--gradient-main); color: white; text-align: center;
+      padding: 10px 20px; font-size: 14px; font-weight: 600;
+      letter-spacing: 0.5px; position: relative; overflow: hidden;
+    }
+    .top-bar::before {
+      content: ''; position: absolute; top: 0; left: -100%; width: 200%; height: 100%;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer { 0% { transform: translateX(-50%); } 100% { transform: translateX(50%); } }
+    .top-bar span { position: relative; z-index: 1; }
+    .top-bar .countdown {
+      display: inline-block; background: rgba(255,255,255,0.2);
+      padding: 2px 10px; border-radius: 20px; margin-left: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: white; padding: 12px 0; position: sticky; top: 0; z-index: 900;
+      box-shadow: var(--shadow-sm); transition: box-shadow .3s ease;
+    }
+    .header.scrolled { box-shadow: var(--shadow-md); }
+    .header .container { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--purple); text-decoration: none; }
+    .header-logo span { color: var(--pink); }
+    .header-cta {
+      background: var(--gradient-main); color: white; border: none; padding: 10px 24px;
+      border-radius: 50px; font-weight: 700; font-size: 14px; cursor: pointer;
+      text-decoration: none; transition: transform .2s, box-shadow .2s;
+    }
+    .header-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; min-height: 90vh; display: flex; align-items: center;
+      background: url('https://images.unsplash.com/photo-1600166898405-da9535204843?w=1600&q=85&auto=format') center/cover no-repeat;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(26,13,78,0.85) 0%, rgba(86,54,209,0.7) 50%, rgba(226,73,138,0.6) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; width: 100%; padding: 80px 0 60px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+      padding: 8px 20px; border-radius: 50px; color: white;
+      font-size: 14px; font-weight: 600; margin-bottom: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero-badge .dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: blink 1.5s infinite; }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700; color: white; line-height: 1.1; margin-bottom: 16px; max-width: 700px;
+    }
+    .hero h1 em { font-style: normal; color: var(--pink-light); }
+    .hero-sub { color: rgba(255,255,255,0.85); font-size: 18px; max-width: 520px; margin-bottom: 32px; }
+
+    .hero-price-card {
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-lg);
+      padding: 28px 32px; max-width: 420px; margin-bottom: 32px;
+    }
+    .hero-price-card .price-label { color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+    .hero-price-card .price-old {
+      color: rgba(255,255,255,0.5); font-size: 22px; font-weight: 600;
+      text-decoration: line-through; margin-bottom: 4px;
+    }
+    .hero-price-card .price-new { color: white; font-size: 48px; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .hero-price-card .price-new small { font-size: 22px; font-weight: 600; }
+    .hero-price-card .price-unit { color: rgba(255,255,255,0.7); font-size: 14px; }
+    .hero-price-card .price-savings {
+      display: inline-block; background: var(--success); color: white; font-size: 13px;
+      font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-top: 8px;
+    }
+
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--pink); color: white; font-size: 18px; font-weight: 800;
+      padding: 18px 40px; border-radius: 50px; text-decoration: none; border: none; cursor: pointer;
+      transition: transform .2s, box-shadow .2s, background .2s;
+      box-shadow: 0 8px 32px rgba(226,73,138,0.4);
+    }
+    .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(226,73,138,0.5); background: var(--pink-dark); }
+
+    .hero-trust {
+      display: flex; gap: 24px; margin-top: 28px; flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500;
+    }
+    .hero-trust-item svg { width: 18px; height: 18px; fill: var(--success); flex-shrink: 0; }
+
+    /* ===== SOCIAL PROOF BAR ===== */
+    .social-bar {
+      background: var(--gray-900); color: white; padding: 14px 0;
+    }
+    .social-bar .container {
+      display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+    }
+    .social-bar-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; }
+    .social-bar-item .num { color: var(--pink-light); font-size: 18px; font-weight: 800; }
+    .social-bar-item .dot-live { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: blink 1.5s infinite; }
+
+    /* ===== LIFESTYLE SPLIT ===== */
+    .lifestyle {
+      padding: 80px 0; background: var(--white);
+    }
+    .lifestyle .container {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .lifestyle-img {
+      border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3;
+    }
+    .lifestyle-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .lifestyle-content h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700;
+      color: var(--gray-900); line-height: 1.2; margin-bottom: 16px;
+    }
+    .lifestyle-content h2 em { font-style: normal; color: var(--purple); }
+    .lifestyle-content p { color: var(--gray-700); font-size: 16px; margin-bottom: 32px; }
+    .lifestyle-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .lifestyle-stat {
+      text-align: center; padding: 20px 12px; background: var(--gray-100);
+      border-radius: var(--radius-md);
+    }
+    .lifestyle-stat .stat-num {
+      font-family: 'Space Grotesk', sans-serif; font-size: 32px;
+      font-weight: 700; color: var(--purple); line-height: 1;
+    }
+    .lifestyle-stat .stat-label { font-size: 12px; color: var(--gray-500); margin-top: 4px; font-weight: 600; }
+
+    /* ===== PAIN POINTS ===== */
+    .pain {
+      padding: 80px 0; background: var(--off-white);
+    }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 6px; background: var(--gray-100);
+      padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 700;
+      color: var(--purple); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700; color: var(--gray-900); line-height: 1.2; margin-bottom: 16px;
+    }
+    .section-title em { font-style: normal; color: var(--purple); }
+    .section-sub { color: var(--gray-500); font-size: 16px; max-width: 600px; margin-bottom: 48px; }
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .pain-card {
+      background: white; padding: 32px 24px; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm); text-align: center;
+      transition: transform .3s, box-shadow .3s; border: 1px solid var(--gray-200);
+    }
+    .pain-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pain-card .icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(226,73,138,0.1), rgba(86,54,209,0.1));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px; font-size: 28px;
+    }
+    .pain-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--gray-900); }
+    .pain-card p { font-size: 14px; color: var(--gray-500); line-height: 1.5; }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps {
+      padding: 80px 0; background: var(--white);
+    }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
+    .steps-grid::before {
+      content: ''; position: absolute; top: 44px; left: 15%; right: 15%; height: 3px;
+      background: var(--gradient-main); border-radius: 2px;
+    }
+    .step-card { text-align: center; position: relative; z-index: 1; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--gradient-main);
+      color: white; font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; box-shadow: 0 4px 16px rgba(86,54,209,0.3);
+    }
+    .step-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .step-card p { font-size: 14px; color: var(--gray-500); max-width: 260px; margin: 0 auto; }
+
+    /* ===== IMAGE GALLERY ===== */
+    .gallery { padding: 80px 0; background: var(--off-white); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .gallery-card {
+      border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);
+      background: white; transition: transform .3s, box-shadow .3s;
+    }
+    .gallery-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .gallery-card-img { aspect-ratio: 4/3; overflow: hidden; }
+    .gallery-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .gallery-card:hover .gallery-card-img img { transform: scale(1.05); }
+    .gallery-card-body { padding: 20px 24px; }
+    .gallery-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+    .gallery-card-body p { font-size: 14px; color: var(--gray-500); }
+
+    /* ===== PRICING ===== */
+    .pricing { padding: 80px 0; background: var(--white); }
+    .pricing-types {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .pricing-type {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--gray-100); padding: 16px 24px; border-radius: var(--radius-md);
+      border: 1px solid var(--gray-200);
+    }
+    .pricing-type .type-name { font-weight: 600; font-size: 15px; color: var(--gray-900); }
+    .pricing-type .type-price { font-weight: 800; font-size: 18px; color: var(--purple); }
+
+    .pricing-compare {
+      max-width: 560px; margin: 0 auto; background: var(--gradient-main);
+      border-radius: var(--radius-lg); padding: 36px 32px; color: white; text-align: center;
+      box-shadow: var(--shadow-xl);
+    }
+    .pricing-compare h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .pricing-compare .compare-sub { font-size: 14px; opacity: 0.8; margin-bottom: 24px; }
+    .pricing-compare .compare-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);
+      font-size: 16px;
+    }
+    .pricing-compare .compare-row:last-of-type { border-bottom: none; }
+    .pricing-compare .compare-row .label { opacity: 0.85; }
+    .pricing-compare .compare-row .value { font-weight: 800; font-size: 18px; }
+    .pricing-compare .compare-row .value.old { text-decoration: line-through; opacity: 0.6; }
+    .pricing-compare .savings-badge {
+      display: inline-block; margin-top: 16px; background: white; color: var(--purple);
+      font-weight: 800; font-size: 18px; padding: 10px 28px; border-radius: 50px;
+    }
+
+    /* ===== OFFER CARD ===== */
+    .offer { padding: 80px 0; background: var(--off-white); }
+    .offer-card {
+      max-width: 700px; margin: 0 auto; background: white; border-radius: var(--radius-xl);
+      padding: 48px 40px; box-shadow: var(--shadow-lg); text-align: center;
+      border: 2px solid var(--gray-200); position: relative; overflow: hidden;
+    }
+    .offer-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--gradient-main);
+    }
+    .offer-card h2 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin-bottom: 8px; }
+    .offer-card .offer-price {
+      font-size: 52px; font-weight: 900; color: var(--purple); line-height: 1; margin: 16px 0;
+    }
+    .offer-card .offer-price small { font-size: 20px; font-weight: 600; }
+    .offer-checklist {
+      text-align: left; max-width: 400px; margin: 24px auto; display: flex; flex-direction: column; gap: 12px;
+    }
+    .offer-checklist li {
+      list-style: none; display: flex; align-items: center; gap: 10px;
+      font-size: 15px; color: var(--gray-700); font-weight: 500;
+    }
+    .offer-checklist li svg { width: 20px; height: 20px; fill: var(--success); flex-shrink: 0; }
+    .offer-card .offer-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--pink); color: white; font-size: 18px; font-weight: 800;
+      padding: 18px 48px; border-radius: 50px; text-decoration: none;
+      margin-top: 24px; transition: transform .2s, box-shadow .2s; border: none; cursor: pointer;
+      box-shadow: 0 8px 32px rgba(226,73,138,0.35);
+    }
+    .offer-card .offer-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(226,73,138,0.45); }
+
+    /* ===== BENEFITS ===== */
+    .benefits { padding: 80px 0; background: var(--white); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .benefit-card {
+      text-align: center; padding: 32px 20px; border-radius: var(--radius-lg);
+      background: var(--gray-100); transition: transform .3s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); }
+    .benefit-card .b-icon {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--gradient-main);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px; font-size: 24px;
+    }
+    .benefit-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .benefit-card p { font-size: 13px; color: var(--gray-500); }
+
+    /* ===== COMFORT BANNER ===== */
+    .comfort-banner {
+      position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center;
+      background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=80&auto=format') center/cover no-repeat;
+    }
+    .comfort-banner::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(26,13,78,0.8), rgba(226,73,138,0.6));
+    }
+    .comfort-banner-content {
+      position: relative; z-index: 2; text-align: center; color: white; padding: 40px 20px;
+    }
+    .comfort-banner-content h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .comfort-banner-content p { font-size: 18px; opacity: 0.9; max-width: 550px; margin: 0 auto 28px; }
+    .comfort-banner-content .banner-cta {
+      display: inline-flex; align-items: center; gap: 10px; background: white; color: var(--purple);
+      font-size: 17px; font-weight: 800; padding: 16px 40px; border-radius: 50px;
+      text-decoration: none; transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .comfort-banner-content .banner-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { padding: 80px 0; background: var(--off-white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonial-card {
+      background: white; padding: 28px 24px; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200);
+      transition: transform .3s;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); }
+    .testimonial-stars { color: var(--warning); font-size: 18px; margin-bottom: 12px; }
+    .testimonial-card p { font-size: 14px; color: var(--gray-700); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 10px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-main);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 700; font-size: 16px;
+    }
+    .testimonial-name { font-weight: 700; font-size: 14px; }
+    .testimonial-loc { font-size: 12px; color: var(--gray-500); }
+
+    /* ===== LEAD FORM ===== */
+    .lead { padding: 80px 0; background: var(--white); }
+    .lead-card {
+      max-width: 560px; margin: 0 auto; background: var(--gray-100);
+      border-radius: var(--radius-xl); padding: 40px 36px;
+      box-shadow: var(--shadow-md); border: 1px solid var(--gray-200);
+    }
+    .lead-card h2 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; text-align: center; margin-bottom: 6px; }
+    .lead-card .lead-sub { text-align: center; color: var(--gray-500); font-size: 14px; margin-bottom: 28px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 14px 16px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200);
+      font-size: 15px; font-family: inherit; background: white; color: var(--gray-900);
+      transition: border-color .2s, box-shadow .2s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-glow);
+    }
+    .form-group input::placeholder { color: var(--gray-500); }
+    .form-submit {
+      width: 100%; padding: 16px; background: var(--gradient-main); color: white;
+      font-size: 16px; font-weight: 800; border: none; border-radius: 50px;
+      cursor: pointer; transition: transform .2s, box-shadow .2s; margin-top: 8px;
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* Coupon success state */
+    .coupon-success { display: none; text-align: center; padding: 20px 0; }
+    .coupon-success.active { display: block; }
+    .coupon-success .coupon-icon { font-size: 48px; margin-bottom: 12px; }
+    .coupon-success h3 { font-size: 22px; font-weight: 700; color: var(--purple); margin-bottom: 8px; }
+    .coupon-success .coupon-code {
+      display: inline-block; background: var(--gradient-main); color: white;
+      font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700;
+      padding: 12px 32px; border-radius: var(--radius-md); margin: 12px 0;
+      letter-spacing: 2px;
+    }
+    .coupon-success .coupon-desc { color: var(--gray-500); font-size: 14px; margin-bottom: 16px; }
+    .coupon-copy {
+      background: var(--gray-100); border: 1.5px solid var(--gray-200); padding: 10px 24px;
+      border-radius: 50px; font-weight: 600; font-size: 14px; cursor: pointer;
+      color: var(--purple); transition: background .2s; font-family: inherit;
+    }
+    .coupon-copy:hover { background: var(--gray-200); }
+    .coupon-whatsapp {
+      display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: white;
+      font-size: 15px; font-weight: 700; padding: 14px 32px; border-radius: 50px;
+      text-decoration: none; margin-top: 12px; transition: transform .2s;
+    }
+    .coupon-whatsapp:hover { transform: translateY(-2px); }
+    .form-area { transition: opacity .3s; }
+    .form-area.hidden { display: none; }
+
+    /* ===== FAQ ===== */
+    .faq { padding: 80px 0; background: var(--off-white); }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item {
+      background: white; border-radius: var(--radius-md); margin-bottom: 12px;
+      border: 1px solid var(--gray-200); overflow: hidden;
+    }
+    .faq-question {
+      width: 100%; padding: 20px 24px; background: none; border: none; font-size: 16px;
+      font-weight: 600; text-align: left; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center; font-family: inherit;
+      color: var(--gray-900); transition: color .2s;
+    }
+    .faq-question:hover { color: var(--purple); }
+    .faq-question .faq-icon { font-size: 20px; transition: transform .3s; color: var(--purple); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 14px; color: var(--gray-500); line-height: 1.7; }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      padding: 80px 0; background: var(--gradient-radial); text-align: center; color: white;
+    }
+    .final-cta h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .final-cta p { font-size: 18px; opacity: 0.85; max-width: 500px; margin: 0 auto 32px; }
+    .final-cta-btn {
+      display: inline-flex; align-items: center; gap: 10px; background: var(--pink);
+      color: white; font-size: 20px; font-weight: 800; padding: 20px 48px;
+      border-radius: 50px; text-decoration: none; transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 8px 32px rgba(226,73,138,0.4); border: none; cursor: pointer;
+      animation: ctaPulse 2.5s infinite;
+    }
+    @keyframes ctaPulse {
+      0%,100% { box-shadow: 0 8px 32px rgba(226,73,138,0.4); }
+      50% { box-shadow: 0 8px 48px rgba(226,73,138,0.6), 0 0 0 6px rgba(226,73,138,0.15); }
+    }
+    .final-cta-btn:hover { transform: translateY(-3px); }
+    .final-cta .trust-row {
+      display: flex; justify-content: center; gap: 28px; margin-top: 24px; flex-wrap: wrap;
+    }
+    .final-cta .trust-row span { font-size: 13px; opacity: 0.7; display: flex; align-items: center; gap: 6px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--gray-900); color: rgba(255,255,255,0.6); padding: 40px 0; text-align: center; font-size: 13px;
+    }
+    .footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 22px; color: white; font-weight: 700; margin-bottom: 8px; }
+    .footer-logo span { color: var(--pink-light); }
+    .footer p { margin-bottom: 4px; }
+
+    /* ===== SOCIAL PROOF TOAST ===== */
+    .toast-container { position: fixed; bottom: 100px; left: 24px; z-index: 999; }
+    .toast {
+      background: white; padding: 14px 20px; border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px;
+      font-size: 13px; transform: translateX(-120%); opacity: 0;
+      transition: transform .5s ease, opacity .5s ease; border-left: 3px solid var(--success);
+      max-width: 320px;
+    }
+    .toast.show { transform: translateX(0); opacity: 1; }
+    .toast .toast-icon { font-size: 20px; }
+    .toast .toast-name { font-weight: 700; color: var(--gray-900); }
+    .toast .toast-action { color: var(--gray-500); }
+    .toast .toast-time { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+
+    /* ===== PIX POPUP ===== */
+    .pix-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000;
+      display: none; align-items: center; justify-content: center;
+      backdrop-filter: blur(4px); padding: 20px;
+    }
+    .pix-overlay.active { display: flex; }
+    .pix-popup {
+      background: white; border-radius: var(--radius-xl); max-width: 460px; width: 100%;
+      padding: 40px 32px; text-align: center; position: relative;
+      box-shadow: var(--shadow-xl); animation: popIn .4s ease;
+    }
+    @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    .pix-popup .pix-close {
+      position: absolute; top: 16px; right: 16px; background: var(--gray-100);
+      border: none; width: 32px; height: 32px; border-radius: 50%;
+      font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: var(--gray-500); transition: background .2s;
+    }
+    .pix-popup .pix-close:hover { background: var(--gray-200); }
+    .pix-popup .pix-badge {
+      display: inline-block; background: var(--success); color: white;
+      font-size: 13px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px;
+    }
+    .pix-popup h3 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin-bottom: 8px; }
+    .pix-popup .pix-sub { font-size: 14px; color: var(--gray-500); margin-bottom: 20px; }
+    .pix-popup .pix-prices { display: flex; justify-content: center; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .pix-popup .pix-old { font-size: 22px; color: var(--gray-500); text-decoration: line-through; font-weight: 600; }
+    .pix-popup .pix-arrow { font-size: 20px; color: var(--gray-500); }
+    .pix-popup .pix-new { font-size: 36px; font-weight: 900; color: var(--purple); }
+    .pix-popup .pix-new small { font-size: 16px; font-weight: 600; }
+    .pix-popup .pix-countdown-label { font-size: 13px; color: var(--gray-500); margin-bottom: 8px; }
+    .pix-popup .pix-countdown {
+      font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700;
+      color: var(--pink); margin-bottom: 20px;
+    }
+    .pix-popup .pix-benefits { text-align: left; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
+    .pix-popup .pix-benefits li {
+      list-style: none; display: flex; align-items: center; gap: 8px;
+      font-size: 14px; color: var(--gray-700);
+    }
+    .pix-popup .pix-benefits li svg { width: 18px; height: 18px; fill: var(--success); flex-shrink: 0; }
+    .pix-popup .pix-cta {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--gradient-main);
+      color: white; font-size: 16px; font-weight: 800; padding: 16px 40px;
+      border-radius: 50px; text-decoration: none; transition: transform .2s;
+      border: none; cursor: pointer;
+    }
+    .pix-popup .pix-cta:hover { transform: translateY(-2px); }
+    .pix-popup .pix-dismiss {
+      display: block; margin-top: 12px; background: none; border: none;
+      color: var(--gray-500); font-size: 13px; cursor: pointer; font-family: inherit;
+      text-decoration: underline;
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .lifestyle .container { grid-template-columns: 1fr; gap: 32px; }
+      .pain-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+      .steps-grid::before { display: none; }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-types { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 32px; }
+      .hero-price-card { padding: 20px; }
+      .hero-price-card .price-new { font-size: 36px; }
+      .social-bar .container { gap: 16px; font-size: 12px; }
+      .social-bar-item .num { font-size: 15px; }
+      .comfort-banner { min-height: 340px; }
+      .lead-card { padding: 28px 20px; }
+      .offer-card { padding: 32px 20px; }
+      .pix-popup { padding: 28px 20px; }
+      .toast-container { left: 12px; right: 12px; }
+      .toast { max-width: 100%; }
+    }
+    @media (max-width: 480px) {
+      .top-bar { font-size: 12px; padding: 8px 12px; }
+      .header-cta { padding: 8px 16px; font-size: 12px; }
+      .hero { min-height: 80vh; }
+      .hero-cta { font-size: 15px; padding: 15px 28px; }
+      .hero-trust { gap: 12px; }
+      .lifestyle-stats { grid-template-columns: 1fr; gap: 10px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 26px; }
+      .final-cta-btn { font-size: 16px; padding: 16px 32px; }
+      .social-bar .container { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20lavagem%20do%20meu%20tapete%20com%20desconto!" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- SOCIAL PROOF TOAST -->
+  <div class="toast-container">
+    <div class="toast" id="socialToast">
+      <span class="toast-icon">&#10003;</span>
+      <div>
+        <div><span class="toast-name" id="toastName">Maria S.</span> <span class="toast-action">agendou lavagem</span></div>
+        <div class="toast-time" id="toastTime">agora mesmo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIX POPUP -->
+  <div class="pix-overlay" id="pixOverlay">
+    <div class="pix-popup">
+      <button class="pix-close" id="pixClose" aria-label="Fechar">&times;</button>
+      <span class="pix-badge">OFERTA EXCLUSIVA PIX</span>
+      <h3>Pague via PIX e ganhe<br>10% OFF extra!</h3>
+      <p class="pix-sub">Desconto aplicado automaticamente no pagamento via PIX</p>
+      <div class="pix-prices">
+        <span class="pix-old">R$42,90</span>
+        <span class="pix-arrow">&rarr;</span>
+        <span class="pix-new">R$38,61<small>/m&sup2;</small></span>
+      </div>
+      <p class="pix-countdown-label">Oferta expira em:</p>
+      <div class="pix-countdown" id="pixCountdown">23:59:59</div>
+      <ul class="pix-benefits">
+        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Desconto imediato de 10%</li>
+        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Confirmacao instantanea</li>
+        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Sem taxas adicionais</li>
+        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Prioridade no agendamento</li>
+      </ul>
+      <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20o%20desconto%20PIX%20para%20lavagem%20de%20tapete!" class="pix-cta">
+        <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quero desconto PIX
+      </a>
+      <button class="pix-dismiss" id="pixDismiss">Agora nao, obrigado</button>
+    </div>
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span>&#9200; PROMO TAPETES: 14% OFF na lavagem profissional! Termina em <span class="countdown" id="topCountdown">23:59:59</span></span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="container">
+      <a href="#" class="header-logo">A7<span>.</span></a>
+      <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20lavagem%20do%20meu%20tapete!" class="header-cta">Agendar Lavagem</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-badge"><span class="dot"></span> Vagas limitadas esta semana</div>
+        <h1>Seu tapete merece um <em>SPA profissional</em></h1>
+        <p class="hero-sub">Lavagem profunda com higienizacao anti-acaros, remocao de manchas e secagem controlada. Coleta e entrega gratis.</p>
+        <div class="hero-price-card">
+          <div class="price-label">Lavagem profissional por m&sup2;</div>
+          <div class="price-old">De R$49,90/m&sup2;</div>
+          <div class="price-new">R$42,90<small>/m&sup2;</small></div>
+          <div class="price-unit">no pacote promocional</div>
+          <span class="price-savings">ECONOMIA DE 14%</span>
+        </div>
+        <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20lavagem%20do%20meu%20tapete%20com%20desconto!" class="hero-cta">
+          <svg width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar Minha Lavagem
+        </a>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Coleta gratis
+          </div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Entrega em 48h
+          </div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Garantia de satisfacao
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="social-bar">
+    <div class="container">
+      <div class="social-bar-item">
+        <span class="num" id="purchaseCount">87</span>+ ja agendaram
+      </div>
+      <div class="social-bar-item">
+        <span class="dot-live"></span>
+        <span class="num" id="viewerCount">11</span> vendo agora
+      </div>
+      <div class="social-bar-item">
+        &#128293; Ultimas <span class="num" id="slotsCount">18</span> vagas
+      </div>
+    </div>
+  </div>
+
+  <!-- LIFESTYLE SPLIT -->
+  <section class="lifestyle reveal" id="resultado">
+    <div class="container">
+      <div class="lifestyle-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80&auto=format" alt="Textura de tapete limpo e macio" loading="lazy">
+      </div>
+      <div class="lifestyle-content">
+        <span class="section-tag">RESULTADO GARANTIDO</span>
+        <h2>Seu tapete volta como <em>novo</em></h2>
+        <p>Nossa lavagem profissional remove sujeira profunda, acaros, fungos e manchas que a limpeza caseira nao consegue eliminar. Devolvemos seu tapete higienizado, macio e com cheirinho de novo.</p>
+        <div class="lifestyle-stats">
+          <div class="lifestyle-stat">
+            <div class="stat-num">99,2%</div>
+            <div class="stat-label">Sujeira removida</div>
+          </div>
+          <div class="lifestyle-stat">
+            <div class="stat-num">48h</div>
+            <div class="stat-label">Prazo de entrega</div>
+          </div>
+          <div class="lifestyle-stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Satisfacao</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain reveal">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">&#128561; O PROBLEMA</span>
+        <h2 class="section-title">Lavar tapete em casa e um <em>pesadelo</em></h2>
+        <p class="section-sub mx-auto">Voce ja tentou lavar seu tapete sozinho e sabe como e frustrante. Veja os problemas mais comuns:</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="icon">&#128170;</div>
+          <h3>Peso impossivel</h3>
+          <p>Tapetes molhados ficam extremamente pesados. Manusear, torcer e secar sozinho e quase impossivel e pode causar lesoes.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#128167;</div>
+          <h3>Manchas persistentes</h3>
+          <p>Cafe, vinho, pet... manchas que nao saem com produtos domesticos. Tentativas caseiras podem fixar a mancha permanentemente.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#129440;</div>
+          <h3>Acaros e fungos ocultos</h3>
+          <p>Seu tapete acumula acaros, bacterias e fungos invisiveis que causam alergias e problemas respiratorios em toda a familia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps reveal">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">COMO FUNCIONA</span>
+        <h2 class="section-title">Simples assim: <em>3 passos</em></h2>
+        <p class="section-sub mx-auto">Voce nao precisa fazer nada alem de agendar. Nos cuidamos de todo o resto.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Agende pelo WhatsApp</h3>
+          <p>Envie uma mensagem com o tipo e tamanho do seu tapete. Respondemos em minutos.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Coletamos na sua casa</h3>
+          <p>Nossa equipe busca o tapete no endereco e horario combinados. Coleta 100% gratis.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Devolvemos impecavel</h3>
+          <p>Em ate 48h, seu tapete volta limpo, higienizado, macio e com cheirinho de novo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE GALLERY -->
+  <section class="gallery reveal">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">NOSSO TRABALHO</span>
+        <h2 class="section-title">Veja a <em>diferenca</em> profissional</h2>
+        <p class="section-sub mx-auto">Cada tapete recebe tratamento individualizado com produtos importados e equipamentos profissionais.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80&auto=format" alt="Resultado da lavagem - sala limpa e moderna" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3>Resultado Impecavel</h3>
+            <p>Tapetes devolvidos com aparencia de novos, cores vibrantes e fibras macias.</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=600&q=80&auto=format" alt="Processo de lavagem profissional de tapete" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3>Processo Profissional</h3>
+            <p>Equipamentos industriais e produtos importados para cada tipo de fibra.</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80&auto=format" alt="Qualidade garantida - ambiente limpo com tapete" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3>Qualidade Garantida</h3>
+            <p>Cada peca passa por inspecao final antes de ser devolvida ao cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TABLE -->
+  <section class="pricing reveal" id="precos">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">&#128176; TABELA DE PRECOS</span>
+        <h2 class="section-title">Preco justo por <em>tipo de tapete</em></h2>
+        <p class="section-sub mx-auto">Cada material exige um cuidado especifico. Confira nossos valores por metro quadrado:</p>
+      </div>
+      <div class="pricing-types">
+        <div class="pricing-type">
+          <span class="type-name">Tapete comum (ate 2m&sup2;)</span>
+          <span class="type-price">R$49,90/m&sup2;</span>
+        </div>
+        <div class="pricing-type">
+          <span class="type-name">Tapete persa/oriental</span>
+          <span class="type-price">R$59,90/m&sup2;</span>
+        </div>
+        <div class="pricing-type">
+          <span class="type-name">Tapete shaggy/peludo</span>
+          <span class="type-price">R$54,90/m&sup2;</span>
+        </div>
+        <div class="pricing-type">
+          <span class="type-name">Carpete fixo</span>
+          <span class="type-price">R$44,90/m&sup2;</span>
+        </div>
+      </div>
+      <div class="pricing-compare">
+        <h3>Exemplo: Tapete Comum de 8m&sup2;</h3>
+        <p class="compare-sub">Veja quanto voce economiza na promocao</p>
+        <div class="compare-row">
+          <span class="label">Preco normal (8 x R$49,90)</span>
+          <span class="value old">R$399,20</span>
+        </div>
+        <div class="compare-row">
+          <span class="label">Preco promocional (8 x R$42,90)</span>
+          <span class="value">R$343,20</span>
+        </div>
+        <div class="compare-row">
+          <span class="label">Sua economia</span>
+          <span class="value" style="color: #34d399;">R$56,00</span>
+        </div>
+        <span class="savings-badge">Voce economiza R$56,00!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER CARD -->
+  <section class="offer reveal">
+    <div class="container">
+      <div class="offer-card">
+        <span class="section-tag">OFERTA ESPECIAL</span>
+        <h2>Lavagem Profissional Completa</h2>
+        <div class="offer-price">R$42,90<small>/m&sup2;</small></div>
+        <p style="color: var(--gray-500); font-size: 14px; margin-top: -8px;">de <s>R$49,90/m&sup2;</s> &mdash; economia de 14%</p>
+        <ul class="offer-checklist">
+          <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Lavagem profunda com produtos importados</li>
+          <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Remocao de manchas dificeis</li>
+          <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Higienizacao anti-acaros</li>
+          <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Secagem controlada (preserva as fibras)</li>
+          <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Coleta e entrega GRATIS</li>
+        </ul>
+        <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20lavagem%20do%20meu%20tapete%20com%20desconto!" class="offer-btn">
+          Quero Este Desconto
+          <svg width="20" height="20" fill="white" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits reveal">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">&#10024; DIFERENCIAIS</span>
+        <h2 class="section-title">Por que escolher a <em>A7 Lavanderia</em>?</h2>
+        <p class="section-sub mx-auto">Mais de 2.000 tapetes lavados com excelencia. Confira nossos diferenciais:</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="b-icon">&#129514;</div>
+          <h3>Produtos Profissionais</h3>
+          <p>Utilizamos produtos importados especificos para cada tipo de fibra e material.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="b-icon">&#128666;</div>
+          <h3>Coleta Gratis</h3>
+          <p>Buscamos seu tapete no endereco e horario que voce escolher, sem custo adicional.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="b-icon">&#9889;</div>
+          <h3>Entrega em 48h</h3>
+          <p>Prazo rapido de devolucao para voce nao ficar sem seu tapete por muito tempo.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="b-icon">&#128170;</div>
+          <h3>Garantia Total</h3>
+          <p>Se voce nao ficar satisfeito, refazemos o servico sem custo. Garantia de qualidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMFORT BANNER -->
+  <section class="comfort-banner reveal">
+    <div class="comfort-banner-content">
+      <h2>Seu lar merece esse cuidado</h2>
+      <p>Um tapete limpo transforma o ambiente, elimina alergenos e traz conforto para toda a familia.</p>
+      <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20lavagem%20do%20meu%20tapete!" class="banner-cta">
+        <svg width="20" height="20" fill="#5636d1" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials reveal" id="depoimentos">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">&#11088; DEPOIMENTOS</span>
+        <h2 class="section-title">O que nossos <em>clientes</em> dizem</h2>
+        <p class="section-sub mx-auto">Centenas de clientes satisfeitos com o resultado da lavagem profissional.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Meu tapete persa estava com uma mancha de vinho ha meses. A A7 removeu completamente! Voltou como novo, com as cores vibrantes de novo. Super recomendo!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">C</div>
+            <div>
+              <div class="testimonial-name">Camila R.</div>
+              <div class="testimonial-loc">Sao Jose dos Campos, SP</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Tenho 3 cachorros e meu tapete shaggy estava impossivel. A equipe coletou, lavou e devolveu em 2 dias. Ficou impecavel e sem cheiro nenhum. Incrivel!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Roberto M.</div>
+              <div class="testimonial-loc">Taubate, SP</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Melhor custo-beneficio da regiao! A coleta gratis faz toda diferenca. Meus filhos tem alergia e desde que comecei a lavar com eles, melhorou muito."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Ana Paula S.</div>
+              <div class="testimonial-loc">Jacarei, SP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM -->
+  <section class="lead reveal" id="cupom">
+    <div class="container">
+      <div class="lead-card">
+        <h2>Ganhe seu cupom de 10% OFF</h2>
+        <p class="lead-sub">Preencha abaixo e receba um cupom exclusivo para lavagem individual do seu tapete.</p>
+        <div class="form-area" id="formArea">
+          <form id="leadForm">
+            <div class="form-group">
+              <label for="leadName">Seu nome</label>
+              <input type="text" id="leadName" placeholder="Ex: Maria Silva" required>
+            </div>
+            <div class="form-group">
+              <label for="leadPhone">WhatsApp</label>
+              <input type="tel" id="leadPhone" placeholder="(12) 99999-9999" required>
+            </div>
+            <div class="form-group">
+              <label for="leadEmail">E-mail</label>
+              <input type="email" id="leadEmail" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="leadType">Tipo de tapete</label>
+              <select id="leadType" required>
+                <option value="">Selecione o tipo...</option>
+                <option value="comum">Tapete comum</option>
+                <option value="persa">Tapete persa/oriental</option>
+                <option value="shaggy">Tapete shaggy/peludo</option>
+                <option value="carpete">Carpete fixo</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <button type="submit" class="form-submit">Gerar Meu Cupom de Desconto</button>
+          </form>
+        </div>
+        <div class="coupon-success" id="couponSuccess">
+          <div class="coupon-icon">&#127881;</div>
+          <h3>Cupom gerado com sucesso!</h3>
+          <p class="coupon-desc">Use este codigo ao agendar sua lavagem e ganhe 10% OFF:</p>
+          <div class="coupon-code" id="couponCode">A7-XXXXX</div>
+          <br>
+          <button class="coupon-copy" id="couponCopy">&#128203; Copiar cupom</button>
+          <br>
+          <a href="#" class="coupon-whatsapp" id="couponWhatsapp">
+            <svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar com meu cupom
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal" id="faq">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">&#10067; DUVIDAS</span>
+        <h2 class="section-title">Perguntas <em>frequentes</em></h2>
+        <p class="section-sub mx-auto">Tire suas duvidas sobre nosso servico de lavagem de tapetes.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto tempo demora a lavagem e devolucao?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Nosso prazo padrao e de ate 48 horas apos a coleta. Em casos de tapetes muito grandes, persas ou com tratamento especial, pode levar ate 72 horas. Sempre informamos o prazo exato no momento do agendamento.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Voces lavam todos os tipos de tapete?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim! Lavamos tapetes comuns, persas, orientais, shaggy, peludos, sisal, carpetes fixos e muito mais. Cada tipo recebe tratamento especifico com produtos adequados para o material e as fibras.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            A coleta e entrega sao realmente gratis?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim, a coleta e entrega sao 100% gratis para toda a regiao de Sao Jose dos Campos e cidades vizinhas (Jacarei, Taubate, Cacapava e regiao). Basta agendar pelo WhatsApp e combinaremos o melhor horario.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Como funciona o pagamento via PIX com desconto?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ao optar pelo pagamento antecipado via PIX, voce ganha 10% de desconto adicional sobre o valor promocional. Ou seja, o metro quadrado sai de R$42,90 por apenas R$38,61. O pagamento e feito antes da coleta e a confirmacao e instantanea.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            E se eu nao ficar satisfeito com o resultado?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Oferecemos garantia total de satisfacao. Se voce nao ficar satisfeito com o resultado, refazemos o servico sem custo adicional. Nossa taxa de satisfacao e de 100% porque tratamos cada tapete com o maximo cuidado e atencao.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pronto para ter seu tapete como novo?</h2>
+      <p>Aproveite a promocao de R$42,90/m&sup2; com coleta gratis. Vagas limitadas esta semana!</p>
+      <a href="https://wa.me/5512974128390?text=Oi!%20Quero%20agendar%20a%20lavagem%20do%20meu%20tapete%20com%20desconto!" class="final-cta-btn">
+        <svg width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar Lavagem Agora
+      </a>
+      <div class="trust-row">
+        <span>&#9989; Coleta gratis</span>
+        <span>&#9989; Entrega em 48h</span>
+        <span>&#9989; Satisfacao garantida</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">A7<span>.</span> Lavanderia</div>
+      <p>Lavanderia profissional de tapetes, carpetes e estofados</p>
+      <p style="margin: 8px 0;">WhatsApp: <a href="https://wa.me/5512974128390">(12) 97412-8390</a> | <a href="https://a7lavanderia.com.br">a7lavanderia.com.br</a></p>
+      <p style="margin-top: 16px; font-size: 12px; opacity: 0.5;">&copy; 2026 A7 Lavanderia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* ===== COUNTDOWN TIMER (resets at midnight) ===== */
+      function updateCountdown() {
+        var now = new Date();
+        var midnight = new Date(now);
+        midnight.setHours(24, 0, 0, 0);
+        var diff = midnight - now;
+        var h = Math.floor(diff / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        var str = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+        var el = document.getElementById('topCountdown');
+        if (el) el.textContent = str;
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      /* ===== HEADER SCROLL ===== */
+      var header = document.getElementById('mainHeader');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 60) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      /* ===== SMOOTH SCROLL FOR ANCHOR LINKS ===== */
+      document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      /* ===== PHONE MASK ===== */
+      var phoneInput = document.getElementById('leadPhone');
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+          var v = e.target.value.replace(/\D/g, '');
+          if (v.length > 11) v = v.slice(0, 11);
+          if (v.length > 6) {
+            v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+          } else if (v.length > 2) {
+            v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+          } else if (v.length > 0) {
+            v = '(' + v;
+          }
+          e.target.value = v;
+        });
+      }
+
+      /* ===== FORM SUBMISSION & COUPON ===== */
+      var leadForm = document.getElementById('leadForm');
+      if (leadForm) {
+        leadForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var name = document.getElementById('leadName').value.trim();
+          var phone = document.getElementById('leadPhone').value.trim();
+          var email = document.getElementById('leadEmail').value.trim();
+          var type = document.getElementById('leadType').value;
+
+          if (!name || !phone || !email || !type) return;
+
+          // Generate coupon
+          var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+          var code = 'A7-';
+          for (var i = 0; i < 5; i++) {
+            code += chars.charAt(Math.floor(Math.random() * chars.length));
+          }
+
+          // Save to localStorage
+          var lead = { name: name, phone: phone, email: email, type: type, coupon: code, date: new Date().toISOString() };
+          localStorage.setItem('a7_tapete_lead', JSON.stringify(lead));
+
+          // Show coupon
+          document.getElementById('couponCode').textContent = code;
+          document.getElementById('formArea').classList.add('hidden');
+          document.getElementById('couponSuccess').classList.add('active');
+
+          // Set WhatsApp link with coupon
+          var waMsg = 'Oi! Meu nome e ' + name + '. Quero agendar lavagem de tapete ' + type + ' com meu cupom ' + code + ' de 10% OFF!';
+          document.getElementById('couponWhatsapp').href = 'https://wa.me/5512974128390?text=' + encodeURIComponent(waMsg);
+
+          // Analytics hooks
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', { event_category: 'form', event_label: 'tapete_coupon', value: code });
+          }
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', { content_name: 'tapete_coupon', content_category: type });
+          }
+        });
+      }
+
+      /* ===== COPY COUPON ===== */
+      var couponCopy = document.getElementById('couponCopy');
+      if (couponCopy) {
+        couponCopy.addEventListener('click', function() {
+          var code = document.getElementById('couponCode').textContent;
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(code).then(function() {
+              couponCopy.textContent = 'Copiado!';
+              setTimeout(function() { couponCopy.innerHTML = '&#128203; Copiar cupom'; }, 2000);
+            });
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = code;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            couponCopy.textContent = 'Copiado!';
+            setTimeout(function() { couponCopy.innerHTML = '&#128203; Copiar cupom'; }, 2000);
+          }
+        });
+      }
+
+      /* ===== FAQ ACCORDION ===== */
+      document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = this.parentElement;
+          var isOpen = item.classList.contains('open');
+          // Close all
+          document.querySelectorAll('.faq-item').forEach(function(fi) { fi.classList.remove('open'); });
+          // Open clicked if was closed
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+
+      /* ===== SOCIAL PROOF NOTIFICATIONS ===== */
+      var toastNames = [
+        'Maria S.', 'Joao P.', 'Ana L.', 'Carlos R.', 'Fernanda M.',
+        'Pedro H.', 'Juliana C.', 'Ricardo A.', 'Beatriz F.', 'Lucas T.',
+        'Patricia G.', 'Marcelo V.', 'Camila D.', 'Gustavo N.', 'Amanda B.'
+      ];
+      var toastActions = [
+        'agendou lavagem de tapete', 'solicitou coleta gratis', 'gerou cupom de desconto',
+        'agendou lavagem', 'contratou lavagem de carpete', 'agendou higienizacao'
+      ];
+      var toastTimes = ['agora mesmo', 'ha 2 min', 'ha 5 min', 'ha 8 min', 'ha 12 min'];
+      var toastEl = document.getElementById('socialToast');
+      var toastNameEl = document.getElementById('toastName');
+      var toastTimeEl = document.getElementById('toastTime');
+
+      function showToast() {
+        toastNameEl.textContent = toastNames[Math.floor(Math.random() * toastNames.length)];
+        toastEl.querySelector('.toast-action').textContent = toastActions[Math.floor(Math.random() * toastActions.length)];
+        toastTimeEl.textContent = toastTimes[Math.floor(Math.random() * toastTimes.length)];
+        toastEl.classList.add('show');
+        setTimeout(function() {
+          toastEl.classList.remove('show');
+        }, 5000);
+      }
+
+      // First toast after 10s, then every 25-40s
+      setTimeout(function() {
+        showToast();
+        setInterval(function() {
+          var delay = Math.floor(Math.random() * 15000) + 25000;
+          setTimeout(showToast, delay);
+        }, 35000);
+      }, 10000);
+
+      /* ===== LIVE COUNTER AUTO-INCREMENT ===== */
+      var purchaseEl = document.getElementById('purchaseCount');
+      var viewerEl = document.getElementById('viewerCount');
+      var slotsEl = document.getElementById('slotsCount');
+      var purchases = 87;
+      var viewers = 11;
+      var slots = 18;
+
+      // Purchases: increment every 30-90s
+      function incrementPurchases() {
+        purchases += 1;
+        purchaseEl.textContent = purchases;
+        if (slots > 3) {
+          slots -= 1;
+          slotsEl.textContent = slots;
+        }
+        var next = Math.floor(Math.random() * 60000) + 30000;
+        setTimeout(incrementPurchases, next);
+      }
+      setTimeout(incrementPurchases, Math.floor(Math.random() * 30000) + 30000);
+
+      // Viewers: fluctuate 6-18 every 5-10s
+      function updateViewers() {
+        viewers = Math.floor(Math.random() * 13) + 6;
+        viewerEl.textContent = viewers;
+        var next = Math.floor(Math.random() * 5000) + 5000;
+        setTimeout(updateViewers, next);
+      }
+      setTimeout(updateViewers, 5000);
+
+      /* ===== PIX POPUP (15s delay, sessionStorage persisted) ===== */
+      var pixOverlay = document.getElementById('pixOverlay');
+      var pixClose = document.getElementById('pixClose');
+      var pixDismiss = document.getElementById('pixDismiss');
+
+      function showPixPopup() {
+        if (sessionStorage.getItem('a7_pix_dismissed')) return;
+        pixOverlay.classList.add('active');
+        startPixCountdown();
+      }
+
+      function closePixPopup() {
+        pixOverlay.classList.remove('active');
+        sessionStorage.setItem('a7_pix_dismissed', '1');
+      }
+
+      if (pixClose) pixClose.addEventListener('click', closePixPopup);
+      if (pixDismiss) pixDismiss.addEventListener('click', closePixPopup);
+      if (pixOverlay) {
+        pixOverlay.addEventListener('click', function(e) {
+          if (e.target === pixOverlay) closePixPopup();
+        });
+      }
+
+      setTimeout(showPixPopup, 15000);
+
+      // PIX 24h countdown
+      function startPixCountdown() {
+        var pixCountdownEl = document.getElementById('pixCountdown');
+        var pixEnd = sessionStorage.getItem('a7_pix_end');
+        if (!pixEnd) {
+          pixEnd = Date.now() + 86400000; // 24h from now
+          sessionStorage.setItem('a7_pix_end', pixEnd);
+        }
+        pixEnd = parseInt(pixEnd);
+
+        function updatePixTimer() {
+          var diff = pixEnd - Date.now();
+          if (diff <= 0) {
+            pixCountdownEl.textContent = '00:00:00';
+            return;
+          }
+          var h = Math.floor(diff / 3600000);
+          var m = Math.floor((diff % 3600000) / 60000);
+          var s = Math.floor((diff % 60000) / 1000);
+          pixCountdownEl.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+        }
+        updatePixTimer();
+        setInterval(updatePixTimer, 1000);
+      }
+
+      /* ===== INTERSECTION OBSERVER (Scroll Animations) ===== */
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        reveals.forEach(function(el) { observer.observe(el); });
+      } else {
+        // Fallback: show all
+        reveals.forEach(function(el) { el.classList.add('visible'); });
+      }
+
+      /* ===== ANALYTICS HOOKS ===== */
+      // Track CTA clicks
+      document.querySelectorAll('a[href*="wa.me"], .hero-cta, .offer-btn, .final-cta-btn, .banner-cta, .pix-cta').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click', { event_category: 'cta', event_label: 'whatsapp_tapete' });
+          }
+          if (typeof fbq === 'function') {
+            fbq('track', 'Contact', { content_name: 'whatsapp_tapete' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

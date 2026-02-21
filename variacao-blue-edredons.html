@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A7 Lavanderia | 3 Edredons por R$99,90 - Lave 3, Pague 2</title>
+<meta name="description" content="Promoção exclusiva A7 Lavanderia: Lave 3 edredons pelo preço de 2. De R$150 por apenas R$99,90. Lavagem profissional com higienização completa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-darker: #1e3a8a;
+  --primary-light: #60a5fa;
+  --primary-lighter: #93c5fd;
+  --accent: #06b6d4;
+  --accent-dark: #0891b2;
+  --accent-light: #22d3ee;
+  --cta: #f97316;
+  --cta-dark: #ea580c;
+  --cta-light: #fb923c;
+  --gradient-main: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%);
+  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0c4a6e 100%);
+  --gradient-cta: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  --dark: #0f172a;
+  --dark-card: #1e293b;
+  --dark-border: #334155;
+  --dark-lighter: #475569;
+  --light: #f8fafc;
+  --light-blue: #eff6ff;
+  --light-border: #dbeafe;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+  --success: #10b981;
+  --white: #ffffff;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--text-primary); background: var(--white); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; font-family: inherit; }
+ul { list-style: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* URGENCY TOP BAR */
+.urgency-bar { background: linear-gradient(90deg, #1e3a8a, #1e40af, #0c4a6e); color: var(--white); padding: 10px 0; text-align: center; font-size: 14px; font-weight: 600; position: relative; overflow: hidden; z-index: 1001; }
+.urgency-bar::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); animation: shimmer 3s infinite; }
+@keyframes shimmer { 0% { left: -100%; } 100% { left: 200%; } }
+.urgency-bar span { color: var(--accent-light); }
+.urgency-bar .timer { display: inline-block; background: rgba(0,0,0,0.3); padding: 2px 10px; border-radius: 4px; margin-left: 8px; font-variant-numeric: tabular-nums; }
+
+/* STICKY HEADER */
+.header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 16px 0; transition: all 0.3s ease; }
+.header.transparent { background: transparent; }
+.header.solid { background: rgba(15, 23, 42, 0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0,0,0,0.3); padding: 10px 0; }
+.header .container { display: flex; align-items: center; justify-content: space-between; }
+.header-logo { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--white); }
+.header-logo span { color: var(--accent-light); }
+.header-cta { background: var(--gradient-cta); color: var(--white); padding: 10px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; transition: transform 0.2s, box-shadow 0.2s; }
+.header-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(249,115,22,0.4); }
+
+/* HERO SECTION */
+.hero { background: var(--gradient-dark); min-height: 100vh; display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, transparent 70%); border-radius: 50%; }
+.hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%); border-radius: 50%; }
+.hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); color: var(--accent-light); padding: 8px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; }
+.hero-badge .live-dot { width: 8px; height: 8px; background: var(--accent-light); border-radius: 50%; animation: pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.5); } }
+.hero-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(42px, 5vw, 72px); font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 20px; }
+.hero-title em { font-style: normal; color: var(--accent-light); }
+.hero-subtitle { color: var(--text-light); font-size: 18px; line-height: 1.6; margin-bottom: 32px; max-width: 480px; }
+.hero-price-card { background: rgba(30, 41, 59, 0.8); backdrop-filter: blur(16px); border: 1px solid var(--dark-border); border-radius: 16px; padding: 24px; margin-bottom: 32px; max-width: 380px; }
+.hero-price-card .price-label { color: var(--text-light); font-size: 14px; margin-bottom: 4px; }
+.hero-price-card .price-old { color: var(--text-light); font-size: 22px; text-decoration: line-through; position: relative; display: inline-block; }
+.hero-price-card .price-old::after { content: ''; position: absolute; top: 50%; left: -4px; right: -4px; height: 3px; background: #ef4444; transform: rotate(-8deg); animation: strike-anim 1s ease-out 0.5s both; }
+@keyframes strike-anim { from { transform: scaleX(0) rotate(-8deg); transform-origin: left; } to { transform: scaleX(1) rotate(-8deg); transform-origin: left; } }
+.hero-price-card .price-new { font-family: 'Space Grotesk', sans-serif; font-size: 52px; font-weight: 700; color: var(--white); line-height: 1; }
+.hero-price-card .price-new small { font-size: 28px; }
+.hero-price-card .price-info { color: var(--accent-light); font-size: 14px; font-weight: 600; margin-top: 4px; }
+.hero-cta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--gradient-cta); color: var(--white); padding: 18px 40px; border-radius: 12px; font-size: 18px; font-weight: 800; transition: all 0.3s; box-shadow: 0 4px 25px rgba(249,115,22,0.4); text-transform: uppercase; letter-spacing: 0.5px; }
+.hero-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(249,115,22,0.5); }
+.hero-cta-btn svg { width: 22px; height: 22px; }
+.hero-trust { display: flex; gap: 24px; margin-top: 28px; }
+.hero-trust-item { display: flex; align-items: center; gap: 6px; color: var(--text-light); font-size: 13px; }
+.hero-trust-item svg { width: 18px; height: 18px; color: var(--accent-light); }
+.hero-image { position: relative; }
+.hero-image-wrapper { border-radius: 24px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.4); animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+.hero-image-wrapper img { width: 100%; height: 500px; object-fit: cover; }
+
+/* DIAGONAL DIVIDER */
+.divider-slant { height: 80px; margin-top: -80px; position: relative; z-index: 3; }
+.divider-slant.dark-to-dark { background: var(--dark); clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%); }
+.divider-slant.dark-to-light { background: var(--light); clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%); }
+.divider-slant.light-to-dark { background: var(--dark); clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%); }
+
+/* SOCIAL PROOF BAR */
+.social-proof-bar { background: var(--dark-card); padding: 40px 0; position: relative; z-index: 4; }
+.social-proof-bar .container { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+.sp-item { text-align: center; }
+.sp-item .sp-number { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; color: var(--accent-light); line-height: 1; }
+.sp-item .sp-label { color: var(--text-light); font-size: 14px; margin-top: 4px; }
+
+/* PROGRESS BAR SECTION */
+.progress-section { background: var(--dark); padding: 40px 0; position: relative; z-index: 4; }
+.progress-wrap { max-width: 600px; margin: 0 auto; text-align: center; }
+.progress-wrap .progress-text { color: var(--white); font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.progress-wrap .progress-text span { color: var(--cta); }
+.progress-track { background: var(--dark-border); border-radius: 12px; height: 20px; overflow: hidden; position: relative; }
+.progress-fill { height: 100%; width: 0; background: var(--gradient-main); border-radius: 12px; transition: width 2s ease-out; position: relative; }
+.progress-fill::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); animation: shimmer 2s infinite; }
+
+/* LIFESTYLE SPLIT */
+.lifestyle-split { background: var(--light); padding: 80px 0; position: relative; z-index: 4; }
+.lifestyle-split .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.lifestyle-img { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.lifestyle-img img { width: 100%; height: 400px; object-fit: cover; }
+.lifestyle-stats { display: flex; flex-direction: column; gap: 24px; }
+.stat-card { background: var(--white); border: 1px solid var(--light-border); border-radius: 16px; padding: 24px; display: flex; align-items: center; gap: 16px; transition: transform 0.3s, box-shadow 0.3s; }
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(37,99,235,0.1); }
+.stat-card .stat-icon { width: 56px; height: 56px; background: var(--light-blue); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.stat-card .stat-icon svg { width: 28px; height: 28px; color: var(--primary); }
+.stat-card .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--primary-dark); }
+.stat-card .stat-desc { color: var(--text-secondary); font-size: 14px; }
+
+/* PAIN POINTS */
+.pain-section { background: var(--light-blue); padding: 80px 0; position: relative; z-index: 4; }
+.section-title { text-align: center; margin-bottom: 48px; }
+.section-title h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; margin-bottom: 12px; }
+.section-title p { color: var(--text-secondary); font-size: 16px; max-width: 560px; margin: 0 auto; }
+.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pain-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border: 1px solid var(--light-border); border-radius: 20px; padding: 32px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.pain-card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(37,99,235,0.1); }
+.pain-card .pain-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--primary-light), var(--accent)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.pain-card .pain-icon svg { width: 32px; height: 32px; color: var(--white); }
+.pain-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
+.pain-card p { color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--dark); padding: 80px 0; position: relative; z-index: 4; }
+.how-section .section-title h2 { color: var(--white); }
+.how-section .section-title p { color: var(--text-light); }
+.how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
+.how-steps::before { content: ''; position: absolute; top: 40px; left: 15%; right: 15%; height: 3px; background: var(--gradient-main); z-index: 0; }
+.how-step { text-align: center; position: relative; z-index: 1; }
+.how-step-num { width: 80px; height: 80px; background: var(--gradient-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); border: 4px solid var(--dark); box-shadow: 0 0 0 4px var(--primary); }
+.how-step h3 { color: var(--white); font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.how-step p { color: var(--text-light); font-size: 14px; line-height: 1.6; }
+
+/* HORIZONTAL GALLERY */
+.gallery-section { background: var(--light); padding: 80px 0; position: relative; z-index: 4; overflow: hidden; }
+.gallery-scroll { display: flex; gap: 24px; overflow-x: auto; padding: 0 20px 20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.gallery-scroll::-webkit-scrollbar { display: none; }
+.gallery-card { min-width: 300px; max-width: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); scroll-snap-align: start; transition: transform 0.4s ease; flex-shrink: 0; position: relative; }
+.gallery-card:hover { transform: perspective(800px) rotateY(-5deg) translateY(-8px); }
+.gallery-card img { width: 100%; height: 350px; object-fit: cover; }
+.gallery-card .gallery-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(15,23,42,0.85)); padding: 40px 20px 20px; color: var(--white); font-weight: 600; font-size: 15px; }
+
+/* PRICING TABLE */
+.pricing-section { background: var(--light-blue); padding: 80px 0; position: relative; z-index: 4; }
+.pricing-table { max-width: 700px; margin: 0 auto; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(37,99,235,0.1); }
+.pricing-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-bottom: 1px solid var(--light-border); font-size: 16px; }
+.pricing-row:last-child { border-bottom: none; }
+.pricing-row.header { background: var(--primary-dark); color: var(--white); font-weight: 700; }
+.pricing-row .price { font-weight: 700; color: var(--primary-dark); }
+.pricing-comparison { max-width: 700px; margin: 32px auto 0; background: var(--white); border-radius: 20px; padding: 32px; text-align: center; box-shadow: 0 10px 40px rgba(37,99,235,0.1); }
+.pricing-comparison .calc { font-size: 18px; color: var(--text-secondary); margin-bottom: 8px; }
+.pricing-comparison .calc-result { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: var(--primary-dark); }
+.pricing-comparison .economy { color: var(--success); font-size: 18px; font-weight: 700; margin-top: 8px; }
+
+/* OFFER CARD */
+.offer-section { background: var(--dark); padding: 80px 0; position: relative; z-index: 4; }
+.offer-card { max-width: 640px; margin: 0 auto; border-radius: 24px; padding: 4px; background: linear-gradient(135deg, var(--primary), var(--accent), var(--primary-light), var(--accent-light)); background-size: 300% 300%; animation: gradient-border 4s ease infinite; }
+@keyframes gradient-border { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.offer-card-inner { background: var(--dark-card); border-radius: 20px; padding: 48px 40px; text-align: center; }
+.offer-card-inner h2 { font-family: 'Space Grotesk', sans-serif; font-size: 32px; color: var(--white); margin-bottom: 28px; }
+.offer-checklist { text-align: left; margin-bottom: 32px; max-width: 400px; margin-left: auto; margin-right: auto; }
+.offer-checklist li { display: flex; align-items: center; gap: 12px; color: var(--white); font-size: 16px; padding: 8px 0; }
+.offer-checklist li svg { width: 22px; height: 22px; color: var(--accent-light); flex-shrink: 0; }
+.offer-price-block { margin-bottom: 32px; }
+.offer-price-block .old { color: var(--text-light); font-size: 24px; text-decoration: line-through; }
+.offer-price-block .new { font-family: 'Space Grotesk', sans-serif; font-size: 64px; font-weight: 700; color: var(--white); line-height: 1; }
+.offer-price-block .new small { font-size: 32px; }
+.offer-price-block .condition { color: var(--accent-light); font-size: 14px; margin-top: 8px; }
+.offer-cta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--gradient-cta); color: var(--white); padding: 20px 48px; border-radius: 14px; font-size: 20px; font-weight: 800; transition: all 0.3s; box-shadow: 0 4px 25px rgba(249,115,22,0.4); text-transform: uppercase; }
+.offer-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(249,115,22,0.5); }
+
+/* BENEFITS */
+.benefits-section { background: var(--dark-card); padding: 80px 0; position: relative; z-index: 4; }
+.benefits-section .section-title h2 { color: var(--white); }
+.benefits-section .section-title p { color: var(--text-light); }
+.benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.benefit-card { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid var(--dark-border); border-radius: 20px; padding: 32px 24px; text-align: center; transition: transform 0.3s, border-color 0.3s; }
+.benefit-card:hover { transform: translateY(-6px); border-color: var(--primary-light); }
+.benefit-card .benefit-icon { width: 56px; height: 56px; background: rgba(37,99,235,0.15); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.benefit-card .benefit-icon svg { width: 28px; height: 28px; color: var(--primary-light); }
+.benefit-card h3 { color: var(--white); font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.benefit-card p { color: var(--text-light); font-size: 13px; line-height: 1.6; }
+
+/* FULL WIDTH BANNER */
+.banner-section { position: relative; height: 350px; overflow: hidden; z-index: 4; }
+.banner-section img { width: 100%; height: 100%; object-fit: cover; }
+.banner-section .banner-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,64,175,0.85), rgba(6,182,212,0.7)); display: flex; align-items: center; justify-content: center; text-align: center; }
+.banner-section .banner-overlay h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 48px); color: var(--white); max-width: 700px; line-height: 1.2; }
+
+/* TESTIMONIALS */
+.testimonials-section { background: var(--light); padding: 80px 0; position: relative; z-index: 4; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testimonial-card { background: var(--white); border: 1px solid var(--light-border); border-radius: 20px; padding: 32px; transition: transform 0.3s, box-shadow 0.3s; }
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(37,99,235,0.08); }
+.testimonial-stars { color: #f59e0b; font-size: 18px; margin-bottom: 16px; }
+.testimonial-text { color: var(--text-secondary); font-size: 15px; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-main); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 18px; }
+.testimonial-name { font-weight: 700; font-size: 15px; color: var(--text-primary); }
+.testimonial-location { font-size: 13px; color: var(--text-secondary); }
+
+/* LEAD FORM */
+.form-section { background: var(--dark); padding: 80px 0; position: relative; z-index: 4; }
+.form-section .section-title h2 { color: var(--white); }
+.form-section .section-title p { color: var(--text-light); }
+.form-wrapper { max-width: 560px; margin: 0 auto; background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 24px; padding: 40px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.form-group input, .form-group select { width: 100%; padding: 14px 16px; background: rgba(15,23,42,0.6); border: 1px solid var(--dark-border); border-radius: 10px; color: var(--white); font-size: 15px; font-family: inherit; transition: border-color 0.3s; }
+.form-group input::placeholder { color: var(--dark-lighter); }
+.form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary-light); }
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
+.form-group select option { background: var(--dark-card); color: var(--white); }
+.form-submit { width: 100%; padding: 16px; background: var(--gradient-cta); color: var(--white); border-radius: 12px; font-size: 18px; font-weight: 800; transition: all 0.3s; box-shadow: 0 4px 20px rgba(249,115,22,0.3); text-transform: uppercase; }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(249,115,22,0.4); }
+.coupon-result { display: none; text-align: center; margin-top: 24px; padding: 24px; background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.3); border-radius: 16px; }
+.coupon-result h3 { color: var(--accent-light); font-size: 18px; margin-bottom: 12px; }
+.coupon-code { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: 3px; margin-bottom: 12px; }
+.coupon-copy { background: var(--primary); color: var(--white); padding: 10px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: background 0.3s; }
+.coupon-copy:hover { background: var(--primary-dark); }
+
+/* FAQ */
+.faq-section { background: var(--light-blue); padding: 80px 0; position: relative; z-index: 4; }
+.faq-list { max-width: 700px; margin: 0 auto; }
+.faq-item { background: var(--white); border: 1px solid var(--light-border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+.faq-question { width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 600; color: var(--text-primary); background: transparent; text-align: left; transition: background 0.3s; }
+.faq-question:hover { background: var(--light-blue); }
+.faq-question .faq-icon { width: 24px; height: 24px; transition: transform 0.3s; flex-shrink: 0; color: var(--primary); }
+.faq-question.active .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+.faq-answer-inner { padding: 0 24px 20px; color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+/* FINAL CTA */
+.final-cta { background: var(--gradient-main); padding: 80px 0; text-align: center; position: relative; z-index: 4; }
+.final-cta h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 44px); color: var(--white); margin-bottom: 16px; }
+.final-cta p { color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.final-cta .offer-cta-btn { font-size: 18px; }
+
+/* FOOTER */
+.footer { background: var(--dark); padding: 48px 0 24px; position: relative; z-index: 4; }
+.footer .container { text-align: center; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.footer-logo span { color: var(--accent-light); }
+.footer-text { color: var(--text-light); font-size: 14px; margin-bottom: 16px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; }
+.footer-links a { color: var(--text-light); font-size: 14px; transition: color 0.3s; }
+.footer-links a:hover { color: var(--accent-light); }
+.footer-copy { color: var(--dark-lighter); font-size: 12px; border-top: 1px solid var(--dark-border); padding-top: 20px; }
+
+/* FLOATING WHATSAPP */
+.whatsapp-float { position: fixed; bottom: 90px; right: 20px; z-index: 998; width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s; animation: pulse-wp 2s infinite; }
+.whatsapp-float:hover { transform: scale(1.1); }
+@keyframes pulse-wp { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6), 0 0 0 12px rgba(37,211,102,0.1); } }
+.whatsapp-float svg { width: 32px; height: 32px; fill: var(--white); }
+
+/* TOAST */
+.toast-notification { position: fixed; bottom: 100px; left: 20px; z-index: 997; background: var(--white); border-radius: 12px; padding: 14px 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 12px; transform: translateX(-120%); transition: transform 0.5s ease; max-width: 320px; border-left: 4px solid var(--primary); }
+.toast-notification.show { transform: translateX(0); }
+.toast-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-main); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 14px; flex-shrink: 0; }
+.toast-content .toast-name { font-weight: 700; font-size: 14px; color: var(--text-primary); }
+.toast-content .toast-msg { font-size: 12px; color: var(--text-secondary); }
+.toast-content .toast-time { font-size: 11px; color: var(--text-light); }
+
+/* PIX POPUP */
+.pix-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; }
+.pix-overlay.show { display: flex; }
+.pix-modal { background: var(--white); border-radius: 24px; padding: 40px; max-width: 440px; width: 100%; position: relative; text-align: center; animation: modal-in 0.4s ease; }
+@keyframes modal-in { from { transform: scale(0.8) translateY(40px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
+.pix-close { position: absolute; top: 12px; right: 16px; background: none; font-size: 28px; color: var(--text-light); cursor: pointer; }
+.pix-badge { display: inline-block; background: var(--light-blue); color: var(--primary-dark); font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 50px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.pix-modal h2 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; color: var(--text-primary); margin-bottom: 8px; }
+.pix-modal .pix-desc { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; }
+.pix-price-row { display: flex; justify-content: center; align-items: center; gap: 16px; margin-bottom: 8px; }
+.pix-price-row .pix-old { font-size: 22px; color: var(--text-light); text-decoration: line-through; }
+.pix-price-row .pix-new { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; color: var(--primary-dark); }
+.pix-price-row .pix-new small { font-size: 24px; }
+.pix-discount { color: var(--success); font-weight: 700; font-size: 16px; margin-bottom: 16px; }
+.pix-timer { background: var(--light-blue); border-radius: 12px; padding: 12px; margin-bottom: 20px; }
+.pix-timer .pix-timer-label { color: var(--text-secondary); font-size: 12px; margin-bottom: 4px; }
+.pix-timer .pix-timer-count { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--primary-dark); }
+.pix-cta { display: inline-flex; align-items: center; gap: 8px; width: 100%; justify-content: center; background: var(--gradient-cta); color: var(--white); padding: 16px; border-radius: 12px; font-size: 18px; font-weight: 800; transition: all 0.3s; box-shadow: 0 4px 20px rgba(249,115,22,0.3); }
+.pix-cta:hover { transform: translateY(-2px); }
+
+/* STICKY BOTTOM BAR */
+.sticky-bottom { position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: rgba(15, 23, 42, 0.97); backdrop-filter: blur(12px); border-top: 1px solid var(--dark-border); padding: 12px 0; transform: translateY(100%); transition: transform 0.4s ease; }
+.sticky-bottom.show { transform: translateY(0); }
+.sticky-bottom .container { display: flex; align-items: center; justify-content: space-between; }
+.sticky-bottom-info { color: var(--white); }
+.sticky-bottom-info .sticky-label { font-size: 13px; color: var(--text-light); }
+.sticky-bottom-info .sticky-price { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--accent-light); }
+.sticky-bottom-btn { background: var(--gradient-cta); color: var(--white); padding: 12px 28px; border-radius: 10px; font-weight: 800; font-size: 16px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); text-transform: uppercase; }
+.sticky-bottom-btn:hover { transform: translateY(-2px); }
+
+/* SCROLL REVEAL */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero .container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .hero-price-card { margin-left: auto; margin-right: auto; }
+  .hero-trust { justify-content: center; flex-wrap: wrap; }
+  .hero-image-wrapper img { height: 350px; }
+  .social-proof-bar .container { gap: 30px; }
+  .lifestyle-split .container { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; gap: 32px; }
+  .how-steps::before { display: none; }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .footer-links { flex-wrap: wrap; }
+  .sticky-bottom-info .sticky-label { display: none; }
+  .whatsapp-float { bottom: 80px; }
+  .toast-notification { bottom: 150px; left: 12px; max-width: 280px; }
+}
+@media (max-width: 480px) {
+  .urgency-bar { font-size: 12px; padding: 8px 10px; }
+  .header-logo { font-size: 20px; }
+  .header-cta { padding: 8px 16px; font-size: 12px; }
+  .hero { padding: 120px 0 60px; }
+  .hero-title { font-size: 36px; }
+  .hero-cta-btn { padding: 14px 28px; font-size: 16px; }
+  .sp-item .sp-number { font-size: 32px; }
+  .gallery-card { min-width: 260px; max-width: 260px; }
+  .gallery-card img { height: 280px; }
+  .offer-card-inner { padding: 32px 20px; }
+  .offer-price-block .new { font-size: 48px; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .form-wrapper { padding: 28px 20px; }
+  .pix-modal { padding: 28px 20px; }
+  .pix-price-row .pix-new { font-size: 36px; }
+  .sticky-bottom .container { gap: 12px; }
+  .sticky-bottom-btn { padding: 10px 20px; font-size: 14px; }
+  .sticky-bottom-info .sticky-price { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+<!-- URGENCY TOP BAR -->
+<div class="urgency-bar">
+  <div class="container">
+    Oferta termina hoje! <span>Lave 3, Pague 2</span> - Restam <span class="timer" id="urgency-timer">00:00:00</span>
+  </div>
+</div>
+
+<!-- STICKY HEADER -->
+<header class="header transparent" id="main-header">
+  <div class="container">
+    <div class="header-logo">A7 <span>Lavanderia</span></div>
+    <a href="#form-section" class="header-cta">Agendar Agora</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="live-dot"></span>
+        Oferta Exclusiva Online
+      </div>
+      <h1 class="hero-title">Lave 3 Edredons.<br><em>Pague Apenas 2.</em></h1>
+      <p class="hero-subtitle">Lavagem profissional com higienização completa. Elimine ácaros, bactérias e alérgenos. Seu edredom como novo, com cheirinho de limpo.</p>
+      <div class="hero-price-card">
+        <div class="price-label">De</div>
+        <div class="price-old">R$ 150,00</div>
+        <div class="price-label" style="margin-top:8px">Por apenas</div>
+        <div class="price-new">R$ 99<small>,90</small></div>
+        <div class="price-info">3 edredons | Economia de R$ 50,10</div>
+      </div>
+      <a href="#form-section" class="hero-cta-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Quero Aproveitar
+      </a>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Pagamento seguro
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Satisfação garantida
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Entrega em 48h
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=900&q=85&auto=format" alt="Edredom limpo e macio" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<section class="social-proof-bar">
+  <div class="container">
+    <div class="sp-item">
+      <div class="sp-number"><span class="count-up" data-target="127">0</span>+</div>
+      <div class="sp-label">Compraram esta semana</div>
+    </div>
+    <div class="sp-item">
+      <div class="sp-number"><span class="count-up" data-target="14">0</span></div>
+      <div class="sp-label">Pessoas vendo agora</div>
+    </div>
+    <div class="sp-item">
+      <div class="sp-number"><span class="count-up" data-target="4" data-decimal="9">0</span>/5</div>
+      <div class="sp-label">Avaliação no Google</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS BAR -->
+<section class="progress-section">
+  <div class="container">
+    <div class="progress-wrap">
+      <div class="progress-text"><span>87%</span> das vagas preenchidas esta semana</div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant dark-to-light"></div>
+
+<!-- LIFESTYLE SPLIT -->
+<section class="lifestyle-split reveal">
+  <div class="container">
+    <div class="lifestyle-img">
+      <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80&auto=format" alt="Quarto aconchegante com roupa de cama limpa" loading="lazy">
+    </div>
+    <div class="lifestyle-stats">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="stat-value">99,7%</div>
+          <div class="stat-desc">dos acaros eliminados na lavagem profissional</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="stat-value">48h</div>
+          <div class="stat-desc">prazo de entrega com coleta gratis</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+        </div>
+        <div>
+          <div class="stat-value">100%</div>
+          <div class="stat-desc">indice de satisfacao dos nossos clientes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant" style="background:var(--light-blue);clip-path:polygon(0 0,100% 80%,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- PAIN POINTS -->
+<section class="pain-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Por Que Lavar em Casa Nao Funciona?</h2>
+      <p>Edredons exigem cuidados profissionais. Veja os riscos de lavar em casa.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Acaros e Alergenos</h3>
+        <p>Sua maquina domestica nao atinge a temperatura necessaria para eliminar acaros. Mais de 2 milhoes vivem no seu edredom.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        </div>
+        <h3>Dano ao Tecido</h3>
+        <p>Lavar edredons em maquinas comuns deforma o enchimento, cria boloes e reduz a vida util do produto pela metade.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3>Secagem Incompleta</h3>
+        <p>Sem secagem industrial, a umidade retida gera mofo e mau cheiro. Um risco real para sua saude e da sua familia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant light-to-dark" style="background:var(--dark);clip-path:polygon(0 60%,100% 0,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Como Funciona</h2>
+      <p>Simples, rapido e sem complicacao. Tres passos para edredons impecaveis.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <h3>Agende Online</h3>
+        <p>Preencha o formulario abaixo ou chame no WhatsApp. Escolha o melhor dia e horario para coleta.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <h3>Coletamos em Casa</h3>
+        <p>Nossa equipe vai ate voce. Sem custo de coleta. Seus edredons sao tratados com cuidado profissional.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <h3>Devolvemos em 48h</h3>
+        <p>Edredons lavados, higienizados e embalados. Entregues na sua porta, cheirosos e macios como novos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant" style="background:var(--light);clip-path:polygon(0 0,100% 60%,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- HORIZONTAL GALLERY -->
+<section class="gallery-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Resultados Reais</h2>
+      <p>Veja a qualidade do nosso servico em cada detalhe.</p>
+    </div>
+  </div>
+  <div class="gallery-scroll">
+    <div style="min-width:20px;flex-shrink:0;"></div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80&auto=format" alt="Quarto com cama arrumada" loading="lazy">
+      <div class="gallery-label">Limpeza profissional garantida</div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=500&q=80&auto=format" alt="Edredom branco impecavel" loading="lazy">
+      <div class="gallery-label">Maciez e frescor renovados</div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=500&q=80&auto=format" alt="Lavanderia profissional" loading="lazy">
+      <div class="gallery-label">Equipamentos industriais</div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=500&q=80&auto=format" alt="Roupa de cama organizada" loading="lazy">
+      <div class="gallery-label">Cuidado com cada peca</div>
+    </div>
+    <div style="min-width:20px;flex-shrink:0;"></div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant" style="background:var(--light-blue);clip-path:polygon(0 60%,100% 0,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- PRICING TABLE -->
+<section class="pricing-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Tabela de Precos Individuais</h2>
+      <p>Confira nossos precos por peca e veja quanto voce economiza com a promocao.</p>
+    </div>
+    <div class="pricing-table">
+      <div class="pricing-row header">
+        <span>Tipo de Edredom</span>
+        <span>Preco Individual</span>
+      </div>
+      <div class="pricing-row">
+        <span>Edredom Solteiro</span>
+        <span class="price">R$ 45,00</span>
+      </div>
+      <div class="pricing-row">
+        <span>Edredom Casal</span>
+        <span class="price">R$ 50,00</span>
+      </div>
+      <div class="pricing-row">
+        <span>Edredom Queen / King</span>
+        <span class="price">R$ 55,00</span>
+      </div>
+      <div class="pricing-row">
+        <span>Edredom Pena / Pluma</span>
+        <span class="price">R$ 120,00</span>
+      </div>
+    </div>
+    <div class="pricing-comparison">
+      <div class="calc">Exemplo: 3x Edredom Casal = <strong style="text-decoration:line-through;color:var(--text-light)">R$ 150,00</strong></div>
+      <div class="calc-result">Por apenas R$ 99,90</div>
+      <div class="economy">Economia de R$ 50,10</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant" style="background:var(--dark);clip-path:polygon(0 0,100% 60%,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- OFFER CARD -->
+<section class="offer-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2 style="color:var(--white);">Oferta Especial</h2>
+      <p style="color:var(--text-light);">Aproveite antes que acabe. Vagas limitadas por semana.</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-inner">
+        <h2>3 Edredons com Lavagem Completa</h2>
+        <ul class="offer-checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Lavagem profissional com produtos premium
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Higienizacao e eliminacao de acaros
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Secagem industrial completa
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Embalagem protetiva individual
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Coleta e entrega gratis
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Entrega em ate 48 horas
+          </li>
+        </ul>
+        <div class="offer-price-block">
+          <div class="old">R$ 150,00</div>
+          <div class="new">R$ 99<small>,90</small></div>
+          <div class="condition">Lave 3, Pague 2 - Economia de R$ 50,10</div>
+        </div>
+        <a href="#form-section" class="offer-cta-btn">
+          Quero Meus 3 Edredons Limpos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Por Que Escolher a A7?</h2>
+      <p>Mais do que uma lavanderia. Uma experiencia premium para sua roupa de cama.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Produtos Premium</h3>
+        <p>Utilizamos apenas produtos de alta qualidade, hipoalergenicos e seguros para toda a familia.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Coleta Gratis</h3>
+        <p>Buscamos e entregamos na sua casa sem nenhum custo adicional. Praticidade total.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Entrega Rapida</h3>
+        <p>Devolvemos seus edredons limpos e higienizados em ate 48 horas uteis.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+        </div>
+        <h3>Garantia Total</h3>
+        <p>Se voce nao ficar satisfeito, lavamos novamente sem custo. Sua satisfacao e prioridade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<section class="banner-section">
+  <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1400&q=80&auto=format" alt="Lavanderia profissional" loading="lazy">
+  <div class="banner-overlay">
+    <h2>Seu Edredom Merece Cuidado Profissional</h2>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>O Que Nossos Clientes Dizem</h2>
+      <p>Mais de 127 clientes satisfeitos somente nesta semana.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Incrivel! Meus 3 edredons voltaram como novos. O cheiro ficou maravilhoso e a maciez surpreendeu. Nunca mais lavo em casa!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">Mariana Silva</div>
+            <div class="testimonial-location">Sao Jose dos Campos, SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Servico excelente! Coleta e entrega pontual, edredons impecaveis. A promocao de 3 por R$99,90 e imbativel. Super recomendo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div>
+            <div class="testimonial-name">Roberto Campos</div>
+            <div class="testimonial-location">Taubate, SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Minha filha tem alergia e depois da lavagem profissional da A7 ela dormiu muito melhor. Obrigada pela qualidade do servico!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">C</div>
+          <div>
+            <div class="testimonial-name">Camila Rodrigues</div>
+            <div class="testimonial-location">Jacarei, SP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant" style="background:var(--dark);clip-path:polygon(0 60%,100% 0,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- LEAD FORM -->
+<section class="form-section reveal" id="form-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Garanta Sua Vaga Agora</h2>
+      <p>Preencha seus dados e receba um cupom exclusivo de desconto.</p>
+    </div>
+    <div class="form-wrapper">
+      <form id="lead-form">
+        <div class="form-group">
+          <label for="nome">Seu Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(12) 97412-8390" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="qty">Quantidade de Edredons</label>
+          <select id="qty" name="qty">
+            <option value="3" selected>3 Edredons (Promocao R$ 99,90)</option>
+            <option value="6">6 Edredons (2x Promocao R$ 199,80)</option>
+            <option value="9">9 Edredons (3x Promocao R$ 299,70)</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Gerar Meu Cupom de Desconto</button>
+      </form>
+      <div class="coupon-result" id="coupon-result">
+        <h3>Seu Cupom Exclusivo</h3>
+        <div class="coupon-code" id="coupon-code"></div>
+        <button class="coupon-copy" id="coupon-copy">Copiar Cupom</button>
+        <p style="color:var(--text-light);font-size:12px;margin-top:12px;">Apresente este cupom no momento do agendamento</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-slant" style="background:var(--light-blue);clip-path:polygon(0 0,100% 60%,100% 100%,0 100%);margin-top:-80px;position:relative;z-index:3;"></div>
+
+<!-- FAQ -->
+<section class="faq-section reveal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Perguntas Frequentes</h2>
+      <p>Tire suas duvidas sobre nosso servico de lavagem de edredons.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Como funciona a promocao Lave 3, Pague 2?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Voce envia 3 edredons e paga apenas o valor de 2. O preco fixo e R$ 99,90 para 3 edredons de qualquer tamanho (exceto pena/pluma). A coleta e entrega sao gratuitas.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Qual o prazo de entrega?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">O prazo padrao e de 48 horas uteis a partir da coleta. Em periodos de alta demanda pode chegar a 72h, mas sempre informamos previamente.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Voces atendem minha regiao?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Atendemos Sao Jose dos Campos, Jacarei, Taubate, Cacapava e regiao. Para verificar disponibilidade na sua area, entre em contato pelo WhatsApp.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Posso lavar edredons de pena ou pluma na promocao?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Edredons de pena e pluma requerem um processo especial de lavagem. O valor individual e R$ 120,00. Entre em contato para combinar um pacote personalizado.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Quais formas de pagamento voces aceitam?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Aceitamos PIX (com 10% de desconto), cartao de credito, cartao de debito e dinheiro. O pagamento pode ser feito na coleta ou na entrega.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta reveal">
+  <div class="container">
+    <h2>Nao Perca Essa Oportunidade</h2>
+    <p>3 edredons lavados profissionalmente por apenas R$ 99,90. Vagas limitadas esta semana.</p>
+    <a href="#form-section" class="offer-cta-btn">
+      Garantir Minha Vaga Agora
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">A7 <span>Lavanderia</span></div>
+    <p class="footer-text">Lavanderia profissional especializada em edredons e roupas de cama.</p>
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a>
+      <a href="#">Politica de Privacidade</a>
+      <a href="https://wa.me/5512974128390" target="_blank">WhatsApp</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 A7 Lavanderia. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20promo%C3%A7%C3%A3o%20de%203%20edredons%20por%20R%2499%2C90" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.002 0C7.174 0 .002 7.172.002 16c0 2.82.736 5.564 2.137 7.984L.078 32l8.27-2.033A15.91 15.91 0 0016.002 32c8.826 0 16-7.174 16-16S24.828 0 16.002 0zm0 29.09a13.06 13.06 0 01-6.98-2.01l-.5-.297-4.91 1.207 1.238-4.78-.33-.52A13.02 13.02 0 012.91 16c0-7.217 5.875-13.09 13.092-13.09S29.092 8.783 29.092 16s-5.873 13.09-13.09 13.09zm7.17-9.8c-.393-.197-2.326-1.148-2.687-1.279-.36-.131-.623-.197-.885.197s-1.017 1.279-1.246 1.541-.459.296-.852.099c-.393-.197-1.66-.612-3.164-1.95-1.17-1.043-1.96-2.33-2.19-2.723-.228-.394-.024-.607.172-.803.177-.176.394-.459.59-.689.198-.23.264-.394.395-.657.132-.263.066-.493-.033-.69-.099-.197-.885-2.133-1.213-2.92-.32-.766-.645-.662-.885-.675l-.754-.013c-.263 0-.689.099-1.05.493-.36.394-1.377 1.345-1.377 3.28s1.41 3.806 1.607 4.068c.197.263 2.775 4.238 6.725 5.943.94.406 1.672.648 2.244.83.943.3 1.8.257 2.478.156.756-.112 2.326-.951 2.654-1.869.328-.918.328-1.705.23-1.869-.1-.164-.362-.263-.756-.46z"/></svg>
+</a>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast-notification" id="toast">
+  <div class="toast-avatar" id="toast-avatar">M</div>
+  <div class="toast-content">
+    <div class="toast-name" id="toast-name">Mariana</div>
+    <div class="toast-msg" id="toast-msg">acabou de agendar 3 edredons</div>
+    <div class="toast-time" id="toast-time">ha 2 minutos</div>
+  </div>
+</div>
+
+<!-- PIX POPUP -->
+<div class="pix-overlay" id="pix-overlay">
+  <div class="pix-modal">
+    <button class="pix-close" id="pix-close">&times;</button>
+    <div class="pix-badge">Desconto Especial PIX</div>
+    <h2>Pague via PIX e Ganhe 10% OFF</h2>
+    <p class="pix-desc">Oferta exclusiva para pagamento via PIX. Economize ainda mais!</p>
+    <div class="pix-price-row">
+      <span class="pix-old">R$ 99,90</span>
+      <span class="pix-new">R$ 89<small>,91</small></span>
+    </div>
+    <div class="pix-discount">Economia total de R$ 60,09</div>
+    <div class="pix-timer">
+      <div class="pix-timer-label">Esta oferta expira em:</div>
+      <div class="pix-timer-count" id="pix-timer">24:00:00</div>
+    </div>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20desconto%20PIX%20de%203%20edredons%20por%20R%2489%2C91" class="pix-cta" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Quero Pagar via PIX
+    </a>
+  </div>
+</div>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-bottom" id="sticky-bottom">
+  <div class="container">
+    <div class="sticky-bottom-info">
+      <div class="sticky-label">Promocao Exclusiva</div>
+      <div class="sticky-price">3 Edredons R$ 99,90</div>
+    </div>
+    <a href="#form-section" class="sticky-bottom-btn">Quero Agora</a>
+  </div>
+</div>
+
+<!-- ALL JAVASCRIPT -->
+<script>
+(function(){
+  'use strict';
+
+  /* ==================== COUNTDOWN TIMER ==================== */
+  function updateCountdown() {
+    var now = new Date();
+    var midnight = new Date();
+    midnight.setHours(23, 59, 59, 999);
+    var diff = midnight - now;
+    if (diff < 0) diff = 0;
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var str = (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    var el = document.getElementById('urgency-timer');
+    if (el) el.textContent = str;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ==================== HEADER SCROLL ==================== */
+  var header = document.getElementById('main-header');
+  var heroSection = document.getElementById('hero');
+  var stickyBottom = document.getElementById('sticky-bottom');
+
+  function onScroll() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    // Header transparency
+    if (scrollY > 80) {
+      header.classList.remove('transparent');
+      header.classList.add('solid');
+    } else {
+      header.classList.remove('solid');
+      header.classList.add('transparent');
+    }
+    // Sticky bottom bar
+    var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    if (scrollY > heroBottom) {
+      stickyBottom.classList.add('show');
+    } else {
+      stickyBottom.classList.remove('show');
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+
+  /* ==================== SMOOTH SCROLL ==================== */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = 80;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+
+  /* ==================== ANIMATED COUNT UP ==================== */
+  var countEls = document.querySelectorAll('.count-up');
+  var countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-target'));
+        var decimal = el.getAttribute('data-decimal');
+        var duration = 2000;
+        var start = 0;
+        var startTime = null;
+        function animate(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.floor(eased * target);
+          if (decimal && progress >= 1) {
+            el.textContent = target + '.' + decimal;
+          } else {
+            el.textContent = current;
+          }
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+        requestAnimationFrame(animate);
+        countObserver.unobserve(el);
+      }
+    });
+  }, {threshold: 0.5});
+  countEls.forEach(function(el) { countObserver.observe(el); });
+
+  /* ==================== PROGRESS BAR ==================== */
+  var progressBar = document.getElementById('progress-bar');
+  var progressObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        setTimeout(function() {
+          progressBar.style.width = '87%';
+        }, 300);
+        progressObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.5});
+  if (progressBar) progressObserver.observe(progressBar.parentElement);
+
+  /* ==================== SCROLL REVEAL ==================== */
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold: 0.1});
+  revealEls.forEach(function(el) { revealObserver.observe(el); });
+
+  /* ==================== PHONE MASK ==================== */
+  var phoneInput = document.getElementById('whatsapp');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function(e) {
+      var v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 6) {
+        v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7);
+      } else if (v.length > 2) {
+        v = '(' + v.slice(0, 2) + ') ' + v.slice(2);
+      } else if (v.length > 0) {
+        v = '(' + v;
+      }
+      e.target.value = v;
+    });
+  }
+
+  /* ==================== FORM + COUPON ==================== */
+  var form = document.getElementById('lead-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nome = document.getElementById('nome').value;
+      var whatsapp = document.getElementById('whatsapp').value;
+      var email = document.getElementById('email').value;
+      var qty = document.getElementById('qty').value;
+      // Generate coupon
+      var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      var code = 'A7-';
+      for (var i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      // Save to localStorage
+      var data = {nome: nome, whatsapp: whatsapp, email: email, qty: qty, coupon: code, date: new Date().toISOString()};
+      var leads = JSON.parse(localStorage.getItem('a7_leads') || '[]');
+      leads.push(data);
+      localStorage.setItem('a7_leads', JSON.stringify(leads));
+      // Show coupon
+      document.getElementById('coupon-code').textContent = code;
+      document.getElementById('coupon-result').style.display = 'block';
+      form.style.display = 'none';
+      // Analytics
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', {currency: 'BRL', value: 99.90}); }
+      if (typeof fbq === 'function') { fbq('track', 'Lead', {currency: 'BRL', value: 99.90}); }
+    });
+  }
+
+  /* ==================== COPY COUPON ==================== */
+  var copyBtn = document.getElementById('coupon-copy');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      var code = document.getElementById('coupon-code').textContent;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(function() {
+          copyBtn.textContent = 'Copiado!';
+          setTimeout(function() { copyBtn.textContent = 'Copiar Cupom'; }, 2000);
+        });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        copyBtn.textContent = 'Copiado!';
+        setTimeout(function() { copyBtn.textContent = 'Copiar Cupom'; }, 2000);
+      }
+    });
+  }
+
+  /* ==================== FAQ TOGGLE ==================== */
+  window.toggleFaq = function(btn) {
+    var item = btn.parentElement;
+    var answer = item.querySelector('.faq-answer');
+    var isActive = btn.classList.contains('active');
+    // Close all
+    document.querySelectorAll('.faq-question.active').forEach(function(q) {
+      q.classList.remove('active');
+      q.parentElement.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    if (!isActive) {
+      btn.classList.add('active');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  };
+
+  /* ==================== SOCIAL PROOF TOASTS ==================== */
+  var toastNames = [
+    {name: 'Mariana', city: 'S. J. dos Campos', initial: 'M'},
+    {name: 'Roberto', city: 'Taubate', initial: 'R'},
+    {name: 'Camila', city: 'Jacarei', initial: 'C'},
+    {name: 'Ana Paula', city: 'Cacapava', initial: 'A'},
+    {name: 'Fernando', city: 'S. J. dos Campos', initial: 'F'},
+    {name: 'Juliana', city: 'Taubate', initial: 'J'},
+    {name: 'Lucas', city: 'Jacarei', initial: 'L'},
+    {name: 'Patricia', city: 'S. J. dos Campos', initial: 'P'},
+    {name: 'Diego', city: 'Cacapava', initial: 'D'},
+    {name: 'Beatriz', city: 'Taubate', initial: 'B'}
+  ];
+  var toastMsgs = [
+    'acabou de agendar 3 edredons',
+    'garantiu a promocao Lave 3 Pague 2',
+    'agendou lavagem de edredons',
+    'aproveitou o desconto exclusivo',
+    'acabou de gerar um cupom'
+  ];
+  var toastTimes = ['ha 1 minuto', 'ha 2 minutos', 'ha 3 minutos', 'ha 5 minutos', 'agora mesmo'];
+  var toastEl = document.getElementById('toast');
+
+  function showToast() {
+    var person = toastNames[Math.floor(Math.random() * toastNames.length)];
+    var msg = toastMsgs[Math.floor(Math.random() * toastMsgs.length)];
+    var time = toastTimes[Math.floor(Math.random() * toastTimes.length)];
+    document.getElementById('toast-avatar').textContent = person.initial;
+    document.getElementById('toast-name').textContent = person.name + ' - ' + person.city;
+    document.getElementById('toast-msg').textContent = msg;
+    document.getElementById('toast-time').textContent = time;
+    toastEl.classList.add('show');
+    setTimeout(function() {
+      toastEl.classList.remove('show');
+    }, 5000);
+  }
+  // First toast after 8s, then random 25-40s
+  setTimeout(function() {
+    showToast();
+    setInterval(function() {
+      setTimeout(showToast, Math.random() * 15000);
+    }, 25000);
+  }, 8000);
+
+  /* ==================== PIX POPUP ==================== */
+  var pixOverlay = document.getElementById('pix-overlay');
+  var pixClose = document.getElementById('pix-close');
+  var pixTimerEl = document.getElementById('pix-timer');
+  var pixShown = sessionStorage.getItem('a7_pix_shown');
+  var pixDismissed = sessionStorage.getItem('a7_pix_dismissed');
+  var pixStartTime = sessionStorage.getItem('a7_pix_start');
+
+  function showPixPopup() {
+    if (pixDismissed) return;
+    pixOverlay.classList.add('show');
+    sessionStorage.setItem('a7_pix_shown', '1');
+    if (!pixStartTime) {
+      pixStartTime = Date.now().toString();
+      sessionStorage.setItem('a7_pix_start', pixStartTime);
+    }
+  }
+
+  function updatePixTimer() {
+    if (!pixStartTime) return;
+    var elapsed = Date.now() - parseInt(pixStartTime);
+    var total = 24 * 60 * 60 * 1000; // 24h
+    var remaining = total - elapsed;
+    if (remaining <= 0) {
+      pixTimerEl.textContent = '00:00:00';
+      return;
+    }
+    var h = Math.floor(remaining / 3600000);
+    var m = Math.floor((remaining % 3600000) / 60000);
+    var s = Math.floor((remaining % 60000) / 1000);
+    pixTimerEl.textContent = (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  // Show PIX popup after 15s
+  if (!pixDismissed) {
+    setTimeout(showPixPopup, 15000);
+  }
+  // If already started, update timer immediately
+  if (pixStartTime) {
+    updatePixTimer();
+  }
+  setInterval(updatePixTimer, 1000);
+
+  pixClose.addEventListener('click', function() {
+    pixOverlay.classList.remove('show');
+    sessionStorage.setItem('a7_pix_dismissed', '1');
+    pixDismissed = '1';
+  });
+  pixOverlay.addEventListener('click', function(e) {
+    if (e.target === pixOverlay) {
+      pixOverlay.classList.remove('show');
+      sessionStorage.setItem('a7_pix_dismissed', '1');
+      pixDismissed = '1';
+    }
+  });
+
+  /* ==================== ANALYTICS HOOKS ==================== */
+  // Google Analytics stub
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  if (typeof window.gtag === 'undefined') { window.gtag = gtag; }
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+
+  // Facebook Pixel stub
+  if (typeof window.fbq === 'undefined') {
+    window.fbq = function(){};
+  }
+
+})();
+</script>
+</body>
+</html>

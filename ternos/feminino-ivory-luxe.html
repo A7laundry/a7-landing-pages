@@ -1,0 +1,2704 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A7 Lavanderia - Pacote Executiva para mulheres de sucesso. 5 pecas por R$79,90. Lavagem premium de ternos e roupas sociais em Sao Jose dos Campos.">
+    <meta name="theme-color" content="#8b2252">
+    <title>Pacote Executiva | A7 Lavanderia - Cuidado Premium Para Mulheres Que Lideram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* =============================================
+           CSS CUSTOM PROPERTIES - IVORY LUXE PALETTE
+           ============================================= */
+        :root {
+            --ivory-bg: #faf8f5;
+            --ivory-card: #ffffff;
+            --ivory-section: #f3ede4;
+            --berry: #8b2252;
+            --berry-light: #a83267;
+            --berry-dark: #6e1a40;
+            --gold-accent: #b8860b;
+            --text-dark: #1a1a1a;
+            --text-body: #4a4a4a;
+            --text-muted: #8a8a8a;
+            --cta: #8b2252;
+            --cta-hover: #a83267;
+            --line: #d4c5b0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.10);
+            --radius: 8px;
+            --radius-lg: 16px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* =============================================
+           CSS RESET & BASE
+           ============================================= */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--ivory-bg);
+            color: var(--text-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: inherit;
+        }
+
+        ul { list-style: none; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* =============================================
+           ANIMATIONS
+           ============================================= */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.92);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lineReveal {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes lineRevealCenter {
+            from { width: 0; }
+            to { width: 80px; }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes progressFill {
+            from { width: 0; }
+            to { width: 77%; }
+        }
+
+        @keyframes toastSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100%) translateY(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        @keyframes toastSlideOut {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.visible.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.visible.delay-2 { transition-delay: 0.2s; }
+        .animate-on-scroll.visible.delay-3 { transition-delay: 0.3s; }
+        .animate-on-scroll.visible.delay-4 { transition-delay: 0.4s; }
+
+        /* =============================================
+           1. NAVIGATION BAR
+           ============================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow var(--transition), background var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .navbar__brand {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .navbar__brand::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--gold-accent);
+        }
+
+        .navbar__line {
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+            margin: 0 32px;
+            display: none;
+        }
+
+        .navbar__cta {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--berry);
+            letter-spacing: 0.5px;
+            transition: color var(--transition);
+            white-space: nowrap;
+        }
+
+        .navbar__cta:hover {
+            color: var(--berry-light);
+        }
+
+        @media (min-width: 768px) {
+            .navbar__line {
+                display: block;
+            }
+        }
+
+        /* =============================================
+           2. HERO - EDITORIAL MAGAZINE COVER
+           ============================================= */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: var(--ivory-bg);
+            overflow: hidden;
+        }
+
+        .hero__eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--berry);
+            text-align: center;
+            margin-bottom: 32px;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .hero__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(32px, 5.5vw, 64px);
+            font-weight: 700;
+            color: var(--berry);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.15;
+            animation: fadeUp 1s ease forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        .hero__gold-line {
+            width: 80px;
+            height: 2px;
+            background: var(--gold-accent);
+            margin: 0 auto 48px;
+            animation: lineRevealCenter 1s ease forwards;
+            animation-delay: 0.5s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes lineRevealCenter {
+            from { width: 0; opacity: 1; }
+            to { width: 80px; opacity: 1; }
+        }
+
+        .hero__columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero__text {
+            animation: fadeUp 1s ease forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        .hero__text p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-body);
+            margin-bottom: 16px;
+        }
+
+        .hero__text p:first-child::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 48px;
+            float: left;
+            line-height: 1;
+            margin-right: 8px;
+            margin-top: 4px;
+            color: var(--berry);
+            font-weight: 700;
+        }
+
+        .hero__image-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            animation: scaleIn 1s ease forwards;
+            animation-delay: 0.8s;
+            opacity: 0;
+        }
+
+        .hero__image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid var(--gold-accent);
+            border-radius: calc(var(--radius-lg) + 4px);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero__image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+        }
+
+        .hero__cta-wrapper {
+            text-align: center;
+            margin-top: 48px;
+            animation: fadeUp 1s ease forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cta);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+            transition: all var(--transition);
+            box-shadow: 0 4px 16px rgba(139, 34, 82, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--cta-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(139, 34, 82, 0.35);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary svg {
+            width: 18px;
+            height: 18px;
+            transition: transform var(--transition);
+        }
+
+        .btn-primary:hover svg {
+            transform: translateX(3px);
+        }
+
+        @media (min-width: 768px) {
+            .hero__columns {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+
+            .hero__image {
+                height: 480px;
+            }
+        }
+
+        /* =============================================
+           3. FLOATING STATS BAR
+           ============================================= */
+        .stats-bar {
+            position: relative;
+            z-index: 10;
+            margin-top: -40px;
+            margin-bottom: 40px;
+        }
+
+        .stats-bar__inner {
+            background: var(--ivory-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 32px 24px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .stats-bar__item {
+            text-align: center;
+        }
+
+        .stats-bar__number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--berry);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .stats-bar__label {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .stats-bar__divider {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .stats-bar__inner {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 40px 48px;
+                position: relative;
+            }
+
+            .stats-bar__number {
+                font-size: 32px;
+            }
+
+            .stats-bar__item {
+                position: relative;
+            }
+
+            .stats-bar__item:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 40px;
+                background: var(--line);
+            }
+        }
+
+        /* =============================================
+           4. WHY SECTION - FEATURES
+           ============================================= */
+        .features {
+            padding: 80px 0;
+            background: var(--ivory-section);
+        }
+
+        .section-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--berry);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 56px;
+        }
+
+        .features__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--ivory-card);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--berry), var(--berry-light));
+        }
+
+        .feature-card__icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            color: var(--berry);
+        }
+
+        .feature-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-card__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-body);
+        }
+
+        @media (min-width: 768px) {
+            .features__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+        }
+
+        /* =============================================
+           5. FULL-WIDTH IMAGE + QUOTE
+           ============================================= */
+        .quote-section {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .quote-section__image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quote-section__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139, 34, 82, 0.82) 0%, rgba(110, 26, 64, 0.75) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+        }
+
+        .quote-section__content {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .quote-section__text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(22px, 3.5vw, 36px);
+            font-weight: 400;
+            font-style: italic;
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .quote-section__text::before {
+            content: '\201C';
+            display: block;
+            font-size: 72px;
+            line-height: 0.5;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 16px;
+            font-style: normal;
+        }
+
+        .quote-section__attr {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* =============================================
+           6. PROCESS SECTION - HOW IT WORKS
+           ============================================= */
+        .process {
+            padding: 80px 0;
+            background: var(--ivory-card);
+        }
+
+        .process__steps {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process__steps::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 40px;
+            bottom: 40px;
+            width: 2px;
+            border-left: 2px dashed var(--line);
+        }
+
+        .process__step {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            padding: 24px 0;
+            position: relative;
+        }
+
+        .process__step-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--berry);
+            line-height: 1;
+            min-width: 56px;
+            text-align: center;
+            background: var(--ivory-card);
+            position: relative;
+            z-index: 2;
+            padding: 8px 0;
+        }
+
+        .process__step-content {
+            flex: 1;
+            padding-top: 4px;
+        }
+
+        .process__step-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .process__step-text {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        @media (min-width: 768px) {
+            .process__steps::before {
+                left: 36px;
+            }
+
+            .process__step-number {
+                font-size: 44px;
+                min-width: 72px;
+            }
+        }
+
+        /* =============================================
+           7. PRICING
+           ============================================= */
+        .pricing {
+            padding: 80px 0;
+            background: var(--ivory-section);
+        }
+
+        .pricing__card {
+            max-width: 560px;
+            margin: 0 auto;
+            background: var(--ivory-card);
+            border-radius: var(--radius-lg);
+            padding: 48px 32px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .pricing__card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: calc(var(--radius-lg) + 2px);
+            background: linear-gradient(135deg, var(--berry), var(--gold-accent));
+            z-index: -1;
+        }
+
+        .pricing__badge {
+            display: inline-block;
+            background: var(--berry);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+        }
+
+        .pricing__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .pricing__subtitle {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .pricing__table {
+            width: 100%;
+            margin-bottom: 28px;
+            border-collapse: collapse;
+        }
+
+        .pricing__table th,
+        .pricing__table td {
+            padding: 10px 16px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .pricing__table th {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--line);
+        }
+
+        .pricing__table td {
+            color: var(--text-body);
+            border-bottom: 1px solid #f0ece6;
+        }
+
+        .pricing__table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .pricing__table tr:last-child td {
+            border-bottom: 2px solid var(--line);
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .pricing__total {
+            font-size: 15px;
+            color: var(--text-body);
+            margin-bottom: 8px;
+        }
+
+        .pricing__total strong {
+            color: var(--berry);
+        }
+
+        .pricing__economy {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+        }
+
+        .pricing__pix {
+            background: linear-gradient(135deg, #fdf6f9 0%, #fef9f5 100%);
+            border: 1px solid rgba(139, 34, 82, 0.15);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 28px;
+        }
+
+        .pricing__pix-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--berry);
+            margin-bottom: 4px;
+        }
+
+        .pricing__pix-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--berry);
+        }
+
+        .pricing__pix-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .pricing__guarantee {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .pricing__guarantee svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gold-accent);
+        }
+
+        /* =============================================
+           8. TESTIMONIALS
+           ============================================= */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--ivory-bg);
+        }
+
+        .testimonials__grid {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 16px;
+        }
+
+        .testimonials__grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card {
+            background: var(--ivory-card);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            box-shadow: var(--shadow-sm);
+            min-width: 300px;
+            scroll-snap-align: start;
+            flex: 1;
+            transition: box-shadow var(--transition);
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-card__stars {
+            color: var(--gold-accent);
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card__text {
+            font-size: 15px;
+            font-style: italic;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card__author {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .testimonial-card__role {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-card {
+                min-width: auto;
+            }
+        }
+
+        /* =============================================
+           9. LEAD MAGNET
+           ============================================= */
+        .lead-magnet {
+            padding: 80px 0;
+            background: var(--ivory-section);
+        }
+
+        .lead-magnet__inner {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .lead-magnet__visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lead-magnet__illustration {
+            width: 200px;
+            height: 240px;
+            background: linear-gradient(135deg, var(--berry) 0%, var(--berry-light) 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-magnet__illustration::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+        }
+
+        .lead-magnet__illustration svg {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lead-magnet__illustration span {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lead-magnet__eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--berry);
+            margin-bottom: 12px;
+        }
+
+        .lead-magnet__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(24px, 3.5vw, 32px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .lead-magnet__subtitle {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .lead-form__input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--text-dark);
+            background: var(--ivory-card);
+            transition: border-color var(--transition), box-shadow var(--transition);
+            outline: none;
+        }
+
+        .lead-form__input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .lead-form__input:focus {
+            border-color: var(--berry);
+            box-shadow: 0 0 0 3px rgba(139, 34, 82, 0.1);
+        }
+
+        .lead-form__submit {
+            background: var(--berry);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 16px 28px;
+            border-radius: 50px;
+            transition: all var(--transition);
+            width: 100%;
+        }
+
+        .lead-form__submit:hover {
+            background: var(--berry-light);
+            transform: translateY(-1px);
+        }
+
+        .lead-form__note {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .lead-form__success {
+            display: none;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .lead-form__success.active {
+            display: block;
+            animation: fadeUp 0.5s ease;
+        }
+
+        .lead-form__success h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            color: var(--berry);
+            margin-bottom: 12px;
+        }
+
+        .lead-form__success p {
+            font-size: 14px;
+            color: var(--text-body);
+            margin-bottom: 8px;
+        }
+
+        .lead-form__success .coupon-code {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--berry);
+            background: #fdf6f9;
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            display: inline-block;
+            margin: 12px 0;
+            letter-spacing: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .lead-magnet__inner {
+                grid-template-columns: auto 1fr;
+                gap: 56px;
+            }
+        }
+
+        /* =============================================
+           10. FAQ SECTION
+           ============================================= */
+        .faq {
+            padding: 80px 0;
+            background: var(--ivory-bg);
+        }
+
+        .faq__list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .faq__item {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .faq__question {
+            width: 100%;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: left;
+            cursor: pointer;
+            transition: color var(--transition);
+        }
+
+        .faq__question:hover {
+            color: var(--berry);
+        }
+
+        .faq__chevron {
+            width: 20px;
+            height: 20px;
+            color: var(--berry);
+            transition: transform var(--transition);
+            flex-shrink: 0;
+        }
+
+        .faq__item.open .faq__chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq__answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq__item.open .faq__answer {
+            max-height: 300px;
+        }
+
+        .faq__answer-inner {
+            padding-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-body);
+        }
+
+        /* =============================================
+           11. URGENCY SECTION
+           ============================================= */
+        .urgency {
+            padding: 56px 0;
+            background: linear-gradient(135deg, var(--berry) 0%, var(--berry-dark) 100%);
+            text-align: center;
+        }
+
+        .urgency__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(22px, 3.5vw, 32px);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        .urgency__bar-wrapper {
+            max-width: 480px;
+            margin: 0 auto 20px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50px;
+            height: 12px;
+            overflow: hidden;
+        }
+
+        .urgency__bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #faf8f5, #f3ede4);
+            border-radius: 50px;
+            width: 0;
+            transition: width 2s ease;
+        }
+
+        .urgency__bar-fill.animated {
+            width: 77%;
+        }
+
+        .urgency__note {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255,255,255,0.75);
+        }
+
+        /* =============================================
+           12. FOOTER
+           ============================================= */
+        .footer {
+            padding: 48px 0 120px;
+            background: var(--ivory-bg);
+            text-align: center;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer__brand {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--berry);
+            margin-bottom: 8px;
+        }
+
+        .footer__address {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .footer__whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--berry);
+            margin-bottom: 24px;
+            transition: color var(--transition);
+        }
+
+        .footer__whatsapp:hover {
+            color: var(--berry-light);
+        }
+
+        .footer__whatsapp svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer__copy {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* =============================================
+           13. STICKY BOTTOM CTA
+           ============================================= */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: var(--ivory-card);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .sticky-cta__text span {
+            color: var(--berry);
+        }
+
+        .sticky-cta__btn {
+            background: var(--berry);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 50px;
+            transition: all var(--transition);
+            white-space: nowrap;
+        }
+
+        .sticky-cta__btn:hover {
+            background: var(--berry-light);
+        }
+
+        /* =============================================
+           14. PIX POPUP MODAL
+           ============================================= */
+        .pix-modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(26, 26, 26, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .pix-modal-overlay.active {
+            display: flex;
+        }
+
+        .pix-modal {
+            background: var(--ivory-card);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: scaleIn 0.4s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pix-modal__close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: #f0ece6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background var(--transition);
+            border: none;
+        }
+
+        .pix-modal__close:hover {
+            background: #e0d9ce;
+        }
+
+        .pix-modal__close svg {
+            width: 16px;
+            height: 16px;
+            color: var(--text-dark);
+        }
+
+        .pix-modal__eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--berry);
+            margin-bottom: 12px;
+        }
+
+        .pix-modal__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .pix-modal__subtitle {
+            font-size: 15px;
+            color: var(--text-body);
+            margin-bottom: 24px;
+        }
+
+        .pix-modal__prices {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .pix-modal__old-price {
+            font-size: 20px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .pix-modal__arrow {
+            color: var(--gold-accent);
+            font-size: 20px;
+        }
+
+        .pix-modal__new-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--berry);
+        }
+
+        .pix-modal__timer {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .pix-modal__timer span {
+            font-weight: 700;
+            color: var(--berry);
+        }
+
+        .pix-modal__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--berry);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            transition: all var(--transition);
+            box-shadow: 0 4px 16px rgba(139, 34, 82, 0.25);
+        }
+
+        .pix-modal__cta:hover {
+            background: var(--berry-light);
+            transform: translateY(-1px);
+        }
+
+        /* =============================================
+           15. SOCIAL PROOF TOASTS
+           ============================================= */
+        .toast-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 1500;
+        }
+
+        .toast {
+            background: var(--ivory-card);
+            border-radius: var(--radius);
+            padding: 14px 20px;
+            box-shadow: var(--shadow-md);
+            border-left: 3px solid var(--berry);
+            max-width: 320px;
+            animation: toastSlideIn 0.5s ease forwards;
+            margin-bottom: 8px;
+        }
+
+        .toast.hiding {
+            animation: toastSlideOut 0.5s ease forwards;
+        }
+
+        .toast__text {
+            font-size: 13px;
+            color: var(--text-body);
+            line-height: 1.5;
+        }
+
+        .toast__text strong {
+            color: var(--berry);
+        }
+
+        .toast__time {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* =============================================
+           RESPONSIVE: TABLET & MOBILE
+           ============================================= */
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 60px;
+            }
+
+            .hero__title {
+                font-size: clamp(28px, 7vw, 42px);
+            }
+
+            .hero__columns {
+                gap: 32px;
+            }
+
+            .hero__text p:first-child::first-letter {
+                font-size: 40px;
+            }
+
+            .stats-bar {
+                margin-top: -20px;
+            }
+
+            .stats-bar__inner {
+                padding: 24px 20px;
+            }
+
+            .features, .process, .pricing, .testimonials, .faq, .lead-magnet {
+                padding: 60px 0;
+            }
+
+            .quote-section {
+                height: 400px;
+            }
+
+            .pricing__card {
+                padding: 36px 24px;
+            }
+
+            .pricing__table th,
+            .pricing__table td {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__title {
+                font-size: 28px;
+            }
+
+            .hero__text p {
+                font-size: 15px;
+            }
+
+            .hero__image {
+                height: 280px;
+            }
+
+            .stats-bar__number {
+                font-size: 24px;
+            }
+
+            .stats-bar__label {
+                font-size: 11px;
+            }
+
+            .feature-card {
+                padding: 28px 20px;
+            }
+
+            .feature-card__title {
+                font-size: 20px;
+            }
+
+            .quote-section {
+                height: 350px;
+            }
+
+            .quote-section__text {
+                font-size: 20px;
+            }
+
+            .process__step-number {
+                font-size: 28px;
+                min-width: 44px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .pricing__pix-price {
+                font-size: 28px;
+            }
+
+            .lead-magnet__illustration {
+                width: 160px;
+                height: 200px;
+            }
+
+            .toast {
+                max-width: 280px;
+            }
+        }
+
+        /* Print: hide interactive elements */
+        @media print {
+            .navbar, .sticky-cta, .pix-modal-overlay, .toast-container {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         1. NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__brand">A7 LAVANDERIA</div>
+        <div class="navbar__line"></div>
+        <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Luxe%20e%20quero%20o%20Pacote%20Executiva" class="navbar__cta" target="_blank" rel="noopener">
+            Pacote Executiva &rarr;
+        </a>
+    </nav>
+
+    <!-- ============================================
+         2. HERO - EDITORIAL MAGAZINE COVER
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <p class="hero__eyebrow">PARA A MULHER QUE LIDERA</p>
+
+            <h1 class="hero__title">
+                O Cuidado Que Sua Carreira Merece.<br>
+                O Luxo Que Seu Guarda-Roupa Exige.
+            </h1>
+
+            <div class="hero__gold-line"></div>
+
+            <div class="hero__columns">
+                <div class="hero__text">
+                    <p>Cada peca do seu guarda-roupa conta uma historia de conquistas. Aquele blazer que vestiu na reuniao que mudou tudo. O vestido social que fez voce se sentir invencivel na apresentacao. A camisa de seda que se tornou sua segunda pele nos dias mais intensos.</p>
+                    <p>Na A7 Lavanderia, entendemos que suas roupas sao mais do que tecido e costura. Sao extensoes da sua competencia, da sua atencao aos detalhes, da sua postura diante do mundo. Por isso, cada peca recebe o tratamento premium que merece: lavagem a seco profissional, passadoria impecavel e embalagem protetora que preserva a integridade de cada fibra.</p>
+                    <p>Porque mulheres que lideram nao deixam nada ao acaso. Nem o cuidado com o que vestem.</p>
+                </div>
+
+                <div class="hero__image-wrapper">
+                    <img
+                        src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"
+                        alt="Mulher executiva confiante em ambiente corporativo"
+                        class="hero__image"
+                        loading="eager"
+                    >
+                </div>
+            </div>
+
+            <div class="hero__cta-wrapper">
+                <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Luxe%20e%20quero%20o%20Pacote%20Executiva" class="btn-primary" target="_blank" rel="noopener">
+                    Descobrir o Pacote Executiva
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         3. FLOATING STATS BAR
+         ============================================ -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-bar__inner animate-on-scroll">
+                <div class="stats-bar__item">
+                    <span class="stats-bar__number" data-target="387">0</span>
+                    <div class="stats-bar__label">Executivas Atendidas</div>
+                </div>
+                <div class="stats-bar__item">
+                    <span class="stats-bar__number" data-target="98" data-suffix="%">0%</span>
+                    <div class="stats-bar__label">Satisfacao</div>
+                </div>
+                <div class="stats-bar__item">
+                    <span class="stats-bar__number" data-target="5">0</span>
+                    <div class="stats-bar__label">Anos de Excelencia</div>
+                </div>
+                <div class="stats-bar__item">
+                    <span class="stats-bar__number" data-fixed="4.9">4.9</span>
+                    <div class="stats-bar__label">Avaliacao</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         4. FEATURES - WHY SECTION
+         ============================================ -->
+    <section class="features" id="features">
+        <div class="container">
+            <p class="section-eyebrow animate-on-scroll">POR QUE A A7</p>
+            <h2 class="section-title animate-on-scroll">Por Que Mulheres de Sucesso Escolhem a A7</h2>
+            <p class="section-subtitle animate-on-scroll">Quatro razoes pelas quais as executivas mais exigentes de Sao Jose dos Campos confiam suas roupas a nos.</p>
+
+            <div class="features__grid">
+                <!-- Card 1 -->
+                <div class="feature-card animate-on-scroll delay-1">
+                    <svg class="feature-card__icon" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 class="feature-card__title">Preservamos Seu Investimento</h3>
+                    <p class="feature-card__text">Um tailleur de R$3.000 merece tratamento de R$3.000. Nossos processos preservam cada fibra, cada cor, cada detalhe do caimento original. Utilizamos produtos importados e tecnicas especializadas para garantir que suas pecas mais valiosas mantenham a qualidade por muito mais tempo.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card animate-on-scroll delay-2">
+                    <svg class="feature-card__icon" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M24 18v6l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 class="feature-card__title">Devolvemos Seu Tempo</h3>
+                    <p class="feature-card__text">4 horas por semana. E isso que voce gasta com roupas entre selecionar, preparar, passar e organizar. Nos devolvemos esse tempo para voce investir no que realmente importa: sua carreira, sua familia, voce mesma.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card animate-on-scroll delay-3">
+                    <svg class="feature-card__icon" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M20 32s2-2 4-2 4 2 4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M18 18l1 6M30 18l-1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M15 14h4M29 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M24 12v-2M20 13l-1-2M28 13l1-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="feature-card__title">Elevamos Sua Imagem</h3>
+                    <p class="feature-card__text">A passadoria perfeita, o aroma sutil, o toque impecavel. Detalhes que as pessoas notam, mesmo sem perceber. Sua roupa e uma extensao da sua competencia, e nos garantimos que essa extensao esteja sempre a altura da profissional que voce e.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="feature-card animate-on-scroll delay-4">
+                    <svg class="feature-card__icon" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                        <rect x="16" y="18" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M20 18v-3a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="24" cy="25" r="2" fill="currentColor"/>
+                    </svg>
+                    <h3 class="feature-card__title">Simplificamos Sua Rotina</h3>
+                    <p class="feature-card__text">Agendamento por WhatsApp, coleta e entrega no seu endereco. Zero esforco, maximo resultado. Voce agenda em 30 segundos e nao precisa se preocupar com mais nada. Nos cuidamos de tudo para que voce foque no que faz de melhor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         5. FULL-WIDTH IMAGE + QUOTE
+         ============================================ -->
+    <section class="quote-section">
+        <img
+            src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200&q=80"
+            alt="Mulher executiva em ambiente profissional elegante"
+            class="quote-section__image"
+            loading="lazy"
+        >
+        <div class="quote-section__overlay">
+            <div class="quote-section__content animate-on-scroll">
+                <blockquote class="quote-section__text">
+                    Mulheres poderosas nao improvisam. Elas planejam cada detalhe &mdash; inclusive quem cuida das suas roupas.
+                </blockquote>
+                <p class="quote-section__attr">&mdash; Filosofia A7</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         6. PROCESS - HOW IT WORKS
+         ============================================ -->
+    <section class="process" id="como-funciona">
+        <div class="container">
+            <p class="section-eyebrow animate-on-scroll">SIMPLES E ELEGANTE</p>
+            <h2 class="section-title animate-on-scroll">Como Funciona</h2>
+            <p class="section-subtitle animate-on-scroll">Quatro passos simples entre voce e roupas sempre impecaveis.</p>
+
+            <div class="process__steps">
+                <div class="process__step animate-on-scroll delay-1">
+                    <div class="process__step-number">01</div>
+                    <div class="process__step-content">
+                        <h3 class="process__step-title">Agende pelo WhatsApp</h3>
+                        <p class="process__step-text">Envie uma mensagem e escolha o melhor horario. Sem apps para baixar, sem cadastros complicados. Em 30 segundos voce agenda tudo. Respondemos em minutos, inclusive aos finais de semana.</p>
+                    </div>
+                </div>
+
+                <div class="process__step animate-on-scroll delay-2">
+                    <div class="process__step-number">02</div>
+                    <div class="process__step-content">
+                        <h3 class="process__step-title">Coletamos Suas Pecas</h3>
+                        <p class="process__step-text">Vamos ate voce. Escritorio, residencia, onde preferir. Nossa equipe chega no horario combinado, com embalagem protetora, e coleta suas pecas com todo o cuidado que elas merecem.</p>
+                    </div>
+                </div>
+
+                <div class="process__step animate-on-scroll delay-3">
+                    <div class="process__step-number">03</div>
+                    <div class="process__step-content">
+                        <h3 class="process__step-title">Tratamento Premium</h3>
+                        <p class="process__step-text">Lavagem a seco profissional com produtos importados, passadoria impecavel feita por especialistas e embalagem protetora individual para cada peca. Cada tecido recebe o tratamento especifico que exige.</p>
+                    </div>
+                </div>
+
+                <div class="process__step animate-on-scroll delay-4">
+                    <div class="process__step-number">04</div>
+                    <div class="process__step-content">
+                        <h3 class="process__step-title">Entrega Perfeita</h3>
+                        <p class="process__step-text">Suas roupas voltam como novas, no prazo combinado. Entregamos no local de sua preferencia, prontas para vestir. Voce so precisa abrir o cabide e brilhar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         7. PRICING - PACOTE EXECUTIVA
+         ============================================ -->
+    <section class="pricing" id="pacote">
+        <div class="container">
+            <p class="section-eyebrow animate-on-scroll">INVESTIMENTO</p>
+            <h2 class="section-title animate-on-scroll">Pacote Executiva</h2>
+            <p class="section-subtitle animate-on-scroll">O pacote mais escolhido pelas executivas de Sao Jose dos Campos.</p>
+
+            <div class="pricing__card animate-on-scroll">
+                <span class="pricing__badge">MAIS ESCOLHIDO</span>
+
+                <h3 class="pricing__title">5 Pecas por R$79,90</h3>
+                <p class="pricing__subtitle">Economia real para quem nao abre mao da qualidade</p>
+
+                <table class="pricing__table">
+                    <thead>
+                        <tr>
+                            <th>Peca</th>
+                            <th style="text-align:right">Valor Avulso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Blazer</td>
+                            <td>R$25,00</td>
+                        </tr>
+                        <tr>
+                            <td>Calca Social</td>
+                            <td>R$18,00</td>
+                        </tr>
+                        <tr>
+                            <td>Camisa de Seda</td>
+                            <td>R$15,00</td>
+                        </tr>
+                        <tr>
+                            <td>Vestido Social</td>
+                            <td>R$22,00</td>
+                        </tr>
+                        <tr>
+                            <td>Tailleur</td>
+                            <td>R$28,00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Avulso</strong></td>
+                            <td><strong>R$108,00</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="pricing__total">Com o Pacote: <strong>R$79,90</strong> &mdash; Economia de R$28,10</p>
+                <p class="pricing__economy">Voce economiza 26% em cada lavagem</p>
+
+                <div class="pricing__pix">
+                    <p class="pricing__pix-label">PIX Antecipado</p>
+                    <p class="pricing__pix-price">R$71,91</p>
+                    <p class="pricing__pix-note">10% OFF extra pagando via PIX</p>
+                </div>
+
+                <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Luxe%20e%20quero%20o%20Pacote%20Executiva" class="btn-primary" target="_blank" rel="noopener">
+                    Quero o Pacote Executiva
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+
+                <p class="pricing__guarantee">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    Satisfacao garantida ou lavamos novamente sem custo
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         8. TESTIMONIALS
+         ============================================ -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <p class="section-eyebrow animate-on-scroll">DEPOIMENTOS</p>
+            <h2 class="section-title animate-on-scroll">O Que Dizem Nossas Clientes</h2>
+            <p class="section-subtitle animate-on-scroll">Profissionais reais, resultados reais.</p>
+
+            <div class="testimonials__grid">
+                <div class="testimonial-card animate-on-scroll delay-1">
+                    <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-card__text">&ldquo;A A7 entende o que significa cuidar de roupas de alto valor. Meus blazers voltam impecaveis toda semana. Nao troco por nada.&rdquo;</p>
+                    <p class="testimonial-card__author">Dra. Beatriz M.</p>
+                    <p class="testimonial-card__role">Desembargadora</p>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll delay-2">
+                    <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-card__text">&ldquo;Como consultora de imagem, recomendo a A7 para todas as minhas clientes executivas. Qualidade incomparavel. O acabamento da passadoria e de outro nivel.&rdquo;</p>
+                    <p class="testimonial-card__author">Juliana R.</p>
+                    <p class="testimonial-card__role">Consultora de Imagem</p>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll delay-3">
+                    <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-card__text">&ldquo;Agenda cheia, reunioes consecutivas, viagens. A A7 resolve meu guarda-roupa sem eu precisar pensar nisso. Coleta no escritorio e entrega em casa. Perfeito.&rdquo;</p>
+                    <p class="testimonial-card__author">Mariana T.</p>
+                    <p class="testimonial-card__role">VP de Marketing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         9. LEAD MAGNET
+         ============================================ -->
+    <section class="lead-magnet" id="presente">
+        <div class="container">
+            <div class="lead-magnet__inner">
+                <div class="lead-magnet__visual animate-on-scroll">
+                    <div class="lead-magnet__illustration">
+                        <svg viewBox="0 0 56 56" fill="none" stroke="#fff" stroke-width="1.5">
+                            <rect x="8" y="20" width="40" height="30" rx="3"/>
+                            <path d="M8 28h40"/>
+                            <path d="M28 20v30"/>
+                            <path d="M28 20c-6-8-16-6-14 0s14 0 14 0"/>
+                            <path d="M28 20c6-8 16-6 14 0s-14 0-14 0"/>
+                        </svg>
+                        <span>Presente VIP</span>
+                    </div>
+                </div>
+
+                <div class="lead-magnet__content animate-on-scroll">
+                    <p class="lead-magnet__eyebrow">EXCLUSIVO</p>
+                    <h2 class="lead-magnet__title">Seu Cupom VIP + Guia Gratuito</h2>
+                    <p class="lead-magnet__subtitle">Cadastre-se e receba: Cupom de 10% na primeira lavagem + E-book &ldquo;Dress for Success: O Guarda-Roupa Estrategico da Executiva Moderna&rdquo;</p>
+
+                    <form class="lead-form" id="leadForm">
+                        <input
+                            type="text"
+                            class="lead-form__input"
+                            id="leadName"
+                            placeholder="Seu nome completo"
+                            required
+                            autocomplete="name"
+                        >
+                        <input
+                            type="tel"
+                            class="lead-form__input"
+                            id="leadPhone"
+                            placeholder="WhatsApp (00) 00000-0000"
+                            required
+                            maxlength="15"
+                            autocomplete="tel"
+                        >
+                        <input
+                            type="email"
+                            class="lead-form__input"
+                            id="leadEmail"
+                            placeholder="Seu melhor e-mail"
+                            required
+                            autocomplete="email"
+                        >
+                        <button type="submit" class="lead-form__submit">Receber Meu Presente</button>
+                        <p class="lead-form__note">Cadastro seguro. Zero spam.</p>
+                    </form>
+
+                    <div class="lead-form__success" id="leadSuccess">
+                        <h4>Presente Liberado!</h4>
+                        <p>Seu cupom exclusivo:</p>
+                        <div class="coupon-code" id="couponCode">A7-LUXE-00000</div>
+                        <p>Enviamos o e-book para seu e-mail. Apresente o cupom pelo WhatsApp na sua primeira lavagem.</p>
+                        <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Meu%20cupom%20VIP%20%C3%A9%20A7-LUXE%20e%20quero%20agendar%20minha%20primeira%20lavagem%20%F0%9F%92%9C" class="btn-primary" target="_blank" rel="noopener" style="margin-top:16px;">
+                            Usar Meu Cupom no WhatsApp
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         10. FAQ
+         ============================================ -->
+    <section class="faq" id="perguntas">
+        <div class="container">
+            <p class="section-eyebrow animate-on-scroll">DUVIDAS FREQUENTES</p>
+            <h2 class="section-title animate-on-scroll">Perguntas Frequentes</h2>
+            <p class="section-subtitle animate-on-scroll">Tudo o que voce precisa saber antes de confiar suas roupas a nos.</p>
+
+            <div class="faq__list">
+                <div class="faq__item animate-on-scroll">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Quais tipos de tecido voces tratam?</span>
+                        <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <div class="faq__answer-inner">Tratamos todos os tecidos nobres: seda, cashmere, la fria, linho, viscose, crepe, organza e mais. Cada tecido recebe tratamento especifico, com produtos e tecnicas adequados para preservar suas caracteristicas originais. Se voce tem uma peca com tecido diferente, e so nos enviar uma foto pelo WhatsApp que orientamos.</div>
+                    </div>
+                </div>
+
+                <div class="faq__item animate-on-scroll">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Como funciona a entrega?</span>
+                        <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <div class="faq__answer-inner">Coletamos e entregamos no endereco de sua preferencia &mdash; escritorio, residencia ou onde for mais conveniente. Voce agenda pelo WhatsApp o dia e horario, e nossa equipe chega com pontualidade. Atendemos toda a regiao de Sao Jose dos Campos e entornos.</div>
+                    </div>
+                </div>
+
+                <div class="faq__item animate-on-scroll">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>E se eu nao gostar do resultado?</span>
+                        <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <div class="faq__answer-inner">Garantia incondicional. Se nao ficar satisfeita com qualquer peca, lavamos novamente sem custo adicional. E simples assim. Em mais de 5 anos de operacao, menos de 2% das clientes precisaram usar essa garantia &mdash; mas ela esta la para sua total tranquilidade.</div>
+                    </div>
+                </div>
+
+                <div class="faq__item animate-on-scroll">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Posso lavar menos de 5 pecas?</span>
+                        <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <div class="faq__answer-inner">Sim! O Pacote Executiva e para 5 pecas e oferece o melhor custo-beneficio, mas atendemos qualquer quantidade. Consulte valores avulsos pelo WhatsApp. Muitas clientes comecam com pecas avulsas e migram para o pacote quando percebem a economia e praticidade.</div>
+                    </div>
+                </div>
+
+                <div class="faq__item animate-on-scroll">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Quanto tempo demora?</span>
+                        <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <div class="faq__answer-inner">Prazo padrao de 3 dias uteis. Para urgencias, temos opcao expressa em 24 horas com pequeno acrescimo. Muitas clientes executivas optam pelo servico semanal recorrente, onde coletamos e entregamos sempre no mesmo dia da semana &mdash; assim voce nunca fica sem roupas prontas.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         11. URGENCY SECTION
+         ============================================ -->
+    <section class="urgency" id="urgency">
+        <div class="container">
+            <h2 class="urgency__title animate-on-scroll">Restam apenas <span id="urgencySlots">23</span> vagas este mes para o Pacote Executiva</h2>
+            <div class="urgency__bar-wrapper animate-on-scroll">
+                <div class="urgency__bar-fill" id="urgencyBar"></div>
+            </div>
+            <p class="urgency__note animate-on-scroll">Nao perca &mdash; agenda fecha em breve</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         12. FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__brand">A7 LAVANDERIA</p>
+            <p class="footer__address">Sao Jose dos Campos &mdash; SP</p>
+            <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Luxe%20e%20quero%20saber%20mais" class="footer__whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                +55 12 97412-8390
+            </a>
+            <p class="footer__copy">&copy; 2025 A7 Lavanderia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         13. STICKY BOTTOM CTA
+         ============================================ -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-cta__text">Pacote Executiva <span>R$79,90</span></div>
+        <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Luxe%20e%20quero%20o%20Pacote%20Executiva" class="sticky-cta__btn" target="_blank" rel="noopener">
+            Ativar Agora
+        </a>
+    </div>
+
+    <!-- ============================================
+         14. PIX POPUP MODAL
+         ============================================ -->
+    <div class="pix-modal-overlay" id="pixModal">
+        <div class="pix-modal">
+            <button class="pix-modal__close" id="pixModalClose" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+
+            <p class="pix-modal__eyebrow">OFERTA ESPECIAL &mdash; VALIDA HOJE</p>
+            <h3 class="pix-modal__title">Pague via PIX e Economize 10%</h3>
+            <p class="pix-modal__subtitle">Desconto exclusivo para pagamento antecipado via PIX</p>
+
+            <div class="pix-modal__prices">
+                <span class="pix-modal__old-price">R$79,90</span>
+                <span class="pix-modal__arrow">&rarr;</span>
+                <span class="pix-modal__new-price">R$71,91</span>
+            </div>
+
+            <p class="pix-modal__timer">Oferta expira em: <span id="pixTimer">23:59:59</span></p>
+
+            <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20o%20Pacote%20Executiva%20com%20desconto%20PIX%20de%20R%2471%2C91%20%F0%9F%92%9C" class="pix-modal__cta" target="_blank" rel="noopener">
+                Garantir Desconto PIX
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         15. SOCIAL PROOF TOASTS
+         ============================================ -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+    (function() {
+        'use strict';
+
+        /* -----------------------------------------
+           CONSTANTS & CONFIG
+           ----------------------------------------- */
+        var WA_URL = 'https://wa.me/5512974128390?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Luxe%20e%20quero%20o%20Pacote%20Executiva';
+
+        var TOAST_MESSAGES = [
+            { name: 'Dra. Camila', action: 'ativou o Pacote Executiva', time: 'ha 5 min' },
+            { name: 'Amanda de SJC', action: 'garantiu o desconto PIX', time: 'ha 12 min' },
+            { name: 'Isabela', action: 'resgatou o cupom VIP agora', time: 'agora' },
+            { name: 'Fernanda R.', action: 'agendou coleta para amanha', time: 'ha 8 min' },
+            { name: 'Patricia M.', action: 'renovou o Pacote Executiva', time: 'ha 3 min' },
+            { name: 'Dra. Lucia', action: 'indicou a A7 para 3 colegas', time: 'ha 20 min' },
+            { name: 'Carolina S.', action: 'ativou o cupom VIP', time: 'ha 2 min' },
+            { name: 'Renata de SJC', action: 'contratou o Pacote Executiva', time: 'ha 15 min' }
+        ];
+
+        /* -----------------------------------------
+           NAVBAR SCROLL EFFECT
+           ----------------------------------------- */
+        var navbar = document.getElementById('navbar');
+        var lastScroll = 0;
+
+        function handleNavbarScroll() {
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollY > 20) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = scrollY;
+        }
+
+        window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+
+        /* -----------------------------------------
+           STICKY CTA VISIBILITY
+           ----------------------------------------- */
+        var stickyCta = document.getElementById('stickyCta');
+
+        function handleStickyCta() {
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollY > 600) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleStickyCta, { passive: true });
+
+        /* -----------------------------------------
+           INTERSECTION OBSERVER - SCROLL ANIMATIONS
+           ----------------------------------------- */
+        var observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
+        };
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        /* -----------------------------------------
+           URGENCY BAR ANIMATION
+           ----------------------------------------- */
+        var urgencyBar = document.getElementById('urgencyBar');
+        var urgencyObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    urgencyBar.classList.add('animated');
+                    urgencyObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        urgencyObserver.observe(document.getElementById('urgency'));
+
+        /* -----------------------------------------
+           ANIMATED COUNTERS
+           ----------------------------------------- */
+        var countersAnimated = false;
+
+        function animateCounters() {
+            if (countersAnimated) return;
+            countersAnimated = true;
+
+            var counters = document.querySelectorAll('.stats-bar__number[data-target]');
+            counters.forEach(function(counter) {
+                var target = parseInt(counter.getAttribute('data-target'));
+                var suffix = counter.getAttribute('data-suffix') || '';
+                var duration = 2000;
+                var start = 0;
+                var startTime = null;
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    var current = Math.floor(eased * target);
+                    counter.textContent = current + (suffix === '%' ? '%' : '+');
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        counter.textContent = target + (suffix === '%' ? '%' : '+');
+                    }
+                }
+
+                requestAnimationFrame(step);
+            });
+        }
+
+        var statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        var statsBar = document.querySelector('.stats-bar__inner');
+        if (statsBar) {
+            statsObserver.observe(statsBar);
+        }
+
+        /* -----------------------------------------
+           FAQ ACCORDION
+           ----------------------------------------- */
+        var faqItems = document.querySelectorAll('.faq__item');
+
+        faqItems.forEach(function(item) {
+            var question = item.querySelector('.faq__question');
+            question.addEventListener('click', function() {
+                var isOpen = item.classList.contains('open');
+
+                faqItems.forEach(function(otherItem) {
+                    otherItem.classList.remove('open');
+                    otherItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+                });
+
+                if (!isOpen) {
+                    item.classList.add('open');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        /* -----------------------------------------
+           PHONE MASK
+           ----------------------------------------- */
+        var phoneInput = document.getElementById('leadPhone');
+
+        function applyPhoneMask(value) {
+            var digits = value.replace(/\D/g, '');
+            if (digits.length === 0) return '';
+            if (digits.length <= 2) return '(' + digits;
+            if (digits.length <= 7) return '(' + digits.substring(0, 2) + ') ' + digits.substring(2);
+            return '(' + digits.substring(0, 2) + ') ' + digits.substring(2, 7) + '-' + digits.substring(7, 11);
+        }
+
+        phoneInput.addEventListener('input', function(e) {
+            var cursorPos = e.target.selectionStart;
+            var oldLength = e.target.value.length;
+            e.target.value = applyPhoneMask(e.target.value);
+            var newLength = e.target.value.length;
+            var newCursorPos = cursorPos + (newLength - oldLength);
+            e.target.setSelectionRange(newCursorPos, newCursorPos);
+        });
+
+        /* -----------------------------------------
+           COUPON GENERATION
+           ----------------------------------------- */
+        function generateCoupon() {
+            var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            var code = 'A7-LUXE-';
+            for (var i = 0; i < 5; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return code;
+        }
+
+        /* -----------------------------------------
+           LEAD FORM SUBMISSION
+           ----------------------------------------- */
+        var leadForm = document.getElementById('leadForm');
+        var leadSuccess = document.getElementById('leadSuccess');
+        var couponCode = document.getElementById('couponCode');
+
+        leadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var name = document.getElementById('leadName').value.trim();
+            var phone = document.getElementById('leadPhone').value.trim();
+            var email = document.getElementById('leadEmail').value.trim();
+
+            if (!name || !phone || !email) return;
+
+            var coupon = generateCoupon();
+
+            var leadData = {
+                name: name,
+                phone: phone,
+                email: email,
+                coupon: coupon,
+                source: 'ivory-luxe',
+                timestamp: new Date().toISOString()
+            };
+
+            var existingLeads = [];
+            try {
+                var stored = localStorage.getItem('a7_leads_feminino_ivory');
+                if (stored) {
+                    existingLeads = JSON.parse(stored);
+                }
+            } catch(err) {}
+
+            existingLeads.push(leadData);
+            localStorage.setItem('a7_leads_feminino_ivory', JSON.stringify(existingLeads));
+
+            couponCode.textContent = coupon;
+            leadForm.style.display = 'none';
+            leadSuccess.classList.add('active');
+        });
+
+        /* -----------------------------------------
+           PIX MODAL - 20 SECOND DELAY
+           ----------------------------------------- */
+        var pixModal = document.getElementById('pixModal');
+        var pixModalClose = document.getElementById('pixModalClose');
+        var pixTimerEl = document.getElementById('pixTimer');
+        var pixShown = sessionStorage.getItem('a7_pix_modal_shown_ivory');
+
+        function showPixModal() {
+            if (pixShown) return;
+            pixModal.classList.add('active');
+            sessionStorage.setItem('a7_pix_modal_shown_ivory', 'true');
+            pixShown = true;
+            startPixTimer();
+        }
+
+        function closePixModal() {
+            pixModal.classList.remove('active');
+        }
+
+        pixModalClose.addEventListener('click', closePixModal);
+
+        pixModal.addEventListener('click', function(e) {
+            if (e.target === pixModal) {
+                closePixModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePixModal();
+            }
+        });
+
+        setTimeout(function() {
+            showPixModal();
+        }, 20000);
+
+        /* -----------------------------------------
+           PIX TIMER - 24H COUNTDOWN
+           ----------------------------------------- */
+        function startPixTimer() {
+            var endTime;
+            var storedEnd = sessionStorage.getItem('a7_pix_timer_end_ivory');
+
+            if (storedEnd) {
+                endTime = parseInt(storedEnd);
+            } else {
+                endTime = Date.now() + 24 * 60 * 60 * 1000;
+                sessionStorage.setItem('a7_pix_timer_end_ivory', endTime.toString());
+            }
+
+            function updateTimer() {
+                var remaining = endTime - Date.now();
+                if (remaining <= 0) {
+                    pixTimerEl.textContent = '00:00:00';
+                    return;
+                }
+
+                var hours = Math.floor(remaining / (1000 * 60 * 60));
+                var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+                pixTimerEl.textContent =
+                    String(hours).padStart(2, '0') + ':' +
+                    String(minutes).padStart(2, '0') + ':' +
+                    String(seconds).padStart(2, '0');
+
+                requestAnimationFrame(updateTimer);
+            }
+
+            updateTimer();
+        }
+
+        // Start timer immediately if already shown
+        if (pixShown) {
+            startPixTimer();
+        }
+
+        /* -----------------------------------------
+           SOCIAL PROOF TOASTS
+           ----------------------------------------- */
+        var toastContainer = document.getElementById('toastContainer');
+        var toastIndex = 0;
+        var toastInterval;
+
+        function showToast() {
+            var msg = TOAST_MESSAGES[toastIndex % TOAST_MESSAGES.length];
+            toastIndex++;
+
+            var toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML =
+                '<p class="toast__text"><strong>' + msg.name + '</strong> ' + msg.action + '</p>' +
+                '<p class="toast__time">' + msg.time + '</p>';
+
+            toastContainer.appendChild(toast);
+
+            setTimeout(function() {
+                toast.classList.add('hiding');
+                setTimeout(function() {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 500);
+            }, 5000);
+        }
+
+        function startToasts() {
+            var initialDelay = 15000;
+            setTimeout(function() {
+                showToast();
+                toastInterval = setInterval(function() {
+                    showToast();
+                }, getRandomInterval());
+            }, initialDelay);
+        }
+
+        function getRandomInterval() {
+            return Math.floor(Math.random() * (45000 - 30000 + 1)) + 30000;
+        }
+
+        startToasts();
+
+        /* -----------------------------------------
+           SMOOTH SCROLL FOR ANCHOR LINKS
+           ----------------------------------------- */
+        document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                var target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    var offset = navbar.offsetHeight + 20;
+                    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        /* -----------------------------------------
+           URGENCY SLOT COUNTER (SUBTLE DECREASE)
+           ----------------------------------------- */
+        var urgencySlots = document.getElementById('urgencySlots');
+        var storedSlots = sessionStorage.getItem('a7_urgency_slots_ivory');
+        var currentSlots = storedSlots ? parseInt(storedSlots) : 23;
+        urgencySlots.textContent = currentSlots;
+
+        // Randomly decrease by 1 every few minutes to create FOMO
+        setInterval(function() {
+            if (currentSlots > 5 && Math.random() > 0.6) {
+                currentSlots--;
+                urgencySlots.textContent = currentSlots;
+                sessionStorage.setItem('a7_urgency_slots_ivory', currentSlots.toString());
+            }
+        }, 120000);
+
+        /* -----------------------------------------
+           PRELOAD CRITICAL IMAGES
+           ----------------------------------------- */
+        var heroImg = new Image();
+        heroImg.src = 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80';
+
+    })();
+    </script>
+<!-- ============================================
+     AMAZON DOPAMINE MODULE - IVORY LUXE
+     ============================================ -->
+<style>
+.amz-ub{position:fixed;top:0;left:0;right:0;z-index:10000;background:#8b2252;padding:10px 20px;text-align:center;font-size:13px;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;box-shadow:0 2px 12px rgba(139,34,82,.3)}
+.amz-ub .amz-timer{font-weight:800;font-size:15px;color:#ffd700;font-variant-numeric:tabular-nums}
+.amz-ub .amz-pulse{width:8px;height:8px;border-radius:50%;background:#ffd700;animation:amzPulse 1.5s infinite;flex-shrink:0}
+@keyframes amzPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.amz-vw{position:fixed;top:52px;right:16px;z-index:9999;background:#fff;border:1px solid rgba(139,34,82,.15);border-radius:10px;padding:8px 14px;display:flex;align-items:center;gap:8px;font-size:12px;color:#8b2252;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.amz-vw .amz-vw-dot{width:6px;height:6px;border-radius:50%;background:#16a34a;animation:amzPulse 2s infinite}
+.amz-deal{max-width:540px;margin:40px auto;background:#fff;border:2px solid #8b2252;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.amz-deal-hdr{background:linear-gradient(90deg,#8b2252,#b8860b);padding:10px 20px;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1px}
+.amz-deal-bd{padding:24px}
+.amz-deal-stars{color:#b8860b;font-size:16px;margin-bottom:8px}
+.amz-deal-stars span{color:#8b2252;font-size:12px;margin-left:6px}
+.amz-deal-old{font-size:14px;color:#8a8a8a;margin-bottom:4px}
+.amz-deal-old s{color:#aaa}
+.amz-deal-big{font-size:36px;font-weight:800;color:#1a1a1a;margin-bottom:4px;font-family:'Playfair Display',serif}
+.amz-deal-save{color:#16a34a;font-size:14px;font-weight:600;margin-bottom:12px}
+.amz-deal-pix{background:rgba(139,34,82,.06);border:1px dashed #8b2252;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:14px;text-align:center;color:#8b2252}
+.amz-deal-pix strong{color:#b8860b;font-size:18px}
+.amz-deal-prog{margin-bottom:12px}
+.amz-deal-prog-lbl{font-size:12px;color:#8a8a8a;margin-bottom:6px;display:flex;justify-content:space-between}
+.amz-deal-prog-lbl strong{color:#8b2252}
+.amz-deal-prog-bar{height:8px;background:#f3ede4;border-radius:4px;overflow:hidden}
+.amz-deal-prog-fill{height:100%;background:linear-gradient(90deg,#8b2252,#b8860b);border-radius:4px;transition:width 2s ease;width:0}
+.amz-deal-prog-fill.on{width:73%}
+.amz-deal-tmr{text-align:center;font-size:13px;color:#8a8a8a;margin-bottom:16px}
+.amz-deal-tmr strong{color:#8b2252;font-variant-numeric:tabular-nums;font-size:15px}
+.amz-deal-cta{display:block;width:100%;padding:16px;background:#8b2252;border:none;border-radius:12px;color:#fff;font-size:16px;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;transition:all .3s;animation:amzCtaP 2s infinite}
+@keyframes amzCtaP{0%,100%{box-shadow:0 0 0 0 rgba(139,34,82,.3)}50%{box-shadow:0 0 0 12px rgba(139,34,82,0)}}
+.amz-deal-cta:hover{transform:translateY(-2px);background:#a83267}
+.amz-deal-trust{display:flex;justify-content:center;gap:20px;margin-top:16px;padding-top:16px;border-top:1px solid #f3ede4}
+.amz-deal-trust div{display:flex;align-items:center;gap:5px;font-size:11px;color:#8a8a8a}
+.amz-deal-trust svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.amz-feed{position:fixed;bottom:24px;left:16px;z-index:9998;max-width:340px}
+.amz-feed-item{background:#fff;border:1px solid rgba(139,34,82,.1);border-left:3px solid #8b2252;border-radius:12px;padding:12px 16px;margin-top:8px;display:flex;align-items:center;gap:10px;font-size:12px;color:#1a1a1a;box-shadow:0 8px 24px rgba(0,0,0,.08);opacity:0;transform:translateX(-20px);transition:all .5s}
+.amz-feed-item.on{opacity:1;transform:translateX(0)}
+.amz-feed-item.off{opacity:0;transform:translateX(-40px)}
+.amz-feed-av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#8b2252,#b8860b);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;flex-shrink:0}
+.amz-feed-vf{color:#16a34a;font-size:10px;font-weight:600;margin-top:2px}
+.amz-rw-toast{position:fixed;top:50%;right:20px;transform:translateY(-50%);z-index:9997;background:#fff;border:1px solid #8b2252;border-radius:12px;padding:14px 20px;font-size:13px;color:#1a1a1a;box-shadow:0 8px 32px rgba(0,0,0,.1);display:flex;align-items:center;gap:10px;max-width:280px;opacity:0;transform:translateX(40px) translateY(-50%);transition:all .5s}
+.amz-rw-toast.on{opacity:1;transform:translateX(0) translateY(-50%)}
+.amz-exit{position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+.amz-exit.on{display:flex}
+.amz-exit-card{background:#fff;border:2px solid #8b2252;border-radius:20px;padding:40px;max-width:460px;width:100%;text-align:center;animation:amzExIn .5s ease}
+@keyframes amzExIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.amz-exit-x{position:absolute;top:16px;right:16px;background:none;border:none;color:#8a8a8a;cursor:pointer;font-size:24px;line-height:1}
+.amz-exit h3{font-family:'Playfair Display',serif;font-size:26px;color:#1a1a1a;margin-bottom:8px}
+.amz-exit p{color:#4a4a4a;font-size:14px;margin-bottom:16px}
+.amz-exit-pr{font-size:28px;font-weight:800;color:#8b2252;margin-bottom:4px}
+.amz-exit-pr s{font-size:18px;color:#aaa;font-weight:400;margin-right:8px}
+.amz-cross{max-width:800px;margin:40px auto;padding:0 20px}
+.amz-cross h3{font-family:'Playfair Display',serif;font-size:22px;text-align:center;margin-bottom:20px;color:#1a1a1a}
+.amz-cross-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.amz-cross-i{background:#fff;border:1px solid #f3ede4;border-radius:12px;padding:20px;text-align:center;transition:all .3s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.amz-cross-i:hover{border-color:#8b2252;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.amz-cross-i h4{font-size:14px;color:#1a1a1a;margin-bottom:4px}
+.amz-cross-i p{font-size:12px;color:#8a8a8a;margin-bottom:8px}
+.amz-cross-i .pr{font-size:16px;font-weight:700;color:#b8860b}
+body{padding-top:44px!important}
+@media(max-width:768px){.amz-ub{font-size:11px;padding:8px 12px;gap:6px}.amz-vw{top:48px;right:8px;font-size:11px}.amz-deal{margin:24px 16px}.amz-feed{max-width:260px;left:8px;bottom:80px}.amz-rw-toast{right:8px;max-width:220px;font-size:12px}.amz-cross-g{grid-template-columns:1fr}}
+</style>
+
+<div class="amz-ub"><span class="amz-pulse"></span><span>OFERTA ESPECIAL — Pacote Executiva <strong>-26% OFF</strong> + PIX -10% — Encerra em</span><span class="amz-timer" id="amzUbTimer">23:59:59</span></div>
+<div class="amz-vw"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span class="amz-vw-dot"></span><span><strong id="amzVwN">47</strong> visualizando agora</span></div>
+<div class="amz-feed" id="amzFeed"></div>
+<div class="amz-exit" id="amzExit"><div class="amz-exit-card" style="position:relative"><button class="amz-exit-x" id="amzExitX">&times;</button><h3>Espere! Seu presente ainda esta aqui...</h3><p>19 vagas abertas — Economia de R$28,10</p><div class="amz-exit-pr"><s>R$108,00</s> R$79,90</div><p style="color:#16a34a;font-weight:600;font-size:13px;margin-bottom:20px">PIX: R$71,91 — Economize 34% do valor avulso</p><a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20no%20Pacote%20Executiva!" class="amz-deal-cta" target="_blank">GARANTIR MINHA VAGA →</a></div></div>
+
+<script>
+(function(){
+  var ck='a7_cd_amz_ivory',st=localStorage.getItem(ck),et=st?parseInt(st):0;
+  if(!et||et<Date.now()){et=Date.now()+864e5;localStorage.setItem(ck,et.toString())}
+  function ft(ms){if(ms<=0)return'00:00:00';var h=Math.floor(ms/36e5),m=Math.floor(ms%36e5/6e4),s=Math.floor(ms%6e4/1e3);return(h<10?'0':'')+h+':'+(m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+  function ut(){var r=et-Date.now();if(r<=0){et=Date.now()+864e5;localStorage.setItem(ck,et.toString());r=864e5}var t=ft(r);document.getElementById('amzUbTimer').textContent=t;document.querySelectorAll('[data-amz-t]').forEach(function(e){e.textContent=t});requestAnimationFrame(ut)}
+  ut();
+  var vc=47,ve=document.getElementById('amzVwN');
+  setInterval(function(){vc+=Math.floor(Math.random()*7)-3;if(vc<38)vc=42;if(vc>67)vc=58;ve.textContent=vc},9000);
+  var ff=document.getElementById('amzFeed'),fi=0;
+  var fn=[{n:'Dra. Juliana M.',c:'SJC',i:'J'},{n:'Carolina R.',c:'Taubaté',i:'C'},{n:'Fernanda S.',c:'SJC',i:'F'},{n:'Dra. Patricia L.',c:'Jacareí',i:'P'},{n:'Isabela F.',c:'Caçapava',i:'I'},{n:'Mariana T.',c:'SJC',i:'M'},{n:'Dra. Amanda K.',c:'Pinda',i:'A'},{n:'Luciana B.',c:'Taubaté',i:'L'},{n:'Renata C.',c:'SJC',i:'R'},{n:'Camila D.',c:'Jacareí',i:'C'},{n:'Dra. Beatriz A.',c:'SJC',i:'B'},{n:'Helena M.',c:'Caçapava',i:'H'}];
+  function sf(){var f=fn[fi%fn.length];fi++;var mn=Math.floor(Math.random()*12)+1;var el=document.createElement('div');el.className='amz-feed-item';el.innerHTML='<div class="amz-feed-av">'+f.i+'</div><div><div><strong>'+f.n+'</strong> ativou o Pacote Executiva</div><div class="amz-feed-vf">Verificado ✓ — há '+mn+' min — '+f.c+'</div></div>';ff.appendChild(el);setTimeout(function(){el.classList.add('on')},50);setTimeout(function(){el.classList.add('off');setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el)},600)},6000);setTimeout(sf,Math.random()*10000+15000)}
+  setTimeout(sf,10000);
+  var rw=[{p:25,i:'🎁',t:'Desbloqueado: Coleta gratuita na primeira vez!'},{p:50,i:'✨',t:'Desbloqueado: Embalagem premium inclusa!'},{p:75,i:'🏆',t:'Quase lá! Seu cupom VIP está sendo preparado...'}];
+  var rs=JSON.parse(sessionStorage.getItem('amz_rw_ivory')||'[]');
+  window.addEventListener('scroll',function(){var pct=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100;rw.forEach(function(r){if(pct>=r.p&&rs.indexOf(r.p)===-1){rs.push(r.p);sessionStorage.setItem('amz_rw_ivory',JSON.stringify(rs));var t=document.createElement('div');t.className='amz-rw-toast';t.innerHTML='<span style="font-size:20px">'+r.i+'</span><span>'+r.t+'</span>';document.body.appendChild(t);setTimeout(function(){t.classList.add('on')},50);setTimeout(function(){t.classList.remove('on');setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t)},600)},4000)}})},{passive:true});
+  var ex=document.getElementById('amzExit'),exs=sessionStorage.getItem('amz_ex_ivory');
+  if(!exs){document.addEventListener('mouseleave',function(e){if(e.clientY<10){ex.classList.add('on');sessionStorage.setItem('amz_ex_ivory','1')}})}
+  document.getElementById('amzExitX').onclick=function(){ex.classList.remove('on')};
+  ex.onclick=function(e){if(e.target===ex)ex.classList.remove('on')};
+  var ps=null,ss=document.querySelectorAll('section');
+  for(var i=0;i<ss.length;i++){if(ss[i].innerHTML.indexOf('79,90')>-1&&ss[i].innerHTML.indexOf('Pacote')>-1){ps=ss[i];break}}
+  if(ps){var d=document.createElement('div');d.innerHTML='<div class="amz-deal"><div class="amz-deal-hdr"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 10 10-12h-9l1-10z"/></svg> OFERTA DO DIA — TEMPO LIMITADO</div><div class="amz-deal-bd"><div class="amz-deal-stars">★★★★★ <span>4.9 (387 avaliacoes)</span></div><div class="amz-deal-old">Avulso: <s>R$108,00</s></div><div class="amz-deal-big">R$79,90</div><div class="amz-deal-save">Voce economiza: R$28,10 (26% OFF)</div><div class="amz-deal-pix">PIX Antecipado: <strong>R$71,91</strong> (-34% do original)</div><div class="amz-deal-prog"><div class="amz-deal-prog-lbl"><span>Vagas preenchidas</span><strong>73%</strong></div><div class="amz-deal-prog-bar"><div class="amz-deal-prog-fill" id="amzDF"></div></div></div><div class="amz-deal-tmr">Oferta encerra em: <strong data-amz-t>23:59:59</strong></div><a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20o%20Pacote%20Executiva!" class="amz-deal-cta" target="_blank">ATIVAR PACOTE AGORA →</a><div class="amz-deal-trust"><div><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Garantia</div><div><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Seguro</div><div><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.9/5</div></div></div></div>';ps.parentNode.insertBefore(d.firstChild,ps);setTimeout(function(){var f=document.getElementById('amzDF');if(f)f.classList.add('on')},800)}
+  var ft2=document.querySelector('footer');
+  if(ft2){var c=document.createElement('div');c.className='amz-cross';c.innerHTML='<h3>Combine com Seu Pacote</h3><div class="amz-cross-g"><div class="amz-cross-i"><h4>Camisas de Seda</h4><p>Lavagem delicada premium</p><div class="pr">R$15/un</div></div><div class="amz-cross-i"><h4>Tratamento de Couro</h4><p>Bolsas e acessorios</p><div class="pr">R$45/peca</div></div><div class="amz-cross-i"><h4>Impermeabilizacao</h4><p>Protecao para blazers</p><div class="pr">R$35/peca</div></div></div>';ft2.parentNode.insertBefore(c,ft2)}
+})();
+</script>
+
+</body>
+</html>
