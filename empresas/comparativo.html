@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Teste A/B - Campanha B2B Empresas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0f0f13; color: white; min-height: 100vh; }
+    .header { text-align: center; padding: 48px 20px 16px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; margin-bottom: 16px; transition: color 0.3s; }
+    .back-link:hover { color: white; }
+    .header .badge { display: inline-block; background: rgba(37,99,235,0.15); color: #60a5fa; border: 1px solid rgba(37,99,235,0.3); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header h1 span { background: linear-gradient(135deg, #2563eb, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .header p { color: rgba(255,255,255,0.45); font-size: 15px; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .target-box { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 28px; margin: 28px auto; max-width: 620px; background: #1a1a22; border: 1px solid #2a2a35; border-radius: 14px; }
+    .target-box .icon { font-size: 28px; }
+    .target-box .text { text-align: left; }
+    .target-box .text strong { font-size: 16px; display: block; }
+    .target-box .text span { font-size: 13px; color: rgba(255,255,255,0.45); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; margin: 36px auto 0; padding: 0 24px 48px; }
+    .card { background: #1a1a22; border: 1px solid #2a2a35; border-radius: 16px; overflow: hidden; transition: all 0.4s ease; cursor: pointer; text-decoration: none; color: white; display: block; position: relative; }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 16px 16px 0 0; opacity: 0; transition: opacity 0.4s; }
+    .card:nth-child(1)::before { background: linear-gradient(90deg, #0f2942, #2563eb); }
+    .card:nth-child(2)::before { background: linear-gradient(90deg, #6366f1, #f97316); }
+    .card:hover { transform: translateY(-6px); border-color: #444; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .card:hover::before { opacity: 1; }
+    .card-preview { height: 280px; position: relative; overflow: hidden; }
+    .card-preview iframe { width: 200%; height: 200%; border: none; transform: scale(0.5); transform-origin: top left; pointer-events: none; }
+    .card-preview .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.8) 100%); pointer-events: none; }
+    .card-body { padding: 22px 24px 28px; }
+    .card-badge { display: inline-block; padding: 5px 14px; border-radius: 50px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+    .badge-corp { background: rgba(37,99,235,0.15); color: #60a5fa; border: 1px solid rgba(37,99,235,0.25); }
+    .badge-modern { background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.25); }
+    .card-body h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .card-body .subtitle { font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .card-body p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 16px; }
+    .features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .feature-tag { font-size: 10px; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); }
+    .open-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; transition: all 0.3s; }
+    .card:hover .open-btn { background: rgba(255,255,255,0.1); color: white; }
+    .strategy { max-width: 1000px; margin: 0 auto; padding: 0 24px 48px; }
+    .strategy h3 { font-size: 18px; text-align: center; margin-bottom: 20px; color: rgba(255,255,255,0.5); }
+    .strategy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .strategy-card { background: #1a1a22; border: 1px solid #2a2a35; border-radius: 12px; padding: 20px; }
+    .strategy-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .strategy-card:nth-child(1) h4 { color: #60a5fa; }
+    .strategy-card:nth-child(2) h4 { color: #a5b4fc; }
+    .strategy-card p { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.5; }
+    .tip { text-align: center; padding: 0 20px 48px; font-size: 13px; color: rgba(255,255,255,0.25); font-style: italic; }
+    @media (max-width: 768px) { .grid, .strategy-grid { grid-template-columns: 1fr; } .header h1 { font-size: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="../comparativo.html" class="back-link">← Voltar ao painel geral</a>
+    <div class="badge">Campanha B2B — Empresas</div>
+    <h1>Teste A/B — <span>Uniformes, Jalecos e EPIs</span></h1>
+    <p>2 variacoes de design para captar empresas. Foco em ROI, compliance e eliminacao de riscos. Zero preco na pagina — captacao pura de lead qualificado.</p>
+    <div class="target-box">
+      <div class="icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="text">
+        <strong>Captacao B2B: Uniformes, Jalecos e EPIs</strong>
+        <span>Formulario de orcamento + Calculadora ROI + Download de guia PDF</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a href="variacao-corporate.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-corporate.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-corp">Variacao A — Corporate Authority</span>
+        <div class="subtitle">Estilo McKinsey / Consultoria</div>
+        <h2>Navy + Amber — Autoridade Corporativa</h2>
+        <p>Design tradicional e serio. Dados pesados, tom consultivo. Ideal para gestores de compras, RH de industrias e hospitais que valorizam solidez e confianca.</p>
+        <div class="features">
+          <span class="feature-tag">Form no Hero</span>
+          <span class="feature-tag">Calculadora ROI</span>
+          <span class="feature-tag">Cases de Sucesso</span>
+          <span class="feature-tag">NR-6 / NR-32</span>
+          <span class="feature-tag">Download PDF</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+
+    <a href="variacao-modern.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-modern.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-modern">Variacao B — Modern Corporate</span>
+        <div class="subtitle">Estilo SaaS / Stripe</div>
+        <h2>Indigo + Orange — Moderno e Dinamico</h2>
+        <p>Design moderno com gradientes e glassmorphism. Apela para decisores jovens, empresas de tecnologia, hoteis boutique e startups que valorizam inovacao.</p>
+        <div class="features">
+          <span class="feature-tag">Bento Grid</span>
+          <span class="feature-tag">ROI com Grafico</span>
+          <span class="feature-tag">Glassmorphism</span>
+          <span class="feature-tag">Timeline Visual</span>
+          <span class="feature-tag">Lead Magnet PDF</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa →</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="strategy">
+    <h3>Estrategia de Veiculacao</h3>
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h4>Corporate Authority — Google Ads / LinkedIn</h4>
+        <p>Tom serio e consultivo ideal para busca paga ("lavanderia industrial", "terceirizar uniformes") e LinkedIn Ads direcionados para cargos de RH, Compras e Seguranca do Trabalho. Publico: industrias, hospitais, construcao civil.</p>
+      </div>
+      <div class="strategy-card">
+        <h4>Modern Corporate — Meta Ads / Google Display</h4>
+        <p>Visual moderno e atrativo para prospeccao fria via Facebook/Instagram B2B e Google Display. Ideal para hoteis, restaurantes, empresas de tecnologia e startups. Tom mais acessivel para primeiro contato.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="tip">Dica: No B2B, meça CPL (custo por lead), taxa de qualificação e taxa de conversão em contrato. Teste por 14 dias com mesmo orçamento antes de definir a campeã.</p>
+</body>
+</html>

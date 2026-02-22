@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A7 Lavanderia — Soluções Corporativas | Lavagem de Uniformes, Jalecos e EPIs</title>
+<meta name="description" content="Terceirize a lavagem de uniformes, jalecos e EPIs da sua empresa. Reduza custos em até 40%. Orçamento gratuito em 24h. São José dos Campos - SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #475569;
+  background: #f8fafc;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  --navy: #0f2942;
+  --navy-light: #1a3a5c;
+  --blue: #2563eb;
+  --blue-light: #3b82f6;
+  --blue-hover: #1d4ed8;
+  --accent: #f59e0b;
+  --accent-light: #fbbf24;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text-dark: #0f172a;
+  --text-body: #475569;
+  --text-muted: #94a3b8;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --max-width: 1200px;
+}
+
+/* ========== UTILITY ========== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section-pad { padding: 80px 0; }
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-body);
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+.text-center { text-align: center; }
+
+/* ========== ANIMATIONS ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--card);
+  padding: 0 24px;
+  transition: box-shadow 0.3s ease;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.navbar.scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.navbar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.navbar-brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.navbar-brand-sub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.navbar-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.navbar-phone svg {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: var(--blue-hover); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: 2px solid rgba(255,255,255,0.4);
+  white-space: nowrap;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); transform: translateY(-1px); }
+.btn-lg { padding: 16px 32px; font-size: 1rem; }
+
+/* Mobile menu */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.navbar-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ========== HERO ========== */
+.hero {
+  background: var(--navy);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(37,99,235,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(37,99,235,0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.04) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.04) 75%, rgba(255,255,255,0.04) 76%, transparent 77%),
+    linear-gradient(90deg, transparent 24%, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.04) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.04) 75%, rgba(255,255,255,0.04) 76%, transparent 77%);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(245,158,11,0.15);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero h1 span { color: var(--accent); }
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+.hero-stats {
+  display: flex;
+  gap: 32px;
+}
+.hero-stat {
+  text-align: left;
+}
+.hero-stat-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+
+/* ========== HERO FORM ========== */
+.hero-form-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.hero-form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.hero-form-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.form-group {
+  margin-bottom: 14px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+.form-control::placeholder { color: var(--text-muted); }
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8.825L.35 3.175l.7-.7L6 7.425l4.95-4.95.7.7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 16px 0;
+}
+.form-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--blue);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.form-check label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 1.4;
+}
+.btn-form-submit {
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  letter-spacing: 0.3px;
+}
+.btn-form-submit:hover { background: var(--blue-hover); transform: translateY(-1px); }
+.form-footer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 24px 0;
+}
+.form-success .success-icon {
+  width: 56px;
+  height: 56px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.form-success h3 {
+  color: var(--success);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.form-success p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  margin-bottom: 16px;
+}
+.form-error {
+  color: var(--danger);
+  font-size: 0.78rem;
+  margin-top: 4px;
+  display: none;
+}
+
+/* ========== TRUST BAR ========== */
+.trust-bar {
+  background: var(--bg);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+.trust-bar-label {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+.trust-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.trust-logo-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.trust-logo-badge svg {
+  width: 18px;
+  height: 18px;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+/* ========== PROBLEM SECTION ========== */
+.problem-section { background: var(--card); }
+.problem-intro {
+  font-size: 1.1rem;
+  color: var(--text-body);
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+  line-height: 1.7;
+}
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.problem-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--danger);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: box-shadow 0.3s ease;
+}
+.problem-card:hover { box-shadow: var(--shadow-md); }
+.problem-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.problem-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.problem-card-icon svg { width: 20px; height: 20px; color: var(--danger); }
+.problem-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.problem-card p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+/* ========== ROI CALCULATOR ========== */
+.roi-section { background: #f0f4f8; }
+.roi-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+}
+.roi-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.roi-input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.roi-input-group input[type="range"] {
+  width: 100%;
+  margin-bottom: 8px;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+.roi-input-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--blue);
+}
+.roi-results {
+  border-top: 2px solid var(--border);
+  padding-top: 32px;
+}
+.roi-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.roi-result-row:last-child { border-bottom: none; }
+.roi-result-label {
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+.roi-result-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.roi-result-row.savings { background: #f0fdf4; margin: 16px -24px; padding: 20px 24px; border-radius: var(--radius); border: none; }
+.roi-result-row.savings .roi-result-label { color: var(--success); font-weight: 600; }
+.roi-result-row.savings .roi-result-value { color: var(--success); font-size: 1.5rem; font-weight: 800; }
+.roi-result-row.annual { background: #dcfce7; margin: 0 -24px; padding: 24px 24px; border-radius: var(--radius); border: none; }
+.roi-result-row.annual .roi-result-label { color: var(--success); font-weight: 700; font-size: 1.05rem; }
+.roi-result-row.annual .roi-result-value { color: var(--success); font-size: 2rem; font-weight: 800; }
+.roi-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+.roi-cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ========== SOLUTION STEPS ========== */
+.solution-section { background: var(--card); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(16.66% + 36px);
+  right: calc(16.66% + 36px);
+  height: 2px;
+  background: var(--border);
+}
+.step {
+  text-align: center;
+  position: relative;
+}
+.step-number {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.step p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+/* ========== SERVICES ========== */
+.services-section { background: var(--bg); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.service-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.service-card-accent {
+  height: 4px;
+  background: var(--accent);
+}
+.service-card-body {
+  padding: 32px 28px;
+}
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.service-icon svg { width: 24px; height: 24px; color: var(--blue); }
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+/* ========== COMPLIANCE ========== */
+.compliance-section {
+  background: var(--navy);
+  color: #fff;
+}
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.compliance-badge {
+  text-align: center;
+  padding: 28px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.05);
+  transition: background 0.3s;
+}
+.compliance-badge:hover { background: rgba(255,255,255,0.08); }
+.compliance-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(37,99,235,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.compliance-icon svg { width: 24px; height: 24px; color: var(--blue-light); }
+.compliance-badge h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.compliance-badge p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+.compliance-sub {
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+}
+
+/* ========== CASE STUDIES ========== */
+.cases-section { background: var(--card); }
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.case-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.case-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 20px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.case-header svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; }
+.case-body { padding: 28px; }
+.case-item {
+  margin-bottom: 16px;
+}
+.case-item:last-child { margin-bottom: 0; }
+.case-item-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.case-item-label.challenge { color: var(--danger); }
+.case-item-label.solution { color: var(--blue); }
+.case-item-label.result { color: var(--success); }
+.case-item p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials-section { background: var(--bg); }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.testimonial-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  position: relative;
+}
+.testimonial-quote {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.testimonial-quote::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 24px;
+  margin-bottom: 12px;
+  background: var(--blue);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 24'%3E%3Cpath d='M0 24V12C0 5.4 4.6 1.2 12 0l1.6 3.6C8.8 5.2 6.8 8.4 6.4 12H12v12H0zm18 0V12c0-6.6 4.6-10.8 12-12l1.6 3.6c-4.8 1.6-6.8 4.8-7.2 8.4H30v12H18z'/%3E%3C/svg%3E");
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 24'%3E%3Cpath d='M0 24V12C0 5.4 4.6 1.2 12 0l1.6 3.6C8.8 5.2 6.8 8.4 6.4 12H12v12H0zm18 0V12c0-6.6 4.6-10.8 12-12l1.6 3.6c-4.8 1.6-6.8 4.8-7.2 8.4H30v12H18z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+.testimonial-author {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ========== LEAD MAGNET ========== */
+.leadmagnet-section {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  position: relative;
+  overflow: hidden;
+}
+.leadmagnet-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: rgba(245,158,11,0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.leadmagnet-inner {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.leadmagnet-content h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.leadmagnet-content p {
+  font-size: 1rem;
+  color: #78350f;
+  line-height: 1.7;
+}
+.leadmagnet-form-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+.leadmagnet-form-card .form-group { margin-bottom: 14px; }
+.btn-amber {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+}
+.btn-amber:hover { background: #d97706; transform: translateY(-1px); }
+.pdf-success {
+  display: none;
+  text-align: center;
+  padding: 16px 0;
+}
+.pdf-success h3 {
+  color: var(--success);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.pdf-success p {
+  font-size: 0.85rem;
+  color: var(--text-body);
+}
+
+/* ========== FAQ ========== */
+.faq-section { background: var(--card); }
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.faq-item:hover { box-shadow: var(--shadow-sm); }
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  background: var(--card);
+  border: none;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-question svg {
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  color: var(--text-muted);
+}
+.faq-item.active .faq-question svg {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ========== FINAL CTA ========== */
+.cta-section {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cta-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.cta-inner h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.cta-inner p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.cta-note {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #0a1f33;
+  padding: 48px 0;
+  text-align: center;
+}
+.footer-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.footer-brand span {
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+}
+.footer-location {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+.footer-contact svg { width: 16px; height: 16px; color: var(--blue-light); flex-shrink: 0; }
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 968px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero h1 { font-size: 2rem; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 32px; }
+  .steps::before { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .compliance-grid { grid-template-columns: repeat(2, 1fr); }
+  .cases-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .leadmagnet-inner { grid-template-columns: 1fr; }
+  .roi-inputs { grid-template-columns: 1fr; }
+  .roi-card { padding: 32px 24px; }
+}
+
+@media (max-width: 768px) {
+  .section-pad { padding: 56px 0; }
+  .section-title { font-size: 1.625rem; }
+  .navbar-phone { display: none; }
+  .navbar-toggle { display: flex; }
+  .navbar-right .btn-primary { display: none; }
+  .navbar-right.open .btn-primary { display: inline-flex; }
+  .navbar-mobile {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--card);
+    padding: 16px 24px;
+    box-shadow: var(--shadow-md);
+    border-top: 1px solid var(--border);
+  }
+  .navbar-mobile.open { display: flex; flex-direction: column; gap: 12px; }
+  .navbar-mobile .navbar-phone { display: flex; }
+  .navbar-mobile .btn-primary { display: inline-flex; width: 100%; justify-content: center; }
+  .hero { padding: 100px 0 56px; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero-form-card { padding: 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-inner h2 { font-size: 1.75rem; }
+  .trust-logos { gap: 10px; }
+  .trust-logo-badge { padding: 8px 14px; font-size: 0.78rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section-pad { padding: 48px 0; }
+  .section-title { font-size: 1.4rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-stats { flex-direction: column; gap: 12px; }
+  .compliance-grid { grid-template-columns: 1fr; }
+  .roi-result-row.annual .roi-result-value { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="navbar-brand">
+      <span class="navbar-brand-name">A7 LAVANDERIA</span>
+      <span class="navbar-brand-sub">Soluções Corporativas</span>
+    </a>
+    <div class="navbar-right">
+      <a href="tel:+5512974128390" class="navbar-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (12) 97412-8390
+      </a>
+      <a href="#form-hero" class="btn-primary">Solicitar Orçamento</a>
+      <button class="navbar-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="navbar-mobile" id="navMobile">
+    <a href="tel:+5512974128390" class="navbar-phone">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (12) 97412-8390
+    </a>
+    <a href="#form-hero" class="btn-primary" onclick="closeNav()">Solicitar Orçamento</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-badge">Soluções para Empresas</span>
+      <h1>Terceirize a Lavagem de Uniformes e EPIs. <span>Reduza Custos.</span> Elimine Riscos.</h1>
+      <p class="hero-subtitle">A7 Lavanderia cuida da higienização profissional dos uniformes, jalecos e EPIs da sua equipe — enquanto você foca no que realmente importa: seu negócio.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-number">150+</div>
+          <div class="hero-stat-label">Empresas Atendidas</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">12.000+</div>
+          <div class="hero-stat-label">Peças/Mês</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">98%</div>
+          <div class="hero-stat-label">Renovação de Contrato</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO FORM -->
+    <div class="hero-form-card" id="form-hero">
+      <div id="heroFormContent">
+        <h3 class="hero-form-title">Solicite Seu Orçamento Gratuito</h3>
+        <p class="hero-form-sub">Resposta em até 24h úteis</p>
+        <form id="heroForm" novalidate>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" class="form-control" placeholder="Nome da empresa" required>
+            <div class="form-error" id="empresaError">Informe o nome da empresa</div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome do Responsável *</label>
+              <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" required>
+              <div class="form-error" id="nomeError">Informe seu nome</div>
+            </div>
+            <div class="form-group">
+              <label for="cargo">Cargo</label>
+              <select id="cargo" class="form-control">
+                <option value="">Selecione...</option>
+                <option value="Proprietário">Proprietário</option>
+                <option value="RH">RH</option>
+                <option value="Compras">Compras</option>
+                <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp *</label>
+              <input type="tel" id="whatsapp" class="form-control phone-mask" placeholder="(12) 99999-9999" required>
+              <div class="form-error" id="whatsappError">Informe um WhatsApp válido</div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" class="form-control" placeholder="email@empresa.com" required>
+              <div class="form-error" id="emailError">Informe um e-mail válido</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="funcionarios">Nº de Funcionários</label>
+              <select id="funcionarios" class="form-control">
+                <option value="">Selecione...</option>
+                <option value="1-20">1 a 20</option>
+                <option value="21-50">21 a 50</option>
+                <option value="51-100">51 a 100</option>
+                <option value="101-300">101 a 300</option>
+                <option value="300+">300+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="segmento">Segmento</label>
+              <select id="segmento" class="form-control">
+                <option value="">Selecione...</option>
+                <option value="Indústria">Indústria</option>
+                <option value="Hospital/Clínica">Hospital/Clínica</option>
+                <option value="Hotel/Restaurante">Hotel/Restaurante</option>
+                <option value="Construção Civil">Construção Civil</option>
+                <option value="Comércio">Comércio</option>
+                <option value="Escritório">Escritório</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="aceite" required>
+            <label for="aceite">Aceito receber o orçamento e contato da A7 Lavanderia</label>
+          </div>
+          <button type="submit" class="btn-form-submit">SOLICITAR ORÇAMENTO GRATUITO &rarr;</button>
+          <p class="form-footer">Sem compromisso. Orçamento personalizado para sua empresa.</p>
+        </form>
+      </div>
+      <div class="form-success" id="heroFormSuccess">
+        <div class="success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>Recebemos sua solicitação!</h3>
+        <p>Nossa equipe comercial entrará em contato em até 24h.</p>
+        <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20corporativo%20para%20lavagem%20de%20uniformes%20e%20EPIs" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST BAR ========== -->
+<section class="trust-bar">
+  <div class="container">
+    <p class="trust-bar-label">Empresas que Confiam na A7</p>
+    <div class="trust-logos">
+      <div class="trust-logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Rede Hoteleira
+      </div>
+      <div class="trust-logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Indústria Metalúrgica
+      </div>
+      <div class="trust-logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Hospital Regional
+      </div>
+      <div class="trust-logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2" ry="2"/><line x1="1" y1="9" x2="23" y2="9"/></svg>
+        Construtora
+      </div>
+      <div class="trust-logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        Rede de Restaurantes
+      </div>
+      <div class="trust-logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Empresa de Segurança
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROBLEM SECTION ========== -->
+<section class="problem-section section-pad" id="problemas">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">O Custo Real que Você Não Está Calculando</h2>
+    <p class="problem-intro fade-in">A maioria das empresas não percebe quanto gasta com a lavagem interna de uniformes e EPIs. Quando somamos todos os custos ocultos, o resultado é alarmante.</p>
+    <div class="problem-grid">
+      <div class="problem-card fade-in fade-in-delay-1">
+        <div class="problem-card-header">
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Custo de Lavanderia Interna</h3>
+        </div>
+        <p>Máquinas industriais, manutenção, água, energia, produtos químicos, espaço físico e pelo menos 1 funcionário dedicado. Custo médio: R$4.500 a R$12.000/mês para empresas de 50+ funcionários.</p>
+      </div>
+      <div class="problem-card fade-in fade-in-delay-2">
+        <div class="problem-card-header">
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+          </div>
+          <h3>Risco de Multas por NR-6 e NR-32</h3>
+        </div>
+        <p>EPIs devem estar higienizados conforme normas regulamentadoras. Multas por descumprimento variam de R$2.000 a R$200.000, dependendo da gravidade e reincidência.</p>
+      </div>
+      <div class="problem-card fade-in fade-in-delay-3">
+        <div class="problem-card-header">
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Tempo e Produtividade Perdidos</h3>
+        </div>
+        <p>Funcionários que lavam uniformes em casa gastam em média 3h por semana. Com 50 funcionários, são 150 horas/semana de produtividade desperdiçada.</p>
+      </div>
+      <div class="problem-card fade-in fade-in-delay-4">
+        <div class="problem-card-header">
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Imagem Corporativa Comprometida</h3>
+        </div>
+        <p>Uniformes malcuidados, manchados ou desbotados afetam a percepção do cliente sobre sua empresa. A primeira impressão visual custa contratos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ROI CALCULATOR ========== -->
+<section class="roi-section section-pad" id="calculadora">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">Descubra Quanto Sua Empresa Pode Economizar</h2>
+    <p class="section-subtitle text-center fade-in">Use nossa calculadora para estimar a economia ao terceirizar com a A7 Lavanderia.</p>
+    <div class="roi-card fade-in">
+      <div class="roi-inputs">
+        <div class="roi-input-group">
+          <label for="roiEmployees">Número de funcionários</label>
+          <input type="range" id="roiEmployees" min="10" max="500" value="50" step="5">
+          <div class="roi-input-value" id="roiEmployeesValue">50 funcionários</div>
+        </div>
+        <div class="roi-input-group">
+          <label for="roiPieces">Peças por funcionário/semana</label>
+          <select id="roiPieces" class="form-control">
+            <option value="3">3 peças</option>
+            <option value="5" selected>5 peças</option>
+            <option value="7">7 peças</option>
+            <option value="10">10 peças</option>
+          </select>
+        </div>
+      </div>
+      <div class="roi-results">
+        <div class="roi-result-row">
+          <span class="roi-result-label">Custo estimado lavanderia interna:</span>
+          <span class="roi-result-value" id="roiInternal">R$ 4.500,00/mês</span>
+        </div>
+        <div class="roi-result-row">
+          <span class="roi-result-label">Custo estimado com A7:</span>
+          <span class="roi-result-value" id="roiA7">R$ 2.800,00/mês</span>
+        </div>
+        <div class="roi-result-row savings">
+          <span class="roi-result-label">SUA ECONOMIA MENSAL:</span>
+          <span class="roi-result-value" id="roiSavings">R$ 1.700,00</span>
+        </div>
+        <div class="roi-result-row annual">
+          <span class="roi-result-label">ECONOMIA ANUAL:</span>
+          <span class="roi-result-value" id="roiAnnual">R$ 20.400,00</span>
+        </div>
+      </div>
+      <p class="roi-note">* Valores estimados para referência. O orçamento real será personalizado para sua operação.</p>
+      <div class="roi-cta">
+        <a href="#form-hero" class="btn-primary btn-lg">Quero Receber Meu Orçamento Personalizado &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOLUTION STEPS ========== -->
+<section class="solution-section section-pad" id="como-funciona">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">Como a A7 Resolve</h2>
+    <p class="section-subtitle text-center fade-in">Um processo simples e eficiente em 3 etapas para sua empresa.</p>
+    <div class="steps">
+      <div class="step fade-in fade-in-delay-1">
+        <div class="step-number">1</div>
+        <h3>Diagnóstico Gratuito</h3>
+        <p>Visitamos sua empresa, entendemos sua operação, volume de peças e necessidades específicas. Sem custo e sem compromisso.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-2">
+        <div class="step-number">2</div>
+        <h3>Proposta Personalizada</h3>
+        <p>Elaboramos um plano sob medida com logística de coleta e entrega, frequência, tratamento especial por tipo de peça e valores competitivos.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-3">
+        <div class="step-number">3</div>
+        <h3>Operação Contínua</h3>
+        <p>Coletamos, higienizamos com processos profissionais e entregamos no prazo. Você acompanha tudo pelo WhatsApp comercial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services-section section-pad" id="servicos">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">O Que Higienizamos</h2>
+    <p class="section-subtitle text-center fade-in">Soluções especializadas para cada tipo de peça da sua operação.</p>
+    <div class="services-grid">
+      <div class="service-card fade-in fade-in-delay-1">
+        <div class="service-card-accent"></div>
+        <div class="service-card-body">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"/></svg>
+          </div>
+          <h3>Uniformes Corporativos</h3>
+          <p>Camisas, calças, jalecos, aventais, coletes. Lavagem profissional que preserva cores, tecidos e identidade visual da sua marca.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in fade-in-delay-2">
+        <div class="service-card-accent"></div>
+        <div class="service-card-body">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Jalecos e Roupas Hospitalares</h3>
+          <p>Higienização hospitalar com processos específicos para eliminação de contaminantes. Atendemos NR-32 e protocolos de biossegurança.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in fade-in-delay-3">
+        <div class="service-card-accent"></div>
+        <div class="service-card-body">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>EPIs — Equipamentos de Proteção</h3>
+          <p>Aventais de segurança, macacões, luvas de tecido, capas. Higienização conforme NR-6 com rastreabilidade de lote.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPLIANCE ========== -->
+<section class="compliance-section section-pad" id="compliance">
+  <div class="container">
+    <h2 class="section-title text-center fade-in" style="color: #fff;">Em Conformidade com as Normas Regulamentadoras</h2>
+    <p class="section-subtitle text-center fade-in" style="color: rgba(255,255,255,0.6);">Segurança e rastreabilidade em cada etapa do processo.</p>
+    <div class="compliance-grid">
+      <div class="compliance-badge fade-in fade-in-delay-1">
+        <div class="compliance-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>NR-6</h4>
+        <p>EPIs</p>
+      </div>
+      <div class="compliance-badge fade-in fade-in-delay-2">
+        <div class="compliance-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h4>NR-32</h4>
+        <p>Saúde</p>
+      </div>
+      <div class="compliance-badge fade-in fade-in-delay-3">
+        <div class="compliance-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Processos Rastreáveis</h4>
+        <p>Controle de Lotes</p>
+      </div>
+      <div class="compliance-badge fade-in fade-in-delay-4">
+        <div class="compliance-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h4>Laudos Disponíveis</h4>
+        <p>Certificação</p>
+      </div>
+    </div>
+    <p class="compliance-sub fade-in">Fornecemos documentação completa para auditorias e fiscalizações.</p>
+  </div>
+</section>
+
+<!-- ========== CASE STUDIES ========== -->
+<section class="cases-section section-pad" id="resultados">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">Resultados Reais</h2>
+    <p class="section-subtitle text-center fade-in">Veja como empresas da região já reduziram custos e eliminaram riscos com a A7.</p>
+    <div class="cases-grid">
+      <div class="case-card fade-in fade-in-delay-1">
+        <div class="case-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Rede Hoteleira — São José dos Campos
+        </div>
+        <div class="case-body">
+          <div class="case-item">
+            <div class="case-item-label challenge">Desafio</div>
+            <p>200 funcionários, lavagem interna custava R$9.200/mês com equipe dedicada.</p>
+          </div>
+          <div class="case-item">
+            <div class="case-item-label solution">Solução</div>
+            <p>Contrato A7 com coleta 3x/semana.</p>
+          </div>
+          <div class="case-item">
+            <div class="case-item-label result">Resultado</div>
+            <p>Economia de 38% nos custos mensais. Liberação de 2 funcionários para outras funções. Zero reclamações de hóspedes sobre uniformes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="case-card fade-in fade-in-delay-2">
+        <div class="case-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Indústria Metalúrgica — Vale do Paraíba
+        </div>
+        <div class="case-body">
+          <div class="case-item">
+            <div class="case-item-label challenge">Desafio</div>
+            <p>120 funcionários, EPIs lavados pelos próprios operadores, risco de multa NR-6.</p>
+          </div>
+          <div class="case-item">
+            <div class="case-item-label solution">Solução</div>
+            <p>Contrato A7 com higienização semanal + rastreabilidade.</p>
+          </div>
+          <div class="case-item">
+            <div class="case-item-label result">Resultado</div>
+            <p>100% conformidade com NR-6. Redução de 45% em afastamentos por problemas dermatológicos. Satisfação dos operadores aumentou 67%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials-section section-pad">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">O Que Nossos Clientes Dizem</h2>
+    <p class="section-subtitle text-center fade-in">Depoimentos de gestores que já terceirizaram com a A7.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in fade-in-delay-1">
+        <p class="testimonial-quote">A terceirização com a A7 foi a melhor decisão operacional que tomamos este ano. Reduzimos custos e ganhamos tempo.</p>
+        <div class="testimonial-author">Carlos M.</div>
+        <div class="testimonial-role">Gerente de Operações, Hotel</div>
+      </div>
+      <div class="testimonial-card fade-in fade-in-delay-2">
+        <p class="testimonial-quote">A conformidade com NR-32 era uma preocupação constante. Com a A7, temos documentação completa e zero problemas em auditorias.</p>
+        <div class="testimonial-author">Dra. Fernanda R.</div>
+        <div class="testimonial-role">Coordenadora de Segurança, Hospital</div>
+      </div>
+      <div class="testimonial-card fade-in fade-in-delay-3">
+        <p class="testimonial-quote">Nossos funcionários elogiaram a qualidade. Uniforme bem cuidado melhora a autoestima e a produtividade.</p>
+        <div class="testimonial-author">Ricardo S.</div>
+        <div class="testimonial-role">RH, Indústria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LEAD MAGNET ========== -->
+<section class="leadmagnet-section section-pad" id="guia">
+  <div class="container">
+    <div class="leadmagnet-inner">
+      <div class="leadmagnet-content fade-in">
+        <h2>Guia Gratuito: Como Reduzir 40% nos Custos com Uniformes e EPIs</h2>
+        <p>Baixe o guia completo com metodologia de cálculo, checklist de compliance e comparativo terceirização vs. lavanderia interna.</p>
+      </div>
+      <div class="leadmagnet-form-card fade-in fade-in-delay-2">
+        <div id="pdfFormContent">
+          <form id="pdfForm" novalidate>
+            <div class="form-group">
+              <label for="pdfNome">Nome *</label>
+              <input type="text" id="pdfNome" class="form-control" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="pdfEmail">E-mail *</label>
+              <input type="email" id="pdfEmail" class="form-control" placeholder="email@empresa.com" required>
+            </div>
+            <div class="form-group">
+              <label for="pdfEmpresa">Empresa *</label>
+              <input type="text" id="pdfEmpresa" class="form-control" placeholder="Nome da empresa" required>
+            </div>
+            <button type="submit" class="btn-amber">BAIXAR GUIA GRATUITO &rarr;</button>
+          </form>
+        </div>
+        <div class="pdf-success" id="pdfFormSuccess">
+          <h3>Guia enviado para seu e-mail!</h3>
+          <p>Verifique sua caixa de entrada e a pasta de spam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq-section section-pad" id="faq">
+  <div class="container">
+    <h2 class="section-title text-center fade-in">Perguntas Frequentes</h2>
+    <p class="section-subtitle text-center fade-in">Tire suas dúvidas sobre nosso serviço corporativo.</p>
+    <div class="faq-list">
+      <div class="faq-item fade-in">
+        <button class="faq-question" aria-expanded="false">
+          Qual o prazo mínimo de contrato?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Trabalhamos com contratos a partir de 3 meses, com renovação automática. Sem fidelidade mínima obrigatória após o período inicial.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-question" aria-expanded="false">
+          Como funciona a logística de coleta e entrega?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Temos frota própria. Definimos juntos a frequência ideal (diária, 2x, 3x ou semanal). Coletamos e entregamos diretamente na sua empresa, no horário que melhor atender sua operação.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-question" aria-expanded="false">
+          Vocês emitem Nota Fiscal?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim. Emitimos NF de serviço para todos os contratos corporativos. Facilitamos a gestão fiscal da sua empresa.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-question" aria-expanded="false">
+          É possível fazer um teste antes de fechar contrato?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim! Oferecemos um lote de teste gratuito para que você avalie a qualidade do nosso serviço antes de qualquer compromisso.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-question" aria-expanded="false">
+          Atendem empresas de qualquer porte?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Atendemos desde pequenas empresas com 10 funcionários até operações com 500+ colaboradores. O orçamento é sempre personalizado para o seu volume.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-question" aria-expanded="false">
+          Quais garantias vocês oferecem?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Garantia de qualidade em cada lote. Se alguma peça não atender ao padrão, reprocessamos sem custo. Temos seguro operacional e processos rastreáveis.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="cta-section section-pad">
+  <div class="container">
+    <div class="cta-inner fade-in">
+      <h2>Pronto Para Reduzir Custos e Eliminar Riscos?</h2>
+      <p>Solicite seu orçamento gratuito e descubra quanto sua empresa pode economizar.</p>
+      <div class="cta-buttons">
+        <a href="#form-hero" class="btn-primary btn-lg">SOLICITAR ORÇAMENTO</a>
+        <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20corporativo%20para%20lavagem%20de%20uniformes%20e%20EPIs" target="_blank" rel="noopener" class="btn-outline btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          FALAR COM CONSULTOR
+        </a>
+      </div>
+      <p class="cta-note">Resposta em até 24h úteis. Sem compromisso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">A7 LAVANDERIA <span>— Soluções Corporativas</span></div>
+    <p class="footer-location">São José dos Campos — SP</p>
+    <div class="footer-contacts">
+      <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20corporativo%20para%20lavagem%20de%20uniformes%20e%20EPIs" target="_blank" rel="noopener" class="footer-contact">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        (12) 97412-8390
+      </a>
+      <a href="mailto:contato@a7lavanderia.com.br" class="footer-contact">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        contato@a7lavanderia.com.br
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2025 A7 Lavanderia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ===== NAVBAR SCROLL SHADOW ===== */
+  var navbar = document.getElementById('navbar');
+  var scrollThreshold = 10;
+
+  function handleNavScroll() {
+    if (window.scrollY > scrollThreshold) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+
+  /* ===== MOBILE NAV TOGGLE ===== */
+  var navToggle = document.getElementById('navToggle');
+  var navMobile = document.getElementById('navMobile');
+
+  navToggle.addEventListener('click', function() {
+    navMobile.classList.toggle('open');
+  });
+
+  window.closeNav = function() {
+    navMobile.classList.remove('open');
+  };
+
+  /* ===== SMOOTH SCROLL ===== */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var target = document.querySelector(targetId);
+      if (target) {
+        var offset = 80;
+        var targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        closeNav();
+      }
+    });
+  });
+
+  /* ===== INTERSECTION OBSERVER (Fade-in) ===== */
+  var fadeEls = document.querySelectorAll('.fade-in');
+  if ('IntersectionObserver' in window) {
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+  } else {
+    fadeEls.forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ===== PHONE MASK ===== */
+  function applyPhoneMask(input) {
+    input.addEventListener('input', function() {
+      var v = this.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.substring(0, 11);
+      if (v.length > 6) {
+        this.value = '(' + v.substring(0, 2) + ') ' + v.substring(2, 7) + '-' + v.substring(7);
+      } else if (v.length > 2) {
+        this.value = '(' + v.substring(0, 2) + ') ' + v.substring(2);
+      } else if (v.length > 0) {
+        this.value = '(' + v;
+      }
+    });
+  }
+
+  document.querySelectorAll('.phone-mask').forEach(applyPhoneMask);
+
+  /* ===== FORM VALIDATION HELPERS ===== */
+  function showError(fieldId) {
+    var errEl = document.getElementById(fieldId + 'Error');
+    if (errEl) errEl.style.display = 'block';
+  }
+  function hideError(fieldId) {
+    var errEl = document.getElementById(fieldId + 'Error');
+    if (errEl) errEl.style.display = 'none';
+  }
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  function isValidPhone(phone) {
+    return phone.replace(/\D/g, '').length >= 10;
+  }
+
+  /* ===== HERO FORM SUBMIT ===== */
+  var heroForm = document.getElementById('heroForm');
+  heroForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+
+    var empresa = document.getElementById('empresa');
+    var nome = document.getElementById('nome');
+    var whatsapp = document.getElementById('whatsapp');
+    var email = document.getElementById('email');
+    var aceite = document.getElementById('aceite');
+
+    // Reset errors
+    ['empresa', 'nome', 'whatsapp', 'email'].forEach(hideError);
+
+    if (!empresa.value.trim()) { showError('empresa'); valid = false; }
+    if (!nome.value.trim()) { showError('nome'); valid = false; }
+    if (!isValidPhone(whatsapp.value)) { showError('whatsapp'); valid = false; }
+    if (!isValidEmail(email.value)) { showError('email'); valid = false; }
+    if (!aceite.checked) { valid = false; aceite.focus(); }
+
+    if (!valid) return;
+
+    // Collect data
+    var leadData = {
+      empresa: empresa.value.trim(),
+      nome: nome.value.trim(),
+      cargo: document.getElementById('cargo').value,
+      whatsapp: whatsapp.value.trim(),
+      email: email.value.trim(),
+      funcionarios: document.getElementById('funcionarios').value,
+      segmento: document.getElementById('segmento').value,
+      timestamp: new Date().toISOString(),
+      source: 'hero-form'
+    };
+
+    // Save to localStorage
+    var leads = [];
+    try {
+      leads = JSON.parse(localStorage.getItem('a7_leads_b2b') || '[]');
+    } catch(ex) { leads = []; }
+    leads.push(leadData);
+    localStorage.setItem('a7_leads_b2b', JSON.stringify(leads));
+
+    // Show success
+    document.getElementById('heroFormContent').style.display = 'none';
+    document.getElementById('heroFormSuccess').style.display = 'block';
+  });
+
+  /* ===== PDF FORM SUBMIT ===== */
+  var pdfForm = document.getElementById('pdfForm');
+  pdfForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var pdfNome = document.getElementById('pdfNome');
+    var pdfEmail = document.getElementById('pdfEmail');
+    var pdfEmpresa = document.getElementById('pdfEmpresa');
+
+    if (!pdfNome.value.trim() || !isValidEmail(pdfEmail.value) || !pdfEmpresa.value.trim()) {
+      return;
+    }
+
+    var pdfLead = {
+      nome: pdfNome.value.trim(),
+      email: pdfEmail.value.trim(),
+      empresa: pdfEmpresa.value.trim(),
+      timestamp: new Date().toISOString(),
+      source: 'pdf-download'
+    };
+
+    var pdfLeads = [];
+    try {
+      pdfLeads = JSON.parse(localStorage.getItem('a7_leads_b2b_pdf') || '[]');
+    } catch(ex) { pdfLeads = []; }
+    pdfLeads.push(pdfLead);
+    localStorage.setItem('a7_leads_b2b_pdf', JSON.stringify(pdfLeads));
+
+    document.getElementById('pdfFormContent').style.display = 'none';
+    document.getElementById('pdfFormSuccess').style.display = 'block';
+  });
+
+  /* ===== ROI CALCULATOR ===== */
+  var roiSlider = document.getElementById('roiEmployees');
+  var roiPieces = document.getElementById('roiPieces');
+  var roiEmployeesValue = document.getElementById('roiEmployeesValue');
+  var roiInternal = document.getElementById('roiInternal');
+  var roiA7 = document.getElementById('roiA7');
+  var roiSavings = document.getElementById('roiSavings');
+  var roiAnnual = document.getElementById('roiAnnual');
+
+  function formatCurrency(value) {
+    return 'R$ ' + value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&.').replace(/\.(\d{2})$/, ',$1');
+  }
+
+  function calculateROI() {
+    var employees = parseInt(roiSlider.value);
+    var pieces = parseInt(roiPieces.value);
+
+    roiEmployeesValue.textContent = employees + ' funcionários';
+
+    // Monthly calculation: employees * pieces_per_week * 4 weeks * cost_per_piece
+    var internalCost = employees * pieces * 4 * 4.5;
+    var a7Cost = employees * pieces * 4 * 2.8;
+    var savings = internalCost - a7Cost;
+    var annual = savings * 12;
+
+    roiInternal.textContent = formatCurrency(internalCost) + '/mês';
+    roiA7.textContent = formatCurrency(a7Cost) + '/mês';
+    roiSavings.textContent = formatCurrency(savings);
+    roiAnnual.textContent = formatCurrency(annual);
+  }
+
+  roiSlider.addEventListener('input', calculateROI);
+  roiPieces.addEventListener('change', calculateROI);
+  calculateROI();
+
+  /* ===== FAQ ACCORDION ===== */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item) {
+    var question = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', function() {
+      var isActive = item.classList.contains('active');
+
+      // Close all
+      faqItems.forEach(function(otherItem) {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Open clicked if it was closed
+      if (!isActive) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ===== LIVE FIELD VALIDATION ===== */
+  document.getElementById('empresa').addEventListener('blur', function() {
+    if (this.value.trim()) hideError('empresa'); else showError('empresa');
+  });
+  document.getElementById('nome').addEventListener('blur', function() {
+    if (this.value.trim()) hideError('nome'); else showError('nome');
+  });
+  document.getElementById('whatsapp').addEventListener('blur', function() {
+    if (isValidPhone(this.value)) hideError('whatsapp'); else showError('whatsapp');
+  });
+  document.getElementById('email').addEventListener('blur', function() {
+    if (isValidEmail(this.value)) hideError('email'); else showError('email');
+  });
+
+})();
+</script>
+</body>
+</html>
