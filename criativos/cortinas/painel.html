@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criativos — Cortinas | A7 Lavanderia</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0f0a15;
+    color: #fff;
+    min-height: 100vh;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1a0e25 0%, #2d1540 50%, #1a0e0a 100%);
+    border-bottom: 3px solid #7c3aed;
+    padding: 40px 60px;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .header h1 span {
+    color: #7c3aed;
+  }
+
+  .header-brand {
+    font-size: 16px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .header p {
+    color: rgba(255,255,255,0.55);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 50px 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(124,58,237,0.20);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    border-color: rgba(124,58,237,0.50);
+    box-shadow: 0 8px 40px rgba(124,58,237,0.15);
+  }
+
+  .card-preview {
+    position: relative;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 380px;
+  }
+  .card-preview.story {
+    min-height: 480px;
+  }
+
+  .card-preview iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .card-preview a {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0);
+    transition: background 0.3s;
+    text-decoration: none;
+  }
+  .card-preview a:hover {
+    background: rgba(0,0,0,0.5);
+  }
+  .card-preview a span {
+    opacity: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 14px 32px;
+    background: rgba(124,58,237,0.9);
+    border-radius: 50px;
+    transition: opacity 0.3s;
+  }
+  .card-preview a:hover span {
+    opacity: 1;
+  }
+
+  .card-info {
+    padding: 24px 28px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .card-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .card-meta span {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    background: rgba(255,255,255,0.06);
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .tips-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 60px 60px;
+  }
+
+  .tips-box {
+    background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(139,69,19,0.08));
+    border: 1px solid rgba(124,58,237,0.20);
+    border-radius: 16px;
+    padding: 40px 48px;
+  }
+
+  .tips-box h2 {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 28px;
+    color: #c4a0e8;
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .tip {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .tip h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c4a0e8;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .tip p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.60);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1200px) {
+    .grid { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
+    .tips-grid { grid-template-columns: 1fr; }
+    .header { padding: 30px; }
+    .tips-section { padding: 20px 30px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <h1>Criativos &mdash; <span>Cortinas</span></h1>
+    <div class="header-brand">A7 Lavanderia</div>
+  </div>
+  <p>Campanha de lavagem especializada de cortinas &bull; 4 pe&ccedil;as criativas &bull; Feed + Stories</p>
+</div>
+
+<div class="grid">
+
+  <!-- V1 Feed -->
+  <div class="card">
+    <div class="card-preview">
+      <iframe src="v1-feed.html" width="340" height="340" scrolling="no" style="transform-origin: 0 0; transform: scale(0.315); width: 1080px; height: 1080px;"></iframe>
+      <a href="v1-feed.html" target="_blank"><span>Abrir Criativo</span></a>
+    </div>
+    <div class="card-info">
+      <h3>V1 &mdash; Dor (Feed)</h3>
+      <div class="card-meta">
+        <span>1080 &times; 1080</span>
+        <span>Instagram Feed</span>
+        <span>Facebook Feed</span>
+        <span>Foco: Dor / Problema</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- V1 Story -->
+  <div class="card">
+    <div class="card-preview story">
+      <iframe src="v1-story.html" width="250" height="444" scrolling="no" style="transform-origin: 0 0; transform: scale(0.231); width: 1080px; height: 1920px;"></iframe>
+      <a href="v1-story.html" target="_blank"><span>Abrir Criativo</span></a>
+    </div>
+    <div class="card-info">
+      <h3>V1 &mdash; Dor (Story)</h3>
+      <div class="card-meta">
+        <span>1080 &times; 1920</span>
+        <span>Instagram Story</span>
+        <span>Facebook Story</span>
+        <span>Foco: Dor / Problema</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- V2 Feed -->
+  <div class="card">
+    <div class="card-preview">
+      <iframe src="v2-feed.html" width="340" height="340" scrolling="no" style="transform-origin: 0 0; transform: scale(0.315); width: 1080px; height: 1080px;"></iframe>
+      <a href="v2-feed.html" target="_blank"><span>Abrir Criativo</span></a>
+    </div>
+    <div class="card-info">
+      <h3>V2 &mdash; Desejo (Feed)</h3>
+      <div class="card-meta">
+        <span>1080 &times; 1080</span>
+        <span>Instagram Feed</span>
+        <span>Facebook Feed</span>
+        <span>Foco: Desejo / Solu&ccedil;&atilde;o</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- V2 Story -->
+  <div class="card">
+    <div class="card-preview story">
+      <iframe src="v2-story.html" width="250" height="444" scrolling="no" style="transform-origin: 0 0; transform: scale(0.231); width: 1080px; height: 1920px;"></iframe>
+      <a href="v2-story.html" target="_blank"><span>Abrir Criativo</span></a>
+    </div>
+    <div class="card-info">
+      <h3>V2 &mdash; Desejo (Story)</h3>
+      <div class="card-meta">
+        <span>1080 &times; 1920</span>
+        <span>Instagram Story</span>
+        <span>Facebook Story</span>
+        <span>Foco: Desejo / Solu&ccedil;&atilde;o</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="tips-section">
+  <div class="tips-box">
+    <h2>Dicas para o Gestor de Tr&aacute;fego</h2>
+    <div class="tips-grid">
+      <div class="tip">
+        <h4>Teste A/B: Dor vs. Desejo</h4>
+        <p>Rode V1 (dor) e V2 (desejo) simultaneamente no mesmo conjunto de an&uacute;ncios. Avalie qual abordagem gera mais cliques e convers&otilde;es para o p&uacute;blico de cortinas. Geralmente, dor performa melhor em p&uacute;blico frio e desejo em p&uacute;blico quente.</p>
+      </div>
+      <div class="tip">
+        <h4>Posicionamento: Feed vs. Story</h4>
+        <p>Use os criativos Feed (1080x1080) para Instagram Feed, Facebook Feed e Audience Network. Use os Story (1080x1920) para Instagram Stories, Facebook Stories e Reels. Nunca misture formatos &mdash; isso prejudica a qualidade de exibi&ccedil;&atilde;o.</p>
+      </div>
+      <div class="tip">
+        <h4>P&uacute;blico Sugerido</h4>
+        <p>Segmente mulheres 30-60 anos, interesses: decora&ccedil;&atilde;o de interiores, casa e jardim, cortinas, persianas, limpeza dom&eacute;stica. Lookalike de clientes existentes &eacute; excelente para escalar. Geolocaliza&ccedil;&atilde;o: raio de 15-25km da lavanderia.</p>
+      </div>
+      <div class="tip">
+        <h4>Or&ccedil;amento e Escala</h4>
+        <p>Comece com R$30-50/dia dividido entre as 2 vers&otilde;es. Ap&oacute;s 3-5 dias com dados suficientes (m&iacute;nimo 1000 impress&otilde;es por criativo), pause o de menor CTR e escale o vencedor. Acompanhe o CPA e n&atilde;o apenas o CPC.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

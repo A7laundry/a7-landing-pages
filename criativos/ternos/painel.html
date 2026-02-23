@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criativos — Ternos | A7 Lavanderia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0d0d15;
+    color: #e8e0d0;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0d0d15 100%);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 48px 60px 44px;
+  }
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #c9a84c;
+    margin-bottom: 12px;
+  }
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .header-title span {
+    color: #c9a84c;
+  }
+  .header-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+  }
+
+  /* Grid */
+  .grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  /* Card */
+  .card {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    border-color: rgba(201, 168, 76, 0.35);
+    box-shadow: 0 8px 40px rgba(201, 168, 76, 0.08);
+  }
+  .card-preview {
+    position: relative;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .card-preview a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+  .card-preview iframe {
+    border: none;
+    pointer-events: none;
+    display: block;
+  }
+  .card-preview.feed iframe {
+    width: 1080px;
+    height: 1080px;
+    transform: scale(0.296);
+    transform-origin: top left;
+  }
+  .card-preview.feed {
+    height: 320px;
+    width: 100%;
+  }
+  .card-preview.story iframe {
+    width: 1080px;
+    height: 1920px;
+    transform: scale(0.167);
+    transform-origin: top left;
+  }
+  .card-preview.story {
+    height: 320px;
+    width: 100%;
+  }
+  .card-info {
+    padding: 20px 24px 24px;
+  }
+  .card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .card-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .card-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(201, 168, 76, 0.1);
+    color: #c9a84c;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+  }
+  .card-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #c9a84c;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+  }
+  .card-link:hover {
+    color: #e0c468;
+  }
+
+  /* Tips Section */
+  .tips {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 60px 72px;
+  }
+  .tips-box {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(201, 168, 76, 0.05));
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 12px;
+    padding: 44px 48px;
+  }
+  .tips-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #c9a84c;
+    margin-bottom: 28px;
+  }
+  .tips-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .tips-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .tips-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #c9a84c;
+    border-radius: 50%;
+  }
+  .tips-list li strong {
+    color: #fff;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-label">A7 Lavanderia &mdash; Campanha</div>
+    <h1 class="header-title">Criativos &mdash; <span>Ternos</span></h1>
+    <p class="header-subtitle">4 pe&ccedil;as &bull; 2 abordagens (Dor / Desejo) &bull; Feed + Stories</p>
+  </div>
+</div>
+
+<div class="grid">
+  <!-- V1 Feed -->
+  <div class="card">
+    <div class="card-preview feed">
+      <a href="v1-feed.html" target="_blank">
+        <iframe src="v1-feed.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-name">V1 &mdash; Dor (Feed)</div>
+      <div class="card-meta">
+        <span class="card-tag">1080 &times; 1080</span>
+        <span class="card-tag">Feed / Carrossel</span>
+        <span class="card-tag">Abordagem: Dor</span>
+      </div>
+      <a href="v1-feed.html" target="_blank" class="card-link">Abrir tamanho real &rarr;</a>
+    </div>
+  </div>
+
+  <!-- V1 Story -->
+  <div class="card">
+    <div class="card-preview story">
+      <a href="v1-story.html" target="_blank">
+        <iframe src="v1-story.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-name">V1 &mdash; Dor (Story)</div>
+      <div class="card-meta">
+        <span class="card-tag">1080 &times; 1920</span>
+        <span class="card-tag">Stories / Reels</span>
+        <span class="card-tag">Abordagem: Dor</span>
+      </div>
+      <a href="v1-story.html" target="_blank" class="card-link">Abrir tamanho real &rarr;</a>
+    </div>
+  </div>
+
+  <!-- V2 Feed -->
+  <div class="card">
+    <div class="card-preview feed">
+      <a href="v2-feed.html" target="_blank">
+        <iframe src="v2-feed.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-name">V2 &mdash; Desejo (Feed)</div>
+      <div class="card-meta">
+        <span class="card-tag">1080 &times; 1080</span>
+        <span class="card-tag">Feed / Carrossel</span>
+        <span class="card-tag">Abordagem: Desejo</span>
+      </div>
+      <a href="v2-feed.html" target="_blank" class="card-link">Abrir tamanho real &rarr;</a>
+    </div>
+  </div>
+
+  <!-- V2 Story -->
+  <div class="card">
+    <div class="card-preview story">
+      <a href="v2-story.html" target="_blank">
+        <iframe src="v2-story.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-name">V2 &mdash; Desejo (Story)</div>
+      <div class="card-meta">
+        <span class="card-tag">1080 &times; 1920</span>
+        <span class="card-tag">Stories / Reels</span>
+        <span class="card-tag">Abordagem: Desejo</span>
+      </div>
+      <a href="v2-story.html" target="_blank" class="card-link">Abrir tamanho real &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="tips">
+  <div class="tips-box">
+    <h2 class="tips-title">Dicas para o Gestor de Tr&aacute;fego</h2>
+    <ul class="tips-list">
+      <li><strong>Teste A/B:</strong> Rode V1 (Dor) e V2 (Desejo) com o mesmo p&uacute;blico para descobrir qual abordagem converte melhor no segmento executivo.</li>
+      <li><strong>P&uacute;blico sugerido:</strong> Homens 28-55, interesses em moda masculina, executivos, empreendedores, LinkedIn. Renda acima da m&eacute;dia.</li>
+      <li><strong>Feed vs Story:</strong> Use vers&otilde;es Feed para campanhas de alcance e engajamento. Stories para retargeting e convers&atilde;o.</li>
+      <li><strong>Hor&aacute;rios:</strong> Teste veicular entre 7h-9h (pré-expediente) e 18h-21h (p&oacute;s-trabalho) para p&uacute;blico executivo.</li>
+      <li><strong>Or&ccedil;amento:</strong> Inicie com R$30-50/dia por criativo. Ap&oacute;s 3 dias, pause o que tiver CPL acima da m&eacute;dia e escale o vencedor.</li>
+      <li><strong>Copy do an&uacute;ncio:</strong> V1 funciona melhor com textos que evidenciam dor e urg&ecirc;ncia. V2 funciona com aspira&ccedil;&atilde;o e exclusividade.</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

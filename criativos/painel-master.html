@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Master &mdash; Criativos A7 Lavanderia</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #08090d;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .master-header {
+    background: linear-gradient(135deg, #0a0b10 0%, #111320 50%, #0d0e18 100%);
+    border-bottom: 1px solid rgba(86,54,209,0.15);
+    padding: 50px 60px 40px;
+    text-align: center;
+  }
+
+  .master-header .logo {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 16px;
+  }
+
+  .master-header h1 {
+    font-size: 42px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .master-header h1 .grad {
+    background: linear-gradient(135deg, #5636d1, #e2498a, #c9a84c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .master-header .subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 24px;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+  .stat .num {
+    font-size: 36px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #5636d1, #e2498a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .stat .label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #475569;
+    margin-top: 4px;
+  }
+
+  /* ── Campaign Grid ── */
+  .campaigns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    gap: 32px;
+    padding: 50px 60px;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .campaign-card {
+    background: #111320;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  .campaign-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.4);
+  }
+
+  .campaign-card .card-header {
+    padding: 28px 32px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .campaign-card .card-header .name {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .campaign-card .card-header .badge {
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .campaign-card .previews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .campaign-card .preview-slot {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #0a0b10;
+  }
+  .campaign-card .preview-slot.story {
+    aspect-ratio: 9/16;
+  }
+  /* For the 4-across grid we use a simple 1:1 ratio for all thumbnails */
+  .campaign-card .preview-slot {
+    aspect-ratio: 1;
+  }
+
+  .campaign-card .preview-slot iframe {
+    width: 1080px;
+    height: 1080px;
+    transform: scale(0.1);
+    transform-origin: top left;
+    border: none;
+    pointer-events: none;
+  }
+  .campaign-card .preview-slot.story iframe {
+    width: 1080px;
+    height: 1920px;
+    transform: scale(0.058);
+    transform-origin: top left;
+  }
+
+  .campaign-card .preview-slot .slot-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    padding: 20px 8px 6px;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+  }
+
+  .campaign-card .card-footer {
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .campaign-card .card-footer .meta {
+    font-size: 12px;
+    color: #475569;
+    font-weight: 500;
+  }
+  .campaign-card .card-footer .meta strong {
+    color: #94a3b8;
+  }
+
+  .campaign-card .card-footer .open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .campaign-card .card-footer .open-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .campaign-card .card-footer .open-btn .arrow {
+    transition: transform 0.2s;
+  }
+  .campaign-card .card-footer .open-btn:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  /* ── Color themes per campaign ── */
+  .card-edredons:hover { border-color: rgba(86,54,209,0.3); }
+  .card-edredons .name { color: #5636d1; }
+  .card-edredons .badge { background: rgba(86,54,209,0.12); border: 1px solid rgba(86,54,209,0.25); color: #7c5ce7; }
+  .card-edredons .open-btn { background: linear-gradient(135deg, #5636d1, #e2498a); }
+
+  .card-tapetes:hover { border-color: rgba(86,54,209,0.3); }
+  .card-tapetes .name { color: #5636d1; }
+  .card-tapetes .badge { background: rgba(226,73,138,0.12); border: 1px solid rgba(226,73,138,0.25); color: #e2498a; }
+  .card-tapetes .open-btn { background: linear-gradient(135deg, #5636d1, #e2498a); }
+
+  .card-tenis:hover { border-color: rgba(0,255,135,0.3); }
+  .card-tenis .name { color: #00ff87; }
+  .card-tenis .badge { background: rgba(0,255,135,0.10); border: 1px solid rgba(0,255,135,0.25); color: #00ff87; }
+  .card-tenis .open-btn { background: linear-gradient(135deg, #00ff87, #00cc6a); color: #0a0a0a; }
+
+  .card-ternos:hover { border-color: rgba(201,168,76,0.3); }
+  .card-ternos .name { color: #c9a84c; }
+  .card-ternos .badge { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25); color: #c9a84c; }
+  .card-ternos .open-btn { background: linear-gradient(135deg, #c9a84c, #a88a3a); }
+
+  .card-empresas:hover { border-color: rgba(37,99,235,0.3); }
+  .card-empresas .name { color: #2563eb; }
+  .card-empresas .badge { background: rgba(37,99,235,0.12); border: 1px solid rgba(37,99,235,0.25); color: #60a5fa; }
+  .card-empresas .open-btn { background: linear-gradient(135deg, #2563eb, #6366f1); }
+
+  .card-estofados:hover { border-color: rgba(14,165,233,0.3); }
+  .card-estofados .name { color: #0ea5e9; }
+  .card-estofados .badge { background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.25); color: #38bdf8; }
+  .card-estofados .open-btn { background: linear-gradient(135deg, #0ea5e9, #d4a843); }
+
+  .card-cortinas:hover { border-color: rgba(139,69,19,0.3); }
+  .card-cortinas .name { color: #cd853f; }
+  .card-cortinas .badge { background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.25); color: #a78bfa; }
+  .card-cortinas .open-btn { background: linear-gradient(135deg, #8B4513, #7c3aed); }
+
+  .card-noivas:hover { border-color: rgba(183,110,121,0.3); }
+  .card-noivas .name { color: #b76e79; }
+  .card-noivas .badge { background: rgba(183,110,121,0.12); border: 1px solid rgba(183,110,121,0.25); color: #d4979f; }
+  .card-noivas .open-btn { background: linear-gradient(135deg, #b76e79, #d4af37); }
+
+  .card-couro:hover { border-color: rgba(139,69,19,0.3); }
+  .card-couro .name { color: #cd853f; }
+  .card-couro .badge { background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.25); color: #f87171; }
+  .card-couro .open-btn { background: linear-gradient(135deg, #8B4513, #dc2626); }
+
+  .card-pet:hover { border-color: rgba(234,179,8,0.3); }
+  .card-pet .name { color: #eab308; }
+  .card-pet .badge { background: rgba(234,179,8,0.12); border: 1px solid rgba(234,179,8,0.25); color: #facc15; }
+  .card-pet .open-btn { background: linear-gradient(135deg, #eab308, #16a34a); }
+
+  /* ── Formats Section ── */
+  .formats-section {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 60px 40px;
+  }
+
+  .formats-card {
+    background: #111320;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 40px 48px;
+  }
+
+  .formats-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+  .formats-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .formats-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #475569;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .formats-table td {
+    font-size: 14px;
+    font-weight: 500;
+    color: #94a3b8;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .formats-table td strong {
+    color: #e2e8f0;
+  }
+
+  .formats-table td .dim {
+    display: inline-block;
+    background: rgba(86,54,209,0.10);
+    border: 1px solid rgba(86,54,209,0.20);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #7c5ce7;
+    font-family: monospace;
+  }
+
+  /* ── Footer ── */
+  .master-footer {
+    text-align: center;
+    padding: 40px 60px 50px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    margin-top: 20px;
+  }
+
+  .master-footer p {
+    font-size: 13px;
+    color: #334155;
+    font-weight: 500;
+  }
+  .master-footer p a {
+    color: #5636d1;
+    text-decoration: none;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1000px) {
+    .campaigns-grid { grid-template-columns: 1fr; padding: 30px; }
+    .master-header { padding: 30px; }
+    .master-header h1 { font-size: 28px; }
+    .stats-row { gap: 24px; }
+    .formats-section { padding: 0 30px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<div class="master-header">
+  <div class="logo">A7 Lavanderia</div>
+  <h1>Painel Master &mdash; <span class="grad">Criativos</span></h1>
+  <p class="subtitle">Todos os criativos publicit&aacute;rios para Instagram, Facebook e Google Meu Neg&oacute;cio</p>
+
+  <div class="stats-row">
+    <div class="stat">
+      <div class="num">10</div>
+      <div class="label">Campanhas</div>
+    </div>
+    <div class="stat">
+      <div class="num">40</div>
+      <div class="label">Criativos</div>
+    </div>
+    <div class="stat">
+      <div class="num">2</div>
+      <div class="label">Formatos</div>
+    </div>
+    <div class="stat">
+      <div class="num">3</div>
+      <div class="label">Plataformas</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CAMPAIGN CARDS ══ -->
+<div class="campaigns-grid">
+
+  <!-- EDREDONS -->
+  <div class="campaign-card card-edredons">
+    <div class="card-header">
+      <span class="name">Edredons</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="edredons/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="edredons/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="edredons/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="edredons/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="edredons/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- TAPETES -->
+  <div class="campaign-card card-tapetes">
+    <div class="card-header">
+      <span class="name">Tapetes</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="tapetes/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="tapetes/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="tapetes/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="tapetes/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="tapetes/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- TENIS -->
+  <div class="campaign-card card-tenis">
+    <div class="card-header">
+      <span class="name">T&ecirc;nis</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="tenis/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="tenis/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="tenis/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="tenis/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="tenis/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- TERNOS -->
+  <div class="campaign-card card-ternos">
+    <div class="card-header">
+      <span class="name">Ternos</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="ternos/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="ternos/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="ternos/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="ternos/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="ternos/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- EMPRESAS -->
+  <div class="campaign-card card-empresas">
+    <div class="card-header">
+      <span class="name">Empresas</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="empresas/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="empresas/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="empresas/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="empresas/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="empresas/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- ESTOFADOS -->
+  <div class="campaign-card card-estofados">
+    <div class="card-header">
+      <span class="name">Estofados</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="estofados/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="estofados/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="estofados/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="estofados/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="estofados/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- CORTINAS -->
+  <div class="campaign-card card-cortinas">
+    <div class="card-header">
+      <span class="name">Cortinas</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="cortinas/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="cortinas/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="cortinas/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="cortinas/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="cortinas/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- NOIVAS -->
+  <div class="campaign-card card-noivas">
+    <div class="card-header">
+      <span class="name">Noivas</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="noivas/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="noivas/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="noivas/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="noivas/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="noivas/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- COURO -->
+  <div class="campaign-card card-couro">
+    <div class="card-header">
+      <span class="name">Couro</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="couro/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="couro/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="couro/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="couro/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="couro/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <!-- PET -->
+  <div class="campaign-card card-pet">
+    <div class="card-header">
+      <span class="name">Pet</span>
+      <span class="badge">4 criativos</span>
+    </div>
+    <div class="previews">
+      <div class="preview-slot">
+        <iframe src="pet/v1-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="pet/v1-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V1 Story</div>
+      </div>
+      <div class="preview-slot">
+        <iframe src="pet/v2-feed.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Feed</div>
+      </div>
+      <div class="preview-slot story">
+        <iframe src="pet/v2-story.html" scrolling="no" loading="lazy"></iframe>
+        <div class="slot-label">V2 Story</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="meta"><strong>V1</strong> Dor &bull; <strong>V2</strong> Desejo</span>
+      <a href="pet/painel.html" class="open-btn">Abrir Painel <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ FORMATS REFERENCE ══ -->
+<div class="formats-section">
+  <div class="formats-card">
+    <h2>Refer&ecirc;ncia de Formatos</h2>
+    <table class="formats-table">
+      <thead>
+        <tr>
+          <th>Formato</th>
+          <th>Dimens&atilde;o</th>
+          <th>Plataformas</th>
+          <th>Uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Feed</strong></td>
+          <td><span class="dim">1080&times;1080</span></td>
+          <td>Instagram Feed, Facebook Feed, Google Meu Neg&oacute;cio</td>
+          <td>Post principal, an&uacute;ncio de feed</td>
+        </tr>
+        <tr>
+          <td><strong>Story</strong></td>
+          <td><span class="dim">1080&times;1920</span></td>
+          <td>Instagram Stories, Facebook Stories, Reels cover</td>
+          <td>Stories, Reels, an&uacute;ncio vertical</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="master-footer">
+  <p>A7 Lavanderia &mdash; Painel Master de Criativos &bull; 10 campanhas &bull; 40 pe&ccedil;as &bull; 2 formatos</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criativos &mdash; Empresas | A7 Lavanderia</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-bottom: 1px solid rgba(99,102,241,0.2);
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left h1 {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  .header-left h1 span {
+    color: #6366f1;
+  }
+
+  .header-left .subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header-badge {
+    background: rgba(99,102,241,0.12);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #818cf8;
+    letter-spacing: 0.04em;
+  }
+
+  .header-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 50px 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(99,102,241,0.12);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    border-color: rgba(99,102,241,0.35);
+    box-shadow: 0 8px 40px rgba(99,102,241,0.10);
+  }
+
+  .card-preview {
+    position: relative;
+    width: 100%;
+    background: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .card-preview a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .card-preview iframe {
+    display: block;
+    border: none;
+    pointer-events: none;
+  }
+
+  .card-preview .feed-frame {
+    width: 1080px;
+    height: 1080px;
+    transform: scale(0.32);
+    transform-origin: top left;
+  }
+  .card-preview.feed-container {
+    height: calc(1080px * 0.32);
+  }
+
+  .card-preview .story-frame {
+    width: 1080px;
+    height: 1920px;
+    transform: scale(0.22);
+    transform-origin: top left;
+  }
+  .card-preview.story-container {
+    height: calc(1920px * 0.22);
+  }
+
+  .card-preview .open-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(99,102,241,0.9);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .card:hover .open-label {
+    opacity: 1;
+  }
+
+  .card-info {
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-info-left h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+  }
+
+  .card-info-left p {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .card-info-right {
+    display: flex;
+    gap: 8px;
+  }
+
+  .tag-pill {
+    background: rgba(99,102,241,0.10);
+    border: 1px solid rgba(99,102,241,0.20);
+    border-radius: 50px;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #818cf8;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .tag-pill.pain {
+    background: rgba(239,68,68,0.10);
+    border-color: rgba(239,68,68,0.20);
+    color: #f87171;
+  }
+  .tag-pill.desire {
+    background: rgba(34,197,94,0.10);
+    border-color: rgba(34,197,94,0.20);
+    color: #4ade80;
+  }
+
+  /* Tips Section */
+  .tips-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 60px 60px;
+  }
+
+  .tips-card {
+    background: linear-gradient(135deg, #1e293b 0%, #1a2332 100%);
+    border: 1px solid rgba(99,102,241,0.15);
+    border-radius: 16px;
+    padding: 40px 48px;
+  }
+
+  .tips-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .tips-card h2 .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(99,102,241,0.15);
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  .tips-card .tips-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .tip {
+    background: rgba(15,23,42,0.6);
+    border: 1px solid rgba(99,102,241,0.08);
+    border-radius: 12px;
+    padding: 22px 26px;
+  }
+
+  .tip h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #c7d2fe;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tip h4 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #6366f1;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  .tip p {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.6;
+    font-weight: 400;
+    padding-left: 32px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .grid { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
+    .tips-section { padding: 20px 30px 40px; }
+    .tips-grid { grid-template-columns: 1fr; }
+    .header { padding: 30px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Criativos &mdash; <span>Empresas</span></h1>
+    <p class="subtitle">Campanha B2B &bull; Lavanderia Corporativa &bull; 4 pe&ccedil;as</p>
+  </div>
+  <div class="header-right">
+    <span class="header-badge">Campanha Empresas</span>
+    <span class="header-logo">A7 Lavanderia</span>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- V1 Feed -->
+  <div class="card">
+    <div class="card-preview feed-container">
+      <a href="v1-feed.html" target="_blank">
+        <iframe src="v1-feed.html" class="feed-frame" scrolling="no" loading="lazy"></iframe>
+        <span class="open-label">Abrir criativo &rarr;</span>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-info-left">
+        <h3>V1 &mdash; Feed (Dor)</h3>
+        <p>1080 &times; 1080px &bull; Instagram / Facebook Feed</p>
+      </div>
+      <div class="card-info-right">
+        <span class="tag-pill pain">Pain</span>
+        <span class="tag-pill">Feed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- V1 Story -->
+  <div class="card">
+    <div class="card-preview story-container">
+      <a href="v1-story.html" target="_blank">
+        <iframe src="v1-story.html" class="story-frame" scrolling="no" loading="lazy"></iframe>
+        <span class="open-label">Abrir criativo &rarr;</span>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-info-left">
+        <h3>V1 &mdash; Story (Dor)</h3>
+        <p>1080 &times; 1920px &bull; Instagram / Facebook Story</p>
+      </div>
+      <div class="card-info-right">
+        <span class="tag-pill pain">Pain</span>
+        <span class="tag-pill">Story</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- V2 Feed -->
+  <div class="card">
+    <div class="card-preview feed-container">
+      <a href="v2-feed.html" target="_blank">
+        <iframe src="v2-feed.html" class="feed-frame" scrolling="no" loading="lazy"></iframe>
+        <span class="open-label">Abrir criativo &rarr;</span>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-info-left">
+        <h3>V2 &mdash; Feed (Desejo)</h3>
+        <p>1080 &times; 1080px &bull; Instagram / Facebook Feed</p>
+      </div>
+      <div class="card-info-right">
+        <span class="tag-pill desire">Desire</span>
+        <span class="tag-pill">Feed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- V2 Story -->
+  <div class="card">
+    <div class="card-preview story-container">
+      <a href="v2-story.html" target="_blank">
+        <iframe src="v2-story.html" class="story-frame" scrolling="no" loading="lazy"></iframe>
+        <span class="open-label">Abrir criativo &rarr;</span>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-info-left">
+        <h3>V2 &mdash; Story (Desejo)</h3>
+        <p>1080 &times; 1920px &bull; Instagram / Facebook Story</p>
+      </div>
+      <div class="card-info-right">
+        <span class="tag-pill desire">Desire</span>
+        <span class="tag-pill">Story</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Tips Section -->
+<div class="tips-section">
+  <div class="tips-card">
+    <h2><span class="icon">&#9881;</span> Dicas para o Gestor de Tr&aacute;fego</h2>
+    <p class="tips-subtitle">Estrat&eacute;gias de A/B testing e otimiza&ccedil;&atilde;o para a campanha Empresas</p>
+
+    <div class="tips-grid">
+      <div class="tip">
+        <h4><span class="num">1</span> Teste Pain vs. Desire</h4>
+        <p>Rode V1 (dor) e V2 (desejo) simultaneamente com o mesmo p&uacute;blico. Em B2B, mensagens de ROI e dados concretos (V2) costumam converter melhor em p&uacute;blicos de decis&atilde;o. Comece com 50/50 e otimize ap&oacute;s 1000 impress&otilde;es.</p>
+      </div>
+      <div class="tip">
+        <h4><span class="num">2</span> Feed vs. Story</h4>
+        <p>Use posicionamento autom&aacute;tico no in&iacute;cio. Stories tendem a ter CPM menor mas CTR tamb&eacute;m. Feed gera mais engajamento. Separe ap&oacute;s dados iniciais para alocar budget no placement vencedor.</p>
+      </div>
+      <div class="tip">
+        <h4><span class="num">3</span> P&uacute;blico Recomendado</h4>
+        <p>Segmente por cargo: gerentes, diretores, proprietores de empresas. Use interesses em &ldquo;gest&atilde;o empresarial&rdquo;, &ldquo;facilities management&rdquo;, &ldquo;terceiriza&ccedil;&atilde;o&rdquo;. Lookalike de clientes PJ existentes &eacute; o p&uacute;blico mais quente.</p>
+      </div>
+      <div class="tip">
+        <h4><span class="num">4</span> M&eacute;tricas-Chave</h4>
+        <p>Monitore CPC e CPL (custo por lead). Para B2B, um CPL abaixo de R$25 &eacute; excelente. Taxa de convers&atilde;o da LP acima de 8% indica boa sincronia criativo-landing. Ajuste copy se CTR ficar abaixo de 1%.</p>
+      </div>
+      <div class="tip">
+        <h4><span class="num">5</span> Escala Gradual</h4>
+        <p>Comece com R$30-50/dia por ad set. Ao encontrar o vencedor (menor CPA ap&oacute;s 3-5 dias), aumente budget em 20% a cada 3 dias. Nunca duplique budget de uma vez &mdash; o algoritmo precisa reaprender.</p>
+      </div>
+      <div class="tip">
+        <h4><span class="num">6</span> Rotina de Otimiza&ccedil;&atilde;o</h4>
+        <p>Revise m&eacute;tricas di&aacute;rias nos primeiros 7 dias. Pause criativos com frequ&ecirc;ncia acima de 3.0. Teste novas varia&ccedil;&otilde;es de headline a cada 2 semanas para evitar ad fatigue. Documente resultados para pr&oacute;ximas campanhas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

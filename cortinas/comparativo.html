@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cortinas e Persianas — Comparativo de Variações | A7 Lavanderia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0f0f13;color:white;min-height:100vh}
+
+/* Back Link */
+.back-link{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,0.4);text-decoration:none;font-size:14px;font-weight:500;padding:24px 32px;transition:color 0.2s}
+.back-link:hover{color:white}
+.back-link svg{width:16px;height:16px}
+
+/* Header */
+.header{text-align:center;padding:24px 20px 48px}
+.header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:20px}
+.header h1{font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-0.5px;margin-bottom:8px}
+.header h1 span{background:linear-gradient(135deg,#c2956b,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header p{color:rgba(255,255,255,0.4);font-size:15px;max-width:500px;margin:0 auto}
+
+/* Campaign Info */
+.campaign-info{max-width:800px;margin:0 auto 40px;padding:0 24px}
+.info-bar{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.info-item{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:10px 18px;border-radius:10px;font-size:13px;color:rgba(255,255,255,0.6)}
+.info-item strong{color:white;font-weight:600}
+.info-item .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1100px;margin:0 auto;padding:0 24px 60px}
+
+/* Card */
+.card{background:#1a1a22;border:1px solid #2a2a35;border-radius:16px;overflow:hidden;transition:all 0.3s ease;cursor:pointer;text-decoration:none;color:white;display:block}
+.card:hover{transform:translateY(-6px);border-color:#444;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.card-preview{height:300px;position:relative;overflow:hidden}
+.card-preview iframe{width:200%;height:200%;border:none;transform:scale(0.5);transform-origin:top left;pointer-events:none}
+.card-preview .preview-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.7) 100%);pointer-events:none}
+.card-preview .preview-label{position:absolute;top:16px;left:16px;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.8);z-index:2}
+
+/* Card Body */
+.card-body{padding:24px 28px 28px}
+.card-name{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.card-color-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;border:2px solid rgba(255,255,255,0.1)}
+.card-name h3{font-size:20px;font-weight:800;letter-spacing:-0.3px}
+.card-desc{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:16px}
+
+/* Tags */
+.card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tag{padding:4px 12px;border-radius:6px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.06)}
+
+/* Palette */
+.card-palette{display:flex;gap:6px;margin-bottom:16px}
+.palette-swatch{width:28px;height:28px;border-radius:6px;border:1px solid rgba(255,255,255,0.08)}
+
+/* Stats */
+.card-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)}
+.stat{text-align:center}
+.stat-value{font-size:18px;font-weight:800;color:white}
+.stat-label{font-size:10px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
+
+/* CTA row */
+.card-cta{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.04)}
+.card-cta span{font-size:13px;font-weight:600;color:rgba(255,255,255,0.5)}
+.card-cta svg{width:18px;height:18px;color:rgba(255,255,255,0.3);transition:transform 0.3s}
+.card:hover .card-cta svg{transform:translateX(4px);color:white}
+
+/* Feature Comparison Table */
+.comparison-section{max-width:1100px;margin:0 auto 60px;padding:0 24px}
+.comparison-title{font-size:20px;font-weight:700;margin-bottom:24px;text-align:center;color:rgba(255,255,255,0.7)}
+.comparison-table{width:100%;border-collapse:collapse;background:#1a1a22;border:1px solid #2a2a35;border-radius:12px;overflow:hidden}
+.comparison-table th{padding:14px 20px;text-align:left;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.03);border-bottom:1px solid #2a2a35}
+.comparison-table td{padding:12px 20px;font-size:14px;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.03)}
+.comparison-table tr:last-child td{border-bottom:none}
+.comparison-table td:first-child{color:rgba(255,255,255,0.4);font-weight:500}
+.check{color:#4ade80;font-weight:700}
+
+/* Footer */
+.footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,0.04)}
+.footer p{font-size:13px;color:rgba(255,255,255,0.25)}
+.footer a{color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s}
+.footer a:hover{color:white}
+
+/* Responsive */
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr;max-width:500px}
+  .info-bar{flex-direction:column;align-items:center}
+  .card-preview{height:240px}
+  .comparison-table{font-size:12px}
+  .comparison-table th,.comparison-table td{padding:10px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- Back Link -->
+<a href="../comparativo.html" class="back-link">
+  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
+  Voltar ao Painel Geral
+</a>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-badge">Campanha Cortinas &amp; Persianas</div>
+  <h1>Comparativo de <span>Varia&ccedil;&otilde;es</span></h1>
+  <p>2 varia&ccedil;&otilde;es de landing page para a campanha de lavagem de cortinas e persianas da A7 Lavanderia.</p>
+</div>
+
+<!-- Campaign Info -->
+<div class="campaign-info">
+  <div class="info-bar">
+    <div class="info-item">
+      <div class="dot" style="background:#4ade80"></div>
+      <span>Campanha: <strong>Cortinas &amp; Persianas</strong></span>
+    </div>
+    <div class="info-item">
+      <div class="dot" style="background:#fbbf24"></div>
+      <span>Varia&ccedil;&otilde;es: <strong>2 ativas</strong></span>
+    </div>
+    <div class="info-item">
+      <div class="dot" style="background:#a78bfa"></div>
+      <span>Regi&atilde;o: <strong>S&atilde;o Jos&eacute; dos Campos, SP</strong></span>
+    </div>
+    <div class="info-item">
+      <div class="dot" style="background:#60a5fa"></div>
+      <span>Servi&ccedil;o: <strong>Lavagem Profissional</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- Cards Grid -->
+<div class="grid">
+
+  <!-- Card: Elegance -->
+  <a href="variacao-elegance.html" class="card">
+    <div class="card-preview">
+      <iframe src="variacao-elegance.html" loading="lazy" title="Preview Elegance"></iframe>
+      <div class="preview-overlay"></div>
+      <div class="preview-label">Varia&ccedil;&atilde;o A</div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">
+        <div class="card-color-dot" style="background:#8B4513"></div>
+        <h3>Elegance</h3>
+      </div>
+      <div class="card-desc">Design elegante com tons de bege areia e bord&ocirc;. Transmite sofistica&ccedil;&atilde;o e cuidado com tecidos nobres. Ideal para p&uacute;blico decora&ccedil;&atilde;o premium.</div>
+      <div class="card-tags">
+        <span class="tag">Bege Areia + Bord&ocirc;</span>
+        <span class="tag">Sofisticado</span>
+        <span class="tag">Premium</span>
+        <span class="tag">Inter</span>
+      </div>
+      <div class="card-palette">
+        <div class="palette-swatch" style="background:#8B4513" title="Primary"></div>
+        <div class="palette-swatch" style="background:#c2956b" title="Accent"></div>
+        <div class="palette-swatch" style="background:#2d1b0e" title="Dark"></div>
+        <div class="palette-swatch" style="background:#faf5ef" title="Light"></div>
+      </div>
+      <div class="card-stats">
+        <div class="stat">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Se&ccedil;&otilde;es</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Imagens</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">7</div>
+          <div class="stat-label">FAQs</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-cta">
+      <span>Abrir varia&ccedil;&atilde;o Elegance</span>
+      <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </div>
+  </a>
+
+  <!-- Card: Airy Light -->
+  <a href="variacao-airy.html" class="card">
+    <div class="card-preview">
+      <iframe src="variacao-airy.html" loading="lazy" title="Preview Airy Light"></iframe>
+      <div class="preview-overlay"></div>
+      <div class="preview-label">Varia&ccedil;&atilde;o B</div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">
+        <div class="card-color-dot" style="background:#7c3aed"></div>
+        <h3>Airy Light</h3>
+      </div>
+      <div class="card-desc">Design leve e arejado com branco e lavanda suave. Transmite limpeza, frescor e leveza. Ideal para p&uacute;blico que prioriza sa&uacute;de e bem-estar.</div>
+      <div class="card-tags">
+        <span class="tag">Branco + Lavanda</span>
+        <span class="tag">Leve</span>
+        <span class="tag">Arejado</span>
+        <span class="tag">Inter</span>
+      </div>
+      <div class="card-palette">
+        <div class="palette-swatch" style="background:#7c3aed" title="Primary"></div>
+        <div class="palette-swatch" style="background:#a78bfa" title="Accent"></div>
+        <div class="palette-swatch" style="background:#1e1b4b" title="Dark"></div>
+        <div class="palette-swatch" style="background:#f5f3ff" title="Light"></div>
+      </div>
+      <div class="card-stats">
+        <div class="stat">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Se&ccedil;&otilde;es</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Imagens</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">7</div>
+          <div class="stat-label">FAQs</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-cta">
+      <span>Abrir varia&ccedil;&atilde;o Airy Light</span>
+      <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </div>
+  </a>
+</div>
+
+<!-- Comparison Table -->
+<div class="comparison-section">
+  <h2 class="comparison-title">Compara&ccedil;&atilde;o de Recursos</h2>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Elegance</th>
+        <th>Airy Light</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tema Visual</td>
+        <td>Bege Areia + Bord&ocirc;</td>
+        <td>Branco + Lavanda Suave</td>
+      </tr>
+      <tr>
+        <td>P&uacute;blico-Alvo</td>
+        <td>Decora&ccedil;&atilde;o premium</td>
+        <td>Sa&uacute;de e bem-estar</td>
+      </tr>
+      <tr>
+        <td>Sensa&ccedil;&atilde;o Transmitida</td>
+        <td>Sofistica&ccedil;&atilde;o, cuidado</td>
+        <td>Limpeza, leveza, frescor</td>
+      </tr>
+      <tr>
+        <td>Hero com Imagem Unsplash</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Galeria Visual</td>
+        <td class="check">4 imagens</td>
+        <td class="check">4 imagens</td>
+      </tr>
+      <tr>
+        <td>Before/After Comparativo</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Pain Points (6 cards)</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Guia de Tecidos E-E-A-T</td>
+        <td class="check">5 materiais</td>
+        <td class="check">5 materiais</td>
+      </tr>
+      <tr>
+        <td>Se&ccedil;&atilde;o de Servi&ccedil;os</td>
+        <td class="check">4 servi&ccedil;os</td>
+        <td class="check">4 servi&ccedil;os</td>
+      </tr>
+      <tr>
+        <td>Como Funciona (4 passos)</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Pre&ccedil;os e ROI</td>
+        <td class="check">3 planos + ROI</td>
+        <td class="check">3 planos + ROI</td>
+      </tr>
+      <tr>
+        <td>Depoimentos</td>
+        <td class="check">3 clientes</td>
+        <td class="check">3 clientes</td>
+      </tr>
+      <tr>
+        <td>FAQ com Schema</td>
+        <td class="check">7 perguntas</td>
+        <td class="check">7 perguntas</td>
+      </tr>
+      <tr>
+        <td>Schema.org (Local/Service/FAQ)</td>
+        <td class="check">Completo</td>
+        <td class="check">Completo</td>
+      </tr>
+      <tr>
+        <td>Geo Tags SJC</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Social Proof Toasts</td>
+        <td class="check">5 varia&ccedil;&otilde;es</td>
+        <td class="check">5 varia&ccedil;&otilde;es</td>
+      </tr>
+      <tr>
+        <td>Exit Intent Modal</td>
+        <td class="check">10% OFF</td>
+        <td class="check">10% OFF</td>
+      </tr>
+      <tr>
+        <td>Scroll Progress Bar</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Sticky WhatsApp (Mobile)</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Fatos "Voc&ecirc; Sabia?"</td>
+        <td class="check">3 fatos</td>
+        <td class="check">3 fatos</td>
+      </tr>
+      <tr>
+        <td>Barra de Urg&ecirc;ncia</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+      <tr>
+        <td>Scroll Animations</td>
+        <td class="check">Sim</td>
+        <td class="check">Sim</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>A7 Lavanderia &mdash; Painel de Varia&ccedil;&otilde;es A/B &middot; Campanha Cortinas &amp; Persianas</p>
+  <p style="margin-top:8px"><a href="../comparativo.html">Painel Geral</a> &middot; <a href="https://a7lavanderia.com.br" target="_blank">a7lavanderia.com.br</a></p>
+</div>
+
+</body>
+</html>

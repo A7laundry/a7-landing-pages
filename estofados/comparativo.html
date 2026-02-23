@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A7 Lavanderia | Comparativo Estofados — Variações A/B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0f0f13;color:#fff;min-height:100vh}
+
+/* Back Link */
+.back-link{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:14px;font-weight:600;padding:24px 24px 0;transition:color .3s}
+.back-link:hover{color:#fff}
+.back-link svg{width:16px;height:16px;fill:currentColor}
+
+/* Header */
+.header{text-align:center;padding:32px 20px 40px}
+.header-tag{display:inline-block;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.2);color:#d4a843;padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.header h1{font-size:clamp(24px,4vw,36px);font-weight:800;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 span{background:linear-gradient(135deg,#0ea5e9,#10b981);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{color:rgba(255,255,255,.45);font-size:15px;max-width:500px;margin:0 auto}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1200px;margin:0 auto;padding:0 24px 40px}
+
+/* Cards */
+.card{background:#1a1a22;border:1px solid #2a2a35;border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer;text-decoration:none;color:#fff;display:block}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.4)}
+.card:first-child:hover{border-color:#0ea5e9}
+.card:last-child:hover{border-color:#d4a843}
+.card-preview{height:300px;position:relative;overflow:hidden}
+.card-preview iframe{width:200%;height:200%;border:none;transform:scale(.5);transform-origin:top left;pointer-events:none}
+.card-preview .preview-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.7) 100%);pointer-events:none}
+.card-body{padding:20px 24px 24px}
+.card-badge{display:inline-block;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:12px}
+.card:first-child .card-badge{background:rgba(14,165,233,.12);color:#0ea5e9}
+.card:last-child .card-badge{background:rgba(212,168,67,.12);color:#d4a843}
+.card-body h2{font-size:20px;font-weight:800;margin-bottom:6px}
+.card-body .desc{font-size:14px;color:rgba(255,255,255,.5);line-height:1.5;margin-bottom:16px}
+
+/* Color Swatches */
+.swatches{display:flex;gap:8px;margin-bottom:16px}
+.swatch{width:28px;height:28px;border-radius:8px;border:2px solid rgba(255,255,255,.1);position:relative}
+.swatch:hover::after{content:attr(data-label);position:absolute;bottom:-24px;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:2px 8px;border-radius:4px;font-size:10px;white-space:nowrap;z-index:10}
+
+/* Tags */
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.card-tags span{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 10px;border-radius:6px;font-size:11px;color:rgba(255,255,255,.5);font-weight:600}
+
+/* Link */
+.card-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;transition:gap .3s}
+.card:first-child .card-link{color:#0ea5e9}
+.card:last-child .card-link{color:#d4a843}
+.card:hover .card-link{gap:10px}
+
+/* Strategy Section */
+.strategy{max-width:1200px;margin:0 auto;padding:0 24px 60px}
+.strategy h2{font-size:22px;font-weight:800;margin-bottom:24px;text-align:center}
+.strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.strat-card{background:#1a1a22;border:1px solid #2a2a35;border-radius:12px;padding:24px}
+.strat-card h3{font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.strat-card:first-child h3{color:#0ea5e9}
+.strat-card:last-child h3{color:#d4a843}
+.strat-card ul{list-style:none;padding:0}
+.strat-card ul li{font-size:14px;color:rgba(255,255,255,.6);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.strat-card ul li:last-child{border:none}
+.strat-card ul li::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:7px}
+.strat-card:first-child ul li::before{background:#0ea5e9}
+.strat-card:last-child ul li::before{background:#d4a843}
+
+/* Comparison Table */
+.comparison{max-width:800px;margin:0 auto;padding:0 24px 60px}
+.comparison h2{font-size:22px;font-weight:800;margin-bottom:24px;text-align:center}
+.comp-table{width:100%;border-collapse:collapse;background:#1a1a22;border-radius:12px;overflow:hidden;border:1px solid #2a2a35}
+.comp-table th,.comp-table td{padding:14px 20px;text-align:left;font-size:14px;border-bottom:1px solid #2a2a35}
+.comp-table th{background:#15151c;color:rgba(255,255,255,.5);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.comp-table td:first-child{color:rgba(255,255,255,.7);font-weight:600}
+.comp-table td:nth-child(2){color:#0ea5e9}
+.comp-table td:nth-child(3){color:#d4a843}
+.comp-table tr:last-child td{border:none}
+
+/* CTA */
+.cta-section{text-align:center;padding:0 24px 60px}
+.cta-section p{color:rgba(255,255,255,.4);font-size:14px;margin-bottom:20px}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn{padding:14px 28px;border-radius:50px;font-weight:700;font-size:14px;transition:all .3s;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.cta-btn.fresh{background:rgba(14,165,233,.12);color:#0ea5e9;border:1px solid rgba(14,165,233,.25)}
+.cta-btn.fresh:hover{background:rgba(14,165,233,.2);transform:translateY(-2px)}
+.cta-btn.premium{background:rgba(212,168,67,.12);color:#d4a843;border:1px solid rgba(212,168,67,.25)}
+.cta-btn.premium:hover{background:rgba(212,168,67,.2);transform:translateY(-2px)}
+
+/* Footer */
+footer{text-align:center;padding:24px;border-top:1px solid #2a2a35;color:rgba(255,255,255,.3);font-size:12px}
+footer a{color:rgba(255,255,255,.5)}
+
+/* Responsive */
+@media(max-width:768px){
+.grid,.strategy-grid{grid-template-columns:1fr}
+.card-preview{height:220px}
+}
+</style>
+</head>
+<body>
+
+<!-- Back Link -->
+<a href="../comparativo.html" class="back-link">
+  <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+  Voltar ao Painel Principal
+</a>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-tag">Campanha Estofados / Sofás</div>
+  <h1>Comparativo de <span>Variações A/B</span></h1>
+  <p>Duas abordagens visuais para a campanha de higienização de sofás e estofados da A7 Lavanderia.</p>
+</div>
+
+<!-- Cards Grid -->
+<div class="grid">
+  <!-- Fresh Clean -->
+  <a href="variacao-fresh.html" class="card">
+    <div class="card-preview">
+      <iframe src="variacao-fresh.html" loading="lazy" title="Preview Fresh Clean"></iframe>
+      <div class="preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-badge">Variação A</div>
+      <h2>Fresh Clean</h2>
+      <p class="desc">Design clean e moderno com tons de azul celeste e verde menta. Transmite frescor, higiene e confiança.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#0ea5e9" data-label="Sky Blue"></div>
+        <div class="swatch" style="background:#10b981" data-label="Emerald"></div>
+        <div class="swatch" style="background:#0c4a6e" data-label="Dark Blue"></div>
+        <div class="swatch" style="background:#f0f9ff" data-label="Light Blue"></div>
+      </div>
+      <div class="card-tags">
+        <span>Frescor</span>
+        <span>Higiene</span>
+        <span>Moderno</span>
+        <span>Família</span>
+        <span>Confiança</span>
+      </div>
+      <span class="card-link">Abrir variação &rarr;</span>
+    </div>
+  </a>
+
+  <!-- Premium Home -->
+  <a href="variacao-premium.html" class="card">
+    <div class="card-preview">
+      <iframe src="variacao-premium.html" loading="lazy" title="Preview Premium Home"></iframe>
+      <div class="preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-badge">Variação B</div>
+      <h2>Premium Home</h2>
+      <p class="desc">Design sofisticado com tons de champagne dourado e grafite. Para público de alto padrão que valoriza exclusividade.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#92702B" data-label="Warm Gold"></div>
+        <div class="swatch" style="background:#d4a843" data-label="Champagne"></div>
+        <div class="swatch" style="background:#1c1917" data-label="Grafite"></div>
+        <div class="swatch" style="background:#faf9f6" data-label="Cream"></div>
+      </div>
+      <div class="card-tags">
+        <span>Sofisticado</span>
+        <span>Premium</span>
+        <span>Alto Padrão</span>
+        <span>Exclusivo</span>
+        <span>Elegante</span>
+      </div>
+      <span class="card-link">Abrir variação &rarr;</span>
+    </div>
+  </a>
+</div>
+
+<!-- Strategy Section -->
+<div class="strategy">
+  <h2>Estratégia de Cada Variação</h2>
+  <div class="strategy-grid">
+    <div class="strat-card">
+      <h3>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0ea5e9"><circle cx="12" cy="12" r="10"/></svg>
+        Fresh Clean — Variação A
+      </h3>
+      <ul>
+        <li>Público-alvo: Famílias com crianças e pets, classe B/C</li>
+        <li>Abordagem emocional: Frescor, saúde da família, higiene</li>
+        <li>Tom de voz: Acessível, prático, direto ao ponto</li>
+        <li>Gatilho principal: Medo (ácaros, bactérias) + Urgência</li>
+        <li>CTA primário: WhatsApp com texto amigável</li>
+        <li>Hero com overlay azul-verde para sensação de limpeza</li>
+        <li>Ideal para campanhas no Facebook/Instagram Ads</li>
+        <li>Copy focada em problemas do dia a dia (manchas, cheiro)</li>
+      </ul>
+    </div>
+    <div class="strat-card">
+      <h3>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#d4a843"><circle cx="12" cy="12" r="10"/></svg>
+        Premium Home — Variação B
+      </h3>
+      <ul>
+        <li>Público-alvo: Famílias alto padrão, classe A/B+, condomínios</li>
+        <li>Abordagem emocional: Exclusividade, sofisticação, investimento</li>
+        <li>Tom de voz: Elegante, premium, diferenciado</li>
+        <li>Gatilho principal: Status + Proteção do investimento</li>
+        <li>CTA primário: WhatsApp com linguagem exclusiva</li>
+        <li>Hero escuro com overlay grafite para sensação de luxo</li>
+        <li>Ideal para Google Ads (busca por "limpeza premium")</li>
+        <li>Copy focada em valor do sofá e proteção patrimonial</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Comparison Table -->
+<div class="comparison">
+  <h2>Comparativo Lado a Lado</h2>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Elemento</th>
+        <th>Fresh Clean</th>
+        <th>Premium Home</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Paleta de Cores</td>
+        <td>Azul Celeste + Verde Menta</td>
+        <td>Dourado + Grafite</td>
+      </tr>
+      <tr>
+        <td>Público-Alvo</td>
+        <td>Famílias B/C, Pets</td>
+        <td>Alto Padrão A/B+</td>
+      </tr>
+      <tr>
+        <td>Tom Emocional</td>
+        <td>Frescor, Limpeza</td>
+        <td>Luxo, Exclusividade</td>
+      </tr>
+      <tr>
+        <td>Hero Image</td>
+        <td>Sofá Teal (moderno)</td>
+        <td>Living Room Luxo</td>
+      </tr>
+      <tr>
+        <td>Background Hero</td>
+        <td>Gradient Azul-Verde</td>
+        <td>Overlay Escuro Grafite</td>
+      </tr>
+      <tr>
+        <td>Gatilho Principal</td>
+        <td>Medo + Urgência</td>
+        <td>Status + Investimento</td>
+      </tr>
+      <tr>
+        <td>Canal Ideal</td>
+        <td>Meta Ads (FB/IG)</td>
+        <td>Google Ads (Busca)</td>
+      </tr>
+      <tr>
+        <td>Seção Serviços</td>
+        <td>Fundo claro, cards brancos</td>
+        <td>Fundo escuro, cards glass</td>
+      </tr>
+      <tr>
+        <td>Urgency Bar</td>
+        <td>Gradient azul-verde</td>
+        <td>Fundo escuro, texto dourado</td>
+      </tr>
+      <tr>
+        <td>Schema.org</td>
+        <td>LocalBusiness + Service + FAQ</td>
+        <td>LocalBusiness + Service + FAQ</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <p>Abra cada variação para visualizar a experiência completa:</p>
+  <div class="cta-buttons">
+    <a href="variacao-fresh.html" class="cta-btn fresh">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+      Abrir Fresh Clean
+    </a>
+    <a href="variacao-premium.html" class="cta-btn premium">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+      Abrir Premium Home
+    </a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>A7 Lavanderia — Painel Comparativo de Campanha Estofados</p>
+  <p style="margin-top:8px"><a href="../comparativo.html">Voltar ao Painel Principal</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Teste A/B — Campanha Couro, Camurca e Jaquetas de Inverno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0f0f13; color: white; min-height: 100vh; }
+    .header { text-align: center; padding: 48px 20px 16px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; margin-bottom: 16px; transition: color 0.3s; }
+    .back-link:hover { color: white; }
+    .header .badge { display: inline-block; background: rgba(139,69,19,0.15); color: #cd7f32; border: 1px solid rgba(205,127,50,0.3); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header h1 .brown { background: linear-gradient(135deg, #8B4513, #cd7f32); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .header h1 .red { background: linear-gradient(135deg, #dc2626, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .header p { color: rgba(255,255,255,0.45); font-size: 15px; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+
+    .target-box { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 28px; margin: 28px auto; max-width: 680px; background: #1a1a22; border: 1px solid #2a2a35; border-radius: 14px; }
+    .target-box .icon { font-size: 28px; }
+    .target-box .icon svg { stroke: #cd7f32; }
+    .target-box .text { text-align: left; }
+    .target-box .text strong { font-size: 16px; display: block; }
+    .target-box .text span { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; margin: 36px auto 0; padding: 0 24px 48px; }
+    .card { background: #1a1a22; border: 1px solid #2a2a35; border-radius: 16px; overflow: hidden; transition: all 0.4s ease; cursor: pointer; text-decoration: none; color: white; display: block; position: relative; }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 16px 16px 0 0; opacity: 0; transition: opacity 0.4s; }
+    .card:nth-child(1)::before { background: linear-gradient(90deg, #8B4513, #cd7f32); }
+    .card:nth-child(2)::before { background: linear-gradient(90deg, #dc2626, #ef4444); }
+    .card:hover { transform: translateY(-6px); border-color: #444; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .card:hover::before { opacity: 1; }
+
+    .card-preview { height: 280px; position: relative; overflow: hidden; }
+    .card-preview iframe { width: 200%; height: 200%; border: none; transform: scale(0.5); transform-origin: top left; pointer-events: none; }
+    .card-preview .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.8) 100%); pointer-events: none; }
+
+    .card-body { padding: 22px 24px 28px; }
+    .card-badge { display: inline-block; padding: 5px 14px; border-radius: 50px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+    .badge-rugged { background: rgba(139,69,19,0.15); color: #cd7f32; border: 1px solid rgba(205,127,50,0.25); }
+    .badge-urban { background: rgba(220,38,38,0.15); color: #ef4444; border: 1px solid rgba(220,38,38,0.25); }
+    .card-body h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .card-body .subtitle { font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .card-body p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 16px; }
+
+    .features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .feature-tag { font-size: 10px; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); }
+
+    .open-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; transition: all 0.3s; }
+    .card:hover .open-btn { background: rgba(255,255,255,0.1); color: white; }
+
+    .strategy { max-width: 1000px; margin: 0 auto; padding: 0 24px 48px; }
+    .strategy h3 { font-size: 18px; text-align: center; margin-bottom: 20px; color: rgba(255,255,255,0.5); }
+    .strategy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .strategy-card { background: #1a1a22; border: 1px solid #2a2a35; border-radius: 12px; padding: 20px; }
+    .strategy-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .strategy-card:nth-child(1) h4 { color: #cd7f32; }
+    .strategy-card:nth-child(2) h4 { color: #ef4444; }
+    .strategy-card p { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.5; }
+
+    .metrics { max-width: 1000px; margin: 0 auto; padding: 0 24px 48px; }
+    .metrics h3 { font-size: 18px; text-align: center; margin-bottom: 20px; color: rgba(255,255,255,0.5); }
+    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .metric-card { background: #1a1a22; border: 1px solid #2a2a35; border-radius: 12px; padding: 20px; text-align: center; }
+    .metric-card .val { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+    .metric-card:nth-child(odd) .val { color: #cd7f32; }
+    .metric-card:nth-child(even) .val { color: #ef4444; }
+    .metric-card .label { font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .tip { text-align: center; padding: 0 20px 48px; font-size: 13px; color: rgba(255,255,255,0.25); font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      .grid, .strategy-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .header h1 { font-size: 24px; }
+      .target-box { flex-direction: column; text-align: center; }
+      .target-box .text { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="../comparativo.html" class="back-link">&larr; Voltar ao painel geral</a>
+    <div class="badge">Campanha B2C — Couro, Camurca e Jaquetas</div>
+    <h1>Teste A/B — <span class="brown">Rugged Craft</span> vs <span class="red">Urban Rider</span></h1>
+    <p>2 variacoes de design para campanha de limpeza e restauracao de couro, camurca e jaquetas de inverno. Foco em urgencia sazonal, ROI emocional e preservacao de pecas de alto valor.</p>
+
+    <div class="target-box">
+      <div class="icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="text">
+        <strong>Captacao B2C: Couro, Camurca e Pecas de Inverno</strong>
+        <span>WhatsApp direto + Guia PDF (exit intent) + Social proof toasts + ROI visual</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <h3>Metricas-Chave para Monitorar</h3>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="val">CTR</div>
+        <div class="label">Click-through no WhatsApp</div>
+      </div>
+      <div class="metric-card">
+        <div class="val">Scroll</div>
+        <div class="label">Profundidade media</div>
+      </div>
+      <div class="metric-card">
+        <div class="val">Exit</div>
+        <div class="label">Conversao do popup</div>
+      </div>
+      <div class="metric-card">
+        <div class="val">CPA</div>
+        <div class="label">Custo por agendamento</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a href="variacao-rugged.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-rugged.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-rugged">Variacao A — Rugged Craft</span>
+        <div class="subtitle">Artesanal / Leather Workshop</div>
+        <h2>Marrom Couro + Bronze — Rustico Premium</h2>
+        <p>Design rustico-premium com feel artesanal. Playfair Display + Source Sans. Tons quentes de couro e bronze. Ideal para publico 30-55 anos que valoriza tradição, qualidade e cuidado com pecas de alto valor sentimental.</p>
+        <div class="features">
+          <span class="feature-tag">Hero Full Screen</span>
+          <span class="feature-tag">5 Inimigos do Couro</span>
+          <span class="feature-tag">Guia de Tipos</span>
+          <span class="feature-tag">Calendario Sazonal</span>
+          <span class="feature-tag">ROI Visual</span>
+          <span class="feature-tag">Exit Intent PDF</span>
+          <span class="feature-tag">Social Proof</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa &rarr;</div>
+      </div>
+    </a>
+
+    <a href="variacao-urban.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-urban.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-urban">Variacao B — Urban Rider</span>
+        <div class="subtitle">Motociclista / Lifestyle Urbano</div>
+        <h2>Preto + Vermelho — Moderno e Ousado</h2>
+        <p>Design moderno dark com tipografia Oswald bold. Estetica Harley Davidson / motorcycle lifestyle. Ideal para publico 25-45 anos, motociclistas, fashionistas urbanos e amantes de couro que buscam atitude e praticidade.</p>
+        <div class="features">
+          <span class="feature-tag">Dark Theme Total</span>
+          <span class="feature-tag">Tipografia Bold</span>
+          <span class="feature-tag">Red Accent</span>
+          <span class="feature-tag">Grayscale Hover</span>
+          <span class="feature-tag">Step Cards</span>
+          <span class="feature-tag">Exit Intent PDF</span>
+          <span class="feature-tag">Social Proof</span>
+        </div>
+        <div class="open-btn">Abrir pagina completa &rarr;</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="strategy">
+    <h3>Estrategia de Veiculacao</h3>
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h4>Rugged Craft — Google Ads / Facebook 30+</h4>
+        <p>Tom premium e artesanal ideal para busca paga ("limpeza jaqueta couro sjc", "hidratacao couro") e Facebook/Instagram para publico 30-55 anos. Apela para valor sentimental, preservacao e cuidado. Cores quentes transmitem confianca e tradicao.</p>
+      </div>
+      <div class="strategy-card">
+        <h4>Urban Rider — Instagram / TikTok / Google</h4>
+        <p>Visual dark e moderno ideal para Instagram Stories/Reels, TikTok e Google Display. Apela para motociclistas, fashionistas e publico urbano 25-45 anos. Estetica ousada, tipografia impactante e urgencia visual. Boa para prospeccao fria.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="tip">Dica: Teste ambas por 14 dias com mesmo orcamento. Metricas-chave: CTR no WhatsApp, taxa de agendamento, CPA e scroll depth medio. A variacao com menor CPA e maior taxa de conversao de agendamento em servico realizado e a campea.</p>
+</body>
+</html>

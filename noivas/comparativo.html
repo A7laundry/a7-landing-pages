@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A7 Lavanderia | Comparativo — Vestido de Noiva & Roupas de Festa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f13;
+    color: white;
+    min-height: 100vh;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    margin: 24px 24px 0;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  .back-link:hover {
+    color: white;
+    background: rgba(255,255,255,0.05);
+  }
+  .back-link svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .header {
+    text-align: center;
+    padding: 48px 20px 12px;
+  }
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(183,110,121,0.1);
+    border: 1px solid rgba(183,110,121,0.2);
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #d4a574;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+  }
+  .header-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #b76e79;
+    border-radius: 50%;
+  }
+  .header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #b76e79, #d4a574, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header p {
+    color: rgba(255,255,255,0.45);
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Campaign info */
+  .campaign-info {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 24px 20px 40px;
+  }
+  .campaign-stat {
+    text-align: center;
+  }
+  .campaign-stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+  }
+  .campaign-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px 72px;
+  }
+
+  .card {
+    background: #1a1a22;
+    border: 1px solid #2a2a35;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .card-bridal {
+    border-color: rgba(183,110,121,0.2);
+  }
+  .card-bridal:hover {
+    border-color: rgba(183,110,121,0.5);
+    box-shadow: 0 20px 60px rgba(183,110,121,0.15);
+  }
+  .card-glamour {
+    border-color: rgba(212,175,55,0.2);
+  }
+  .card-glamour:hover {
+    border-color: rgba(212,175,55,0.5);
+    box-shadow: 0 20px 60px rgba(212,175,55,0.15);
+  }
+
+  .card-preview {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-preview iframe {
+    width: 200%;
+    height: 200%;
+    border: none;
+    transform: scale(0.5);
+    transform-origin: top left;
+    pointer-events: none;
+  }
+  .card-preview .preview-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(26,26,34,0.8) 100%);
+    pointer-events: none;
+  }
+
+  .card-body {
+    padding: 24px 28px 28px;
+  }
+  .card-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+  .badge-bridal {
+    background: rgba(183,110,121,0.15);
+    color: #d4a574;
+    border: 1px solid rgba(183,110,121,0.25);
+  }
+  .badge-glamour {
+    background: rgba(212,175,55,0.12);
+    color: #f5d67b;
+    border: 1px solid rgba(212,175,55,0.25);
+  }
+
+  .card-body h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .card-body p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .card-tag {
+    padding: 4px 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+  }
+
+  .card-colors {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .color-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.1);
+  }
+  .color-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-left: 4px;
+  }
+
+  .card-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 2;
+  }
+  .card:hover .card-arrow {
+    background: rgba(255,255,255,0.12);
+    transform: translate(3px, -3px);
+  }
+  .card-arrow svg {
+    width: 16px;
+    height: 16px;
+    stroke: rgba(255,255,255,0.5);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 0 24px 48px;
+    color: rgba(255,255,255,0.25);
+    font-size: 12px;
+  }
+  .footer a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer a:hover {
+    color: rgba(255,255,255,0.7);
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      padding: 0 16px 48px;
+    }
+    .header h1 {
+      font-size: 28px;
+    }
+    .card-preview {
+      height: 220px;
+    }
+    .campaign-info {
+      gap: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="../comparativo.html" class="back-link">
+  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  Voltar ao Comparativo Geral
+</a>
+
+<div class="header">
+  <div class="header-badge">Campanha Noivas & Festas</div>
+  <h1>Vestido de Noiva & Roupas de Festa</h1>
+  <p>Comparativo de variações A/B para a campanha de lavagem de vestidos de noiva e roupas de festa da A7 Lavanderia.</p>
+</div>
+
+<div class="campaign-info">
+  <div class="campaign-stat">
+    <div class="campaign-stat-value">2</div>
+    <div class="campaign-stat-label">Variações</div>
+  </div>
+  <div class="campaign-stat">
+    <div class="campaign-stat-value">800+</div>
+    <div class="campaign-stat-label">Vestidos Lavados</div>
+  </div>
+  <div class="campaign-stat">
+    <div class="campaign-stat-value">SJC</div>
+    <div class="campaign-stat-label">Região</div>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- BRIDAL DREAM -->
+  <a href="variacao-bridal.html" class="card card-bridal">
+    <div class="card-arrow">
+      <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    </div>
+    <div class="card-preview">
+      <iframe src="variacao-bridal.html" loading="lazy" title="Preview Bridal Dream"></iframe>
+      <div class="preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <span class="card-badge badge-bridal">Variação A</span>
+      <h2>Bridal Dream</h2>
+      <p>Tema editorial de moda noiva, ultra feminino e sofisticado. Inspirado em Vogue Noivas e Constance Zahn. Fundo claro com acentos rose gold.</p>
+      <div class="card-tags">
+        <span class="card-tag">Rose Gold</span>
+        <span class="card-tag">Branco Pérola</span>
+        <span class="card-tag">Feminino</span>
+        <span class="card-tag">Editorial</span>
+        <span class="card-tag">Light Theme</span>
+      </div>
+      <div class="card-colors">
+        <div class="color-dot" style="background:#b76e79"></div>
+        <div class="color-dot" style="background:#d4a574"></div>
+        <div class="color-dot" style="background:#fdf8f6"></div>
+        <div class="color-dot" style="background:#1a1218"></div>
+        <span class="color-label">Rose Gold + Champagne</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- BLACK TIE GLAMOUR -->
+  <a href="variacao-glamour.html" class="card card-glamour">
+    <div class="card-arrow">
+      <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    </div>
+    <div class="card-preview">
+      <iframe src="variacao-glamour.html" loading="lazy" title="Preview Black Tie Glamour"></iframe>
+      <div class="preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <span class="card-badge badge-glamour">Variação B</span>
+      <h2>Black Tie Glamour</h2>
+      <p>Tema luxuoso de festas e eventos, alto padrão. Inspirado na estética Oscar e Tapete Vermelho. Fundo escuro com dourado elegante.</p>
+      <div class="card-tags">
+        <span class="card-tag">Preto & Dourado</span>
+        <span class="card-tag">Luxo</span>
+        <span class="card-tag">Alto Padrão</span>
+        <span class="card-tag">Eventos</span>
+        <span class="card-tag">Dark Theme</span>
+      </div>
+      <div class="card-colors">
+        <div class="color-dot" style="background:#d4af37"></div>
+        <div class="color-dot" style="background:#f5d67b"></div>
+        <div class="color-dot" style="background:#faf8f0"></div>
+        <div class="color-dot" style="background:#0a0a0a"></div>
+        <span class="color-label">Gold + Champagne</span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<div class="footer">
+  <p>A7 Lavanderia &mdash; Lavanderia Profissional em São José dos Campos, SP</p>
+  <p style="margin-top:6px">
+    <a href="https://a7lavanderia.com.br">a7lavanderia.com.br</a> &bull;
+    <a href="https://wa.me/5512974128390">(12) 97412-8390</a>
+  </p>
+</div>
+
+</body>
+</html>

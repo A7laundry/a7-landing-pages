@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criativos — Pet | A7 Lavanderia</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0a0f08;
+    color: #fff;
+    min-height: 100vh;
+  }
+
+  .header {
+    padding: 48px 64px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.04), rgba(234, 179, 8, 0.04));
+  }
+
+  .header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .header h1 span {
+    background: linear-gradient(135deg, #eab308, #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .header .meta {
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 48px 64px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .card:hover {
+    border-color: rgba(22, 163, 74, 0.25);
+  }
+
+  .card-preview {
+    position: relative;
+    background: #0d1f0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-height: 360px;
+    cursor: pointer;
+  }
+
+  .card-preview a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .card-preview iframe {
+    border: none;
+    pointer-events: none;
+    display: block;
+  }
+
+  .card-preview.feed iframe {
+    width: 1080px;
+    height: 1080px;
+    transform: scale(0.29);
+    transform-origin: top left;
+  }
+
+  .card-preview.feed {
+    height: 340px;
+    overflow: hidden;
+  }
+
+  .card-preview.feed a {
+    width: 313px;
+    height: 313px;
+    overflow: hidden;
+  }
+
+  .card-preview.story iframe {
+    width: 1080px;
+    height: 1920px;
+    transform: scale(0.20);
+    transform-origin: top left;
+  }
+
+  .card-preview.story {
+    height: 410px;
+    overflow: hidden;
+  }
+
+  .card-preview.story a {
+    width: 216px;
+    height: 384px;
+    overflow: hidden;
+  }
+
+  .card-info {
+    padding: 24px 28px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .card-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .card-info .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .tag.yellow {
+    background: rgba(234, 179, 8, 0.1);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.2);
+  }
+
+  .tag.green {
+    background: rgba(22, 163, 74, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+  }
+
+  .tag.neutral {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .card-info .dims {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    font-weight: 500;
+  }
+
+  .open-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #16a34a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: gap 0.2s;
+  }
+
+  .open-link:hover {
+    gap: 10px;
+  }
+
+  /* Tips Section */
+  .tips-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 24px 64px 80px;
+  }
+
+  .tips-card {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.04), rgba(234, 179, 8, 0.04));
+    border: 1px solid rgba(22, 163, 74, 0.1);
+    border-radius: 16px;
+    padding: 48px;
+  }
+
+  .tips-card h2 {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, #eab308, #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .tip {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .tip h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .tip p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  .tip .tip-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  .tip .tip-tag.strategy { background: rgba(22,163,74,0.15); color: #16a34a; }
+  .tip .tip-tag.testing { background: rgba(234,179,8,0.15); color: #eab308; }
+  .tip .tip-tag.budget { background: rgba(255,100,100,0.15); color: #ff6464; }
+  .tip .tip-tag.creative { background: rgba(100,100,255,0.15); color: #8888ff; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Criativos &mdash; <span>Pet</span></h1>
+  <div class="meta">A7 Lavanderia &bull; Campanha Pet &bull; 4 Criativos</div>
+</div>
+
+<div class="grid">
+  <!-- V1 Feed -->
+  <div class="card">
+    <div class="card-preview feed">
+      <a href="v1-feed.html" target="_blank">
+        <iframe src="v1-feed.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <h3>V1 &mdash; Dor (Feed)</h3>
+      <div class="tags">
+        <span class="tag yellow">Pain Point</span>
+        <span class="tag neutral">Feed 1:1</span>
+      </div>
+      <div class="dims">1080 &times; 1080px &bull; Instagram / Facebook Feed</div>
+      <a href="v1-feed.html" target="_blank" class="open-link">Abrir criativo &rarr;</a>
+    </div>
+  </div>
+
+  <!-- V1 Story -->
+  <div class="card">
+    <div class="card-preview story">
+      <a href="v1-story.html" target="_blank">
+        <iframe src="v1-story.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <h3>V1 &mdash; Dor (Story)</h3>
+      <div class="tags">
+        <span class="tag yellow">Pain Point</span>
+        <span class="tag neutral">Story 9:16</span>
+      </div>
+      <div class="dims">1080 &times; 1920px &bull; Instagram / Facebook Story</div>
+      <a href="v1-story.html" target="_blank" class="open-link">Abrir criativo &rarr;</a>
+    </div>
+  </div>
+
+  <!-- V2 Feed -->
+  <div class="card">
+    <div class="card-preview feed">
+      <a href="v2-feed.html" target="_blank">
+        <iframe src="v2-feed.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <h3>V2 &mdash; Desejo (Feed)</h3>
+      <div class="tags">
+        <span class="tag green">Desire</span>
+        <span class="tag neutral">Feed 1:1</span>
+      </div>
+      <div class="dims">1080 &times; 1080px &bull; Instagram / Facebook Feed</div>
+      <a href="v2-feed.html" target="_blank" class="open-link">Abrir criativo &rarr;</a>
+    </div>
+  </div>
+
+  <!-- V2 Story -->
+  <div class="card">
+    <div class="card-preview story">
+      <a href="v2-story.html" target="_blank">
+        <iframe src="v2-story.html" scrolling="no"></iframe>
+      </a>
+    </div>
+    <div class="card-info">
+      <h3>V2 &mdash; Desejo (Story)</h3>
+      <div class="tags">
+        <span class="tag green">Desire</span>
+        <span class="tag neutral">Story 9:16</span>
+      </div>
+      <div class="dims">1080 &times; 1920px &bull; Instagram / Facebook Story</div>
+      <a href="v2-story.html" target="_blank" class="open-link">Abrir criativo &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="tips-section">
+  <div class="tips-card">
+    <h2>Dicas para o Gestor de Tr&aacute;fego</h2>
+    <div class="tips-grid">
+      <div class="tip">
+        <span class="tip-tag strategy">Estrat&eacute;gia</span>
+        <h4>Teste V1 (Dor) vs V2 (Desejo)</h4>
+        <p>A abordagem de dor ("10x mais bact&eacute;rias") gera curiosidade e urg&ecirc;ncia. Ideal para p&uacute;blicos frios. A vers&atilde;o desejo ("melhor amigo") conecta emocionalmente e funciona melhor em retargeting e p&uacute;blicos quentes.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-tag testing">A/B Testing</span>
+        <h4>Posicionamentos Separados</h4>
+        <p>N&atilde;o misture Feed e Story no mesmo conjunto. Cada formato tem comportamento de consumo diferente. Story converte mais por impulso; Feed permite mais considera&ccedil;&atilde;o.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-tag budget">Or&ccedil;amento</span>
+        <h4>Escala Gradual</h4>
+        <p>Comece com R$20-30/dia por conjunto. Ap&oacute;s identificar o vencedor (3-5 dias), escale 20% a cada 48h. Evite dobrar or&ccedil;amento de uma vez &mdash; reinicia a fase de aprendizado.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-tag creative">Segmenta&ccedil;&atilde;o</span>
+        <h4>P&uacute;blico Pet Lover</h4>
+        <p>Interesses: Pets, c&atilde;es, gatos, pet shop, ra&ccedil;as espec&iacute;ficas. Comportamento: compradores de produtos pet online. Lookalike de clientes pet da A7. Idade sugerida: 25-55, predomin&acirc;ncia feminina.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A7 Lavanderia | Campanha Pet - Comparativo de Variacoes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f13;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* Back Link */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      font-size: 14px; font-weight: 500;
+      padding: 24px 24px 0;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover { color: white; }
+    .back-link svg { width: 16px; height: 16px; fill: currentColor; }
+
+    .header {
+      text-align: center;
+      padding: 32px 20px 24px;
+    }
+    .header-icon {
+      font-size: 48px; margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      color: rgba(255,255,255,0.5);
+      font-size: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Campaign badge */
+    .campaign-badge {
+      display: flex; justify-content: center; padding: 0 20px 32px;
+    }
+    .campaign-badge span {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(234, 179, 8, 0.12);
+      color: #fde047;
+      border: 1px solid rgba(234, 179, 8, 0.25);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+    .card {
+      background: #1a1a22;
+      border: 1px solid #2a2a35;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .card:nth-child(1):hover { border-color: #eab308; }
+    .card:nth-child(2):hover { border-color: #16a34a; }
+
+    .card-preview {
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-preview iframe {
+      width: 200%;
+      height: 200%;
+      border: none;
+      transform: scale(0.5);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .card-preview .preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(15,15,19,0.8) 100%);
+      pointer-events: none;
+    }
+    .card-body {
+      padding: 24px 28px 28px;
+    }
+    .card-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .badge-pawsome {
+      background: rgba(234, 179, 8, 0.15);
+      color: #fde047;
+      border: 1px solid rgba(234, 179, 8, 0.3);
+    }
+    .badge-petcare {
+      background: rgba(22, 163, 74, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(22, 163, 74, 0.3);
+    }
+
+    .card-body h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .card-body p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .card-meta {
+      display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .meta-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: rgba(255,255,255,0.4);
+    }
+    .meta-item .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+    }
+    .dot-yellow { background: #eab308; }
+    .dot-cyan { background: #06b6d4; }
+    .dot-green { background: #16a34a; }
+    .dot-orange { background: #f97316; }
+
+    .color-swatches {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      border: 2px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+    }
+    .swatch:hover { transform: scale(1.15); }
+    .swatch-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      margin-left: 4px;
+    }
+
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50px;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .card:nth-child(1):hover .open-btn { background: rgba(234, 179, 8, 0.15); border-color: rgba(234, 179, 8, 0.3); }
+    .card:nth-child(2):hover .open-btn { background: rgba(22, 163, 74, 0.15); border-color: rgba(22, 163, 74, 0.3); }
+
+    /* Comparison Table */
+    .comparison {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+    .comparison h3 {
+      font-size: 20px; font-weight: 700;
+      text-align: center; margin-bottom: 24px;
+      color: rgba(255,255,255,0.8);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #1a1a22;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #2a2a35;
+    }
+    .comparison-table th {
+      background: #22222e;
+      padding: 16px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.6);
+      text-align: left;
+    }
+    .comparison-table th:nth-child(2) { color: #fde047; }
+    .comparison-table th:nth-child(3) { color: #4ade80; }
+    .comparison-table td {
+      padding: 14px 20px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      border-top: 1px solid #2a2a35;
+    }
+    .comparison-table tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .tip {
+      text-align: center;
+      padding: 20px 20px 48px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 24px; }
+      .card-preview { height: 240px; }
+      .comparison-table { font-size: 13px; }
+      .comparison-table th, .comparison-table td { padding: 10px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to main dashboard -->
+  <a href="../comparativo.html" class="back-link">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    Voltar ao Painel Principal
+  </a>
+
+  <div class="header">
+    <div class="header-icon">&#128062;</div>
+    <h1>Campanha Pet — Itens do Pet</h1>
+    <p>Variacoes da landing page para lavagem de camas, cobertores e roupinhas de pets. Clique para abrir cada versao.</p>
+  </div>
+
+  <div class="campaign-badge">
+    <span>&#128062; Campanha Pet Items — 2 variacoes</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- Variacao Pawsome -->
+    <a href="variacao-pawsome.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-pawsome.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-pawsome">&#128054; Variacao A — Pawsome</span>
+        <h2>Amarelo Alegre + Turquesa</h2>
+        <p>Design divertido e fofo, voltado para pet lovers. Paw prints, imagens fofas, tom descontraido e emocional. Ideal para publico jovem e engajado nas redes sociais.</p>
+        <div class="card-meta">
+          <span class="meta-item"><span class="dot dot-yellow"></span> Fun & Playful</span>
+          <span class="meta-item"><span class="dot dot-cyan"></span> Pet Lovers Vibes</span>
+          <span class="meta-item">Tom: Alegre</span>
+        </div>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#eab308;"></div>
+          <div class="swatch" style="background:#06b6d4;"></div>
+          <div class="swatch" style="background:#1a1a2e;"></div>
+          <div class="swatch" style="background:#fefce8;"></div>
+          <span class="swatch-label">Yellow + Cyan</span>
+        </div>
+        <div class="open-btn">
+          Abrir pagina completa &#10140;
+        </div>
+      </div>
+    </a>
+
+    <!-- Variacao Pet Care Premium -->
+    <a href="variacao-petcare.html" target="_blank" class="card">
+      <div class="card-preview">
+        <iframe src="variacao-petcare.html" loading="lazy" tabindex="-1"></iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-badge badge-petcare">&#129657; Variacao B — Pet Care Premium</span>
+        <h2>Verde Veterinario + Laranja Quente</h2>
+        <p>Design profissional com foco em saude animal e cuidado especializado. Tom de autoridade veterinaria. Ideal para tutores preocupados com saude e higiene.</p>
+        <div class="card-meta">
+          <span class="meta-item"><span class="dot dot-green"></span> Profissional</span>
+          <span class="meta-item"><span class="dot dot-orange"></span> Health-Focused</span>
+          <span class="meta-item">Tom: Autoridade</span>
+        </div>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#16a34a;"></div>
+          <div class="swatch" style="background:#f97316;"></div>
+          <div class="swatch" style="background:#052e16;"></div>
+          <div class="swatch" style="background:#f0fdf4;"></div>
+          <span class="swatch-label">Green + Orange</span>
+        </div>
+        <div class="open-btn">
+          Abrir pagina completa &#10140;
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="comparison">
+    <h3>&#128202; Comparativo das Variacoes</h3>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Caracteristica</th>
+          <th>&#128054; Pawsome</th>
+          <th>&#129657; Pet Care Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paleta de Cores</td>
+          <td>Amarelo + Turquesa</td>
+          <td>Verde Vet + Laranja</td>
+        </tr>
+        <tr>
+          <td>Tom de Comunicacao</td>
+          <td>Divertido, emocional, fofo</td>
+          <td>Profissional, cientifico, confiavel</td>
+        </tr>
+        <tr>
+          <td>Publico-Alvo Principal</td>
+          <td>Pet lovers jovens, redes sociais</td>
+          <td>Tutores preocupados com saude</td>
+        </tr>
+        <tr>
+          <td>Hero Layout</td>
+          <td>Texto full-width + bg image</td>
+          <td>Grid 2 colunas + galeria</td>
+        </tr>
+        <tr>
+          <td>Tipografia</td>
+          <td>Fredoka (fun/rounded)</td>
+          <td>Plus Jakarta Sans (clean/pro)</td>
+        </tr>
+        <tr>
+          <td>Apelo Emocional</td>
+          <td>Alto — "fofura" e amor</td>
+          <td>Medio-Alto — saude e protecao</td>
+        </tr>
+        <tr>
+          <td>Autoridade</td>
+          <td>Media — social proof</td>
+          <td>Alta — dados cientificos + vet</td>
+        </tr>
+        <tr>
+          <td>CTA Principal</td>
+          <td>"Agendar Lavagem Pet"</td>
+          <td>"Agendar Higienizacao"</td>
+        </tr>
+        <tr>
+          <td>Dopamine Elements</td>
+          <td>Paw prints, scroll rewards, popup</td>
+          <td>Section labels, stamps, popup</td>
+        </tr>
+        <tr>
+          <td>Social Proof</td>
+          <td>6 depoimentos pet parents</td>
+          <td>6 depoimentos + vet endorsement</td>
+        </tr>
+        <tr>
+          <td>Ideal Para</td>
+          <td>Meta/Instagram Ads, TikTok</td>
+          <td>Google Ads, SEO organico</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="tip">&#128161; Dica: Rode ambas as variacoes em campanhas separadas no Meta Ads com o mesmo orcamento e publico-alvo para identificar qual converte melhor. A variacao "Pawsome" tende a performar bem em redes sociais, enquanto "Pet Care Premium" pode converter melhor em trafego de busca.</p>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>A7 Lavanderia — Noivas V1 Story</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 0; background: #0f0a0c; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  .creative {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1080&q=80');
+    background-size: cover;
+    background-position: center top;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(60, 30, 40, 0.45) 0%,
+      rgba(60, 30, 40, 0.08) 20%,
+      rgba(60, 30, 40, 0.12) 40%,
+      rgba(60, 30, 40, 0.50) 60%,
+      rgba(25, 12, 18, 0.95) 100%
+    );
+  }
+  .rose-edge {
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(183, 110, 121, 0.12);
+    margin: 24px;
+    pointer-events: none;
+    z-index: 6;
+  }
+  .corner-ornament {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-color: rgba(212, 175, 55, 0.22);
+    border-style: solid;
+    z-index: 7;
+    pointer-events: none;
+  }
+  .corner-ornament.tl { top: 40px; left: 40px; border-width: 2px 0 0 2px; }
+  .corner-ornament.tr { top: 40px; right: 40px; border-width: 2px 2px 0 0; }
+  .corner-ornament.bl { bottom: 40px; left: 40px; border-width: 0 0 2px 2px; }
+  .corner-ornament.br { bottom: 40px; right: 40px; border-width: 0 2px 2px 0; }
+  .badge {
+    position: absolute;
+    top: 56px;
+    left: 48px;
+    background: rgba(183, 110, 121, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(183, 110, 121, 0.25);
+    border-radius: 50px;
+    padding: 12px 26px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+  }
+  .badge-star {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .badge-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .logo {
+    position: absolute;
+    top: 60px;
+    right: 48px;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-30%);
+    padding: 0 72px;
+    z-index: 8;
+  }
+  .tag {
+    display: inline-block;
+    background: rgba(183, 110, 121, 0.15);
+    border: 1px solid rgba(183, 110, 121, 0.35);
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 8px 22px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+  }
+  .headline {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 66px;
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+  }
+  .headline em {
+    font-style: normal;
+    color: #b76e79;
+  }
+  .subline {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.55;
+    margin-bottom: 0;
+    max-width: 700px;
+    letter-spacing: 0.01em;
+  }
+  .cta-wrap {
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    padding: 0 72px;
+    z-index: 8;
+  }
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(135deg, #b76e79, #a05a64);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 26px 56px;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 8px 40px rgba(183, 110, 121, 0.30);
+    border: none;
+    cursor: pointer;
+  }
+  .cta-arrow {
+    font-size: 26px;
+  }
+  .accent-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #b76e79, #d4af37, #b76e79);
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+<div class="creative">
+  <div class="overlay"></div>
+  <div class="rose-edge"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament tr"></div>
+  <div class="corner-ornament bl"></div>
+  <div class="corner-ornament br"></div>
+
+  <div class="badge">
+    <span class="badge-star">4.9&#9733;</span>
+    <span class="badge-text">+2000 clientes</span>
+  </div>
+
+  <div class="logo">A7 Lavanderia</div>
+
+  <div class="content">
+    <div class="tag">Restaura&ccedil;&atilde;o Especializada</div>
+    <h1 class="headline">Manchou o vestido? <em>A gente salva.</em></h1>
+    <p class="subline">Restaura&ccedil;&atilde;o especializada para vestidos de noiva.</p>
+  </div>
+
+  <div class="cta-wrap">
+    <button class="cta">
+      Agende Agora
+      <span class="cta-arrow">&rarr;</span>
+    </button>
+  </div>
+
+  <div class="accent-line"></div>
+</div>
+</body>
+</html>
