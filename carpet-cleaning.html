@@ -288,6 +288,103 @@
     .exit-box .exit-cta:hover{transform:translateY(-2px)}
     .exit-box .exit-dismiss{display:block;margin-top:12px;font-size:12px;color:var(--gray-500);cursor:pointer;border:none;background:none;text-decoration:underline}
 
+    /* === MULTILINGUAL === */
+    [data-lang]{display:none}
+    .lang-active-en [data-lang="en"],.lang-active-pt [data-lang="pt"],.lang-active-es [data-lang="es"]{display:inline}
+    .lang-active-en .lang-block[data-lang="en"],.lang-active-pt .lang-block[data-lang="pt"],.lang-active-es .lang-block[data-lang="es"]{display:block}
+    .lang-active-en .lang-flex[data-lang="en"],.lang-active-pt .lang-flex[data-lang="pt"],.lang-active-es .lang-flex[data-lang="es"]{display:flex}
+    .lang-active-en .lang-iflex[data-lang="en"],.lang-active-pt .lang-iflex[data-lang="pt"],.lang-active-es .lang-iflex[data-lang="es"]{display:inline-flex}
+    .lang-active-en .lang-grid[data-lang="en"],.lang-active-pt .lang-grid[data-lang="pt"],.lang-active-es .lang-grid[data-lang="es"]{display:grid}
+
+    /* === TRUST BADGES STRIP === */
+    .trust-strip{background:#fff;padding:20px 0;border-bottom:1px solid var(--gray-200)}
+    .trust-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:24px}
+    .trust-badge-item{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--gray-700)}
+    .trust-badge-item .tbi{font-size:18px}
+
+    /* === CTA STRIP === */
+    .cta-strip{background:var(--gradient-main);padding:16px 0;text-align:center}
+    .cta-strip-inner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+    .cta-strip-text{font-size:16px;font-weight:800;color:#000}
+    .cta-strip-btn{display:inline-flex;align-items:center;gap:8px;background:#000;color:var(--accent);padding:10px 24px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:.3s}
+    .cta-strip-btn:hover{background:var(--bg-dark);transform:translateY(-1px)}
+
+    /* === PET PAIN === */
+    .pet-pain{padding:80px 0;background:var(--bg-dark);text-align:center;color:#fff;position:relative;overflow:hidden}
+    .pet-pain::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,.15),transparent 70%);border-radius:50%;transform:translate(-50%,-50%)}
+    .pet-pain .container{position:relative;z-index:2}
+    .pet-pain .section-tag{background:rgba(255,255,255,.08);color:var(--accent-light)}
+    .pet-pain .section-title{color:#fff}
+    .pet-pain .section-sub{color:rgba(255,255,255,.6)}
+    .pet-pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:960px;margin:0 auto 40px}
+    .pet-pain-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:28px 22px;text-align:left;transition:.3s}
+    .pet-pain-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+    .pet-pain-card .icon{font-size:30px;margin-bottom:10px}
+    .pet-pain-card h3{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--accent-light)}
+    .pet-pain-card p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6}
+    .pet-solution{max-width:700px;margin:0 auto;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:var(--radius-xl);padding:36px 28px}
+    .pet-solution h3{font-size:20px;font-weight:800;color:var(--accent-light);margin-bottom:20px}
+    .pet-solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left;margin-bottom:24px}
+    .pet-solution-item{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.8);font-weight:500}
+    .pet-solution-item .psi{color:var(--accent);font-weight:800}
+    .pet-addon{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);padding:16px;margin-bottom:20px}
+    .pet-addon-price{font-size:28px;font-weight:900;color:var(--accent-light)}
+    .pet-addon-label{font-size:14px;color:rgba(255,255,255,.6)}
+
+    /* === PRICING TABLE === */
+    .pricing-table{max-width:700px;margin:0 auto 24px}
+    .pricing-row{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--off-white);border:1px solid var(--gray-200);border-radius:var(--radius-md);margin-bottom:8px;transition:.3s}
+    .pricing-row:hover{border-color:var(--accent);transform:translateX(4px);box-shadow:var(--shadow-sm)}
+    .pricing-row .pr-name{font-size:15px;font-weight:600;color:var(--gray-900)}
+    .pricing-row .pr-prices{display:flex;align-items:center;gap:12px}
+    .pricing-row .pr-market{font-size:13px;color:var(--gray-500);text-decoration:line-through}
+    .pricing-row .pr-price{font-size:20px;font-weight:800;color:var(--accent-dark)}
+    .pricing-row.addon{background:rgba(245,158,11,.05);border-color:var(--accent-light)}
+    .pricing-callout{max-width:700px;margin:0 auto 24px;background:var(--bg-dark);color:#fff;padding:20px 24px;border-radius:var(--radius-md);font-size:15px;font-weight:600}
+    .pricing-callout strong{color:var(--accent-light)}
+
+    /* === VACATION RENTAL === */
+    .vacation{padding:80px 0;background:linear-gradient(135deg,var(--bg-dark) 0%,#1a1530 100%);text-align:center;color:#fff;position:relative;overflow:hidden}
+    .vacation::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,.12),transparent 70%);border-radius:50%;transform:translate(-50%,-50%)}
+    .vacation .container{position:relative;z-index:2}
+    .vacation .section-tag{background:rgba(255,255,255,.08);color:var(--accent-light)}
+    .vacation .section-title{color:#fff}
+    .vacation .section-sub{color:rgba(255,255,255,.6)}
+    .vacation-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto 40px}
+    .vacation-tier{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:28px 20px;transition:.3s;position:relative}
+    .vacation-tier:hover{border-color:var(--accent);transform:translateY(-4px)}
+    .vacation-tier.popular{border-color:var(--accent);transform:scale(1.05)}
+    .vacation-tier.popular:hover{transform:scale(1.05) translateY(-4px)}
+    .vacation-tier h4{font-size:18px;font-weight:700;margin-bottom:8px}
+    .vacation-tier .discount{font-size:36px;font-weight:900;color:var(--accent-light);margin:8px 0}
+    .vacation-tier .discount small{font-size:16px;font-weight:600}
+    .vacation-tier p{font-size:13px;color:rgba(255,255,255,.6)}
+    .vacation-calc{max-width:700px;margin:0 auto;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-xl);padding:32px}
+    .vacation-calc h3{font-size:20px;font-weight:800;color:var(--accent-light);margin-bottom:20px}
+    .vacation-calc table{width:100%;border-collapse:collapse}
+    .vacation-calc th,.vacation-calc td{padding:12px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1);font-size:14px}
+    .vacation-calc th{color:var(--accent-light);font-weight:700}
+    .vacation-calc td{color:rgba(255,255,255,.8)}
+    .vacation-calc .savings{color:#10b981;font-weight:700}
+
+    /* === PROMO POPUP === */
+    .promo-popup{position:fixed;inset:0;z-index:9997;background:rgba(10,6,24,.85);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;backdrop-filter:blur(4px)}
+    .promo-popup.show{opacity:1;visibility:visible}
+    .promo-box{background:#fff;border-radius:var(--radius-xl);max-width:480px;width:90%;padding:40px 28px;text-align:center;transform:scale(.85);transition:.4s;position:relative}
+    .promo-popup.show .promo-box{transform:scale(1)}
+    .promo-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--gray-500);line-height:1}
+    .promo-badge{display:inline-block;background:var(--accent);color:#000;padding:6px 20px;border-radius:50px;font-size:12px;font-weight:800;letter-spacing:1px;margin-bottom:16px}
+    .promo-box h3{font-size:24px;font-weight:800;color:var(--gray-900);margin-bottom:8px}
+    .promo-price{color:var(--accent-dark)}
+    .promo-was{font-size:14px;color:var(--gray-500);margin-bottom:16px}
+    .promo-extras{background:var(--off-white);border-radius:var(--radius-md);padding:16px;margin-bottom:16px;text-align:left;font-size:14px;color:var(--gray-700)}
+    .promo-extras div{padding:4px 0}
+    .promo-urgency{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:700;color:#dc2626;margin-bottom:16px}
+    .pulse-dot{width:8px;height:8px;background:#dc2626;border-radius:50%;animation:blink 1.5s infinite}
+    .promo-cta{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:16px 36px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;transition:.3s;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+    .promo-cta:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(37,211,102,.4)}
+    .promo-dismiss{display:block;margin:12px auto 0;font-size:12px;color:var(--gray-500);cursor:pointer;border:none;background:none;text-decoration:underline}
+
     /* === RESPONSIVE === */
     @media(max-width:768px){
       .hero{min-height:auto;padding:80px 0 60px}
@@ -300,6 +397,12 @@
       .live-viewers{bottom:70px}
       .toast{left:10px;right:10px;max-width:none;bottom:70px}
       .lifestyle>div{grid-template-columns:1fr !important}
+      .vacation-tiers{grid-template-columns:1fr}
+      .vacation-tier.popular{transform:none}
+      .vacation-tier.popular:hover{transform:translateY(-4px)}
+      .pet-solution-grid{grid-template-columns:1fr}
+      .trust-badges{gap:16px}
+      .pricing-row{flex-direction:column;align-items:flex-start;gap:8px}
     }
     @media(max-width:480px){
       .hero h1{font-size:clamp(28px,8vw,38px)}
@@ -308,39 +411,41 @@
       .reviews-grid{grid-template-columns:1fr}
       .zip-form{flex-direction:column;align-items:center}
       .lang-sw{top:46px;right:10px}
+      .pet-pain-grid{grid-template-columns:1fr}
+      .cta-strip-inner{flex-direction:column;gap:10px}
     }
   </style>
 </head>
-<body>
+<body class="lang-active-en">
 
   <!-- SCROLL PROGRESS -->
   <div class="scroll-progress" id="scrollBar"></div>
 
   <!-- LANGUAGE SWITCHER -->
   <div class="lang-sw">
-    <button class="active">EN</button>
-    <button>PT</button>
-    <button>ES</button>
+    <button class="active" onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('pt')">PT</button>
+    <button onclick="setLanguage('es')">ES</button>
   </div>
 
   <!-- LIVE VIEWERS -->
   <div class="live-viewers">
     <span class="live-dot"></span>
-    🔥 <span id="liveViewers">21</span> people viewing this page
+    🔥 <span id="liveViewers">21</span> <span data-lang="en">people viewing this page</span><span data-lang="pt">pessoas vendo esta página</span><span data-lang="es">personas viendo esta página</span>
   </div>
 
   <!-- HEADER WITH LOGO -->
   <header class="site-header">
     <div class="container">
       <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" class="logo-img">
-      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!" class="header-cta">Get FREE Room</a>
+      <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20book%20professional%20carpet%20cleaning!" class="header-cta" data-wa-link data-wa-type="hero"><span data-lang="en">Book Now</span><span data-lang="pt">Agendar</span><span data-lang="es">Reservar</span></a>
     </div>
   </header>
 
   <!-- URGENCY BAR -->
   <div class="urgency-bar">
     <span>
-      ⏰ LIMITED: Only <strong id="spotsLeft">9</strong> spots left this week — Offer expires in
+      ⏰ <span data-lang="en">LIMITED: Only <strong id="spotsLeft">9</strong> spots left this week — Offer expires in</span><span data-lang="pt">LIMITADO: Apenas <strong class="spots-mirror">9</strong> vagas esta semana — Oferta expira em</span><span data-lang="es">LIMITADO: Solo <strong class="spots-mirror">9</strong> lugares esta semana — Oferta expira en</span>
       <span class="cd" id="countdown">23:59:59</span>
     </span>
   </div>
@@ -348,22 +453,22 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=85&auto=format" alt="Professional carpet cleaning in Orlando home" fetchpriority="high">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=85&auto=format" alt="Luxury vacation home with clean carpet in Orlando" fetchpriority="high">
     </div>
     <div class="glow3"></div>
     <div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div><div class="particle p4"></div><div class="particle p5"></div>
     <div class="particle p6"></div><div class="particle p7"></div><div class="particle p8"></div><div class="particle p9"></div><div class="particle p10"></div>
     <div class="container">
-      <div class="hero-badge"><span class="dot"></span> Orlando's #1 Rated Carpet Cleaners</div>
-      <h1>Your Carpet Is a<br><span class="highlight">Bacteria Factory.</span></h1>
-      <p class="hero-sub">200,000+ bacteria per square inch are breeding in your carpet right now. Our hot-water extraction kills 99.9% — and your 1st room is <strong>FREE.</strong></p>
-      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!" class="hero-cta">
-        Get My FREE Room Cleaning →
+      <div class="hero-badge"><span class="dot"></span> <span data-lang="en">Orlando's #1 Rated Carpet Cleaners</span><span data-lang="pt">#1 em Limpeza de Carpete em Orlando</span><span data-lang="es">#1 en Limpieza de Alfombras en Orlando</span></div>
+      <h1><span data-lang="en">Your Carpet Is a<br><span class="highlight">Bacteria Factory.</span></span><span data-lang="pt">Seu Carpete É uma<br><span class="highlight">Fábrica de Bactérias.</span></span><span data-lang="es">Tu Alfombra Es una<br><span class="highlight">Fábrica de Bacterias.</span></span></h1>
+      <p class="hero-sub"><span data-lang="en">200,000+ bacteria per square inch are breeding in your carpet right now. Our hot-water extraction kills 99.9% — starting at just <strong>$45/room.</strong></span><span data-lang="pt">Mais de 200.000 bactérias por polegada quadrada estão se reproduzindo no seu carpete agora. Nossa extração com água quente elimina 99,9% — a partir de <strong>$45/quarto.</strong></span><span data-lang="es">Más de 200,000 bacterias por pulgada cuadrada se reproducen en tu alfombra. Nuestra extracción con agua caliente elimina el 99.9% — desde solo <strong>$45/habitación.</strong></span></p>
+      <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20book%20professional%20carpet%20cleaning!" class="hero-cta" data-wa-link data-wa-type="hero">
+        <span data-lang="en">Book Carpet Cleaning →</span><span data-lang="pt">Agendar Limpeza →</span><span data-lang="es">Reservar Limpieza →</span>
       </a>
       <div class="hero-trust">
-        <span>✓ 2,000+ Homes Cleaned</span>
-        <span>✓ 4.9★ Google Rating</span>
-        <span>✓ Eco-Friendly Products</span>
+        <span><span data-lang="en">✓ 2,000+ Homes Cleaned</span><span data-lang="pt">✓ 2.000+ Casas Limpas</span><span data-lang="es">✓ 2,000+ Hogares Limpiados</span></span>
+        <span><span data-lang="en">✓ 4.9★ Google Rating</span><span data-lang="pt">✓ 4.9★ no Google</span><span data-lang="es">✓ 4.9★ en Google</span></span>
+        <span><span data-lang="en">✓ Eco-Friendly Products</span><span data-lang="pt">✓ Produtos Ecológicos</span><span data-lang="es">✓ Productos Ecológicos</span></span>
       </div>
     </div>
     <div class="marquee">
@@ -378,25 +483,81 @@
   <section class="stats-bar">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item"><div class="stat-num" data-target="2000" data-suffix="+">0</div><div class="stat-label">Homes Cleaned</div></div>
-        <div class="stat-item"><div class="stat-num" data-target="4.9" data-decimal="true">0</div><div class="stat-label">Google Rating</div></div>
-        <div class="stat-item"><div class="stat-num" data-target="99.9" data-decimal="true" data-suffix="%">0</div><div class="stat-label">Bacteria Killed</div></div>
-        <div class="stat-item"><div class="stat-num" data-target="24" data-suffix="hr">0</div><div class="stat-label">Dry Time</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="2000" data-suffix="+">0</div><div class="stat-label"><span data-lang="en">Homes Cleaned</span><span data-lang="pt">Casas Limpas</span><span data-lang="es">Hogares Limpiados</span></div></div>
+        <div class="stat-item"><div class="stat-num" data-target="4.9" data-decimal="true">0</div><div class="stat-label"><span data-lang="en">Google Rating</span><span data-lang="pt">Nota no Google</span><span data-lang="es">Calificación Google</span></div></div>
+        <div class="stat-item"><div class="stat-num" data-target="99.9" data-decimal="true" data-suffix="%">0</div><div class="stat-label"><span data-lang="en">Bacteria Killed</span><span data-lang="pt">Bactérias Eliminadas</span><span data-lang="es">Bacterias Eliminadas</span></div></div>
+        <div class="stat-item"><div class="stat-num" data-target="24" data-suffix="hr">0</div><div class="stat-label"><span data-lang="en">Dry Time</span><span data-lang="pt">Tempo de Secagem</span><span data-lang="es">Tiempo de Secado</span></div></div>
       </div>
     </div>
   </section>
 
+  <!-- ===== TRUST BADGES ===== -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-badges">
+        <div class="trust-badge-item"><span class="tbi">🛡️</span> <span data-lang="en">Licensed & Insured</span><span data-lang="pt">Licenciado e Segurado</span><span data-lang="es">Licenciado y Asegurado</span></div>
+        <div class="trust-badge-item"><span class="tbi">🌿</span> <span data-lang="en">Eco-Friendly</span><span data-lang="pt">Ecológico</span><span data-lang="es">Ecológico</span></div>
+        <div class="trust-badge-item"><span class="tbi">⭐</span> <span data-lang="en">4.9 Google Rating</span><span data-lang="pt">4.9 no Google</span><span data-lang="es">4.9 en Google</span></div>
+        <div class="trust-badge-item"><span class="tbi">🐾</span> <span data-lang="en">Pet Safe</span><span data-lang="pt">Seguro para Pets</span><span data-lang="es">Seguro para Mascotas</span></div>
+        <div class="trust-badge-item"><span class="tbi">⚡</span> <span data-lang="en">Same-Day Service</span><span data-lang="pt">Serviço no Mesmo Dia</span><span data-lang="es">Servicio el Mismo Día</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA STRIP 1 ===== -->
+  <div class="cta-strip">
+    <div class="container">
+      <div class="cta-strip-inner">
+        <span class="cta-strip-text"><span data-lang="en">🎉 3 Rooms for $107 — Save $28!</span><span data-lang="pt">🎉 3 Quartos por $107 — Economize $28!</span><span data-lang="es">🎉 3 Habitaciones por $107 — ¡Ahorra $28!</span></span>
+        <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20the%203%20Rooms%20for%20$107%20deal!" class="cta-strip-btn" data-wa-link data-wa-type="promo"><span data-lang="en">Book Now →</span><span data-lang="pt">Agendar →</span><span data-lang="es">Reservar →</span></a>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== PAIN ===== -->
   <section class="pain">
     <div class="container">
-      <span class="section-tag">THE PROBLEM</span>
-      <h2 class="section-title">Your Carpet Holds <strong>4x Its Weight</strong><br>in Trapped Dirt, Bacteria & Allergens</h2>
-      <p class="section-sub">Vacuuming only removes surface debris. The real threats live deep inside the fibers.</p>
+      <span class="section-tag"><span data-lang="en">THE PROBLEM</span><span data-lang="pt">O PROBLEMA</span><span data-lang="es">EL PROBLEMA</span></span>
+      <h2 class="section-title"><span data-lang="en">Your Carpet Holds <strong>4x Its Weight</strong><br>in Trapped Dirt, Bacteria & Allergens</span><span data-lang="pt">Seu Carpete Retém <strong>4x Seu Peso</strong><br>em Sujeira, Bactérias e Alérgenos</span><span data-lang="es">Tu Alfombra Retiene <strong>4x Su Peso</strong><br>en Suciedad, Bacterias y Alérgenos</span></h2>
+      <p class="section-sub"><span data-lang="en">Vacuuming only removes surface debris. The real threats live deep inside the fibers.</span><span data-lang="pt">O aspirador só remove sujeira superficial. As ameaças reais vivem nas fibras.</span><span data-lang="es">La aspiradora solo elimina suciedad superficial. Las amenazas reales viven en las fibras.</span></p>
       <div class="pain-grid">
-        <div class="pain-card"><div class="icon">🦠</div><h3>Bacteria Breeding Ground</h3><p>200,000 bacteria per square inch. More than a toilet seat. Your family walks on this barefoot every single day.</p></div>
-        <div class="pain-card"><div class="icon">🤧</div><h3>Allergy Trigger</h3><p>Dust mites, pet dander, pollen — all trapped deep in carpet fibers. Vacuuming only removes about 50% of contaminants.</p></div>
-        <div class="pain-card"><div class="icon">🐾</div><h3>Pet Stains & Odors</h3><p>That "clean" smell? It's masking urine crystals that reactivate with humidity. They never truly go away without professional extraction.</p></div>
-        <div class="pain-card"><div class="icon">👶</div><h3>Kids on the Floor</h3><p>Your toddler plays on a surface dirtier than your kitchen counter. Professional cleaning isn't a luxury — it's a necessity.</p></div>
+        <div class="pain-card"><div class="icon">🦠</div><h3><span data-lang="en">Bacteria Breeding Ground</span><span data-lang="pt">Criadouro de Bactérias</span><span data-lang="es">Criadero de Bacterias</span></h3><p><span data-lang="en">200,000 bacteria per square inch. More than a toilet seat. Your family walks on this barefoot every single day.</span><span data-lang="pt">200.000 bactérias por polegada quadrada. Mais que um vaso sanitário. Sua família pisa nisso descalça todo dia.</span><span data-lang="es">200,000 bacterias por pulgada cuadrada. Más que un inodoro. Tu familia camina descalza sobre esto todos los días.</span></p></div>
+        <div class="pain-card"><div class="icon">🤧</div><h3><span data-lang="en">Allergy Trigger</span><span data-lang="pt">Gatilho de Alergias</span><span data-lang="es">Detonante de Alergias</span></h3><p><span data-lang="en">Dust mites, pet dander, pollen — all trapped deep in carpet fibers. Vacuuming only removes about 50% of contaminants.</span><span data-lang="pt">Ácaros, pelos de pets, pólen — tudo preso nas fibras. O aspirador remove apenas 50% dos contaminantes.</span><span data-lang="es">Ácaros, pelo de mascotas, polen — todo atrapado en las fibras. La aspiradora solo elimina el 50% de los contaminantes.</span></p></div>
+        <div class="pain-card"><div class="icon">🐾</div><h3><span data-lang="en">Pet Stains & Odors</span><span data-lang="pt">Manchas e Odores de Pets</span><span data-lang="es">Manchas y Olores de Mascotas</span></h3><p><span data-lang="en">That "clean" smell? It's masking urine crystals that reactivate with humidity. They never truly go away without professional extraction.</span><span data-lang="pt">Aquele cheiro de "limpo"? Está mascarando cristais de urina que reativam com umidade. Nunca desaparecem sem extração profissional.</span><span data-lang="es">¿Ese olor a "limpio"? Enmascara cristales de orina que se reactivan con la humedad. Nunca desaparecen sin extracción profesional.</span></p></div>
+        <div class="pain-card"><div class="icon">👶</div><h3><span data-lang="en">Kids on the Floor</span><span data-lang="pt">Crianças no Chão</span><span data-lang="es">Niños en el Piso</span></h3><p><span data-lang="en">Your toddler plays on a surface dirtier than your kitchen counter. Professional cleaning isn't a luxury — it's a necessity.</span><span data-lang="pt">Seu filho brinca numa superfície mais suja que a bancada da cozinha. Limpeza profissional não é luxo — é necessidade.</span><span data-lang="es">Tu hijo juega en una superficie más sucia que la encimera de la cocina. La limpieza profesional no es un lujo — es una necesidad.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PET PAIN SECTION ===== -->
+  <section class="pet-pain">
+    <div class="container">
+      <span class="section-tag"><span data-lang="en">PET OWNERS</span><span data-lang="pt">DONOS DE PETS</span><span data-lang="es">DUEÑOS DE MASCOTAS</span></span>
+      <h2 class="section-title"><span data-lang="en">Your Pet's Accidents Are <strong>Destroying</strong><br>Your Carpet From the Inside</span><span data-lang="pt">Os Acidentes do Seu Pet Estão <strong>Destruindo</strong><br>Seu Carpete por Dentro</span><span data-lang="es">Los Accidentes de Tu Mascota Están <strong>Destruyendo</strong><br>Tu Alfombra por Dentro</span></h2>
+      <p class="section-sub"><span data-lang="en">Orlando's heat and humidity make pet damage worse. Here's what's really happening.</span><span data-lang="pt">O calor e umidade de Orlando pioram os danos de pets. Veja o que realmente acontece.</span><span data-lang="es">El calor y la humedad de Orlando empeoran los daños de mascotas. Esto es lo que realmente pasa.</span></p>
+      <div class="pet-pain-grid">
+        <div class="pet-pain-card"><div class="icon">💧</div><h3><span data-lang="en">Urine Penetrates Deep</span><span data-lang="pt">Urina Penetra Fundo</span><span data-lang="es">La Orina Penetra Profundo</span></h3><p><span data-lang="en">Pet urine soaks through carpet fibers into the padding and subfloor. Surface cleaning can't reach it.</span><span data-lang="pt">A urina penetra pelas fibras até a manta e contrapiso. Limpeza superficial não alcança.</span><span data-lang="es">La orina empapa las fibras hasta la base y el subpiso. La limpieza superficial no la alcanza.</span></p></div>
+        <div class="pet-pain-card"><div class="icon">🦠</div><h3><span data-lang="en">Bacteria Multiply</span><span data-lang="pt">Bactérias se Multiplicam</span><span data-lang="es">Las Bacterias se Multiplican</span></h3><p><span data-lang="en">Warm, moist urine spots become bacteria colonies. Orlando's humidity accelerates growth exponentially.</span><span data-lang="pt">Manchas de urina quentes e úmidas viram colônias de bactérias. A umidade de Orlando acelera o crescimento.</span><span data-lang="es">Las manchas de orina cálidas y húmedas se convierten en colonias bacterianas. La humedad de Orlando acelera el crecimiento.</span></p></div>
+        <div class="pet-pain-card"><div class="icon">🤧</div><h3><span data-lang="en">Allergies Get Worse</span><span data-lang="pt">Alergias Pioram</span><span data-lang="es">Las Alergias Empeoran</span></h3><p><span data-lang="en">Pet dander trapped in carpet fibers triggers respiratory issues, especially in children and elderly family members.</span><span data-lang="pt">Pelos de pets presos nas fibras provocam problemas respiratórios, especialmente em crianças e idosos.</span><span data-lang="es">El pelo de mascotas atrapado en las fibras provoca problemas respiratorios, especialmente en niños y ancianos.</span></p></div>
+        <div class="pet-pain-card"><div class="icon">👃</div><h3><span data-lang="en">Odor Gets Worse Over Time</span><span data-lang="pt">O Odor Piora com o Tempo</span><span data-lang="es">El Olor Empeora con el Tiempo</span></h3><p><span data-lang="en">Orlando's heat reactivates dried urine crystals, releasing ammonia. The smell keeps coming back, stronger each time.</span><span data-lang="pt">O calor de Orlando reativa cristais de urina secos, liberando amônia. O cheiro volta sempre mais forte.</span><span data-lang="es">El calor de Orlando reactiva los cristales de orina secos, liberando amoníaco. El olor vuelve cada vez más fuerte.</span></p></div>
+      </div>
+      <div class="pet-solution">
+        <h3><span data-lang="en">🐾 A7 Pet Treatment Solution</span><span data-lang="pt">🐾 Solução A7 para Pets</span><span data-lang="es">🐾 Solución A7 para Mascotas</span></h3>
+        <div class="pet-solution-grid">
+          <div class="pet-solution-item"><span class="psi">✓</span> <span data-lang="en">Enzyme-based deep treatment</span><span data-lang="pt">Tratamento profundo com enzimas</span><span data-lang="es">Tratamiento profundo con enzimas</span></div>
+          <div class="pet-solution-item"><span class="psi">✓</span> <span data-lang="en">Hot water extraction at 200°F</span><span data-lang="pt">Extração com água quente a 93°C</span><span data-lang="es">Extracción con agua caliente a 93°C</span></div>
+          <div class="pet-solution-item"><span class="psi">✓</span> <span data-lang="en">Kills 99.9% of bacteria</span><span data-lang="pt">Elimina 99,9% das bactérias</span><span data-lang="es">Elimina el 99.9% de las bacterias</span></div>
+          <div class="pet-solution-item"><span class="psi">✓</span> <span data-lang="en">Permanently removes odor</span><span data-lang="pt">Remove odor permanentemente</span><span data-lang="es">Elimina el olor permanentemente</span></div>
+          <div class="pet-solution-item"><span class="psi">✓</span> <span data-lang="en">Safe for pets & children</span><span data-lang="pt">Seguro para pets e crianças</span><span data-lang="es">Seguro para mascotas y niños</span></div>
+          <div class="pet-solution-item"><span class="psi">✓</span> <span data-lang="en">Eco-friendly products</span><span data-lang="pt">Produtos ecológicos</span><span data-lang="es">Productos ecológicos</span></div>
+        </div>
+        <div class="pet-addon">
+          <div class="pet-addon-price">+$25<span class="pet-addon-label"><span data-lang="en">/room</span><span data-lang="pt">/quarto</span><span data-lang="es">/habitación</span></span></div>
+          <div class="pet-addon-label"><span data-lang="en">Pet Treatment Add-On</span><span data-lang="pt">Adicional Tratamento Pet</span><span data-lang="es">Tratamiento Mascotas Adicional</span></div>
+        </div>
+        <a href="https://wa.me/14077878590?text=Hi!%20I%20need%20carpet%20cleaning%20with%20pet%20treatment!" class="value-cta" data-wa-link data-wa-type="pet" style="font-size:15px;padding:14px 32px">
+          <span data-lang="en">Book Pet Treatment →</span><span data-lang="pt">Agendar Tratamento Pet →</span><span data-lang="es">Reservar Tratamiento Mascotas →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -408,9 +569,9 @@
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=85&auto=format" alt="Beautiful clean home in Orlando" style="width:100%;height:100%;object-fit:cover;transition:transform 8s ease;display:block" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       </div>
       <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 48px;background:var(--bg-dark)">
-        <span class="section-tag" style="background:rgba(255,255,255,.08);color:var(--accent-light);align-self:flex-start">ORLANDO'S CHOICE</span>
-        <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;color:#fff;margin:16px 0;line-height:1.2">"The Best Decision We Made for Our Home"</h2>
-        <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px">Orlando families trust A7 because we deliver results, not excuses. Our hot-water extraction doesn't just clean — it <strong style="color:var(--accent-light)">eliminates 99.9% of bacteria</strong> and extends your carpet life by up to 10 years.</p>
+        <span class="section-tag" style="background:rgba(255,255,255,.08);color:var(--accent-light);align-self:flex-start"><span data-lang="en">ORLANDO'S CHOICE</span><span data-lang="pt">ESCOLHA DE ORLANDO</span><span data-lang="es">LA ELECCIÓN DE ORLANDO</span></span>
+        <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;color:#fff;margin:16px 0;line-height:1.2"><span data-lang="en">"The Best Decision We Made for Our Home"</span><span data-lang="pt">"A Melhor Decisão Que Tomamos Para Nossa Casa"</span><span data-lang="es">"La Mejor Decisión Que Tomamos Para Nuestro Hogar"</span></h2>
+        <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px"><span data-lang="en">Orlando families trust A7 because we deliver results, not excuses. Our hot-water extraction doesn't just clean — it <strong style="color:var(--accent-light)">eliminates 99.9% of bacteria</strong> and extends your carpet life by up to 10 years.</span><span data-lang="pt">Famílias de Orlando confiam na A7 porque entregamos resultados, não desculpas. Nossa extração com água quente não apenas limpa — <strong style="color:var(--accent-light)">elimina 99,9% das bactérias</strong> e estende a vida do carpete em até 10 anos.</span><span data-lang="es">Las familias de Orlando confían en A7 porque entregamos resultados, no excusas. Nuestra extracción con agua caliente no solo limpia — <strong style="color:var(--accent-light)">elimina el 99.9% de las bacterias</strong> y extiende la vida de tu alfombra hasta 10 años.</span></p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
             <div style="font-size:32px;font-weight:900;color:var(--accent-light)">2,000+</div>
@@ -428,116 +589,143 @@
   <!-- ===== BRIDGE ===== -->
   <section class="bridge">
     <div class="container">
-      <p>What if your carpet looked and smelled like <em>the day it was installed</em>? What if your kids could play on the floor <em>without you worrying</em>? What if allergy season didn't mean <em>suffering in your own home</em>?</p>
+      <p><span data-lang="en">What if your carpet looked and smelled like <em>the day it was installed</em>? What if your kids could play on the floor <em>without you worrying</em>? What if allergy season didn't mean <em>suffering in your own home</em>?</span><span data-lang="pt">E se seu carpete parecesse e cheirasse como <em>no dia em que foi instalado</em>? E se seus filhos pudessem brincar no chão <em>sem você se preocupar</em>? E se a época de alergias não significasse <em>sofrer na sua própria casa</em>?</span><span data-lang="es">¿Y si tu alfombra luciera y oliera como <em>el día que fue instalada</em>? ¿Y si tus hijos pudieran jugar en el piso <em>sin que te preocupes</em>? ¿Y si la temporada de alergias no significara <em>sufrir en tu propia casa</em>?</span></p>
     </div>
   </section>
 
   <!-- ===== HOW IT WORKS ===== -->
   <section class="how">
     <div class="container">
-      <span class="section-tag">HOW IT WORKS</span>
-      <h2 class="section-title">From Dirty to Pristine<br>in 3 Simple Steps</h2>
-      <p class="section-sub">We make it effortless. You relax, we handle everything.</p>
+      <span class="section-tag"><span data-lang="en">HOW IT WORKS</span><span data-lang="pt">COMO FUNCIONA</span><span data-lang="es">CÓMO FUNCIONA</span></span>
+      <h2 class="section-title"><span data-lang="en">From Dirty to Pristine<br>in 3 Simple Steps</span><span data-lang="pt">De Sujo a Impecável<br>em 3 Passos Simples</span><span data-lang="es">De Sucio a Impecable<br>en 3 Simples Pasos</span></h2>
+      <p class="section-sub"><span data-lang="en">We make it effortless. You relax, we handle everything.</span><span data-lang="pt">Nós facilitamos tudo. Você relaxa, nós cuidamos de tudo.</span><span data-lang="es">Lo hacemos fácil. Tú descansas, nosotros nos encargamos de todo.</span></p>
       <div class="steps">
         <div class="step">
           <img class="step-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80&auto=format" alt="Free carpet assessment" loading="lazy">
           <div class="step-num">1</div>
-          <h3>Free Assessment</h3>
-          <p>We inspect your carpets and identify problem areas. No obligation, no pressure.</p>
+          <h3><span data-lang="en">Free Assessment</span><span data-lang="pt">Avaliação Grátis</span><span data-lang="es">Evaluación Gratis</span></h3>
+          <p><span data-lang="en">We inspect your carpets and identify problem areas. No obligation, no pressure.</span><span data-lang="pt">Inspecionamos seus carpetes e identificamos áreas problemáticas. Sem compromisso.</span><span data-lang="es">Inspeccionamos tus alfombras e identificamos áreas problemáticas. Sin compromiso.</span></p>
         </div>
         <div class="step">
           <img class="step-img" src="https://images.unsplash.com/photo-1527515637462-cee1395c1e6f?w=500&q=80&auto=format" alt="Deep hot-water extraction cleaning" loading="lazy">
           <div class="step-num">2</div>
-          <h3>Deep Extraction</h3>
-          <p>Hot water extraction at 200°F kills bacteria, removes stains, and eliminates odors at the source.</p>
+          <h3><span data-lang="en">Deep Extraction</span><span data-lang="pt">Extração Profunda</span><span data-lang="es">Extracción Profunda</span></h3>
+          <p><span data-lang="en">Hot water extraction at 200°F kills bacteria, removes stains, and eliminates odors at the source.</span><span data-lang="pt">Extração com água quente a 93°C elimina bactérias, remove manchas e acaba com odores na origem.</span><span data-lang="es">Extracción con agua caliente a 93°C mata bacterias, elimina manchas y acaba con los olores de raíz.</span></p>
         </div>
         <div class="step">
           <img class="step-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80&auto=format" alt="Clean carpet results" loading="lazy">
           <div class="step-num">3</div>
-          <h3>Walk on Clean</h3>
-          <p>Carpets dry in 4-6 hours. Fresh, soft, and completely safe for your family and pets.</p>
+          <h3><span data-lang="en">Walk on Clean</span><span data-lang="pt">Pise no Limpo</span><span data-lang="es">Camina en Limpio</span></h3>
+          <p><span data-lang="en">Carpets dry in 4-6 hours. Fresh, soft, and completely safe for your family and pets.</span><span data-lang="pt">Carpetes secam em 4-6 horas. Frescos, macios e totalmente seguros para família e pets.</span><span data-lang="es">Las alfombras secan en 4-6 horas. Frescas, suaves y totalmente seguras para tu familia y mascotas.</span></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== VALUE STACK ===== -->
+  <!-- ===== CTA STRIP 2 ===== -->
+  <div class="cta-strip">
+    <div class="container">
+      <div class="cta-strip-inner">
+        <span class="cta-strip-text"><span data-lang="en">🎉 3 Rooms for $107 — Save $28!</span><span data-lang="pt">🎉 3 Quartos por $107 — Economize $28!</span><span data-lang="es">🎉 3 Habitaciones por $107 — ¡Ahorra $28!</span></span>
+        <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20the%203%20Rooms%20for%20$107%20deal!" class="cta-strip-btn" data-wa-link data-wa-type="promo"><span data-lang="en">Book Now →</span><span data-lang="pt">Agendar →</span><span data-lang="es">Reservar →</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRICING ===== -->
   <section class="value" id="pricing">
     <div class="container">
-      <span class="section-tag">INVESTMENT</span>
-      <h2 class="section-title">Everything Included in<br>Your Carpet Cleaning</h2>
-      <p class="section-sub">No hidden fees, no upsells. Everything your carpet needs in one package.</p>
-      <div class="value-card">
-        <div class="value-item"><span class="vi-check">✓</span><span class="vi-text">Pre-treatment of high-traffic areas</span><span class="vi-price">$50</span></div>
-        <div class="value-item"><span class="vi-check">✓</span><span class="vi-text">Hot water extraction cleaning</span><span class="vi-price">$150</span></div>
-        <div class="value-item"><span class="vi-check">✓</span><span class="vi-text">Stain spot treatment</span><span class="vi-price">$40</span></div>
-        <div class="value-item"><span class="vi-check">✓</span><span class="vi-text">Deodorizer application</span><span class="vi-price">$30</span></div>
-        <div class="value-item"><span class="vi-check">✓</span><span class="vi-text">Speed-dry fan service</span><span class="vi-price">$25</span></div>
-        <div class="value-item"><span class="vi-check">✓</span><span class="vi-text">Furniture moving (basic pieces)</span><span class="vi-price">$40</span></div>
-        <div class="value-total">
-          <div class="vt-old">Total Value: $335</div>
-          <div class="vt-new"><small>$</small>99<small>/room</small></div>
-          <div class="vt-free">🎁 1st Room FREE with whole-house booking</div>
+      <span class="section-tag"><span data-lang="en">TRANSPARENT PRICING</span><span data-lang="pt">PREÇOS TRANSPARENTES</span><span data-lang="es">PRECIOS TRANSPARENTES</span></span>
+      <h2 class="section-title"><span data-lang="en">Clear Per-Room Pricing.<br><strong>No Hidden Fees.</strong></span><span data-lang="pt">Preço Claro por Quarto.<br><strong>Sem Taxas Ocultas.</strong></span><span data-lang="es">Precio Claro por Habitación.<br><strong>Sin Cargos Ocultos.</strong></span></h2>
+      <p class="section-sub"><span data-lang="en">Everything included: pre-treatment, extraction, stain removal, deodorizer & speed-dry.</span><span data-lang="pt">Tudo incluso: pré-tratamento, extração, remoção de manchas, desodorizador e secagem rápida.</span><span data-lang="es">Todo incluido: pre-tratamiento, extracción, eliminación de manchas, desodorizante y secado rápido.</span></p>
+      <div class="pricing-table">
+        <div class="pricing-row">
+          <span class="pr-name"><span data-lang="en">Regular Bedroom</span><span data-lang="pt">Quarto Regular</span><span data-lang="es">Habitación Regular</span></span>
+          <div class="pr-prices"><span class="pr-market"><span data-lang="en">Market: $50-$80</span><span data-lang="pt">Mercado: $50-$80</span><span data-lang="es">Mercado: $50-$80</span></span><span class="pr-price">$45</span></div>
         </div>
-        <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20to%20claim%20my%20FREE%20room%20carpet%20cleaning!" class="value-cta">Claim My FREE Room →</a>
+        <div class="pricing-row">
+          <span class="pr-name"><span data-lang="en">Master Suite</span><span data-lang="pt">Suíte Master</span><span data-lang="es">Suite Principal</span></span>
+          <div class="pr-prices"><span class="pr-market"><span data-lang="en">Market: $80-$120</span><span data-lang="pt">Mercado: $80-$120</span><span data-lang="es">Mercado: $80-$120</span></span><span class="pr-price">$65</span></div>
+        </div>
+        <div class="pricing-row">
+          <span class="pr-name"><span data-lang="en">Stairs</span><span data-lang="pt">Escadas</span><span data-lang="es">Escaleras</span></span>
+          <div class="pr-prices"><span class="pr-market"><span data-lang="en">Market: $40-$60</span><span data-lang="pt">Mercado: $40-$60</span><span data-lang="es">Mercado: $40-$60</span></span><span class="pr-price">$30</span></div>
+        </div>
+        <div class="pricing-row">
+          <span class="pr-name"><span data-lang="en">Game Room</span><span data-lang="pt">Sala de Jogos</span><span data-lang="es">Sala de Juegos</span></span>
+          <div class="pr-prices"><span class="pr-market"><span data-lang="en">Market: $50-$80</span><span data-lang="pt">Mercado: $50-$80</span><span data-lang="es">Mercado: $50-$80</span></span><span class="pr-price">$45</span></div>
+        </div>
+        <div class="pricing-row addon">
+          <span class="pr-name"><span data-lang="en">🐾 Pet Treatment Add-On</span><span data-lang="pt">🐾 Adicional Tratamento Pet</span><span data-lang="es">🐾 Tratamiento Mascotas</span></span>
+          <div class="pr-prices"><span class="pr-price">+$25<small><span data-lang="en">/room</span><span data-lang="pt">/quarto</span><span data-lang="es">/hab.</span></small></span></div>
+        </div>
       </div>
+      <div class="pricing-callout">
+        <span data-lang="en">Orlando average: <strong>$50-$80/room</strong>. A7: starting at <strong>$45 — everything included.</strong></span><span data-lang="pt">Média Orlando: <strong>$50-$80/quarto</strong>. A7: a partir de <strong>$45 — tudo incluso.</strong></span><span data-lang="es">Promedio Orlando: <strong>$50-$80/hab.</strong> A7: desde <strong>$45 — todo incluido.</strong></span>
+      </div>
+      <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20book%20carpet%20cleaning.%20Starting%20at%20$45/room!" class="value-cta" data-wa-link data-wa-type="pricing"><span data-lang="en">Book Now via WhatsApp →</span><span data-lang="pt">Agendar via WhatsApp →</span><span data-lang="es">Reservar por WhatsApp →</span></a>
     </div>
   </section>
 
   <!-- ===== REVIEWS ===== -->
   <section class="reviews">
     <div class="container">
-      <span class="section-tag">HAPPY CUSTOMERS</span>
-      <h2 class="section-title">2,000+ Orlando Families Trust A7</h2>
-      <p class="section-sub">Real results from real homeowners in your neighborhood.</p>
+      <span class="section-tag"><span data-lang="en">HAPPY CUSTOMERS</span><span data-lang="pt">CLIENTES FELIZES</span><span data-lang="es">CLIENTES FELICES</span></span>
+      <h2 class="section-title"><span data-lang="en">2,000+ Orlando Families Trust A7</span><span data-lang="pt">2.000+ Famílias de Orlando Confiam na A7</span><span data-lang="es">2,000+ Familias de Orlando Confían en A7</span></h2>
+      <p class="section-sub"><span data-lang="en">Orlando's Brazilian & Hispanic communities trust A7. Real results from real homeowners.</span><span data-lang="pt">As comunidades brasileira e hispânica de Orlando confiam na A7. Resultados reais de moradores reais.</span><span data-lang="es">Las comunidades brasileña e hispana de Orlando confían en A7. Resultados reales de propietarios reales.</span></p>
       <div class="reviews-grid">
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <blockquote>"Our carpets looked brand new! The pet stains we thought were permanent — gone! Absolutely incredible work."</blockquote>
+          <blockquote><span data-lang="en">"Our carpets looked brand new! The pet stains we thought were permanent — gone! Absolutely incredible work."</span><span data-lang="pt">"Nossos carpetes ficaram como novos! As manchas de pet que achávamos permanentes — sumiram! Trabalho absolutamente incrível."</span><span data-lang="es">"¡Nuestras alfombras quedaron como nuevas! Las manchas de mascotas que creíamos permanentes — ¡desaparecieron! Trabajo absolutamente increíble."</span></blockquote>
           <div class="review-author"><div class="review-avatar">JW</div><div><div class="review-name">Jennifer W.</div><div class="review-loc">Winter Park, FL</div></div></div>
         </div>
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <blockquote>"Best carpet cleaning service in Orlando. Period. Fair prices and amazing results. Already booked my next appointment."</blockquote>
+          <blockquote><span data-lang="en">"Best carpet cleaning service in Orlando. Period. Fair prices and amazing results. Already booked my next appointment."</span><span data-lang="pt">"Melhor serviço de limpeza de carpete em Orlando. Ponto final. Preços justos e resultados incríveis. Já agendei o próximo."</span><span data-lang="es">"Mejor servicio de limpieza de alfombras en Orlando. Punto. Precios justos y resultados increíbles. Ya reservé mi próxima cita."</span></blockquote>
           <div class="review-author"><div class="review-avatar">MT</div><div><div class="review-name">Michael T.</div><div class="review-loc">Lake Nona, FL</div></div></div>
         </div>
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <blockquote>"Scheduled same-day when we had guests coming. They arrived on time and the carpets were dry by evening. Lifesavers!"</blockquote>
+          <blockquote><span data-lang="en">"Scheduled same-day when we had guests coming. They arrived on time and the carpets were dry by evening. Lifesavers!"</span><span data-lang="pt">"Agendei no mesmo dia quando tínhamos visitas chegando. Chegaram no horário e os carpetes estavam secos à noite. Salvaram a gente!"</span><span data-lang="es">"Reservé el mismo día cuando teníamos invitados. Llegaron a tiempo y las alfombras estaban secas por la noche. ¡Nos salvaron!"</span></blockquote>
           <div class="review-author"><div class="review-avatar">AR</div><div><div class="review-name">Amanda R.</div><div class="review-loc">Dr. Phillips, FL</div></div></div>
         </div>
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <blockquote>"My allergies improved dramatically after A7 cleaned our carpets. Should've done this years ago. Life-changing."</blockquote>
+          <blockquote><span data-lang="en">"My allergies improved dramatically after A7 cleaned our carpets. Should've done this years ago. Life-changing."</span><span data-lang="pt">"Minhas alergias melhoraram muito depois que a A7 limpou nossos carpetes. Deveria ter feito isso anos atrás. Mudou minha vida."</span><span data-lang="es">"Mis alergias mejoraron mucho después de que A7 limpió nuestras alfombras. Debí haberlo hecho hace años. Cambió mi vida."</span></blockquote>
           <div class="review-author"><div class="review-avatar">RS</div><div><div class="review-name">Robert S.</div><div class="review-loc">Windermere, FL</div></div></div>
         </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote><span data-lang="en">"A7 was recommended by a friend from church. They cleaned 4 rooms and the carpets look and smell amazing. Very professional and they speak Portuguese! Highly recommend."</span><span data-lang="pt">"A A7 foi recomendada por uma amiga da igreja. Limparam 4 quartos e os carpetes ficaram incríveis. Muito profissionais e falam português! Super recomendo."</span><span data-lang="es">"A7 fue recomendada por una amiga de la iglesia. Limpiaron 4 habitaciones y las alfombras quedaron increíbles. Muy profesionales y hablan portugués. ¡Súper recomendado!"</span></blockquote>
+          <div class="review-author"><div class="review-avatar">FS</div><div><div class="review-name">Fernanda S.</div><div class="review-loc">Kissimmee, FL</div></div></div>
+        </div>
       </div>
-      <div class="google-badge"><span class="gb-stars">★★★★★</span> 4.9 on Google · 89 reviews</div>
+      <div class="google-badge"><span class="gb-stars">★★★★★</span> <span data-lang="en">4.9 on Google · 89 reviews</span><span data-lang="pt">4.9 no Google · 89 avaliações</span><span data-lang="es">4.9 en Google · 89 reseñas</span></div>
     </div>
   </section>
 
   <!-- ===== BEFORE / AFTER ===== -->
   <section class="compare">
     <div class="container">
-      <span class="section-tag">THE DIFFERENCE</span>
-      <h2 class="section-title">WITHOUT vs WITH A7 Cleaning</h2>
-      <p class="section-sub">See why professional carpet cleaning changes everything.</p>
+      <span class="section-tag"><span data-lang="en">THE DIFFERENCE</span><span data-lang="pt">A DIFERENÇA</span><span data-lang="es">LA DIFERENCIA</span></span>
+      <h2 class="section-title"><span data-lang="en">WITHOUT vs WITH A7 Cleaning</span><span data-lang="pt">SEM vs COM Limpeza A7</span><span data-lang="es">SIN vs CON Limpieza A7</span></h2>
+      <p class="section-sub"><span data-lang="en">See why professional carpet cleaning changes everything.</span><span data-lang="pt">Veja por que a limpeza profissional muda tudo.</span><span data-lang="es">Descubre por qué la limpieza profesional lo cambia todo.</span></p>
       <div class="compare-grid">
         <div class="compare-col bad">
-          <h3>❌ WITHOUT Professional Cleaning</h3>
-          <div class="compare-item"><span class="ci">✗</span> Trapped allergens & bacteria multiply daily</div>
-          <div class="compare-item"><span class="ci">✗</span> Stubborn stains & odors get worse over time</div>
-          <div class="compare-item"><span class="ci">✗</span> Dull, matted carpet fibers look old</div>
-          <div class="compare-item"><span class="ci">✗</span> Shortened carpet lifespan by 5-8 years</div>
-          <div class="compare-item"><span class="ci">✗</span> Health risks for kids, pets & family</div>
+          <h3><span data-lang="en">❌ WITHOUT Professional Cleaning</span><span data-lang="pt">❌ SEM Limpeza Profissional</span><span data-lang="es">❌ SIN Limpieza Profesional</span></h3>
+          <div class="compare-item"><span class="ci">✗</span> <span data-lang="en">Trapped allergens & bacteria multiply daily</span><span data-lang="pt">Alérgenos e bactérias presos se multiplicam diariamente</span><span data-lang="es">Alérgenos y bacterias atrapados se multiplican diariamente</span></div>
+          <div class="compare-item"><span class="ci">✗</span> <span data-lang="en">Stubborn stains & odors get worse over time</span><span data-lang="pt">Manchas e odores persistentes pioram com o tempo</span><span data-lang="es">Manchas y olores persistentes empeoran con el tiempo</span></div>
+          <div class="compare-item"><span class="ci">✗</span> <span data-lang="en">Dull, matted carpet fibers look old</span><span data-lang="pt">Fibras opacas e amassadas parecem velhas</span><span data-lang="es">Fibras opacas y aplastadas lucen viejas</span></div>
+          <div class="compare-item"><span class="ci">✗</span> <span data-lang="en">Shortened carpet lifespan by 5-8 years</span><span data-lang="pt">Vida útil do carpete reduzida em 5-8 anos</span><span data-lang="es">Vida útil de la alfombra reducida 5-8 años</span></div>
+          <div class="compare-item"><span class="ci">✗</span> <span data-lang="en">Health risks for kids, pets & family</span><span data-lang="pt">Riscos à saúde de crianças, pets e família</span><span data-lang="es">Riesgos de salud para niños, mascotas y familia</span></div>
         </div>
         <div class="compare-col good">
-          <h3>✓ WITH A7 Cleaning</h3>
-          <div class="compare-item"><span class="ci">✓</span> 99.9% bacteria eliminated instantly</div>
-          <div class="compare-item"><span class="ci">✓</span> Stains & odors removed at the source</div>
-          <div class="compare-item"><span class="ci">✓</span> Fluffy, restored fibers look brand new</div>
-          <div class="compare-item"><span class="ci">✓</span> Extended carpet life by 5-10 years</div>
-          <div class="compare-item"><span class="ci">✓</span> Safe environment for entire family</div>
+          <h3><span data-lang="en">✓ WITH A7 Cleaning</span><span data-lang="pt">✓ COM Limpeza A7</span><span data-lang="es">✓ CON Limpieza A7</span></h3>
+          <div class="compare-item"><span class="ci">✓</span> <span data-lang="en">99.9% bacteria eliminated instantly</span><span data-lang="pt">99,9% das bactérias eliminadas instantaneamente</span><span data-lang="es">99.9% de bacterias eliminadas al instante</span></div>
+          <div class="compare-item"><span class="ci">✓</span> <span data-lang="en">Stains & odors removed at the source</span><span data-lang="pt">Manchas e odores removidos na origem</span><span data-lang="es">Manchas y olores eliminados de raíz</span></div>
+          <div class="compare-item"><span class="ci">✓</span> <span data-lang="en">Fluffy, restored fibers look brand new</span><span data-lang="pt">Fibras restauradas e macias como novas</span><span data-lang="es">Fibras restauradas y suaves como nuevas</span></div>
+          <div class="compare-item"><span class="ci">✓</span> <span data-lang="en">Extended carpet life by 5-10 years</span><span data-lang="pt">Vida útil estendida em 5-10 anos</span><span data-lang="es">Vida útil extendida 5-10 años</span></div>
+          <div class="compare-item"><span class="ci">✓</span> <span data-lang="en">Safe environment for entire family</span><span data-lang="pt">Ambiente seguro para toda a família</span><span data-lang="es">Ambiente seguro para toda la familia</span></div>
         </div>
       </div>
     </div>
@@ -546,9 +734,9 @@
   <!-- ===== VISUAL GALLERY ===== -->
   <section style="padding:80px 0;background:var(--off-white);text-align:center">
     <div class="container">
-      <span class="section-tag">REAL RESULTS</span>
-      <h2 class="section-title">See the <strong>A7 Difference</strong></h2>
-      <p class="section-sub">Real transformations from Orlando homes. No filters, no tricks.</p>
+      <span class="section-tag"><span data-lang="en">REAL RESULTS</span><span data-lang="pt">RESULTADOS REAIS</span><span data-lang="es">RESULTADOS REALES</span></span>
+      <h2 class="section-title"><span data-lang="en">See the <strong>A7 Difference</strong></span><span data-lang="pt">Veja a <strong>Diferença A7</strong></span><span data-lang="es">Mira la <strong>Diferencia A7</strong></span></h2>
+      <p class="section-sub"><span data-lang="en">Real transformations from Orlando homes. No filters, no tricks.</span><span data-lang="pt">Transformações reais de casas em Orlando. Sem filtros, sem truques.</span><span data-lang="es">Transformaciones reales de hogares en Orlando. Sin filtros, sin trucos.</span></p>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto">
         <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
           <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80&auto=format" alt="Before carpet cleaning" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
@@ -576,17 +764,17 @@
   <section class="guarantee">
     <div class="container">
       <div class="guarantee-icon">🛡️</div>
-      <h2>Not Happy? We'll Re-Clean for FREE.</h2>
-      <p class="section-sub">If you're not 100% satisfied with the results, we'll come back and clean it again at no charge. No questions asked. 30-day satisfaction guarantee.</p>
+      <h2><span data-lang="en">Not Happy? We'll Re-Clean for FREE.</span><span data-lang="pt">Não Ficou Satisfeito? Limpamos de Novo GRÁTIS.</span><span data-lang="es">¿No Estás Satisfecho? Limpiamos de Nuevo GRATIS.</span></h2>
+      <p class="section-sub"><span data-lang="en">If you're not 100% satisfied with the results, we'll come back and clean it again at no charge. No questions asked. 30-day satisfaction guarantee.</span><span data-lang="pt">Se você não ficar 100% satisfeito com os resultados, voltamos e limpamos novamente sem custo. Sem perguntas. Garantia de 30 dias.</span><span data-lang="es">Si no estás 100% satisfecho con los resultados, regresamos y limpiamos de nuevo sin costo. Sin preguntas. Garantía de 30 días.</span></p>
       <div class="guarantee-terms">
-        <h4>Our Promise to You</h4>
+        <h4><span data-lang="en">Our Promise to You</span><span data-lang="pt">Nossa Promessa a Você</span><span data-lang="es">Nuestra Promesa</span></h4>
         <ul>
-          <li>100% satisfaction or we re-clean for free</li>
-          <li>30-day guarantee on all cleaning services</li>
-          <li>Licensed, bonded & fully insured</li>
-          <li>Eco-friendly, child & pet safe products</li>
-          <li>No hidden fees — price quoted is price paid</li>
-          <li>Same-day service available</li>
+          <li><span data-lang="en">100% satisfaction or we re-clean for free</span><span data-lang="pt">100% satisfação ou relimpamos grátis</span><span data-lang="es">100% satisfacción o limpiamos de nuevo gratis</span></li>
+          <li><span data-lang="en">30-day guarantee on all cleaning services</span><span data-lang="pt">Garantia de 30 dias em todos os serviços</span><span data-lang="es">Garantía de 30 días en todos los servicios</span></li>
+          <li><span data-lang="en">Licensed, bonded & fully insured</span><span data-lang="pt">Licenciado, com fiança e totalmente segurado</span><span data-lang="es">Licenciado, con fianza y totalmente asegurado</span></li>
+          <li><span data-lang="en">Eco-friendly, child & pet safe products</span><span data-lang="pt">Produtos ecológicos, seguros para crianças e pets</span><span data-lang="es">Productos ecológicos, seguros para niños y mascotas</span></li>
+          <li><span data-lang="en">No hidden fees — price quoted is price paid</span><span data-lang="pt">Sem taxas ocultas — o preço cotado é o preço pago</span><span data-lang="es">Sin cargos ocultos — el precio cotizado es el precio pagado</span></li>
+          <li><span data-lang="en">Same-day service available</span><span data-lang="pt">Serviço no mesmo dia disponível</span><span data-lang="es">Servicio el mismo día disponible</span></li>
         </ul>
       </div>
     </div>
@@ -596,40 +784,40 @@
   <section class="faq">
     <div class="container">
       <span class="section-tag">FAQ</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-sub">Everything you need to know before booking.</p>
+      <h2 class="section-title"><span data-lang="en">Frequently Asked Questions</span><span data-lang="pt">Perguntas Frequentes</span><span data-lang="es">Preguntas Frecuentes</span></h2>
+      <p class="section-sub"><span data-lang="en">Everything you need to know before booking.</span><span data-lang="pt">Tudo que você precisa saber antes de agendar.</span><span data-lang="es">Todo lo que necesitas saber antes de reservar.</span></p>
       <div class="faq-list">
         <div class="faq-item active">
-          <div class="faq-q" onclick="toggleFaq(this)">How long does carpet cleaning take?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">Most rooms take 20-30 minutes each. A typical 3-bedroom home takes about 1.5-2 hours including setup and inspection. We work efficiently without cutting corners.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">How long does carpet cleaning take?</span><span data-lang="pt">Quanto tempo leva a limpeza?</span><span data-lang="es">¿Cuánto tiempo toma la limpieza?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">Most rooms take 20-30 minutes each. A typical 3-bedroom home takes about 1.5-2 hours including setup and inspection.</span><span data-lang="pt">A maioria dos quartos leva 20-30 minutos cada. Uma casa típica de 3 quartos leva cerca de 1,5-2 horas incluindo preparação e inspeção.</span><span data-lang="es">La mayoría de las habitaciones toman 20-30 minutos cada una. Una casa típica de 3 habitaciones toma 1.5-2 horas incluyendo preparación e inspección.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">How long until carpets are dry?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">Carpets typically dry within 4-6 hours with our speed-dry fan service. We recommend keeping windows open and fans running. In most cases, you can walk on carpets (with clean socks) within 2 hours.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">How long until carpets are dry?</span><span data-lang="pt">Quanto tempo para os carpetes secarem?</span><span data-lang="es">¿Cuánto tardan en secar las alfombras?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">Carpets typically dry within 4-6 hours with our speed-dry fan service. You can walk on carpets with clean socks within 2 hours.</span><span data-lang="pt">Os carpetes geralmente secam em 4-6 horas com nosso serviço de secagem rápida. Você pode andar de meias limpas em 2 horas.</span><span data-lang="es">Las alfombras generalmente secan en 4-6 horas con nuestro servicio de secado rápido. Puedes caminar con calcetines limpios en 2 horas.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Is it safe for pets and children?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">Absolutely! We use eco-friendly, non-toxic cleaning solutions that are 100% safe for children, pets, and people with allergies. Our products are Green Seal certified.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">Is it safe for pets and children?</span><span data-lang="pt">É seguro para pets e crianças?</span><span data-lang="es">¿Es seguro para mascotas y niños?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">Absolutely! We use eco-friendly, non-toxic cleaning solutions that are 100% safe for children, pets, and people with allergies.</span><span data-lang="pt">Com certeza! Usamos soluções ecológicas e não tóxicas, 100% seguras para crianças, pets e pessoas com alergias.</span><span data-lang="es">¡Absolutamente! Usamos soluciones ecológicas y no tóxicas, 100% seguras para niños, mascotas y personas con alergias.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Do you move furniture?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">Yes, we move basic furniture (chairs, small tables, ottomans) at no extra charge. Heavy items like beds, dressers, and large entertainment centers stay in place — we clean around and under them where accessible.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">Do you move furniture?</span><span data-lang="pt">Vocês movem móveis?</span><span data-lang="es">¿Mueven los muebles?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">Yes, we move basic furniture (chairs, small tables, ottomans) at no extra charge. Heavy items stay in place — we clean around them.</span><span data-lang="pt">Sim, movemos móveis básicos (cadeiras, mesas pequenas) sem custo extra. Itens pesados ficam no lugar — limpamos ao redor.</span><span data-lang="es">Sí, movemos muebles básicos (sillas, mesas pequeñas) sin cargo extra. Los muebles pesados se quedan — limpiamos alrededor.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Can you remove tough stains?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">We remove most stains including pet accidents, wine, coffee, and food spills. Some stains (like bleach or permanent dye) may be permanent, but our technicians will assess and be upfront about what to expect.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">Can you remove tough stains?</span><span data-lang="pt">Vocês removem manchas difíceis?</span><span data-lang="es">¿Pueden eliminar manchas difíciles?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">We remove most stains including pet accidents, wine, coffee, and food spills. Our technicians will assess and be upfront about what to expect.</span><span data-lang="pt">Removemos a maioria das manchas incluindo acidentes de pets, vinho, café e comida. Nossos técnicos avaliam e são transparentes sobre o que esperar.</span><span data-lang="es">Eliminamos la mayoría de las manchas incluyendo accidentes de mascotas, vino, café y comida. Nuestros técnicos evalúan y son transparentes sobre qué esperar.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">How often should I have carpets cleaned?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">We recommend professional cleaning every 6-12 months for most homes. If you have pets, kids, or allergies, every 3-6 months is ideal. Regular cleaning extends carpet life by 5-10 years.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">How often should I have carpets cleaned?</span><span data-lang="pt">Com que frequência devo limpar os carpetes?</span><span data-lang="es">¿Con qué frecuencia debo limpiar las alfombras?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">We recommend every 6-12 months for most homes. With pets, kids, or allergies, every 3-6 months is ideal.</span><span data-lang="pt">Recomendamos a cada 6-12 meses para a maioria das casas. Com pets, crianças ou alergias, a cada 3-6 meses é ideal.</span><span data-lang="es">Recomendamos cada 6-12 meses para la mayoría de hogares. Con mascotas, niños o alergias, cada 3-6 meses es ideal.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">What's included in the free room offer?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">Your 1st room is completely free when you book whole-house carpet cleaning (3+ rooms). The free room includes full pre-treatment, hot-water extraction, stain treatment, and deodorizer. Standard room up to 200 sq ft.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">What's included in the pricing?</span><span data-lang="pt">O que está incluso no preço?</span><span data-lang="es">¿Qué incluye el precio?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">Every room includes pre-treatment, hot-water extraction, stain treatment, deodorizer, and speed-dry fan service. Starting at $45/room.</span><span data-lang="pt">Cada quarto inclui pré-tratamento, extração com água quente, tratamento de manchas, desodorizador e secagem rápida. A partir de $45/quarto.</span><span data-lang="es">Cada habitación incluye pre-tratamiento, extracción con agua caliente, tratamiento de manchas, desodorizante y secado rápido. Desde $45/hab.</span></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">What areas do you service?<span class="faq-toggle">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner">We service the entire Orlando metro area including Winter Park, Lake Nona, Dr. Phillips, Windermere, Kissimmee, Celebration, and surrounding communities. Use our ZIP checker below to verify your area.</div></div>
+          <div class="faq-q" onclick="toggleFaq(this)"><span data-lang="en">What areas do you service?</span><span data-lang="pt">Quais áreas vocês atendem?</span><span data-lang="es">¿Qué áreas cubren?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner"><span data-lang="en">We service the entire Orlando metro area including Winter Park, Lake Nona, Dr. Phillips, Windermere, Kissimmee, Celebration, and surrounding communities.</span><span data-lang="pt">Atendemos toda a região metropolitana de Orlando incluindo Winter Park, Lake Nona, Dr. Phillips, Windermere, Kissimmee, Celebration e comunidades vizinhas.</span><span data-lang="es">Cubrimos toda el área metropolitana de Orlando incluyendo Winter Park, Lake Nona, Dr. Phillips, Windermere, Kissimmee, Celebration y comunidades cercanas.</span></div></div>
         </div>
       </div>
     </div>
@@ -638,8 +826,8 @@
   <!-- ===== ZIP CHECKER ===== -->
   <section class="zip" id="zip-check">
     <div class="container">
-      <span class="section-tag">SERVICE AREA</span>
-      <h2 class="section-title">Check If We Service Your Area</h2>
+      <span class="section-tag"><span data-lang="en">SERVICE AREA</span><span data-lang="pt">ÁREA DE ATENDIMENTO</span><span data-lang="es">ÁREA DE SERVICIO</span></span>
+      <h2 class="section-title"><span data-lang="en">Check If We Service Your Area</span><span data-lang="pt">Verifique Se Atendemos Sua Região</span><span data-lang="es">Verifica Si Cubrimos Tu Área</span></h2>
       <div class="zip-form">
         <input type="text" id="zipInput" placeholder="Enter ZIP" maxlength="5" inputmode="numeric">
         <button onclick="checkZip()">Check Availability</button>
@@ -651,19 +839,68 @@
   <!-- ===== MEMBERSHIP ===== -->
   <section class="membership">
     <div class="container">
-      <span class="section-tag">SAVE MORE</span>
-      <h2 class="section-title">A7 Members Save 25%<br>on Every Cleaning</h2>
+      <span class="section-tag"><span data-lang="en">SAVE MORE</span><span data-lang="pt">ECONOMIZE MAIS</span><span data-lang="es">AHORRA MÁS</span></span>
+      <h2 class="section-title"><span data-lang="en">A7 Members Save 25%<br>on Every Cleaning</span><span data-lang="pt">Membros A7 Economizam 25%<br>em Toda Limpeza</span><span data-lang="es">Miembros A7 Ahorran 25%<br>en Cada Limpieza</span></h2>
       <div class="member-card">
-        <h3>A7 Membership Program</h3>
-        <p>Join our membership for consistent, discounted carpet care all year round.</p>
+        <h3><span data-lang="en">A7 Membership Program</span><span data-lang="pt">Programa de Membros A7</span><span data-lang="es">Programa de Membresía A7</span></h3>
+        <p><span data-lang="en">Join our membership for consistent, discounted carpet care all year round.</span><span data-lang="pt">Junte-se ao nosso programa para limpeza de carpete com desconto o ano todo.</span><span data-lang="es">Únete a nuestro programa para limpieza de alfombras con descuento todo el año.</span></p>
         <div class="member-perks">
-          <div class="member-perk"><span class="mp-i">✓</span> Quarterly deep cleans</div>
-          <div class="member-perk"><span class="mp-i">✓</span> Priority scheduling</div>
-          <div class="member-perk"><span class="mp-i">✓</span> 25% off every clean</div>
-          <div class="member-perk"><span class="mp-i">✓</span> Free spot treatments</div>
+          <div class="member-perk"><span class="mp-i">✓</span> <span data-lang="en">Quarterly deep cleans</span><span data-lang="pt">Limpeza profunda trimestral</span><span data-lang="es">Limpieza profunda trimestral</span></div>
+          <div class="member-perk"><span class="mp-i">✓</span> <span data-lang="en">Priority scheduling</span><span data-lang="pt">Agendamento prioritário</span><span data-lang="es">Programación prioritaria</span></div>
+          <div class="member-perk"><span class="mp-i">✓</span> <span data-lang="en">25% off every clean</span><span data-lang="pt">25% de desconto sempre</span><span data-lang="es">25% de descuento siempre</span></div>
+          <div class="member-perk"><span class="mp-i">✓</span> <span data-lang="en">Free spot treatments</span><span data-lang="pt">Tratamento de manchas grátis</span><span data-lang="es">Tratamiento de manchas gratis</span></div>
         </div>
         <button onclick="document.getElementById('memberModal').classList.add('show')" class="member-cta" style="border:none;cursor:pointer;font-family:inherit">View Membership Plans →</button>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== VACATION RENTAL ===== -->
+  <section class="vacation">
+    <div class="container">
+      <span class="section-tag"><span data-lang="en">VACATION RENTALS</span><span data-lang="pt">ALUGUEL DE TEMPORADA</span><span data-lang="es">ALQUILER VACACIONAL</span></span>
+      <h2 class="section-title"><span data-lang="en">Vacation Rental Owners:<br><strong>Save Up to 30%</strong> on Recurring Service</span><span data-lang="pt">Proprietários de Temporada:<br><strong>Economize Até 30%</strong> no Serviço Recorrente</span><span data-lang="es">Propietarios Vacacionales:<br><strong>Ahorra Hasta 30%</strong> en Servicio Recurrente</span></h2>
+      <p class="section-sub"><span data-lang="en">Keep your property guest-ready with progressive discounts for continuous service.</span><span data-lang="pt">Mantenha sua propriedade pronta para hóspedes com descontos progressivos para serviço contínuo.</span><span data-lang="es">Mantén tu propiedad lista para huéspedes con descuentos progresivos por servicio continuo.</span></p>
+      <div class="vacation-tiers">
+        <div class="vacation-tier">
+          <h4><span data-lang="en">Monthly</span><span data-lang="pt">Mensal</span><span data-lang="es">Mensual</span></h4>
+          <div class="discount">10% <small>OFF</small></div>
+          <p><span data-lang="en">Perfect for seasonal rentals with steady bookings</span><span data-lang="pt">Perfeito para aluguéis sazonais com reservas constantes</span><span data-lang="es">Perfecto para alquileres de temporada con reservas constantes</span></p>
+        </div>
+        <div class="vacation-tier popular">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h4><span data-lang="en">Bi-Weekly</span><span data-lang="pt">Quinzenal</span><span data-lang="es">Quincenal</span></h4>
+          <div class="discount">20% <small>OFF</small></div>
+          <p><span data-lang="en">Ideal for high-turnover properties near Disney & Universal</span><span data-lang="pt">Ideal para propriedades com alta rotação perto da Disney e Universal</span><span data-lang="es">Ideal para propiedades de alta rotación cerca de Disney y Universal</span></p>
+        </div>
+        <div class="vacation-tier">
+          <h4><span data-lang="en">Weekly</span><span data-lang="pt">Semanal</span><span data-lang="es">Semanal</span></h4>
+          <div class="discount">30% <small>OFF</small></div>
+          <p><span data-lang="en">Maximum savings for premium vacation homes</span><span data-lang="pt">Economia máxima para casas de temporada premium</span><span data-lang="es">Ahorro máximo para casas vacacionales premium</span></p>
+        </div>
+      </div>
+      <div class="vacation-calc">
+        <h3><span data-lang="en">💰 Savings Calculator — 3 Rooms</span><span data-lang="pt">💰 Calculadora de Economia — 3 Quartos</span><span data-lang="es">💰 Calculadora de Ahorro — 3 Habitaciones</span></h3>
+        <table>
+          <thead>
+            <tr>
+              <th><span data-lang="en">Frequency</span><span data-lang="pt">Frequência</span><span data-lang="es">Frecuencia</span></th>
+              <th><span data-lang="en">Regular</span><span data-lang="pt">Regular</span><span data-lang="es">Regular</span></th>
+              <th><span data-lang="en">You Pay</span><span data-lang="pt">Você Paga</span><span data-lang="es">Tú Pagas</span></th>
+              <th><span data-lang="en">You Save</span><span data-lang="pt">Economia</span><span data-lang="es">Ahorras</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-lang="en">Standard</span><span data-lang="pt">Padrão</span><span data-lang="es">Estándar</span></td><td>$135</td><td>$135</td><td>—</td></tr>
+            <tr><td><span data-lang="en">Monthly (10%)</span><span data-lang="pt">Mensal (10%)</span><span data-lang="es">Mensual (10%)</span></td><td>$135</td><td>$121.50</td><td class="savings">$13.50</td></tr>
+            <tr><td><span data-lang="en">Bi-Weekly (20%)</span><span data-lang="pt">Quinzenal (20%)</span><span data-lang="es">Quincenal (20%)</span></td><td>$135</td><td>$108</td><td class="savings">$27</td></tr>
+            <tr><td><span data-lang="en">Weekly (30%)</span><span data-lang="pt">Semanal (30%)</span><span data-lang="es">Semanal (30%)</span></td><td>$135</td><td>$94.50</td><td class="savings">$40.50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="https://wa.me/14077878590?text=Hi!%20I'm%20interested%20in%20vacation%20rental%20carpet%20cleaning%20plans!" class="value-cta" data-wa-link data-wa-type="vacation" style="margin-top:32px">
+        <span data-lang="en">Get Vacation Rental Plans →</span><span data-lang="pt">Ver Planos para Temporada →</span><span data-lang="es">Ver Planes Vacacionales →</span>
+      </a>
     </div>
   </section>
 
@@ -763,14 +1000,14 @@
     <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=85&auto=format" alt="Beautiful Orlando home interior" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,6,24,.85) 0%,rgba(245,158,11,.3) 50%,rgba(10,6,24,.9) 100%)"></div>
     <div class="container" style="position:relative;z-index:2;text-align:center;padding:80px 20px">
-      <h2 style="font-size:clamp(28px,4.5vw,44px);font-weight:800;color:#fff;margin-bottom:20px;line-height:1.15">Clean Carpets. <span style="color:var(--accent-light)">Healthy Home.</span><br>Happy Family.</h2>
+      <h2 style="font-size:clamp(28px,4.5vw,44px);font-weight:800;color:#fff;margin-bottom:20px;line-height:1.15"><span data-lang="en">Clean Carpets. <span style="color:var(--accent-light)">Healthy Home.</span><br>Happy Family.</span><span data-lang="pt">Carpetes Limpos. <span style="color:var(--accent-light)">Casa Saudável.</span><br>Família Feliz.</span><span data-lang="es">Alfombras Limpias. <span style="color:var(--accent-light)">Hogar Saludable.</span><br>Familia Feliz.</span></h2>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px">
         <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.3);border-radius:50%;font-size:18px">🦠</span> 99.9% Bacteria Killed</div>
         <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.3);border-radius:50%;font-size:18px">🌿</span> Eco-Friendly Products</div>
         <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.3);border-radius:50%;font-size:18px">⚡</span> Same-Day Available</div>
       </div>
-      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!" style="display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#000;padding:18px 44px;border-radius:60px;font-size:17px;font-weight:800;text-decoration:none;transition:.3s;box-shadow:0 8px 32px var(--accent-glow)">
-        Get My FREE Room Cleaning →
+      <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20book%20professional%20carpet%20cleaning!" style="display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#000;padding:18px 44px;border-radius:60px;font-size:17px;font-weight:800;text-decoration:none;transition:.3s;box-shadow:0 8px 32px var(--accent-glow)" data-wa-link data-wa-type="hero">
+        <span data-lang="en">Book Carpet Cleaning →</span><span data-lang="pt">Agendar Limpeza →</span><span data-lang="es">Reservar Limpieza →</span>
       </a>
     </div>
   </section>
@@ -778,11 +1015,11 @@
   <!-- ===== FINAL CTA ===== -->
   <section class="final-cta">
     <div class="container">
-      <h2>Your Carpets Deserve Better.<br>Your Family Deserves Better.</h2>
-      <p>Get your 1st room cleaned FREE with whole-house booking. No risk. Just clean carpets.</p>
-      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!" class="final-btn">
+      <h2><span data-lang="en">Your Carpets Deserve Better.<br>Your Family Deserves Better.</span><span data-lang="pt">Seus Carpetes Merecem Mais.<br>Sua Família Merece Mais.</span><span data-lang="es">Tus Alfombras Merecen Más.<br>Tu Familia Merece Más.</span></h2>
+      <p><span data-lang="en">Professional carpet cleaning starting at $45/room. No risk. Just clean carpets.</span><span data-lang="pt">Limpeza profissional de carpete a partir de $45/quarto. Sem risco. Apenas carpetes limpos.</span><span data-lang="es">Limpieza profesional de alfombras desde $45/habitación. Sin riesgo. Solo alfombras limpias.</span></p>
+      <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20book%20professional%20carpet%20cleaning!" class="final-btn" data-wa-link data-wa-type="hero">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Get My FREE Room Cleaning
+        <span data-lang="en">Book Carpet Cleaning Now</span><span data-lang="pt">Agendar Limpeza Agora</span><span data-lang="es">Reservar Limpieza Ahora</span>
       </a>
     </div>
   </section>
@@ -791,7 +1028,7 @@
   <footer class="footer">
     <div class="container">
       <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" style="height:50px;width:auto;margin-bottom:10px;display:block;background:#fff;border-radius:8px;padding:4px;">
-      <p>Professional Carpet Cleaning — Orlando, FL</p>
+      <p><span data-lang="en">Professional Carpet Cleaning — Orlando, FL</span><span data-lang="pt">Limpeza Profissional de Carpete — Orlando, FL</span><span data-lang="es">Limpieza Profesional de Alfombras — Orlando, FL</span></p>
       <p style="margin-top:6px"><a href="https://wa.me/14077878590">WhatsApp (407) 787-8590</a></p>
       <p class="dev">Developed by A7x Systems IA · © 2026 A7 Cleaning Services</p>
     </div>
@@ -805,24 +1042,97 @@
 
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta">
-    <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!">🎁 Get My FREE Room Cleaning</a>
+    <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20the%203%20Rooms%20for%20$107%20deal!" data-wa-link data-wa-type="promo"><span data-lang="en">🎉 3 Rooms for $107 — Book Now</span><span data-lang="pt">🎉 3 Quartos por $107 — Agendar</span><span data-lang="es">🎉 3 Habitaciones por $107 — Reservar</span></a>
   </div>
 
   <!-- EXIT POPUP -->
   <div class="exit-popup" id="exitPopup">
     <div class="exit-box">
-      <h3>Wait! Your FREE Room<br>Is Expiring Soon 🎁</h3>
-      <p>Don't miss your free carpet cleaning. Book now and your 1st room is completely FREE with whole-house service.</p>
-      <a href="https://wa.me/14077878590?text=Hi!%20I%20almost%20left%20but%20I%20want%20my%20FREE%20room!" class="exit-cta">
+      <h3><span data-lang="en">Wait! Don't Miss<br>3 Rooms for $107 🎉</span><span data-lang="pt">Espere! Não Perca<br>3 Quartos por $107 🎉</span><span data-lang="es">¡Espera! No Te Pierdas<br>3 Habitaciones por $107 🎉</span></h3>
+      <p><span data-lang="en">Orlando's most competitive carpet cleaning deal. Professional service starting at $45/room.</span><span data-lang="pt">A oferta mais competitiva de limpeza de carpete em Orlando. Serviço profissional a partir de $45/quarto.</span><span data-lang="es">La oferta más competitiva de limpieza de alfombras en Orlando. Servicio profesional desde $45/habitación.</span></p>
+      <a href="https://wa.me/14077878590?text=Hi!%20I%20almost%20left%20but%20I%20want%20to%20book%20carpet%20cleaning!" class="exit-cta" data-wa-link data-wa-type="exit">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Claim My FREE Room Now
+        <span data-lang="en">Book Now via WhatsApp</span><span data-lang="pt">Agendar via WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span>
       </a>
-      <button class="exit-dismiss" id="exitDismiss">No thanks, I don't want a free cleaning</button>
+      <button class="exit-dismiss" id="exitDismiss"><span data-lang="en">No thanks, not right now</span><span data-lang="pt">Não, obrigado, agora não</span><span data-lang="es">No gracias, ahora no</span></button>
+    </div>
+  </div>
+
+  <!-- ===== PROMO POPUP ===== -->
+  <div class="promo-popup" id="promoPopup">
+    <div class="promo-box">
+      <button class="promo-close" id="promoClose">&times;</button>
+      <div class="promo-badge"><span data-lang="en">🎉 LIMITED OFFER</span><span data-lang="pt">🎉 OFERTA LIMITADA</span><span data-lang="es">🎉 OFERTA LIMITADA</span></div>
+      <h3><span data-lang="en">3 Regular Rooms for <span class="promo-price">$107</span></span><span data-lang="pt">3 Quartos Regulares por <span class="promo-price">$107</span></span><span data-lang="es">3 Habitaciones Regulares por <span class="promo-price">$107</span></span></h3>
+      <p class="promo-was"><span data-lang="en">Regular: $135 — <strong>Save $28!</strong></span><span data-lang="pt">Regular: $135 — <strong>Economize $28!</strong></span><span data-lang="es">Regular: $135 — <strong>¡Ahorra $28!</strong></span></p>
+      <div class="promo-extras">
+        <div><span data-lang="en">+ Additional Room: <strong>$35</strong></span><span data-lang="pt">+ Quarto Adicional: <strong>$35</strong></span><span data-lang="es">+ Habitación Adicional: <strong>$35</strong></span></div>
+        <div><span data-lang="en">+ Master Suite: <strong>$45</strong> <s style="color:var(--gray-500)">$65</s></span><span data-lang="pt">+ Suíte Master: <strong>$45</strong> <s style="color:var(--gray-500)">$65</s></span><span data-lang="es">+ Suite Principal: <strong>$45</strong> <s style="color:var(--gray-500)">$65</s></span></div>
+        <div><span data-lang="en">+ Pet Treatment: <strong>$25/room</strong></span><span data-lang="pt">+ Tratamento Pet: <strong>$25/quarto</strong></span><span data-lang="es">+ Tratamiento Mascotas: <strong>$25/hab.</strong></span></div>
+      </div>
+      <div class="promo-urgency">
+        <span class="pulse-dot"></span>
+        <span data-lang="en">Only 5 spots left this week</span><span data-lang="pt">Apenas 5 vagas esta semana</span><span data-lang="es">Solo 5 lugares esta semana</span>
+      </div>
+      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20the%203%20Rooms%20for%20$107%20deal!" class="promo-cta" data-wa-link data-wa-type="promo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-lang="en">Book 3 Rooms for $107 →</span><span data-lang="pt">Agendar 3 Quartos por $107 →</span><span data-lang="es">Reservar 3 Habitaciones por $107 →</span>
+      </a>
+      <button class="promo-dismiss" id="promoDismiss"><span data-lang="en">No thanks, I'll pay full price</span><span data-lang="pt">Não, obrigado, prefiro pagar preço cheio</span><span data-lang="es">No gracias, prefiero pagar precio completo</span></button>
     </div>
   </div>
 
   <script>
   (function(){
+    /* === LANGUAGE SWITCHER === */
+    var waMessages = {
+      hero: {
+        en: "Hi! I'd like to book professional carpet cleaning!",
+        pt: "Olá! Gostaria de agendar limpeza profissional de carpete!",
+        es: "¡Hola! Me gustaría reservar limpieza profesional de alfombras!"
+      },
+      promo: {
+        en: "Hi! I want the 3 Rooms for $107 deal!",
+        pt: "Olá! Quero a promoção de 3 quartos por $107!",
+        es: "¡Hola! Quiero la oferta de 3 habitaciones por $107!"
+      },
+      pet: {
+        en: "Hi! I need carpet cleaning with pet treatment!",
+        pt: "Olá! Preciso de limpeza de carpete com tratamento para pets!",
+        es: "¡Hola! Necesito limpieza de alfombras con tratamiento para mascotas!"
+      },
+      vacation: {
+        en: "Hi! I'm interested in vacation rental carpet cleaning plans!",
+        pt: "Olá! Tenho interesse nos planos de limpeza para aluguel de temporada!",
+        es: "¡Hola! Me interesan los planes de limpieza para alquiler vacacional!"
+      },
+      exit: {
+        en: "Hi! I almost left but I want to book carpet cleaning!",
+        pt: "Olá! Quase saí mas quero agendar limpeza de carpete!",
+        es: "¡Hola! Casi me voy pero quiero reservar limpieza de alfombras!"
+      },
+      pricing: {
+        en: "Hi! I'd like to book carpet cleaning. Starting at $45/room!",
+        pt: "Olá! Gostaria de agendar limpeza de carpete. A partir de $45/quarto!",
+        es: "¡Hola! Me gustaría reservar limpieza de alfombras. ¡Desde $45/habitación!"
+      }
+    };
+
+    window.setLanguage = function(lang){
+      document.body.className = document.body.className.replace(/lang-active-\w+/, 'lang-active-' + lang);
+      localStorage.setItem('a7carpet_lang', lang);
+      document.querySelectorAll('.lang-sw button').forEach(function(b){
+        b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang);
+      });
+      document.querySelectorAll('[data-wa-link]').forEach(function(el){
+        var type = el.getAttribute('data-wa-type') || 'hero';
+        var msg = waMessages[type] && waMessages[type][lang] ? waMessages[type][lang] : waMessages.hero[lang];
+        el.href = 'https://wa.me/14077878590?text=' + encodeURIComponent(msg);
+      });
+    };
+    var savedLang = localStorage.getItem('a7carpet_lang');
+    if (savedLang && savedLang !== 'en') setLanguage(savedLang);
+
     /* === MEMBERSHIP MODAL TOGGLE === */
     window.togglePlan = function(btn, type){
       btn.parentElement.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
@@ -874,12 +1184,14 @@
     var spots = sessionStorage.getItem('a7carpet_spots');
     if (!spots) { spots = 9; sessionStorage.setItem('a7carpet_spots', spots); }
     document.getElementById('spotsLeft').textContent = spots;
+    document.querySelectorAll('.spots-mirror').forEach(function(el){ el.textContent = spots; });
     setInterval(function(){
       var s = parseInt(sessionStorage.getItem('a7carpet_spots'));
       if (s > 3 && Math.random() < .15) {
         s--;
         sessionStorage.setItem('a7carpet_spots', s);
         document.getElementById('spotsLeft').textContent = s;
+        document.querySelectorAll('.spots-mirror').forEach(function(el){ el.textContent = s; });
       }
     }, 45000);
 
@@ -937,9 +1249,14 @@
       var valid = (num >= 32801 && num <= 32899) || (num >= 34701 && num <= 34799) ||
                   (num >= 34741 && num <= 34786) || num === 33896 || num === 33897 ||
                   num === 33848 || (num >= 32701 && num <= 32799) || (num >= 34744 && num <= 34747);
-      result.textContent = valid
-        ? '🎉 Great news! We service your area. Book your FREE room cleaning today!'
-        : '⚠️ We don\'t service this area yet, but we\'re expanding! Text us to join the waitlist.';
+      var lang = localStorage.getItem('a7carpet_lang') || 'en';
+      var msgs = {
+        en: { yes: '🎉 Great news! We service your area. Book your carpet cleaning today!', no: "⚠️ We don't service this area yet, but we're expanding! Text us to join the waitlist." },
+        pt: { yes: '🎉 Ótima notícia! Atendemos sua região. Agende sua limpeza de carpete hoje!', no: '⚠️ Ainda não atendemos esta área, mas estamos expandindo! Envie uma mensagem para entrar na lista de espera.' },
+        es: { yes: '🎉 ¡Buenas noticias! Cubrimos tu área. ¡Reserva tu limpieza de alfombras hoy!', no: '⚠️ Aún no cubrimos esta área, ¡pero estamos expandiéndonos! Envíanos un mensaje para la lista de espera.' }
+      };
+      var m = msgs[lang] || msgs.en;
+      result.textContent = valid ? m.yes : m.no;
       result.className = 'zip-result ' + (valid ? 'yes' : 'no');
     };
 
@@ -947,6 +1264,7 @@
     var toasts = [
       {name:'Jennifer W.', init:'JW', time:'2 min ago'},
       {name:'Michael T.', init:'MT', time:'5 min ago'},
+      {name:'Fernanda S.', init:'FS', time:'7 min ago'},
       {name:'Amanda R.', init:'AR', time:'8 min ago'},
       {name:'Robert S.', init:'RS', time:'12 min ago'},
       {name:'Carlos M.', init:'CM', time:'15 min ago'},
@@ -971,16 +1289,17 @@
 
     /* === EXIT INTENT === */
     var exitPopup = document.getElementById('exitPopup');
+    var promoPopup = document.getElementById('promoPopup');
     var exitShown = false;
     document.addEventListener('mouseleave', function(e){
-      if (e.clientY < 5 && !exitShown && !sessionStorage.getItem('a7carpet_exit')) {
+      if (e.clientY < 5 && !exitShown && !sessionStorage.getItem('a7carpet_exit') && !promoPopup.classList.contains('show')) {
         exitShown = true;
         exitPopup.classList.add('show');
         sessionStorage.setItem('a7carpet_exit', '1');
       }
     });
     setTimeout(function(){
-      if (!exitShown && !sessionStorage.getItem('a7carpet_exit')) {
+      if (!exitShown && !sessionStorage.getItem('a7carpet_exit') && !promoPopup.classList.contains('show')) {
         exitShown = true;
         exitPopup.classList.add('show');
         sessionStorage.setItem('a7carpet_exit', '1');
@@ -993,6 +1312,23 @@
       if (e.target === exitPopup) exitPopup.classList.remove('show');
     });
 
+    /* === PROMO POPUP (30s) === */
+    setTimeout(function(){
+      if (!sessionStorage.getItem('a7carpet_promo') && !exitPopup.classList.contains('show')) {
+        promoPopup.classList.add('show');
+        sessionStorage.setItem('a7carpet_promo', '1');
+      }
+    }, 30000);
+    document.getElementById('promoClose').addEventListener('click', function(){
+      promoPopup.classList.remove('show');
+    });
+    document.getElementById('promoDismiss').addEventListener('click', function(){
+      promoPopup.classList.remove('show');
+    });
+    promoPopup.addEventListener('click', function(e){
+      if (e.target === promoPopup) promoPopup.classList.remove('show');
+    });
+
     /* === SCROLL ANIMATIONS === */
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
@@ -1003,7 +1339,7 @@
         }
       });
     }, {threshold: .1, rootMargin: '0px 0px -40px 0px'});
-    document.querySelectorAll('.pain-card,.step,.value-card,.review-card,.compare-col,.faq-item,.member-card,.guarantee-terms,.stat-item').forEach(function(el){
+    document.querySelectorAll('.pain-card,.step,.review-card,.compare-col,.faq-item,.member-card,.guarantee-terms,.stat-item,.pet-pain-card,.pet-solution,.vacation-tier,.vacation-calc,.pricing-row,.pricing-callout,.trust-badge-item').forEach(function(el){
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity .6s ease, transform .6s ease';
