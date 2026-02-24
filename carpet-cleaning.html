@@ -367,6 +367,12 @@
     .vacation-calc td{color:rgba(255,255,255,.8)}
     .vacation-calc .savings{color:#10b981;font-weight:700}
 
+    /* === SERVICES NAV === */
+    .services-nav{background:rgba(10,6,24,.98);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .services-nav-inner{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+    .services-nav a{color:rgba(255,255,255,.5);font-size:12px;font-weight:600;text-decoration:none;transition:.2s;display:flex;align-items:center;gap:4px}
+    .services-nav a:hover,.services-nav a.active{color:var(--accent-light)}
+
     /* === PROMO POPUP === */
     .promo-popup{position:fixed;inset:0;z-index:9997;background:rgba(10,6,24,.85);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;backdrop-filter:blur(4px)}
     .promo-popup.show{opacity:1;visibility:visible}
@@ -441,6 +447,16 @@
       <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20book%20professional%20carpet%20cleaning!" class="header-cta" data-wa-link data-wa-type="hero"><span data-lang="en">Book Now</span><span data-lang="pt">Agendar</span><span data-lang="es">Reservar</span></a>
     </div>
   </header>
+
+  <!-- SERVICES NAV -->
+  <nav class="services-nav">
+    <div class="services-nav-inner">
+      <a href="carpet-cleaning.html" class="active">🏠 Carpet</a>
+      <a href="upholstery-cleaning.html">🛋️ Upholstery</a>
+      <a href="shoe-cleaning.html">👟 Shoes</a>
+      <a href="vacation-rental.html">🌴 Vacation Rental</a>
+    </div>
+  </nav>
 
   <!-- URGENCY BAR -->
   <div class="urgency-bar">

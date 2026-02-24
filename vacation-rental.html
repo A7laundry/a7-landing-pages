@@ -416,6 +416,12 @@
     .rv { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .rv.visible { opacity: 1; transform: translateY(0); }
 
+    /* === SERVICES NAV === */
+    .services-nav{background:rgba(10,6,24,.98);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .services-nav-inner{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+    .services-nav a{color:rgba(255,255,255,.5);font-size:12px;font-weight:600;text-decoration:none;transition:.2s;display:flex;align-items:center;gap:4px}
+    .services-nav a:hover,.services-nav a.active{color:#f59e0b}
+
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px) {
       .hero h1 { font-size: clamp(26px,6vw,36px); }
@@ -458,6 +464,16 @@
     <a href="https://wa.me/14077878590?text=Hi!%20I'm%20interested%20in%20vacation%20rental%20cleaning%20services." class="header-cta">Get FREE Cleaning</a>
   </div>
 </header>
+
+<!-- SERVICES NAV -->
+<nav class="services-nav">
+  <div class="services-nav-inner">
+    <a href="carpet-cleaning.html">🏠 Carpet</a>
+    <a href="upholstery-cleaning.html">🛋️ Upholstery</a>
+    <a href="shoe-cleaning.html">👟 Shoes</a>
+    <a href="vacation-rental.html" class="active">🌴 Vacation Rental</a>
+  </div>
+</nav>
 
 <!-- 4. URGENCY BAR -->
 <div class="urgency-bar">
