@@ -60,7 +60,7 @@
     /* === HEADER WITH LOGO === */
     .site-header{position:sticky;top:0;z-index:100;background:rgba(10,6,24,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 0}
     .site-header .container{display:flex;align-items:center;justify-content:space-between}
-    .site-header .logo-img{height:44px;width:auto}
+    .site-header .logo-img{height:44px;width:auto;display:block}
     .header-cta{background:var(--accent);color:#000;border:none;padding:10px 24px;border-radius:50px;font-weight:700;font-size:13px;cursor:pointer;transition:.3s;text-decoration:none;white-space:nowrap}
     .header-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
 
@@ -299,6 +299,7 @@
       .sticky-cta{display:block}
       .live-viewers{bottom:70px}
       .toast{left:10px;right:10px;max-width:none;bottom:70px}
+      .lifestyle>div{grid-template-columns:1fr !important}
     }
     @media(max-width:480px){
       .hero h1{font-size:clamp(28px,8vw,38px)}
@@ -331,7 +332,7 @@
   <!-- HEADER WITH LOGO -->
   <header class="site-header">
     <div class="container">
-      <img src="a7-logo.jpg" alt="A7 Cleaning Service Premium" class="logo-img">
+      <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" class="logo-img">
       <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!" class="header-cta">Get FREE Room</a>
     </div>
   </header>
@@ -396,6 +397,30 @@
         <div class="pain-card"><div class="icon">🤧</div><h3>Allergy Trigger</h3><p>Dust mites, pet dander, pollen — all trapped deep in carpet fibers. Vacuuming only removes about 50% of contaminants.</p></div>
         <div class="pain-card"><div class="icon">🐾</div><h3>Pet Stains & Odors</h3><p>That "clean" smell? It's masking urine crystals that reactivate with humidity. They never truly go away without professional extraction.</p></div>
         <div class="pain-card"><div class="icon">👶</div><h3>Kids on the Floor</h3><p>Your toddler plays on a surface dirtier than your kitchen counter. Professional cleaning isn't a luxury — it's a necessity.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIFESTYLE VISUAL ===== -->
+  <section class="lifestyle" style="padding:0;overflow:hidden">
+    <div style="display:grid;grid-template-columns:1fr 1fr;min-height:500px">
+      <div style="position:relative;overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=85&auto=format" alt="Beautiful clean home in Orlando" style="width:100%;height:100%;object-fit:cover;transition:transform 8s ease;display:block" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 48px;background:var(--bg-dark)">
+        <span class="section-tag" style="background:rgba(255,255,255,.08);color:var(--accent-light);align-self:flex-start">ORLANDO'S CHOICE</span>
+        <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;color:#fff;margin:16px 0;line-height:1.2">"The Best Decision We Made for Our Home"</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px">Orlando families trust A7 because we deliver results, not excuses. Our hot-water extraction doesn't just clean — it <strong style="color:var(--accent-light)">eliminates 99.9% of bacteria</strong> and extends your carpet life by up to 10 years.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
+            <div style="font-size:32px;font-weight:900;color:var(--accent-light)">2,000+</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:4px">Homes Cleaned</div>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
+            <div style="font-size:32px;font-weight:900;color:var(--accent-light)">4.9★</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:4px">Google Rating</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -518,6 +543,35 @@
     </div>
   </section>
 
+  <!-- ===== VISUAL GALLERY ===== -->
+  <section style="padding:80px 0;background:var(--off-white);text-align:center">
+    <div class="container">
+      <span class="section-tag">REAL RESULTS</span>
+      <h2 class="section-title">See the <strong>A7 Difference</strong></h2>
+      <p class="section-sub">Real transformations from Orlando homes. No filters, no tricks.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto">
+        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80&auto=format" alt="Before carpet cleaning" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+          <span style="position:absolute;top:12px;left:12px;background:rgba(239,68,68,.9);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">BEFORE</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Living Room Carpet</div><div style="font-size:12px;color:rgba(255,255,255,.6)">Winter Park, FL</div></div>
+        </div>
+        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format" alt="After carpet cleaning" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+          <span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#000;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">AFTER</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Same Room, New Life</div><div style="font-size:12px;color:rgba(255,255,255,.6)">99.9% bacteria eliminated</div></div>
+        </div>
+        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80&auto=format" alt="Happy family on clean carpet" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+          <span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#000;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">RESULT</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Safe for the Whole Family</div><div style="font-size:12px;color:rgba(255,255,255,.6)">Kids &amp; pets approved</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== GUARANTEE ===== -->
   <section class="guarantee">
     <div class="container">
@@ -608,8 +662,116 @@
           <div class="member-perk"><span class="mp-i">✓</span> 25% off every clean</div>
           <div class="member-perk"><span class="mp-i">✓</span> Free spot treatments</div>
         </div>
-        <a href="https://wa.me/14077878590?text=Hi!%20I'm%20interested%20in%20the%20A7%20membership%20program." class="member-cta">Learn About Membership →</a>
+        <button onclick="document.getElementById('memberModal').classList.add('show')" class="member-cta" style="border:none;cursor:pointer;font-family:inherit">View Membership Plans →</button>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERSHIP MODAL ===== -->
+  <div id="memberModal" style="position:fixed;inset:0;z-index:10000;background:rgba(10,6,24,.85);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;backdrop-filter:blur(8px)" onclick="if(event.target===this)this.classList.remove('show')">
+    <style>
+      #memberModal.show{opacity:1;visibility:visible}
+      #memberModal .modal-box{transform:scale(.9);transition:.4s}
+      #memberModal.show .modal-box{transform:scale(1)}
+      .plan-toggle{display:flex;background:rgba(255,255,255,.1);border-radius:50px;padding:4px;gap:4px;margin:0 auto 32px;width:fit-content}
+      .plan-toggle button{padding:10px 28px;border:none;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;background:transparent;color:var(--gray-500)}
+      .plan-toggle button.active{background:var(--accent);color:#000}
+      .plan-toggle .save-badge{display:inline-block;background:#10b981;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px;margin-left:6px;vertical-align:middle}
+      .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+      .plan-card{background:#fff;border:2px solid var(--gray-200);border-radius:20px;padding:32px 24px;text-align:center;position:relative;transition:.3s}
+      .plan-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+      .plan-card.popular{border-color:var(--accent);transform:scale(1.05)}
+      .plan-card.popular:hover{transform:scale(1.05) translateY(-4px)}
+      .popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 20px;border-radius:50px;font-size:11px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+      .plan-card h4{font-size:20px;font-weight:800;color:var(--gray-900);margin-bottom:4px}
+      .plan-price{font-size:42px;font-weight:900;color:var(--accent-dark);letter-spacing:-2px;margin:12px 0 4px}
+      .plan-price small{font-size:16px;font-weight:600;color:var(--gray-500)}
+      .plan-period{font-size:13px;color:var(--gray-500);margin-bottom:20px}
+      .plan-features{list-style:none;text-align:left;margin-bottom:24px}
+      .plan-features li{padding:8px 0;font-size:13px;color:var(--gray-700);display:flex;align-items:flex-start;gap:8px;border-bottom:1px solid var(--gray-100)}
+      .plan-features li:last-child{border-bottom:none}
+      .plan-features .pf-check{color:var(--accent);font-weight:700;flex-shrink:0}
+      .plan-btn{display:block;width:100%;padding:14px;border:none;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;text-decoration:none;text-align:center}
+      .plan-btn.primary{background:var(--accent);color:#000}
+      .plan-btn.primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+      .plan-btn.outline{background:transparent;border:2px solid var(--gray-200);color:var(--gray-700)}
+      .plan-btn.outline:hover{border-color:var(--accent);color:var(--accent-dark)}
+      @media(max-width:768px){.plans-grid{grid-template-columns:1fr;max-width:400px}.plan-card.popular{transform:none}.plan-card.popular:hover{transform:translateY(-4px)}}
+    </style>
+    <div class="modal-box" style="background:var(--off-white);border-radius:24px;max-width:980px;width:95%;max-height:90vh;overflow-y:auto;padding:48px 36px;position:relative">
+      <button onclick="document.getElementById('memberModal').classList.remove('show')" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--gray-500);line-height:1">&times;</button>
+      <div style="text-align:center;margin-bottom:12px">
+        <span class="section-tag">MEMBERSHIP PLANS</span>
+        <h2 style="font-size:clamp(24px,3.5vw,36px);font-weight:800;color:var(--gray-900);margin:12px 0 8px">Carpet Cleaning Plans</h2>
+        <p style="font-size:15px;color:var(--gray-500);max-width:500px;margin:0 auto 24px">Choose the perfect plan for your home. Cancel anytime.</p>
+      </div>
+      <div class="plan-toggle">
+        <button class="active" onclick="togglePlan(this,'monthly')">Monthly</button>
+        <button onclick="togglePlan(this,'annual')">Annual <span class="save-badge">Save 2 months</span></button>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <h4>Essential</h4>
+          <div class="plan-price" data-monthly="79" data-annual="790"><small>$</small>79<small>/mo</small></div>
+          <div class="plan-period" data-monthly="Billed monthly" data-annual="$790/year — save $158">Billed monthly</div>
+          <ul class="plan-features">
+            <li><span class="pf-check">✓</span> 1 room quarterly (4x/year)</li>
+            <li><span class="pf-check">✓</span> Pre-treatment included</li>
+            <li><span class="pf-check">✓</span> Hot water extraction</li>
+            <li><span class="pf-check">✓</span> Deodorizer application</li>
+            <li><span class="pf-check">✓</span> Priority scheduling</li>
+          </ul>
+          <a href="#stripe-carpet-essential" class="plan-btn outline">Subscribe Now</a>
+        </div>
+        <div class="plan-card popular">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h4>Home</h4>
+          <div class="plan-price" data-monthly="149" data-annual="1490"><small>$</small>149<small>/mo</small></div>
+          <div class="plan-period" data-monthly="Billed monthly" data-annual="$1,490/year — save $298">Billed monthly</div>
+          <ul class="plan-features">
+            <li><span class="pf-check">✓</span> 3 rooms quarterly (4x/year)</li>
+            <li><span class="pf-check">✓</span> Spot treatment between cleans</li>
+            <li><span class="pf-check">✓</span> Hot water extraction</li>
+            <li><span class="pf-check">✓</span> Deodorizer + sanitizer</li>
+            <li><span class="pf-check">✓</span> Priority scheduling</li>
+            <li><span class="pf-check">✓</span> Speed-dry fan service</li>
+          </ul>
+          <a href="#stripe-carpet-home" class="plan-btn primary">Subscribe Now</a>
+        </div>
+        <div class="plan-card">
+          <h4>Premium</h4>
+          <div class="plan-price" data-monthly="249" data-annual="2490"><small>$</small>249<small>/mo</small></div>
+          <div class="plan-period" data-monthly="Billed monthly" data-annual="$2,490/year — save $498">Billed monthly</div>
+          <ul class="plan-features">
+            <li><span class="pf-check">✓</span> Whole house quarterly (4x/year)</li>
+            <li><span class="pf-check">✓</span> Monthly spot treatment</li>
+            <li><span class="pf-check">✓</span> Hot water extraction</li>
+            <li><span class="pf-check">✓</span> Full deodorizer + sanitizer</li>
+            <li><span class="pf-check">✓</span> Priority scheduling</li>
+            <li><span class="pf-check">✓</span> Dedicated cleaning team</li>
+            <li><span class="pf-check">✓</span> Furniture moving included</li>
+          </ul>
+          <a href="#stripe-carpet-premium" class="plan-btn outline">Subscribe Now</a>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--gray-500);margin-top:24px">All plans include 30-day satisfaction guarantee. Cancel anytime. Stripe secure checkout.</p>
+    </div>
+  </div>
+
+  <!-- ===== IMPACT BANNER ===== -->
+  <section style="position:relative;min-height:400px;display:flex;align-items:center;overflow:hidden">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=85&auto=format" alt="Beautiful Orlando home interior" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,6,24,.85) 0%,rgba(245,158,11,.3) 50%,rgba(10,6,24,.9) 100%)"></div>
+    <div class="container" style="position:relative;z-index:2;text-align:center;padding:80px 20px">
+      <h2 style="font-size:clamp(28px,4.5vw,44px);font-weight:800;color:#fff;margin-bottom:20px;line-height:1.15">Clean Carpets. <span style="color:var(--accent-light)">Healthy Home.</span><br>Happy Family.</h2>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px">
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.3);border-radius:50%;font-size:18px">🦠</span> 99.9% Bacteria Killed</div>
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.3);border-radius:50%;font-size:18px">🌿</span> Eco-Friendly Products</div>
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.3);border-radius:50%;font-size:18px">⚡</span> Same-Day Available</div>
+      </div>
+      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20my%20FREE%20room%20carpet%20cleaning!" style="display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#000;padding:18px 44px;border-radius:60px;font-size:17px;font-weight:800;text-decoration:none;transition:.3s;box-shadow:0 8px 32px var(--accent-glow)">
+        Get My FREE Room Cleaning →
+      </a>
     </div>
   </section>
 
@@ -628,7 +790,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <img src="a7-logo.jpg" alt="A7 Cleaning Service Premium" style="height:50px;width:auto;margin-bottom:10px;filter:brightness(0) invert(1);opacity:.8;">
+      <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" style="height:50px;width:auto;margin-bottom:10px;display:block;background:#fff;border-radius:8px;padding:4px;">
       <p>Professional Carpet Cleaning — Orlando, FL</p>
       <p style="margin-top:6px"><a href="https://wa.me/14077878590">WhatsApp (407) 787-8590</a></p>
       <p class="dev">Developed by A7x Systems IA · © 2026 A7 Cleaning Services</p>
@@ -661,6 +823,26 @@
 
   <script>
   (function(){
+    /* === MEMBERSHIP MODAL TOGGLE === */
+    window.togglePlan = function(btn, type){
+      btn.parentElement.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.plan-price').forEach(function(el){
+        var val = el.dataset[type];
+        if (val) {
+          if (type === 'annual') {
+            el.innerHTML = '<small>$</small>' + parseInt(val).toLocaleString() + '<small>/yr</small>';
+          } else {
+            el.innerHTML = '<small>$</small>' + val + '<small>/mo</small>';
+          }
+        }
+      });
+      document.querySelectorAll('.plan-period').forEach(function(el){
+        var text = el.dataset[type];
+        if (text) el.textContent = text;
+      });
+    };
+
     /* === SCROLL PROGRESS === */
     var bar = document.getElementById('scrollBar');
     window.addEventListener('scroll', function(){

@@ -97,7 +97,7 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .site-header .logo-img {
-      height: 44px; width: auto;
+      height: 44px; width: auto; display: block;
     }
     .header-cta {
       background: var(--accent); color: var(--white); border: none;
@@ -424,6 +424,7 @@
       .value-box { padding: 28px 20px; }
       .guarantee-box { padding: 32px 20px; }
       .exit-box { margin: 20px; padding: 36px 24px; }
+      .lifestyle>div { grid-template-columns: 1fr !important; }
     }
     @media(max-width:480px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -453,7 +454,7 @@
 <!-- HEADER WITH LOGO -->
 <header class="site-header">
   <div class="container">
-    <img src="a7-logo.jpg" alt="A7 Cleaning Service Premium" class="logo-img">
+    <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" class="logo-img">
     <a href="https://wa.me/14077878590?text=Hi!%20I'm%20interested%20in%20vacation%20rental%20cleaning%20services." class="header-cta">Get FREE Cleaning</a>
   </div>
 </header>
@@ -527,6 +528,30 @@
         <div class="pain-icon">&#x1F624;</div>
         <h3>Guest Complaints</h3>
         <p>Hair in the shower, stained sheets, dusty surfaces &mdash; these complaints are 100% preventable with the right cleaning partner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE VISUAL -->
+<section class="lifestyle" style="padding:0;overflow:hidden">
+  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:500px">
+    <div style="position:relative;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85&auto=format" alt="Luxury vacation rental in Orlando" style="width:100%;height:100%;object-fit:cover;transition:transform 8s ease;display:block" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 48px;background:var(--bg-dark)">
+      <div class="section-tag" style="align-self:flex-start">ORLANDO'S #1 CHOICE</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;color:var(--white);margin:16px 0;line-height:1.2">"A7 Changed My Hosting Business Forever"</h2>
+      <p style="font-size:16px;color:var(--gray-200);line-height:1.7;margin-bottom:24px">Orlando vacation rental hosts trust A7 because we deliver <strong style="color:var(--accent-light)">5-star cleanliness, every single time</strong>. Your guests walk into a property that feels brand new — and your reviews reflect it.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px;text-align:center">
+          <div style="font-size:32px;font-weight:900;color:var(--accent-light)">500+</div>
+          <div style="font-size:13px;color:var(--gray-500);margin-top:4px">Properties Cleaned</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px;text-align:center">
+          <div style="font-size:32px;font-weight:900;color:var(--accent-light)">2hr</div>
+          <div style="font-size:13px;color:var(--gray-500);margin-top:4px">Avg Turnaround</div>
+        </div>
       </div>
     </div>
   </div>
@@ -671,6 +696,35 @@
   </div>
 </section>
 
+<!-- VISUAL GALLERY -->
+<section style="padding:clamp(60px,10vw,100px) 20px;text-align:center;background:linear-gradient(180deg,var(--bg-dark),rgba(5,150,105,.04),var(--bg-dark))">
+  <div class="container">
+    <div class="section-tag">REAL RESULTS</div>
+    <h2 class="section-title">See the <strong style="color:var(--accent-light)">A7 Difference</strong></h2>
+    <p class="section-sub">Real vacation rental transformations in Orlando.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto">
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format" alt="Vacation rental before cleaning" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+        <span style="position:absolute;top:12px;left:12px;background:rgba(239,68,68,.9);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">BEFORE</span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">3BR Vacation Home</div><div style="font-size:12px;color:rgba(255,255,255,.6)">After guest checkout</div></div>
+      </div>
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format" alt="Vacation rental after cleaning" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+        <span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">AFTER</span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">5-Star Ready</div><div style="font-size:12px;color:rgba(255,255,255,.6)">Photo verified &amp; confirmed</div></div>
+      </div>
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format" alt="Happy guests arriving" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+        <span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">RESULT</span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Guests Love It</div><div style="font-size:12px;color:rgba(255,255,255,.6)">5-star reviews guaranteed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 13. GUARANTEE -->
 <section class="guarantee" id="guarantee">
   <div class="container">
@@ -752,7 +806,7 @@
   </div>
 </section>
 
-<!-- 16. MEMBERSHIP -->
+<!-- 16. SUBSCRIPTION -->
 <section class="membership" id="membership">
   <div class="container">
     <div class="rv">
@@ -762,13 +816,120 @@
     </div>
     <div class="member-box rv">
       <ul class="member-benefits">
-        <li>Priority scheduling &mdash; your cleanings come first</li>
+        <li>Priority scheduling — your cleanings come first</li>
         <li>25% off every single clean</li>
         <li>Dedicated cleaning team assigned to your properties</li>
         <li>Free restocking consultation included</li>
       </ul>
-      <a href="https://wa.me/14077878590?text=Hi!%20I'd%20like%20to%20learn%20about%20the%20A7%20membership%20program." class="btn-primary">Learn About Membership &rarr;</a>
+      <button onclick="document.getElementById('memberModal').classList.add('show')" class="btn-primary" style="border:none;cursor:pointer;font-family:inherit;margin-top:12px">View Membership Plans →</button>
     </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP MODAL -->
+<div id="memberModal" style="position:fixed;inset:0;z-index:10000;background:rgba(10,6,24,.85);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;backdrop-filter:blur(8px)" onclick="if(event.target===this)this.classList.remove('show')">
+  <style>
+    #memberModal.show{opacity:1;visibility:visible}
+    #memberModal .modal-box{transform:scale(.9);transition:.4s}
+    #memberModal.show .modal-box{transform:scale(1)}
+    .plan-toggle{display:flex;background:rgba(5,150,105,.1);border-radius:50px;padding:4px;gap:4px;margin:0 auto 32px;width:fit-content}
+    .plan-toggle button{padding:10px 28px;border:none;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;background:transparent;color:var(--gray-500)}
+    .plan-toggle button.active{background:var(--accent);color:var(--white)}
+    .plan-toggle .save-badge{display:inline-block;background:#fbbf24;color:#000;font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px;margin-left:6px;vertical-align:middle}
+    .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+    .plan-card{background:var(--white);border:2px solid #e5e7eb;border-radius:20px;padding:32px 24px;text-align:center;position:relative;transition:.3s;color:var(--gray-900)}
+    .plan-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+    .plan-card.popular{border-color:var(--accent);transform:scale(1.05)}
+    .plan-card.popular:hover{transform:scale(1.05) translateY(-4px)}
+    .popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--white);padding:4px 20px;border-radius:50px;font-size:11px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+    .plan-card h4{font-size:20px;font-weight:800;margin-bottom:4px}
+    .plan-price{font-size:42px;font-weight:900;color:var(--accent-dark);letter-spacing:-2px;margin:12px 0 4px}
+    .plan-price small{font-size:16px;font-weight:600;color:var(--gray-500)}
+    .plan-period{font-size:13px;color:var(--gray-500);margin-bottom:20px}
+    .plan-features{list-style:none;text-align:left;margin-bottom:24px}
+    .plan-features li{padding:8px 0;font-size:13px;color:var(--gray-700);display:flex;align-items:flex-start;gap:8px;border-bottom:1px solid #f3f4f6}
+    .plan-features li:last-child{border-bottom:none}
+    .plan-features li::before{display:none}
+    .plan-features .pf-check{color:var(--accent);font-weight:700;flex-shrink:0}
+    .plan-btn{display:block;width:100%;padding:14px;border:none;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;text-decoration:none;text-align:center}
+    .plan-btn.primary{background:var(--accent);color:var(--white)}
+    .plan-btn.primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+    .plan-btn.outline{background:transparent;border:2px solid #e5e7eb;color:var(--gray-700)}
+    .plan-btn.outline:hover{border-color:var(--accent);color:var(--accent-dark)}
+    @media(max-width:768px){.plans-grid{grid-template-columns:1fr;max-width:400px}.plan-card.popular{transform:none}.plan-card.popular:hover{transform:translateY(-4px)}}
+  </style>
+  <div class="modal-box" style="background:var(--white);border-radius:24px;max-width:980px;width:95%;max-height:90vh;overflow-y:auto;padding:48px 36px;position:relative">
+    <button onclick="document.getElementById('memberModal').classList.remove('show')" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--gray-500);line-height:1">&times;</button>
+    <div style="text-align:center;margin-bottom:12px">
+      <div class="section-tag" style="background:rgba(5,150,105,.1);color:var(--accent-dark)">MEMBERSHIP PLANS</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3.5vw,36px);font-weight:700;color:var(--gray-900);margin:12px 0 8px">Vacation Rental Plans</h2>
+      <p style="font-size:15px;color:var(--gray-500);max-width:500px;margin:0 auto 24px">Consistent turnovers at a fixed monthly price. Cancel anytime.</p>
+    </div>
+    <div class="plan-toggle">
+      <button class="active" onclick="togglePlan(this,'monthly')">Monthly</button>
+      <button onclick="togglePlan(this,'annual')">Annual <span class="save-badge">Save 2 months</span></button>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <h4>Starter</h4>
+        <div class="plan-price" data-monthly="199" data-annual="1990"><small>$</small>199<small>/mo</small></div>
+        <div class="plan-period" data-monthly="Billed monthly" data-annual="$1,990/year — save $398">Billed monthly</div>
+        <ul class="plan-features">
+          <li><span class="pf-check">✓</span> Up to 4 turnovers/month</li>
+          <li><span class="pf-check">✓</span> Deep clean all rooms</li>
+          <li><span class="pf-check">✓</span> Kitchen &amp; bathroom sanitization</li>
+          <li><span class="pf-check">✓</span> Photo verification report</li>
+          <li><span class="pf-check">✓</span> Same-day availability</li>
+        </ul>
+        <a href="#stripe-vr-starter" class="plan-btn outline">Subscribe Now</a>
+      </div>
+      <div class="plan-card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <h4>Professional</h4>
+        <div class="plan-price" data-monthly="399" data-annual="3990"><small>$</small>399<small>/mo</small></div>
+        <div class="plan-period" data-monthly="Billed monthly" data-annual="$3,990/year — save $798">Billed monthly</div>
+        <ul class="plan-features">
+          <li><span class="pf-check">✓</span> Up to 10 turnovers/month</li>
+          <li><span class="pf-check">✓</span> Deep clean + linen service</li>
+          <li><span class="pf-check">✓</span> Kitchen &amp; bathroom sanitization</li>
+          <li><span class="pf-check">✓</span> Restock essentials checklist</li>
+          <li><span class="pf-check">✓</span> Photo verification report</li>
+          <li><span class="pf-check">✓</span> Priority scheduling</li>
+        </ul>
+        <a href="#stripe-vr-professional" class="plan-btn primary">Subscribe Now</a>
+      </div>
+      <div class="plan-card">
+        <h4>Enterprise</h4>
+        <div class="plan-price" data-monthly="699" data-annual="6990"><small>$</small>699<small>/mo</small></div>
+        <div class="plan-period" data-monthly="Billed monthly" data-annual="$6,990/year — save $1,398">Billed monthly</div>
+        <ul class="plan-features">
+          <li><span class="pf-check">✓</span> Unlimited turnovers</li>
+          <li><span class="pf-check">✓</span> Dedicated cleaning team</li>
+          <li><span class="pf-check">✓</span> Full linen + towel service</li>
+          <li><span class="pf-check">✓</span> Restock &amp; inventory management</li>
+          <li><span class="pf-check">✓</span> Photo verification report</li>
+          <li><span class="pf-check">✓</span> Priority scheduling</li>
+          <li><span class="pf-check">✓</span> Account manager assigned</li>
+        </ul>
+        <a href="#stripe-vr-enterprise" class="plan-btn outline">Subscribe Now</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--gray-500);margin-top:24px">All plans include 30-day satisfaction guarantee. Cancel anytime. Stripe secure checkout.</p>
+  </div>
+</div>
+
+<!-- IMPACT BANNER -->
+<section style="position:relative;min-height:400px;display:flex;align-items:center;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=85&auto=format" alt="Luxury Orlando vacation rental" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,6,24,.88) 0%,rgba(5,150,105,.25) 50%,rgba(10,6,24,.92) 100%)"></div>
+  <div class="container" style="position:relative;z-index:2;text-align:center;padding:80px 20px">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4.5vw,44px);font-weight:700;color:var(--white);margin-bottom:20px;line-height:1.15">Professional Turnovers. <span style="color:var(--accent-light)">5-Star Reviews.</span><br>Hands-Off Hosting.</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px">
+      <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(5,150,105,.2);border:1px solid rgba(5,150,105,.3);border-radius:50%;font-size:18px">📸</span> Photo Verification</div>
+      <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(5,150,105,.2);border:1px solid rgba(5,150,105,.3);border-radius:50%;font-size:18px">🛏️</span> Linen Service</div>
+      <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(5,150,105,.2);border:1px solid rgba(5,150,105,.3);border-radius:50%;font-size:18px">⚡</span> Same-Day Available</div>
+    </div>
+    <a href="https://wa.me/14077878590?text=Hi!%20I'm%20interested%20in%20vacation%20rental%20cleaning%20services." class="btn-primary" style="font-size:17px;padding:18px 44px;">Get My FREE Cleaning →</a>
   </div>
 </section>
 
@@ -783,7 +944,7 @@
 
 <!-- 18. FOOTER -->
 <footer class="footer">
-  <img src="a7-logo.jpg" alt="A7 Cleaning Service Premium" style="height:50px;width:auto;margin-bottom:10px;filter:brightness(0) invert(1);opacity:.8;">
+  <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" style="height:50px;width:auto;margin-bottom:10px;display:block;background:#fff;border-radius:8px;padding:4px;">
   <p>Professional Vacation Rental Cleaning &mdash; Orlando, FL</p>
   <p style="margin-top:12px;">Developed by A7x Systems IA</p>
   <p>&copy; 2026 A7 Cleaning Services. All rights reserved.</p>
@@ -813,6 +974,26 @@
 <script>
 (function(){
   'use strict';
+
+  /* === MEMBERSHIP MODAL TOGGLE === */
+  window.togglePlan = function(btn, type){
+    btn.parentElement.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.plan-price').forEach(function(el){
+      var val = el.dataset[type];
+      if (val) {
+        if (type === 'annual') {
+          el.innerHTML = '<small>$</small>' + parseInt(val).toLocaleString() + '<small>/yr</small>';
+        } else {
+          el.innerHTML = '<small>$</small>' + val + '<small>/mo</small>';
+        }
+      }
+    });
+    document.querySelectorAll('.plan-period').forEach(function(el){
+      var text = el.dataset[type];
+      if (text) el.textContent = text;
+    });
+  };
 
   /* ===== 1. SCROLL PROGRESS BAR ===== */
   var progressBar = document.getElementById('progressBar');

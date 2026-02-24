@@ -60,7 +60,7 @@
     /* === HEADER WITH LOGO === */
     .site-header{position:sticky;top:0;z-index:100;background:rgba(10,6,24,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 0}
     .site-header .container{display:flex;align-items:center;justify-content:space-between}
-    .site-header .logo-img{height:44px;width:auto}
+    .site-header .logo-img{height:44px;width:auto;display:block}
     .header-cta{background:var(--accent);color:#fff;border:none;padding:10px 24px;border-radius:50px;font-weight:700;font-size:13px;cursor:pointer;transition:.3s;text-decoration:none;white-space:nowrap}
     .header-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
 
@@ -300,6 +300,7 @@
 
     /* === RESPONSIVE === */
     @media(max-width:768px){
+      .lifestyle>div{grid-template-columns:1fr !important}
       .hero{min-height:auto;padding:80px 0 60px}
       .steps{grid-template-columns:1fr}
       .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
@@ -336,7 +337,7 @@
   <!-- HEADER WITH LOGO -->
   <header class="site-header">
     <div class="container">
-      <img src="a7-logo.jpg" alt="A7 Cleaning Service Premium" class="logo-img">
+      <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" class="logo-img">
       <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20shoe%20cleaning%20—%20Buy%202%20Get%201%20FREE!" class="header-cta">Buy 2 Get 1 FREE</a>
     </div>
   </header>
@@ -398,6 +399,30 @@
         <div class="pain-card"><div class="icon">👀</div><h3>First Impressions Ruined</h3><p>People notice your shoes first. Dirty, yellowed sneakers scream "I don't care." Clean kicks command respect instantly.</p></div>
         <div class="pain-card"><div class="icon">🧴</div><h3>DIY Disasters</h3><p>Washing machines destroy shape. Wrong products cause discoloration. That YouTube hack? It ruined more shoes than it saved.</p></div>
         <div class="pain-card"><div class="icon">📦</div><h3>Closet Full of "Maybe"</h3><p>You've got 5+ pairs you stopped wearing because they look "too beat." One cleaning brings them all back to rotation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIFESTYLE VISUAL ===== -->
+  <section class="lifestyle" style="padding:0;overflow:hidden">
+    <div style="display:grid;grid-template-columns:1fr 1fr;min-height:500px">
+      <div style="position:relative;overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=900&q=85&auto=format" alt="Premium sneaker collection" style="width:100%;height:100%;object-fit:cover;transition:transform 8s ease;display:block" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 48px;background:var(--bg-dark)">
+        <span class="section-tag" style="background:rgba(255,255,255,.08);color:var(--accent-light);align-self:flex-start">SNEAKER EXPERTS</span>
+        <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;color:#fff;margin:16px 0;line-height:1.2">"My Jordans Look Better Than When I Bought Them"</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px">Orlando's sneakerheads trust A7 with their most prized kicks. From $50 Air Forces to $500 Yeezys — we treat every pair like a grail. <strong style="color:var(--accent-light)">Professional hand-cleaning</strong> that restores your investment.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
+            <div style="font-size:32px;font-weight:900;color:var(--accent-light)">3,000+</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:4px">Pairs Restored</div>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
+            <div style="font-size:32px;font-weight:900;color:var(--accent-light)">48hr</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:4px">Turnaround</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -541,6 +566,35 @@
     </div>
   </section>
 
+  <!-- ===== VISUAL GALLERY ===== -->
+  <section style="padding:80px 0;background:var(--off-white);text-align:center">
+    <div class="container">
+      <span class="section-tag">REAL RESULTS</span>
+      <h2 class="section-title">See the <strong>A7 Difference</strong></h2>
+      <p class="section-sub">Real sneaker transformations. No filters, no tricks.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto">
+        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&q=80&auto=format" alt="Dirty sneakers before" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+          <span style="position:absolute;top:12px;left:12px;background:rgba(239,68,68,.9);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">BEFORE</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Jordan 1 Retro</div><div style="font-size:12px;color:rgba(255,255,255,.6)">6 months of daily wear</div></div>
+        </div>
+        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80&auto=format" alt="Clean sneakers after" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+          <span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">AFTER</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Factory Fresh Again</div><div style="font-size:12px;color:rgba(255,255,255,.6)">Full restoration + protection</div></div>
+        </div>
+        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;transition:transform .3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80&auto=format" alt="Sneaker collection" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,24,.8) 100%)"></div>
+          <span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px">RESULT</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;color:#fff;text-align:left"><div style="font-size:15px;font-weight:700">Back in Rotation</div><div style="font-size:12px;color:rgba(255,255,255,.6)">Ready to turn heads</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== GUARANTEE ===== -->
   <section class="guarantee">
     <div class="container">
@@ -633,8 +687,114 @@
           <div class="member-perk"><span class="mp-i">✓</span> Priority 24hr turnaround</div>
           <div class="member-perk"><span class="mp-i">✓</span> Free pickup & delivery</div>
         </div>
-        <a href="https://wa.me/14077878590?text=Hi!%20Tell%20me%20about%20the%20A7%20Sneaker%20Club%20membership." class="member-cta">Join the Sneaker Club →</a>
+        <button onclick="document.getElementById('memberModal').classList.add('show')" class="member-cta" style="border:none;cursor:pointer;font-family:inherit">View Membership Plans →</button>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERSHIP MODAL ===== -->
+  <div id="memberModal" style="position:fixed;inset:0;z-index:10000;background:rgba(10,6,24,.85);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;backdrop-filter:blur(8px)" onclick="if(event.target===this)this.classList.remove('show')">
+    <style>
+      #memberModal.show{opacity:1;visibility:visible}
+      #memberModal .modal-box{transform:scale(.9);transition:.4s}
+      #memberModal.show .modal-box{transform:scale(1)}
+      .plan-toggle{display:flex;background:rgba(239,68,68,.1);border-radius:50px;padding:4px;gap:4px;margin:0 auto 32px;width:fit-content}
+      .plan-toggle button{padding:10px 28px;border:none;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;background:transparent;color:var(--gray-500)}
+      .plan-toggle button.active{background:var(--accent);color:#fff}
+      .plan-toggle .save-badge{display:inline-block;background:#10b981;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px;margin-left:6px;vertical-align:middle}
+      .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+      .plan-card{background:#fff;border:2px solid #fecaca;border-radius:20px;padding:32px 24px;text-align:center;position:relative;transition:.3s}
+      .plan-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+      .plan-card.popular{border-color:var(--accent);transform:scale(1.05)}
+      .plan-card.popular:hover{transform:scale(1.05) translateY(-4px)}
+      .popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 20px;border-radius:50px;font-size:11px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+      .plan-card h4{font-size:20px;font-weight:800;color:var(--gray-900);margin-bottom:4px}
+      .plan-price{font-size:42px;font-weight:900;color:var(--accent-dark);letter-spacing:-2px;margin:12px 0 4px}
+      .plan-price small{font-size:16px;font-weight:600;color:var(--gray-500)}
+      .plan-period{font-size:13px;color:var(--gray-500);margin-bottom:20px}
+      .plan-features{list-style:none;text-align:left;margin-bottom:24px}
+      .plan-features li{padding:8px 0;font-size:13px;color:var(--gray-700);display:flex;align-items:flex-start;gap:8px;border-bottom:1px solid var(--gray-100)}
+      .plan-features li:last-child{border-bottom:none}
+      .plan-features .pf-check{color:var(--accent);font-weight:700;flex-shrink:0}
+      .plan-btn{display:block;width:100%;padding:14px;border:none;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;text-decoration:none;text-align:center}
+      .plan-btn.primary{background:var(--accent);color:#fff}
+      .plan-btn.primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+      .plan-btn.outline{background:transparent;border:2px solid #fecaca;color:var(--gray-700)}
+      .plan-btn.outline:hover{border-color:var(--accent);color:var(--accent-dark)}
+      @media(max-width:768px){.plans-grid{grid-template-columns:1fr;max-width:400px}.plan-card.popular{transform:none}.plan-card.popular:hover{transform:translateY(-4px)}}
+    </style>
+    <div class="modal-box" style="background:var(--off-white);border-radius:24px;max-width:980px;width:95%;max-height:90vh;overflow-y:auto;padding:48px 36px;position:relative">
+      <button onclick="document.getElementById('memberModal').classList.remove('show')" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--gray-500);line-height:1">&times;</button>
+      <div style="text-align:center;margin-bottom:12px">
+        <span class="section-tag">SNEAKER CLUB PLANS</span>
+        <h2 style="font-size:clamp(24px,3.5vw,36px);font-weight:800;color:var(--gray-900);margin:12px 0 8px">Shoe Cleaning Plans</h2>
+        <p style="font-size:15px;color:var(--gray-500);max-width:500px;margin:0 auto 24px">Keep your whole rotation fresh. Cancel anytime.</p>
+      </div>
+      <div class="plan-toggle">
+        <button class="active" onclick="togglePlan(this,'monthly')">Monthly</button>
+        <button onclick="togglePlan(this,'annual')">Annual <span class="save-badge">Save 2 months</span></button>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <h4>Starter</h4>
+          <div class="plan-price" data-monthly="29" data-annual="290"><small>$</small>29<small>/mo</small></div>
+          <div class="plan-period" data-monthly="Billed monthly" data-annual="$290/year — save $58">Billed monthly</div>
+          <ul class="plan-features">
+            <li><span class="pf-check">✓</span> 2 pairs/month basic clean</li>
+            <li><span class="pf-check">✓</span> Surface cleaning</li>
+            <li><span class="pf-check">✓</span> Deodorizing treatment</li>
+            <li><span class="pf-check">✓</span> 48hr turnaround</li>
+          </ul>
+          <a href="#stripe-shoe-starter" class="plan-btn outline">Subscribe Now</a>
+        </div>
+        <div class="plan-card popular">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h4>Sneakerhead</h4>
+          <div class="plan-price" data-monthly="49" data-annual="490"><small>$</small>49<small>/mo</small></div>
+          <div class="plan-period" data-monthly="Billed monthly" data-annual="$490/year — save $98">Billed monthly</div>
+          <ul class="plan-features">
+            <li><span class="pf-check">✓</span> 4 pairs/month deep clean</li>
+            <li><span class="pf-check">✓</span> Stain removal + sole whitening</li>
+            <li><span class="pf-check">✓</span> Deodorizing + protection spray</li>
+            <li><span class="pf-check">✓</span> Priority 24hr turnaround</li>
+            <li><span class="pf-check">✓</span> Free pickup &amp; delivery</li>
+          </ul>
+          <a href="#stripe-shoe-sneakerhead" class="plan-btn primary">Subscribe Now</a>
+        </div>
+        <div class="plan-card">
+          <h4>Collector</h4>
+          <div class="plan-price" data-monthly="89" data-annual="890"><small>$</small>89<small>/mo</small></div>
+          <div class="plan-period" data-monthly="Billed monthly" data-annual="$890/year — save $178">Billed monthly</div>
+          <ul class="plan-features">
+            <li><span class="pf-check">✓</span> 8 pairs/month full restoration</li>
+            <li><span class="pf-check">✓</span> Complete stain + sole restoration</li>
+            <li><span class="pf-check">✓</span> De-crease treatment included</li>
+            <li><span class="pf-check">✓</span> Crep Protect coating</li>
+            <li><span class="pf-check">✓</span> Priority 24hr turnaround</li>
+            <li><span class="pf-check">✓</span> Free pickup &amp; delivery</li>
+            <li><span class="pf-check">✓</span> Before/after photo report</li>
+          </ul>
+          <a href="#stripe-shoe-collector" class="plan-btn outline">Subscribe Now</a>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--gray-500);margin-top:24px">All plans include 30-day satisfaction guarantee. Cancel anytime. Stripe secure checkout.</p>
+    </div>
+  </div>
+
+  <!-- ===== IMPACT BANNER ===== -->
+  <section style="position:relative;min-height:400px;display:flex;align-items:center;overflow:hidden">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600&q=85&auto=format" alt="Premium sneakers" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,6,24,.88) 0%,rgba(239,68,68,.25) 50%,rgba(10,6,24,.92) 100%)"></div>
+    <div class="container" style="position:relative;z-index:2;text-align:center;padding:80px 20px">
+      <h2 style="font-size:clamp(28px,4.5vw,44px);font-weight:800;color:#fff;margin-bottom:20px;line-height:1.15">Clean Kicks. <span style="color:var(--accent-light)">Fresh Style.</span><br>Confidence Restored.</h2>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px">
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(239,68,68,.2);border:1px solid rgba(239,68,68,.3);border-radius:50%;font-size:18px">👟</span> All Brands Welcome</div>
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(239,68,68,.2);border:1px solid rgba(239,68,68,.3);border-radius:50%;font-size:18px">✨</span> Hand-Cleaned Only</div>
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:600"><span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(239,68,68,.2);border:1px solid rgba(239,68,68,.3);border-radius:50%;font-size:18px">⚡</span> 48hr Turnaround</div>
+      </div>
+      <a href="https://wa.me/14077878590?text=Hi!%20I%20want%20shoe%20cleaning%20—%20Buy%202%20Get%201%20FREE!" style="display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;padding:18px 44px;border-radius:60px;font-size:17px;font-weight:800;text-decoration:none;transition:.3s;box-shadow:0 8px 32px var(--accent-glow)">
+        Buy 2 Get 1 FREE →
+      </a>
     </div>
   </section>
 
@@ -653,7 +813,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <img src="a7-logo.jpg" alt="A7 Cleaning Service Premium" style="height:50px;width:auto;margin-bottom:10px;filter:brightness(0) invert(1);opacity:.8;">
+      <img src="LOGO HORIZONTAL-01.png" alt="A7 Lavanderia" style="height:50px;width:auto;margin-bottom:10px;display:block;background:#fff;border-radius:8px;padding:4px;">
       <p>Professional Shoe & Sneaker Cleaning — Orlando, FL</p>
       <p style="margin-top:6px"><a href="https://wa.me/14077878590">WhatsApp (407) 787-8590</a></p>
       <p class="dev">Developed by A7x Systems IA · © 2026 A7 Cleaning Services</p>
@@ -686,6 +846,26 @@
 
   <script>
   (function(){
+    /* === MEMBERSHIP MODAL TOGGLE === */
+    window.togglePlan = function(btn, type){
+      btn.parentElement.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.plan-price').forEach(function(el){
+        var val = el.dataset[type];
+        if (val) {
+          if (type === 'annual') {
+            el.innerHTML = '<small>$</small>' + parseInt(val).toLocaleString() + '<small>/yr</small>';
+          } else {
+            el.innerHTML = '<small>$</small>' + val + '<small>/mo</small>';
+          }
+        }
+      });
+      document.querySelectorAll('.plan-period').forEach(function(el){
+        var text = el.dataset[type];
+        if (text) el.textContent = text;
+      });
+    };
+
     /* === SCROLL PROGRESS === */
     var bar = document.getElementById('scrollBar');
     window.addEventListener('scroll', function(){
