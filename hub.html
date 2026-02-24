@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A7 — Hub de Links</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid #222;
+            margin-bottom: 3rem;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        header p { color: #888; font-size: 1.1rem; }
+
+        .company-section {
+            margin-bottom: 3rem;
+        }
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #1a1a2e;
+        }
+        .company-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+        }
+        .badge-br { background: #1a3a1a; color: #4ade80; }
+        .badge-en { background: #1a2a3a; color: #60a5fa; }
+        .badge-infra { background: #2a1a3a; color: #c084fc; }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+        .card-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .card-links a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.2rem 0;
+            transition: color 0.15s;
+        }
+        .card-links a:hover { color: #93c5fd; }
+        .card-links a::before { content: '→'; color: #444; }
+
+        .card-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+            margin-top: 0.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .special-card {
+            background: linear-gradient(135deg, #141428, #1a1a2e);
+            border-color: #2a2a4a;
+        }
+
+        .stats {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #222;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.875rem;
+        }
+        .stats span { color: #3b82f6; font-weight: 600; }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.75rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>A7 Hub de Links</h1>
+            <p>Todas as paginas e projetos organizados por empresa</p>
+        </header>
+
+        <!-- A7 LAVANDERIA BRASIL -->
+        <section class="company-section">
+            <div class="company-header">
+                <h2>A7 Lavanderia</h2>
+                <span class="badge badge-br">Brasil PT-BR</span>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Edredons -->
+                <div class="card">
+                    <h3>Edredons</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/" target="_blank">Landing principal</a>
+                        <a href="https://a7-landing-edredons.vercel.app/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes A/B</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/variacao-a-original.html" target="_blank">A — Original</a>
+                        <a href="https://a7-landing-edredons.vercel.app/variacao-b-ocean.html" target="_blank">B — Ocean</a>
+                        <a href="https://a7-landing-edredons.vercel.app/variacao-blue-edredons.html" target="_blank">Blue Edredons</a>
+                        <a href="https://a7-landing-edredons.vercel.app/variacao-c-emerald.html" target="_blank">C — Emerald</a>
+                        <a href="https://a7-landing-edredons.vercel.app/variacao-d-midnight.html" target="_blank">D — Midnight</a>
+                    </div>
+                </div>
+
+                <!-- Tapete -->
+                <div class="card">
+                    <h3>Tapete</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/tapete/" target="_blank">Landing principal</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tapete/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/tapete/variacao-a7-brand.html" target="_blank">A7 Brand</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tapete/variacao-blue.html" target="_blank">Blue</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tapete/variacao-ocean.html" target="_blank">Ocean</a>
+                    </div>
+                </div>
+
+                <!-- Tenis -->
+                <div class="card">
+                    <h3>Tenis</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/" target="_blank">Landing principal</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/variacao-a7-brand.html" target="_blank">A7 Brand</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/variacao-blue.html" target="_blank">Blue</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/variacao-ocean.html" target="_blank">Ocean</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/variacao-sneaker-drop.html" target="_blank">Sneaker Drop</a>
+                        <a href="https://a7-landing-edredons.vercel.app/tenis/variacao-transformation.html" target="_blank">Transformation</a>
+                    </div>
+                </div>
+
+                <!-- Ternos -->
+                <div class="card">
+                    <h3>Ternos</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes Masculino</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/variacao-a7-brand.html" target="_blank">A7 Brand</a>
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/variacao-blue.html" target="_blank">Blue</a>
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/variacao-dark-gold.html" target="_blank">Dark Gold</a>
+                    </div>
+                    <div class="card-label">Feminino</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/feminino-comparativo.html" target="_blank">Comparativo Feminino</a>
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/feminino-rose-gold.html" target="_blank">Rose Gold</a>
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/feminino-noir-chic.html" target="_blank">Noir Chic</a>
+                        <a href="https://a7-landing-edredons.vercel.app/ternos/feminino-ivory-luxe.html" target="_blank">Ivory Luxe</a>
+                    </div>
+                </div>
+
+                <!-- Cortinas -->
+                <div class="card">
+                    <h3>Cortinas</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/cortinas/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/cortinas/variacao-elegance.html" target="_blank">Elegance</a>
+                        <a href="https://a7-landing-edredons.vercel.app/cortinas/variacao-airy.html" target="_blank">Airy</a>
+                    </div>
+                </div>
+
+                <!-- Couro -->
+                <div class="card">
+                    <h3>Couro</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/couro/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/couro/variacao-rugged.html" target="_blank">Rugged</a>
+                        <a href="https://a7-landing-edredons.vercel.app/couro/variacao-urban.html" target="_blank">Urban</a>
+                    </div>
+                </div>
+
+                <!-- Empresas -->
+                <div class="card">
+                    <h3>Empresas</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/empresas/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/empresas/variacao-corporate.html" target="_blank">Corporate</a>
+                        <a href="https://a7-landing-edredons.vercel.app/empresas/variacao-modern.html" target="_blank">Modern</a>
+                    </div>
+                </div>
+
+                <!-- Estofados -->
+                <div class="card">
+                    <h3>Estofados</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/estofados/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/estofados/variacao-fresh.html" target="_blank">Fresh</a>
+                        <a href="https://a7-landing-edredons.vercel.app/estofados/variacao-premium.html" target="_blank">Premium</a>
+                    </div>
+                </div>
+
+                <!-- Noivas -->
+                <div class="card">
+                    <h3>Noivas</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/noivas/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/noivas/variacao-bridal.html" target="_blank">Bridal</a>
+                        <a href="https://a7-landing-edredons.vercel.app/noivas/variacao-glamour.html" target="_blank">Glamour</a>
+                    </div>
+                </div>
+
+                <!-- Pet -->
+                <div class="card">
+                    <h3>Pet</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/pet/comparativo.html" target="_blank">Comparativo</a>
+                    </div>
+                    <div class="card-label">Variacoes</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/pet/variacao-pawsome.html" target="_blank">Pawsome</a>
+                        <a href="https://a7-landing-edredons.vercel.app/pet/variacao-petcare.html" target="_blank">Petcare</a>
+                    </div>
+                </div>
+
+                <!-- Roupas -->
+                <div class="card">
+                    <h3>Roupas</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/roupas/" target="_blank">Landing principal</a>
+                    </div>
+                </div>
+
+                <!-- Planos (WhatsApp) -->
+                <div class="card">
+                    <h3>Planos (via WhatsApp)</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/planos/" target="_blank">Pagina de planos (landing)</a>
+                    </div>
+                </div>
+
+                <!-- Planos Assinatura -->
+                <div class="card special-card">
+                    <h3>Planos de Assinatura</h3>
+                    <div class="card-links">
+                        <a href="https://a7-planos-assinatura.vercel.app" target="_blank">Plataforma de assinatura</a>
+                    </div>
+                </div>
+
+                <!-- Site Principal -->
+                <div class="card special-card">
+                    <h3>Site Principal (Next.js)</h3>
+                    <div class="card-links">
+                        <a href="https://a7-lavanderia.vercel.app" target="_blank">a7-lavanderia.vercel.app</a>
+                    </div>
+                </div>
+
+                <!-- Criativos -->
+                <div class="card special-card">
+                    <h3>Criativos</h3>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/painel-master.html" target="_blank">Painel Master (todos)</a>
+                    </div>
+                    <div class="card-label">Paineis por Vertical</div>
+                    <div class="card-links">
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/edredons/painel.html" target="_blank">Edredons</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/tapetes/painel.html" target="_blank">Tapetes</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/tenis/painel.html" target="_blank">Tenis</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/ternos/painel.html" target="_blank">Ternos</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/cortinas/painel.html" target="_blank">Cortinas</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/couro/painel.html" target="_blank">Couro</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/empresas/painel.html" target="_blank">Empresas</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/estofados/painel.html" target="_blank">Estofados</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/noivas/painel.html" target="_blank">Noivas</a>
+                        <a href="https://a7-landing-edredons.vercel.app/criativos/pet/painel.html" target="_blank">Pet</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- A7 LAUNDRY ORLANDO -->
+        <section class="company-section">
+            <div class="company-header">
+                <h2>A7 Laundry Orlando</h2>
+                <span class="badge badge-en">Florida EN</span>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Carpet Cleaning</h3>
+                    <div class="card-links">
+                        <a href="https://a7laundry.github.io/A7-Laundry-Orlando/carpet-cleaning.html" target="_blank">Landing page</a>
+                        <a href="https://a7laundry.github.io/A7-Laundry-Orlando/carpet-campaign/" target="_blank">Carpet Campaign</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Shoe Cleaning</h3>
+                    <div class="card-links">
+                        <a href="https://a7laundry.github.io/A7-Laundry-Orlando/shoe-cleaning.html" target="_blank">Landing page</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Upholstery Cleaning</h3>
+                    <div class="card-links">
+                        <a href="https://a7laundry.github.io/A7-Laundry-Orlando/upholstery-cleaning.html" target="_blank">Landing page</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Vacation Rental</h3>
+                    <div class="card-links">
+                        <a href="https://a7laundry.github.io/A7-Laundry-Orlando/vacation-rental.html" target="_blank">Landing page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFRAESTRUTURA -->
+        <section class="company-section">
+            <div class="company-header">
+                <h2>Infraestrutura</h2>
+                <span class="badge badge-infra">Backend / Apps</span>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card special-card">
+                    <h3>WhatsApp Agent</h3>
+                    <div class="card-links">
+                        <a href="https://whatsapp-agent-phi.vercel.app" target="_blank">API (Vercel Serverless)</a>
+                    </div>
+                </div>
+
+                <div class="card special-card">
+                    <h3>App Mobile</h3>
+                    <div class="card-links">
+                        <span style="color:#666; font-size:0.875rem;">a7-lavanderia-app (React Native — nao web)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REPOSITORIOS -->
+        <section class="company-section">
+            <div class="company-header">
+                <h2>Repositorios GitHub</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>a7-landing-pages</h3>
+                    <div class="card-links">
+                        <a href="https://github.com/A7laundry/a7-landing-pages" target="_blank">GitHub</a>
+                        <a href="https://a7-landing-edredons.vercel.app" target="_blank">Vercel</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>a7-planos-assinatura</h3>
+                    <div class="card-links">
+                        <a href="https://github.com/A7laundry/a7-planos-assinatura" target="_blank">GitHub</a>
+                        <a href="https://a7-planos-assinatura.vercel.app" target="_blank">Vercel</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>a7-site-brasil</h3>
+                    <div class="card-links">
+                        <a href="https://github.com/A7laundry/a7-site-brasil" target="_blank">GitHub</a>
+                        <a href="https://a7-lavanderia.vercel.app" target="_blank">Vercel</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>a7-whatsapp-agent</h3>
+                    <div class="card-links">
+                        <a href="https://github.com/A7laundry/a7-whatsapp-agent" target="_blank">GitHub</a>
+                        <a href="https://whatsapp-agent-phi.vercel.app" target="_blank">Vercel</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>A7-Laundry-Orlando</h3>
+                    <div class="card-links">
+                        <a href="https://github.com/A7laundry/A7-Laundry-Orlando" target="_blank">GitHub</a>
+                        <a href="https://a7laundry.github.io/A7-Laundry-Orlando/" target="_blank">GitHub Pages</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats">
+            <p><span>99+</span> paginas &middot; <span>5</span> repositorios &middot; <span>2</span> empresas &middot; <span>3</span> plataformas (Vercel, GitHub Pages, App Store)</p>
+        </div>
+    </div>
+</body>
+</html>
