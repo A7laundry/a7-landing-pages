@@ -1,0 +1,2727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planos Mensais de Lavanderia | A7 Lavanderia — SJC e Região</title>
+<meta name="description" content="Assine um plano mensal de lavanderia e nunca mais se preocupe com roupas. Office R$315/mês, Individual R$360/mês, Família R$640/mês. Coleta e entrega grátis. Plano anual com 13º mês GRÁTIS.">
+<meta property="og:title" content="Planos Mensais A7 Lavanderia — Roupas Sempre Prontas">
+<meta property="og:description" content="Nunca mais perca tempo com roupa. Planos a partir de R$315/mês com coleta e entrega grátis. Plano anual com 13º mês GRÁTIS.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   A7 LAVANDERIA — PLANOS MENSAIS v2
+   Design: Premium / Navy+Gold
+   ======================================== */
+:root {
+  --navy: #0f172a;
+  --navy-light: #1e293b;
+  --navy-mid: #334155;
+  --slate: #64748b;
+  --slate-light: #94a3b8;
+  --gold: #f59e0b;
+  --gold-light: #fbbf24;
+  --gold-dark: #d97706;
+  --gold-glow: rgba(245, 158, 11, 0.25);
+  --emerald: #10b981;
+  --emerald-light: #34d399;
+  --white: #ffffff;
+  --off-white: #f8fafc;
+  --gray-50: #f1f5f9;
+  --gray-100: #e2e8f0;
+  --gray-200: #cbd5e1;
+  --red-500: #ef4444;
+  --gradient-premium: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+  --gradient-gold-text: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.18);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.25);
+  --shadow-gold: 0 8px 32px rgba(245, 158, 11, 0.3);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--navy);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', 'Inter', sans-serif; line-height: 1.15; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { cursor: pointer; border: none; font-family: inherit; }
+ul { list-style: none; }
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+}
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes goldShine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(120%); opacity: 0; }
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============ URGENCY BAR ============ */
+.urgency-bar {
+  background: var(--gradient-gold);
+  color: var(--navy);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1001;
+}
+.urgency-bar .countdown {
+  background: rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--navy);
+}
+
+/* ============ STICKY HEADER ============ */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.97);
+  backdrop-filter: blur(16px);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.sticky-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+}
+.logo-text span {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-gold);
+}
+.header-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(245,158,11,0.4); }
+.header-live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--emerald);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--navy);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=85&auto=format') center/cover no-repeat;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15,23,42,0.92) 0%, rgba(30,41,59,0.8) 40%, rgba(15,23,42,0.85) 100%);
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 80px 20px;
+}
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.hero-eyebrow .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--emerald);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+.hero h1 {
+  font-size: clamp(32px, 5.5vw, 58px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--slate-light);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 16px 40px;
+  border-radius: 60px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.hero-cta-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+.hero-cta-primary span { position: relative; z-index: 1; }
+.hero-cta-primary svg { position: relative; z-index: 1; width: 20px; height: 20px; }
+.hero-cta-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 48px rgba(245,158,11,0.45); }
+.hero-cta-secondary {
+  font-size: 14px;
+  color: var(--slate-light);
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: border-color 0.2s, color 0.2s;
+}
+.hero-cta-secondary:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
+.hero-trust {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--slate-light);
+  font-size: 13px;
+  font-weight: 500;
+}
+.hero-trust-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold);
+}
+
+/* ============ LIVE COUNTER BAR ============ */
+.live-counter-bar {
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.live-counter-bar .container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.counter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.counter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+.counter-dot.gold { background: var(--gold); }
+.counter-dot.green { background: var(--emerald); }
+.counter-dot.orange { background: #f97316; }
+.counter-number { font-weight: 800; }
+
+/* ============ PAIN POINTS ============ */
+.pain-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.section-subtitle {
+  font-size: 17px;
+  color: var(--slate);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pain-card {
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.pain-card:hover {
+  border-color: var(--red-500);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.pain-emoji { font-size: 48px; margin-bottom: 16px; }
+.pain-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.pain-card p {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.6;
+}
+.pain-callout {
+  margin-top: 40px;
+  background: rgba(239,68,68,0.06);
+  border: 1px solid rgba(239,68,68,0.15);
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.pain-callout strong { color: var(--red-500); }
+
+/* ============ SOLUTION / VALUE PROPS ============ */
+.value-section {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.value-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+  border: 1px solid var(--gray-100);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.value-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+}
+.value-icon.time { background: rgba(245,158,11,0.1); }
+.value-icon.money { background: rgba(16,185,129,0.1); }
+.value-icon.quality { background: rgba(99,102,241,0.1); }
+.value-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.value-card p {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+/* ============ HOW IT WORKS ============ */
+.how-section {
+  padding: 100px 0;
+  background: var(--white);
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: var(--gray-100);
+  z-index: 0;
+}
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: var(--shadow-gold);
+}
+.step h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.step p {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+/* ============ COMPARISON TABLE ============ */
+.comparison-section {
+  padding: 100px 0;
+  background: var(--navy);
+  color: var(--white);
+}
+.comparison-table {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 140px 140px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.comparison-row:last-child { border-bottom: none; }
+.comparison-row.header {
+  background: rgba(255,255,255,0.05);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.comparison-row.header .comp-cell { padding: 16px 20px; color: var(--slate-light); }
+.comparison-row.header .comp-cell:last-child { color: var(--gold-light); }
+.comp-cell {
+  padding: 14px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.comp-cell:first-child { color: var(--slate-light); }
+.comp-cell:nth-child(2) { justify-content: center; color: var(--slate); }
+.comp-cell:last-child { justify-content: center; background: rgba(245,158,11,0.04); }
+.comp-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+.comp-check.yes { background: rgba(16,185,129,0.15); color: var(--emerald-light); }
+.comp-check.no { background: rgba(239,68,68,0.12); color: var(--red-500); }
+.comp-check.partial { background: rgba(245,158,11,0.12); color: var(--gold); }
+.comparison-savings {
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.2);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  max-width: 700px;
+  margin: 32px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+.comparison-savings strong { font-size: 20px; color: var(--gold); }
+.comparison-note {
+  font-size: 13px;
+  color: var(--slate);
+  margin-top: 16px;
+}
+
+/* ============ PRICING SECTION ============ */
+.pricing-section {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+
+/* BILLING TOGGLE */
+.billing-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.billing-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--slate);
+  transition: color 0.3s;
+}
+.billing-label.active { color: var(--navy); }
+.billing-switch {
+  position: relative;
+  width: 56px;
+  height: 30px;
+  background: var(--gray-200);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.billing-switch.annual { background: var(--gold); }
+.billing-switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.billing-switch.annual .billing-switch-knob { transform: translateX(26px); }
+.billing-badge {
+  background: var(--gradient-gold);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulseBadge 2s infinite;
+}
+
+/* PLAN CARDS */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+  align-items: start;
+}
+.plan-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  border: 2px solid var(--gray-100);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.plan-card:hover { transform: translateY(-4px); }
+.plan-card.featured {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+  transform: scale(1.04);
+  z-index: 2;
+}
+.plan-card.featured:hover { transform: scale(1.04) translateY(-4px); }
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-gold);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 20px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.plan-icon { font-size: 36px; margin-bottom: 12px; }
+.plan-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.plan-tagline {
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 20px;
+}
+.plan-price { margin-bottom: 4px; }
+.plan-price .amount {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -2px;
+  line-height: 1;
+}
+.plan-card.featured .plan-price .amount { color: var(--gold-dark); }
+.plan-price .period {
+  font-size: 14px;
+  color: var(--slate);
+  font-weight: 500;
+}
+.plan-annual-info {
+  font-size: 13px;
+  color: var(--emerald);
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: none;
+}
+.plan-annual-info.show { display: block; }
+.plan-per-piece {
+  font-size: 13px;
+  color: var(--emerald);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding: 6px 12px;
+  background: rgba(16,185,129,0.08);
+  border-radius: 50px;
+  display: inline-block;
+}
+.plan-features { margin-bottom: 28px; }
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--navy-mid);
+  border-bottom: 1px solid var(--gray-50);
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features .feat-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(16,185,129,0.1);
+  color: var(--emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.plan-cta {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.plan-cta.primary {
+  background: var(--gradient-gold);
+  color: var(--navy);
+  box-shadow: var(--shadow-gold);
+}
+.plan-cta.primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(245,158,11,0.4); }
+.plan-cta.secondary {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+.plan-cta.secondary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+/* ============ UPSELL ADD-ONS ============ */
+.upsell-section {
+  margin-top: 60px;
+  padding-top: 48px;
+  border-top: 2px solid var(--gray-100);
+}
+.upsell-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.upsell-subtitle {
+  font-size: 15px;
+  color: var(--slate);
+  margin-bottom: 32px;
+}
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.addon-card {
+  background: var(--white);
+  border: 2px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.addon-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.addon-card.active {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+}
+.addon-card.active::after {
+  content: '\2713 Adicionado';
+  position: absolute;
+  top: -10px;
+  right: -6px;
+  background: var(--emerald);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+.addon-emoji { font-size: 36px; margin-bottom: 10px; }
+.addon-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.addon-desc {
+  font-size: 12px;
+  color: var(--slate);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.addon-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--gold-dark);
+}
+
+/* ============ ORDER SUMMARY BAR ============ */
+.order-summary-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 0;
+  z-index: 997;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+}
+.order-summary-bar.visible { transform: translateY(0); }
+.order-summary-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.order-summary-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+.order-summary-text strong { color: var(--gold-light); font-weight: 800; }
+.order-summary-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: transform 0.2s;
+}
+.order-summary-cta:hover { transform: translateY(-2px); }
+
+/* ============ MID-PAGE CTA BANNER ============ */
+.midpage-cta {
+  padding: 60px 0;
+  background: var(--gradient-premium);
+  text-align: center;
+}
+.midpage-cta h2 {
+  font-size: clamp(22px, 3.5vw, 32px);
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.midpage-cta h2 em {
+  font-style: normal;
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.midpage-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 16px 40px;
+  border-radius: 60px;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.midpage-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(245,158,11,0.45); }
+
+/* ============ WHAT'S INCLUDED ============ */
+.included-section {
+  padding: 100px 0;
+  background: var(--white);
+}
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.included-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: var(--off-white);
+  border: 1px solid var(--gray-100);
+  transition: transform 0.2s;
+}
+.included-item:hover { transform: translateY(-2px); }
+.included-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(245,158,11,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.included-item h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+.included-item p { font-size: 13px; color: var(--slate); line-height: 1.5; }
+
+/* ============ TESTIMONIALS ============ */
+.testimonials-section {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+.reviews-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245,158,11,0.1);
+  color: var(--gold-dark);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--gray-100);
+}
+.testimonial-stars { color: var(--gold); font-size: 16px; margin-bottom: 14px; letter-spacing: 2px; }
+.testimonial-text { font-size: 14px; color: var(--navy-mid); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.testimonial-name { font-size: 14px; font-weight: 700; color: var(--navy); }
+.testimonial-role { font-size: 12px; color: var(--slate); }
+
+/* ============ LEAD FORM ============ */
+.lead-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.lead-form-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--off-white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+.lead-form-wrapper .form-group {
+  margin-bottom: 18px;
+}
+.lead-form-wrapper label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.lead-form-wrapper input,
+.lead-form-wrapper select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: var(--white);
+  transition: border-color 0.2s;
+}
+.lead-form-wrapper input:focus,
+.lead-form-wrapper select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.lead-form-wrapper .form-submit {
+  width: 100%;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-gold);
+}
+.lead-form-wrapper .form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(245,158,11,0.4);
+}
+
+/* ============ FAQ ============ */
+.faq-section {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+.faq-list {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: left;
+  transition: color 0.2s;
+}
+.faq-question:hover { color: var(--gold-dark); }
+.faq-icon {
+  font-size: 22px;
+  color: var(--slate);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item.active .faq-icon { transform: rotate(45deg); color: var(--gold-dark); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.faq-answer-inner {
+  padding: 0 0 20px;
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.7;
+}
+
+/* ============ EMOTIONAL FINAL CTA ============ */
+.final-section {
+  padding: 100px 0;
+  background: var(--gradient-premium);
+  position: relative;
+  overflow: hidden;
+}
+.final-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,158,11,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.final-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+.final-section h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--white);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.final-section h2 em {
+  font-style: normal;
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.final-subtitle {
+  font-size: 17px;
+  color: var(--slate-light);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+.final-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 18px 48px;
+  border-radius: 60px;
+  font-size: 17px;
+  font-weight: 800;
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.final-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(245,158,11,0.45); }
+.final-cta svg { width: 22px; height: 22px; }
+.final-guarantee {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--slate);
+}
+.final-guarantee strong { color: var(--slate-light); }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 0;
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.footer-link { font-size: 13px; color: var(--slate); transition: color 0.2s; }
+.footer-link:hover { color: var(--gold); }
+.footer-copy { font-size: 12px; color: var(--slate); }
+
+/* ============ FLOATING WHATSAPP ============ */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulseGlow 2s infinite;
+}
+.floating-whatsapp:hover { transform: scale(1.1); }
+.floating-whatsapp svg { width: 32px; height: 32px; fill: white; }
+
+/* ============ STICKY BOTTOM BAR ============ */
+.sticky-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 0;
+  z-index: 996;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+}
+.sticky-bottom-bar.visible { transform: translateY(0); }
+.sticky-bottom-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sticky-bottom-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+.sticky-bottom-text strong {
+  color: var(--gold-light);
+  font-weight: 800;
+}
+.sticky-bottom-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: transform 0.2s;
+}
+.sticky-bottom-cta:hover { transform: translateY(-2px); }
+
+/* ============ SOCIAL PROOF TOAST ============ */
+.social-toast {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  z-index: 998;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 320px;
+  animation: slideInRight 0.5s ease;
+  border-left: 4px solid var(--gold);
+}
+.social-toast.hiding { animation: slideOutRight 0.5s ease forwards; }
+.social-toast-icon { font-size: 24px; }
+.social-toast-text { font-size: 13px; color: var(--navy-mid); line-height: 1.4; }
+.social-toast-text strong { color: var(--navy); }
+.social-toast-time { font-size: 11px; color: var(--slate); margin-top: 2px; }
+
+/* ============ PIX POPUP ============ */
+.pix-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  padding: 20px;
+}
+.pix-overlay.active { opacity: 1; pointer-events: auto; }
+.pix-popup {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  animation: fadeInScale 0.4s ease;
+}
+.pix-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gray-50);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate);
+  transition: background 0.2s;
+}
+.pix-close:hover { background: var(--gray-100); }
+.pix-badge {
+  display: inline-block;
+  background: rgba(245,158,11,0.1);
+  color: var(--gold-dark);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.pix-popup h3 {
+  font-size: 24px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.pix-sub {
+  color: var(--slate);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.pix-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.pix-old {
+  font-size: 18px;
+  color: var(--slate);
+  text-decoration: line-through;
+}
+.pix-new {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--emerald);
+  font-family: 'Space Grotesk', sans-serif;
+}
+.pix-savings {
+  display: inline-block;
+  background: rgba(16,185,129,0.1);
+  color: var(--emerald);
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.pix-countdown-wrapper {
+  margin-bottom: 20px;
+}
+.pix-countdown-label {
+  font-size: 12px;
+  color: var(--slate);
+  margin-bottom: 4px;
+}
+.pix-countdown {
+  font-size: 28px;
+  font-weight: 900;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+.pix-benefits-list {
+  text-align: left;
+  margin-bottom: 24px;
+}
+.pix-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--navy-mid);
+}
+.pix-benefit-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(16,185,129,0.1);
+  color: var(--emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.pix-cta {
+  display: block;
+  width: 100%;
+  background: var(--gradient-gold);
+  color: var(--navy);
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  transition: transform 0.2s;
+}
+.pix-cta:hover { transform: translateY(-2px); }
+.pix-dismiss {
+  background: none;
+  color: var(--slate);
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .plans-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .plan-card.featured { transform: none; }
+  .plan-card.featured:hover { transform: translateY(-4px); }
+  .plan-card.featured { order: -1; }
+  .value-grid, .pain-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .steps-grid::before { display: none; }
+  .comparison-row { grid-template-columns: 1fr 100px 100px; }
+  .testimonials-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .included-grid { grid-template-columns: 1fr; }
+  .addons-grid { grid-template-columns: repeat(2, 1fr); }
+  .live-counter-bar .container { gap: 16px; }
+  .order-summary-bar .container { flex-direction: column; text-align: center; gap: 10px; }
+  .sticky-bottom-bar .container { flex-direction: column; text-align: center; gap: 10px; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: auto; }
+  .hero .container { padding: 60px 20px; }
+  .hero h1 { font-size: 28px; }
+  .hero-subtitle { font-size: 16px; }
+  .hero-trust { gap: 16px; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .comparison-row { grid-template-columns: 1fr 80px 80px; }
+  .comp-cell { padding: 10px 12px; font-size: 12px; }
+  .plan-card { padding: 28px 20px; }
+  .plan-price .amount { font-size: 36px; }
+  .section-title { font-size: 26px; }
+  .final-section h2 { font-size: 26px; }
+  .addons-grid { grid-template-columns: 1fr 1fr; }
+  .billing-toggle-wrap { flex-wrap: wrap; gap: 10px; }
+  .urgency-bar { font-size: 12px; padding: 8px 12px; }
+  .lead-form-wrapper { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ URGENCY BAR ============ -->
+<div class="urgency-bar">
+  <span>Oferta de Lançamento: Plano Anual com 13º Mês GRÁTIS — Encerra em</span>
+  <span class="countdown" id="urgencyCountdown">23:59:59</span>
+</div>
+
+<!-- ============ STICKY HEADER ============ -->
+<header class="sticky-header">
+  <div class="container">
+    <div class="logo-text">A7 <span>Lavanderia</span></div>
+    <a href="#planos" class="header-cta">
+      <span class="header-live-dot"></span>
+      Assinar Agora
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="dot"></span>
+        Planos Mensais 2026
+      </div>
+      <h1 class="reveal">Nunca mais perca tempo com roupa.<br><em>Sua vida, sempre em ordem.</em></h1>
+      <p class="hero-subtitle reveal">
+        Imagine abrir o armário e encontrar tudo pronto: lavado, passado, dobrado.
+        Sem esforço. Sem estresse. Sem pensar nisso. A A7 cuida de tudo pra você.
+      </p>
+      <div class="hero-cta-group reveal">
+        <a href="#planos" class="hero-cta-primary">
+          <span>Escolher Meu Plano</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </a>
+        <a href="#como-funciona" class="hero-cta-secondary">Veja como funciona</a>
+      </div>
+      <div class="hero-trust reveal">
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Sem fidelidade
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          Coleta grátis
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Cancele quando quiser
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE COUNTER BAR ============ -->
+<div class="live-counter-bar">
+  <div class="container">
+    <div class="counter-item">
+      <span class="counter-dot gold"></span>
+      <span><span class="counter-number" id="subscriberCount">387</span>+ já assinaram</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-dot green"></span>
+      <span><span class="counter-number" id="viewerCount">12</span> vendo agora</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-dot orange"></span>
+      <span>Últimas <span class="counter-number" id="slotsCount">9</span> vagas no Individual</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAIN POINTS — PAS ============ -->
+<section class="pain-section">
+  <div class="container text-center">
+    <span class="section-label reveal">O problema</span>
+    <h2 class="section-title reveal">Quanto tempo você perde com roupa por semana?</h2>
+    <p class="section-subtitle reveal">Lavar, estender, recolher, passar, dobrar, guardar. Toda semana. O ano inteiro. Já parou pra pensar nisso?</p>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-emoji">⏰</div>
+        <h3>Tempo perdido</h3>
+        <p>São 10+ horas por semana entre lavar, estender, passar e dobrar. Tempo que você nunca recupera.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-emoji">💸</div>
+        <h3>Conta que não fecha</h3>
+        <p>Água, luz, sabão, amaciante, ferro, máquina. No final do mês, lavanderia caseira custa mais do que parece.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-emoji">😤</div>
+        <h3>Estresse constante</h3>
+        <p>Aquela pilha de roupas que nunca acaba. A camisa que precisava pra amanhã e não está pronta. Todo dia.</p>
+      </div>
+    </div>
+    <div class="pain-callout reveal">
+      São <strong>520 horas por ano</strong>. Quase <strong>21 dias inteiros</strong> da sua vida gastos com roupa suja.
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTION + VALUE PROPS ============ -->
+<section class="value-section">
+  <div class="container text-center">
+    <span class="section-label reveal">A solução</span>
+    <h2 class="section-title reveal">Com a A7, esse tempo volta pra você.</h2>
+    <p class="section-subtitle reveal">
+      Não é só lavanderia. É tempo de volta, roupa sempre pronta e a tranquilidade de não se preocupar com mais nada.
+    </p>
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <div class="value-icon time">⏰</div>
+        <h3>+15 horas livres por mês</h3>
+        <p>Tempo que você gastaria lavando, estendendo, passando e dobrando. Agora é seu — pra família, hobbies ou descanso.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon money">💰</div>
+        <h3>Economia de até 40%</h3>
+        <p>Comparado ao preço avulso, nossos planos oferecem um custo por peça muito menor. Quanto mais peças, maior a economia.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon quality">✨</div>
+        <h3>Qualidade profissional sempre</h3>
+        <p>Lavagem, secagem e passadoria profissional. Suas roupas duram mais, cheiram melhor e estão sempre impecáveis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how-section" id="como-funciona">
+  <div class="container text-center">
+    <span class="section-label reveal">Simples assim</span>
+    <h2 class="section-title reveal">Como funciona</h2>
+    <p class="section-subtitle reveal">Assine, agende e pronto. Em 4 passos, suas roupas estão resolvidas pra sempre.</p>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="step-number">1</div>
+        <h4>Escolha seu plano</h4>
+        <p>Selecione o plano ideal e personalize com add-ons se quiser.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">2</div>
+        <h4>Agende a coleta</h4>
+        <p>Pelo WhatsApp, combine dia e horário. Buscamos na sua porta.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">3</div>
+        <h4>Lavamos e passamos</h4>
+        <p>Processo profissional: lavagem, secagem, passadoria e dobra impecável.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">4</div>
+        <h4>Entrega pronta</h4>
+        <p>Roupas limpas e organizadas de volta em até 48h. Coleta e entrega grátis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON: PLANO vs AVULSO ============ -->
+<section class="comparison-section">
+  <div class="container text-center">
+    <span class="section-label reveal" style="color: var(--gold-light);">Compare e decida</span>
+    <h2 class="section-title reveal" style="color: var(--white);">Plano mensal vs. Lavagem avulsa</h2>
+    <p class="section-subtitle reveal" style="color: var(--slate-light);">Veja por que quem assina não volta ao avulso.</p>
+    <div class="comparison-table reveal">
+      <div class="comparison-row header">
+        <div class="comp-cell"></div>
+        <div class="comp-cell">Avulso</div>
+        <div class="comp-cell">Plano</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-cell">Preço por peça</div>
+        <div class="comp-cell">R$12-18</div>
+        <div class="comp-cell" style="color: var(--emerald-light); font-weight: 700;">R$8-10</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-cell">Coleta e entrega</div>
+        <div class="comp-cell"><span class="comp-check partial">$</span></div>
+        <div class="comp-cell"><span class="comp-check yes">&#10003;</span></div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-cell">Passadoria inclusa</div>
+        <div class="comp-cell"><span class="comp-check no">&#10007;</span></div>
+        <div class="comp-cell"><span class="comp-check yes">&#10003;</span></div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-cell">Prioridade no prazo</div>
+        <div class="comp-cell"><span class="comp-check no">&#10007;</span></div>
+        <div class="comp-cell"><span class="comp-check yes">&#10003;</span></div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-cell">Previsibilidade mensal</div>
+        <div class="comp-cell"><span class="comp-check no">&#10007;</span></div>
+        <div class="comp-cell"><span class="comp-check yes">&#10003;</span></div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-cell">Sem contrato/fidelidade</div>
+        <div class="comp-cell"><span class="comp-check yes">&#10003;</span></div>
+        <div class="comp-cell"><span class="comp-check yes">&#10003;</span></div>
+      </div>
+    </div>
+    <div class="comparison-savings reveal">
+      Economia média com plano: <strong>até R$280/mês</strong> vs. avulso
+    </div>
+    <p class="comparison-note reveal">* No plano anual, a economia é ainda maior com o 13º mês grátis.</p>
+  </div>
+</section>
+
+<!-- ============ PRICING + TOGGLE + UPSELL ============ -->
+<section class="pricing-section" id="planos">
+  <div class="container text-center">
+    <span class="section-label reveal">Planos mensais</span>
+    <h2 class="section-title reveal">Escolha o plano ideal para você</h2>
+    <p class="section-subtitle reveal">Todos incluem coleta, lavagem, passadoria e entrega. Sem fidelidade — cancele quando quiser.</p>
+
+    <!-- BILLING TOGGLE -->
+    <div class="billing-toggle-wrap reveal">
+      <span class="billing-label active" id="labelMonthly">Mensal</span>
+      <div class="billing-switch" id="billingSwitch" role="button" tabindex="0" aria-label="Alternar entre mensal e anual">
+        <div class="billing-switch-knob"></div>
+      </div>
+      <span class="billing-label" id="labelAnnual">Anual</span>
+      <span class="billing-badge">13º mês GRÁTIS</span>
+    </div>
+
+    <!-- PLAN CARDS -->
+    <div class="plans-grid">
+      <!-- OFFICE -->
+      <div class="plan-card reveal" data-plan="office" data-monthly="315" data-annual="3780" data-pieces="30">
+        <div class="plan-icon">💼</div>
+        <div class="plan-name">Office</div>
+        <div class="plan-tagline">Ideal para profissionais</div>
+        <div class="plan-price">
+          <span class="amount plan-amount">R$315</span>
+          <span class="period plan-period">/mês</span>
+        </div>
+        <div class="plan-annual-info">Equivale a R$315/mês · Economize R$315</div>
+        <div class="plan-per-piece">R$10,50/peça</div>
+        <ul class="plan-features">
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span><strong>30 peças sociais</strong> por mês</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Camisas, calças e blazers</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Lavagem + passadoria inclusa</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Coleta e entrega grátis</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Prazo de até 48h úteis</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Sem contrato de fidelidade</span>
+          </li>
+        </ul>
+        <a href="#" class="plan-cta secondary" data-plan-cta="office" target="_blank" rel="noopener">Assinar Plano Office</a>
+      </div>
+
+      <!-- INDIVIDUAL (FEATURED) -->
+      <div class="plan-card featured reveal" data-plan="individual" data-monthly="360" data-annual="4320" data-pieces="40">
+        <div class="plan-badge">Mais Popular</div>
+        <div class="plan-icon">👤</div>
+        <div class="plan-name">Individual</div>
+        <div class="plan-tagline">Melhor custo-benefício</div>
+        <div class="plan-price">
+          <span class="amount plan-amount">R$360</span>
+          <span class="period plan-period">/mês</span>
+        </div>
+        <div class="plan-annual-info">Equivale a R$360/mês · Economize R$360</div>
+        <div class="plan-per-piece">R$9,00/peça</div>
+        <ul class="plan-features">
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span><strong>40 peças comuns</strong> por mês</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Roupas do dia a dia + sociais</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Lavagem + passadoria inclusa</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Coleta e entrega grátis</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Prazo de até 48h úteis</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Prioridade no atendimento</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Sem contrato de fidelidade</span>
+          </li>
+        </ul>
+        <a href="#" class="plan-cta primary" data-plan-cta="individual" target="_blank" rel="noopener">Assinar Plano Individual</a>
+      </div>
+
+      <!-- FAMÍLIA -->
+      <div class="plan-card reveal" data-plan="familia" data-monthly="640" data-annual="7680" data-pieces="80">
+        <div class="plan-icon">👨‍👩‍👧‍👦</div>
+        <div class="plan-name">Família</div>
+        <div class="plan-tagline">Para toda a família</div>
+        <div class="plan-price">
+          <span class="amount plan-amount">R$640</span>
+          <span class="period plan-period">/mês</span>
+        </div>
+        <div class="plan-annual-info">Equivale a R$640/mês · Economize R$640</div>
+        <div class="plan-per-piece">R$8,00/peça</div>
+        <ul class="plan-features">
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span><strong>80 peças comuns</strong> por mês</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Roupas de toda a família</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Lavagem + passadoria inclusa</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Coleta e entrega grátis</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Prazo de até 48h úteis</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Prioridade máxima</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Sem contrato de fidelidade</span>
+          </li>
+          <li>
+            <span class="feat-icon">&#10003;</span>
+            <span>Menor custo por peça</span>
+          </li>
+        </ul>
+        <a href="#" class="plan-cta secondary" data-plan-cta="familia" target="_blank" rel="noopener">Assinar Plano Família</a>
+      </div>
+    </div>
+
+    <!-- UPSELL ADD-ONS -->
+    <div class="upsell-section reveal">
+      <h3 class="upsell-title text-center">Quer turbinar seu plano?</h3>
+      <p class="upsell-subtitle text-center">Adicione extras e monte o plano perfeito para sua rotina.</p>
+      <div class="addons-grid">
+        <div class="addon-card" data-addon="edredons" data-addon-price="79.90">
+          <div class="addon-emoji">🛏️</div>
+          <div class="addon-name">Edredons</div>
+          <div class="addon-desc">3 edredons por mês inclusos</div>
+          <div class="addon-price">+R$79,90/mês</div>
+        </div>
+        <div class="addon-card" data-addon="tenis" data-addon-price="59.90">
+          <div class="addon-emoji">👟</div>
+          <div class="addon-name">Tênis</div>
+          <div class="addon-desc">2 pares por mês inclusos</div>
+          <div class="addon-price">+R$59,90/mês</div>
+        </div>
+        <div class="addon-card" data-addon="express" data-addon-price="49.90">
+          <div class="addon-emoji">⚡</div>
+          <div class="addon-name">Express 24h</div>
+          <div class="addon-desc">Prazo reduzido para 24h úteis</div>
+          <div class="addon-price">+R$49,90/mês</div>
+        </div>
+        <div class="addon-card" data-addon="impermeabilizacao" data-addon-price="99.90">
+          <div class="addon-emoji">🛋️</div>
+          <div class="addon-name">Impermeabilização</div>
+          <div class="addon-desc">1 estofado por trimestre</div>
+          <div class="addon-price">+R$99,90/mês</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MID-PAGE CTA BANNER ============ -->
+<section class="midpage-cta">
+  <div class="container">
+    <h2 class="reveal">Mais de <em>387 famílias</em> já assinaram.<br>Quando começa a sua?</h2>
+    <a href="#planos" class="midpage-cta-btn reveal">
+      Escolher Meu Plano
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section class="included-section">
+  <div class="container text-center">
+    <span class="section-label reveal">Tudo incluso</span>
+    <h2 class="section-title reveal">O que está incluso em todos os planos</h2>
+    <p class="section-subtitle reveal">Cada detalhe pensado pra você não ter que pensar em nada.</p>
+    <div class="included-grid">
+      <div class="included-item reveal">
+        <div class="included-icon">🚗</div>
+        <div>
+          <h4>Coleta e entrega grátis</h4>
+          <p>Buscamos e devolvemos na sua porta. Sem taxa, sem custo extra.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">👔</div>
+        <div>
+          <h4>Passadoria profissional</h4>
+          <p>Todas as peças voltam passadas, dobradas e prontas para usar.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">🧴</div>
+        <div>
+          <h4>Produtos premium</h4>
+          <p>Usamos produtos de alta qualidade que cuidam das fibras e do meio ambiente.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">📱</div>
+        <div>
+          <h4>Agendamento por WhatsApp</h4>
+          <p>Agende, acompanhe e converse conosco direto pelo WhatsApp.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">⏱️</div>
+        <div>
+          <h4>Prazo de até 48h</h4>
+          <p>Suas roupas prontas em até 2 dias úteis. Assinantes têm prioridade.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">🔒</div>
+        <div>
+          <h4>Sem fidelidade</h4>
+          <p>Cancele a qualquer momento. Sem multa, sem burocracia, sem letras miúdas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <div class="container text-center">
+    <span class="section-label reveal">Depoimentos</span>
+    <div class="reviews-badge reveal">&#9733;&#9733;&#9733;&#9733;&#9733; 500+ avaliações 5 estrelas</div>
+    <h2 class="section-title reveal">Quem assinou, não volta atrás</h2>
+    <p class="section-subtitle reveal">Veja o que nossos assinantes dizem sobre a experiência.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Eu não sabia que lavanderia podia ser tão prático. Assino o plano Individual e ganho umas 3 horas todo final de semana. Minhas roupas voltam impecáveis."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PM</div>
+          <div>
+            <div class="testimonial-name">Patricia Mendes</div>
+            <div class="testimonial-role">Plano Individual — 8 meses</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Com 2 filhos pequenos, lavar roupa era um pesadelo. O plano Família mudou minha rotina completamente. Vale cada centavo. A entrega é sempre pontual."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RA</div>
+          <div>
+            <div class="testimonial-name">Renata Almeida</div>
+            <div class="testimonial-role">Plano Família — 5 meses</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Uso o Office pra minhas camisas sociais. A passadoria é perfeita — melhor que qualquer lavanderia que já usei. E o preço por peça compensa demais."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CF</div>
+          <div>
+            <div class="testimonial-name">Carlos Ferreira</div>
+            <div class="testimonial-role">Plano Office — 11 meses</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section class="lead-section" id="simular">
+  <div class="container text-center">
+    <span class="section-label reveal">Simule seu plano</span>
+    <h2 class="section-title reveal">Quer falar com a gente antes de assinar?</h2>
+    <p class="section-subtitle reveal">Preencha seus dados e te chamamos no WhatsApp para montar o plano perfeito para você.</p>
+    <div class="lead-form-wrapper reveal">
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="leadName">Seu nome</label>
+          <input type="text" id="leadName" placeholder="Ex: Maria Silva" required>
+        </div>
+        <div class="form-group">
+          <label for="leadPhone">WhatsApp</label>
+          <input type="tel" id="leadPhone" placeholder="(12) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="leadPlan">Plano de interesse</label>
+          <select id="leadPlan" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Office">Office (30 peças)</option>
+            <option value="Individual">Individual (40 peças)</option>
+            <option value="Familia">Família (80 peças)</option>
+            <option value="Nao sei">Ainda não sei</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Simular Meu Plano no WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq-section" id="faq">
+  <div class="container text-center">
+    <span class="section-label reveal">Dúvidas</span>
+    <h2 class="section-title reveal">Perguntas frequentes</h2>
+    <p class="section-subtitle reveal">Tudo o que você precisa saber antes de assinar.</p>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Como funciona a cobrança mensal?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">A cobrança é mensal e fixa. Você pode pagar via PIX, cartão de crédito ou boleto. Não existe taxa de adesão, e você pode cancelar a qualquer momento sem multa.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Como funciona o plano anual?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No plano anual, você paga 12 meses e ganha o 13º mês grátis. O valor é cobrado em 12 parcelas mensais (mesmo valor do plano mensal), mas você recebe 13 meses de serviço. É a melhor economia! Se pagar via PIX, ganha ainda 5% de desconto extra.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>E se eu não usar todas as peças do mês?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">As peças não utilizadas não acumulam para o mês seguinte. Porém, nossos planos são dimensionados para uso real — a maioria dos assinantes utiliza toda a cota ou próximo disso. Se perceber que usa menos, pode migrar para um plano menor.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Posso trocar de plano depois?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim! Você pode fazer upgrade ou downgrade a qualquer momento. A mudança vale a partir do próximo ciclo de cobrança. É só avisar pelo WhatsApp.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Posso adicionar extras depois?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Com certeza! Você pode adicionar ou remover add-ons (Edredons, Tênis, Express 24h, Impermeabilização) a qualquer momento. A mudança vale a partir do próximo ciclo. Basta avisar pelo WhatsApp.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Qual a área de atendimento?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Atendemos São José dos Campos, Taubaté, Jacareí, Caçapava, Pindamonhangaba, Tremembé e região do Vale do Paraíba. A coleta e entrega é totalmente gratuita em todas essas cidades.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Quanto tempo leva a entrega?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">O prazo padrão é de até 48 horas úteis. Assinantes dos planos Individual e Família têm prioridade no processamento. Com o add-on Express 24h, o prazo cai para 24 horas úteis.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>Que tipo de roupa posso enviar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No plano Office: camisas, calças, blazers e roupas sociais em geral. Nos planos Individual e Família: qualquer roupa do dia a dia — camisetas, bermudas, jeans, vestidos, pijamas, roupas íntimas, toalhas, etc. Peças especiais como ternos e vestidos de festa podem ter tratamento diferenciado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMOTIONAL FINAL CTA ============ -->
+<section class="final-section">
+  <div class="container text-center">
+    <h2 class="reveal">O que você faria com <em>15 horas extras</em> por mês?</h2>
+    <p class="final-subtitle reveal">
+      Ler aquele livro. Brincar com seus filhos. Dormir mais. Treinar. Sair com amigos.
+      Ou simplesmente não fazer nada — porque você merece.
+    </p>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20planos%20mensais%20de%20lavanderia.%20Pode%20me%20ajudar%3F" class="final-cta reveal" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Quero meu tempo de volta
+    </a>
+    <p class="final-guarantee reveal">
+      <strong>Sem fidelidade.</strong> Cancele quando quiser. Sem multa. Sem letras miúdas.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">A7 Lavanderia</div>
+    <div class="footer-links">
+      <a href="https://a7lavanderia.com.br" class="footer-link" target="_blank" rel="noopener">a7lavanderia.com.br</a>
+      <a href="https://wa.me/5512974128390" class="footer-link" target="_blank" rel="noopener">WhatsApp: (12) 97412-8390</a>
+      <a href="#faq" class="footer-link">Dúvidas frequentes</a>
+    </div>
+    <p class="footer-copy">A7 Lavanderia &copy; 2026. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20planos%20mensais!" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ============ SOCIAL PROOF TOAST (container) ============ -->
+<div id="socialToastContainer"></div>
+
+<!-- ============ STICKY BOTTOM BAR ============ -->
+<div class="sticky-bottom-bar" id="stickyBottomBar">
+  <div class="container">
+    <span class="sticky-bottom-text">Planos a partir de <strong>R$315/mês</strong> com coleta grátis</span>
+    <a href="#planos" class="sticky-bottom-cta">Ver Planos</a>
+  </div>
+</div>
+
+<!-- ============ ORDER SUMMARY BAR ============ -->
+<div class="order-summary-bar" id="orderSummaryBar">
+  <div class="container">
+    <span class="order-summary-text" id="orderSummaryText">Plano Individual = <strong>R$360/mês</strong></span>
+    <a href="#" class="order-summary-cta" id="orderSummaryCta" target="_blank" rel="noopener">Assinar pelo WhatsApp</a>
+  </div>
+</div>
+
+<!-- ============ PIX POPUP ============ -->
+<div class="pix-overlay" id="pixOverlay">
+  <div class="pix-popup">
+    <button class="pix-close" id="pixClose">&times;</button>
+    <div class="pix-badge">Desconto exclusivo PIX</div>
+    <h3>Pague via PIX e ganhe<br>5% OFF no plano anual!</h3>
+    <p class="pix-sub">O plano anual já tem o 13º mês grátis. Com PIX, fica ainda melhor.</p>
+    <div class="pix-prices">
+      <span class="pix-old">R$4.320/ano</span>
+      <span style="font-size:22px;">&#8594;</span>
+      <span class="pix-new">R$4.104/ano</span>
+    </div>
+    <div class="pix-savings">
+      <span>Economia de R$576 no ano</span>
+    </div>
+    <div class="pix-countdown-wrapper">
+      <div class="pix-countdown-label">Oferta PIX expira em:</div>
+      <div class="pix-countdown" id="pixCountdown">23:59:59</div>
+    </div>
+    <div class="pix-benefits-list">
+      <div class="pix-benefit-item">
+        <span class="pix-benefit-check">&#10003;</span>
+        <span>Pagamento instantâneo e seguro</span>
+      </div>
+      <div class="pix-benefit-item">
+        <span class="pix-benefit-check">&#10003;</span>
+        <span>5% de desconto aplicado na hora</span>
+      </div>
+      <div class="pix-benefit-item">
+        <span class="pix-benefit-check">&#10003;</span>
+        <span>13º mês grátis mantido</span>
+      </div>
+    </div>
+    <a href="https://wa.me/5512974128390?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20anual%20com%20desconto%20PIX!%20Pode%20me%20ajudar%3F" class="pix-cta" target="_blank" rel="noopener">Quero o desconto PIX no WhatsApp</a>
+    <button class="pix-dismiss" id="pixDismiss">Não, obrigado. Quero ver os planos normais.</button>
+  </div>
+</div>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+(function() {
+  'use strict';
+
+  var WA_URL = 'https://wa.me/5512974128390';
+  var isAnnual = false;
+  var selectedAddons = {};
+  var selectedPlan = null;
+
+  // ---- PLAN DATA ----
+  var plans = {
+    office: { name: 'Office', monthly: 315, annual: 3780, pieces: 30 },
+    individual: { name: 'Individual', monthly: 360, annual: 4320, pieces: 40 },
+    familia: { name: 'Família', monthly: 640, annual: 7680, pieces: 80 }
+  };
+
+  var addons = {
+    edredons: { name: 'Edredons', price: 79.90 },
+    tenis: { name: 'Tênis', price: 59.90 },
+    express: { name: 'Express 24h', price: 49.90 },
+    impermeabilizacao: { name: 'Impermeabilização', price: 99.90 }
+  };
+
+  // ---- URGENCY COUNTDOWN (resets at midnight) ----
+  function updateUrgencyCountdown() {
+    var now = new Date();
+    var midnight = new Date();
+    midnight.setHours(23, 59, 59, 999);
+    var diff = midnight - now;
+    if (diff < 0) diff = 0;
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var el = document.getElementById('urgencyCountdown');
+    if (el) {
+      el.textContent =
+        String(h).padStart(2, '0') + ':' +
+        String(m).padStart(2, '0') + ':' +
+        String(s).padStart(2, '0');
+    }
+  }
+  updateUrgencyCountdown();
+  setInterval(updateUrgencyCountdown, 1000);
+
+  // ---- BUILD WHATSAPP URL ----
+  function buildWhatsAppURL(plan, annual, addonsList) {
+    var p = plans[plan];
+    if (!p) return WA_URL;
+    var period = annual ? 'Anual' : 'Mensal';
+    var price = annual ? p.annual : p.monthly;
+    var addonTotal = 0;
+    var addonNames = [];
+    for (var key in addonsList) {
+      if (addonsList[key]) {
+        addonTotal += addons[key].price;
+        addonNames.push(addons[key].name);
+      }
+    }
+    var monthlyTotal = (annual ? p.monthly : p.monthly) + addonTotal;
+    var msg = 'Olá! Quero assinar o Plano ' + p.name + ' (' + period + ')';
+    if (addonNames.length > 0) {
+      msg += ' com add-ons: ' + addonNames.join(', ');
+    }
+    msg += '. Total: R$' + monthlyTotal.toFixed(2).replace('.', ',') + '/mês.';
+    msg += ' Pode me ajudar?';
+    return WA_URL + '?text=' + encodeURIComponent(msg);
+  }
+
+  // ---- BILLING TOGGLE ----
+  function initBillingToggle() {
+    var toggle = document.getElementById('billingSwitch');
+    var labelM = document.getElementById('labelMonthly');
+    var labelA = document.getElementById('labelAnnual');
+    if (!toggle) return;
+
+    function updateToggle() {
+      if (isAnnual) {
+        toggle.classList.add('annual');
+        labelA.classList.add('active');
+        labelM.classList.remove('active');
+      } else {
+        toggle.classList.remove('annual');
+        labelM.classList.add('active');
+        labelA.classList.remove('active');
+      }
+      updatePrices();
+      updateOrderSummary();
+    }
+
+    toggle.addEventListener('click', function() {
+      isAnnual = !isAnnual;
+      updateToggle();
+    });
+    toggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        isAnnual = !isAnnual;
+        updateToggle();
+      }
+    });
+  }
+
+  function updatePrices() {
+    var cards = document.querySelectorAll('.plan-card');
+    cards.forEach(function(card) {
+      var planKey = card.getAttribute('data-plan');
+      var p = plans[planKey];
+      if (!p) return;
+      var amountEl = card.querySelector('.plan-amount');
+      var periodEl = card.querySelector('.plan-period');
+      var annualInfo = card.querySelector('.plan-annual-info');
+
+      if (isAnnual) {
+        amountEl.textContent = 'R$' + p.annual.toLocaleString('pt-BR');
+        periodEl.textContent = '/ano';
+        if (annualInfo) {
+          annualInfo.textContent = 'Equivale a R$' + p.monthly + '/mês · Economize R$' + p.monthly;
+          annualInfo.classList.add('show');
+        }
+      } else {
+        amountEl.textContent = 'R$' + p.monthly;
+        periodEl.textContent = '/mês';
+        if (annualInfo) {
+          annualInfo.classList.remove('show');
+        }
+      }
+
+      // Update CTA href
+      var cta = card.querySelector('[data-plan-cta]');
+      if (cta) {
+        cta.href = buildWhatsAppURL(planKey, isAnnual, selectedAddons);
+      }
+    });
+  }
+
+  // ---- ADD-ONS ----
+  function initAddons() {
+    var addonCards = document.querySelectorAll('.addon-card');
+    addonCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        var key = card.getAttribute('data-addon');
+        if (selectedAddons[key]) {
+          delete selectedAddons[key];
+          card.classList.remove('active');
+        } else {
+          selectedAddons[key] = true;
+          card.classList.add('active');
+        }
+        updatePrices();
+        updateOrderSummary();
+      });
+    });
+  }
+
+  // ---- ORDER SUMMARY BAR ----
+  function updateOrderSummary() {
+    var bar = document.getElementById('orderSummaryBar');
+    var textEl = document.getElementById('orderSummaryText');
+    var ctaEl = document.getElementById('orderSummaryCta');
+    if (!bar || !textEl || !ctaEl) return;
+
+    // Default to individual if no plan selected via interaction
+    var plan = selectedPlan || 'individual';
+    var p = plans[plan];
+    var addonTotal = 0;
+    var addonNames = [];
+    for (var key in selectedAddons) {
+      if (selectedAddons[key]) {
+        addonTotal += addons[key].price;
+        addonNames.push(addons[key].name);
+      }
+    }
+
+    var basePrice = isAnnual ? p.annual : p.monthly;
+    var period = isAnnual ? '/ano' : '/mês';
+    var monthlyTotal = p.monthly + addonTotal;
+
+    var summary = 'Plano ' + p.name;
+    if (addonNames.length > 0) {
+      summary += ' + ' + addonNames.join(' + ');
+    }
+
+    if (isAnnual) {
+      var annualTotal = p.annual + (addonTotal * 12);
+      summary += ' = <strong>R$' + annualTotal.toLocaleString('pt-BR', {minimumFractionDigits: 0}) + '/ano</strong>';
+      summary += ' (R$' + monthlyTotal.toFixed(2).replace('.', ',') + '/mês)';
+    } else {
+      summary += ' = <strong>R$' + monthlyTotal.toFixed(2).replace('.', ',') + '/mês</strong>';
+    }
+    textEl.innerHTML = summary;
+    ctaEl.href = buildWhatsAppURL(plan, isAnnual, selectedAddons);
+  }
+
+  // ---- TRACK PLAN CTA CLICKS ----
+  function initPlanCtaTracking() {
+    document.querySelectorAll('[data-plan-cta]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        selectedPlan = btn.getAttribute('data-plan-cta');
+        updateOrderSummary();
+      });
+    });
+  }
+
+  // ---- LIVE COUNTERS ----
+  function initLiveCounters() {
+    var subEl = document.getElementById('subscriberCount');
+    var viewerEl = document.getElementById('viewerCount');
+    var slotsEl = document.getElementById('slotsCount');
+    var subVal = 387;
+    var slotsVal = 9;
+
+    // Subscribers: increment every 45-120s
+    function incSubs() {
+      subVal += 1;
+      if (subEl) subEl.textContent = subVal;
+      setTimeout(incSubs, 45000 + Math.floor(Math.random() * 75000));
+    }
+    setTimeout(incSubs, 45000 + Math.floor(Math.random() * 75000));
+
+    // Viewers: fluctuate 5-15 every 5-10s
+    function updateViewers() {
+      var v = 5 + Math.floor(Math.random() * 11);
+      if (viewerEl) viewerEl.textContent = v;
+      setTimeout(updateViewers, 5000 + Math.floor(Math.random() * 5000));
+    }
+    setTimeout(updateViewers, 3000);
+
+    // Slots: decrease from 9 to 3 over time
+    function decSlots() {
+      if (slotsVal > 3) {
+        slotsVal -= 1;
+        if (slotsEl) slotsEl.textContent = slotsVal;
+      }
+      setTimeout(decSlots, 60000 + Math.floor(Math.random() * 120000));
+    }
+    setTimeout(decSlots, 60000 + Math.floor(Math.random() * 60000));
+  }
+
+  // ---- PIX POPUP ----
+  function initPixPopup() {
+    var overlay = document.getElementById('pixOverlay');
+    var closeBtn = document.getElementById('pixClose');
+    var dismissBtn = document.getElementById('pixDismiss');
+    var countdownEl = document.getElementById('pixCountdown');
+    var dismissed = sessionStorage.getItem('a7_pix_planos_dismissed');
+
+    // 24h countdown
+    var expiry = sessionStorage.getItem('a7_pix_planos_expiry');
+    if (!expiry) {
+      expiry = Date.now() + 86400000;
+      sessionStorage.setItem('a7_pix_planos_expiry', expiry);
+    } else {
+      expiry = parseInt(expiry, 10);
+    }
+
+    function updatePixCountdown() {
+      var diff = expiry - Date.now();
+      if (diff < 0) diff = 0;
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      if (countdownEl) {
+        countdownEl.textContent =
+          String(h).padStart(2, '0') + ':' +
+          String(m).padStart(2, '0') + ':' +
+          String(s).padStart(2, '0');
+      }
+    }
+    updatePixCountdown();
+    setInterval(updatePixCountdown, 1000);
+
+    // Show after 20s if not dismissed
+    if (!dismissed) {
+      setTimeout(function() {
+        if (overlay) overlay.classList.add('active');
+      }, 20000);
+    }
+
+    function closePixPopup() {
+      if (overlay) overlay.classList.remove('active');
+      sessionStorage.setItem('a7_pix_planos_dismissed', '1');
+    }
+    if (closeBtn) closeBtn.addEventListener('click', closePixPopup);
+    if (dismissBtn) dismissBtn.addEventListener('click', closePixPopup);
+    if (overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closePixPopup();
+      });
+    }
+  }
+
+  // ---- STICKY BOTTOM BAR ----
+  function initStickyBottom() {
+    var bar = document.getElementById('stickyBottomBar');
+    var orderBar = document.getElementById('orderSummaryBar');
+    var pricingSection = document.getElementById('planos');
+    if (!bar) return;
+
+    var orderBarVisible = false;
+
+    function checkScroll() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var pricingRect = pricingSection ? pricingSection.getBoundingClientRect() : null;
+
+      // Show order summary bar when pricing section is in view
+      if (pricingRect && pricingRect.top < window.innerHeight && pricingRect.bottom > 0) {
+        orderBarVisible = true;
+        if (orderBar) orderBar.classList.add('visible');
+        bar.classList.remove('visible');
+      } else {
+        orderBarVisible = false;
+        if (orderBar) orderBar.classList.remove('visible');
+        // Show sticky bottom only after 600px scroll
+        if (scrollY > 600) {
+          bar.classList.add('visible');
+        } else {
+          bar.classList.remove('visible');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+  }
+
+  // ---- LEAD FORM ----
+  function initLeadForm() {
+    var form = document.getElementById('leadForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('leadName').value.trim();
+      var phone = document.getElementById('leadPhone').value.trim();
+      var plan = document.getElementById('leadPlan').value;
+
+      if (!name || !phone || !plan) return;
+
+      // Save to localStorage
+      var lead = {
+        name: name,
+        phone: phone,
+        plan: plan,
+        timestamp: new Date().toISOString()
+      };
+      var leads = [];
+      try {
+        leads = JSON.parse(localStorage.getItem('a7_leads_planos') || '[]');
+      } catch(ex) { leads = []; }
+      leads.push(lead);
+      localStorage.setItem('a7_leads_planos', JSON.stringify(leads));
+
+      // Redirect to WhatsApp
+      var msg = 'Olá! Meu nome é ' + name + '. Tenho interesse no Plano ' + plan + '. Meu WhatsApp: ' + phone + '. Pode me ajudar a montar meu plano?';
+      window.open(WA_URL + '?text=' + encodeURIComponent(msg), '_blank');
+
+      // Analytics
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { event_category: 'planos', event_label: plan });
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: 'plano_simulacao', content_category: 'planos' });
+      }
+    });
+  }
+
+  // ---- PHONE MASK ----
+  function initPhoneMask() {
+    var phoneInput = document.getElementById('leadPhone');
+    if (!phoneInput) return;
+    phoneInput.addEventListener('input', function(e) {
+      var v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 6) {
+        v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      } else if (v.length > 2) {
+        v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      } else if (v.length > 0) {
+        v = '(' + v;
+      }
+      e.target.value = v;
+    });
+  }
+
+  // ---- SOCIAL PROOF TOASTS ----
+  function initSocialToasts() {
+    var socialNames = [
+      { name: 'Patricia M.', city: 'São José dos Campos', plan: 'Individual' },
+      { name: 'Carlos F.', city: 'Taubaté', plan: 'Office' },
+      { name: 'Renata A.', city: 'Jacareí', plan: 'Família' },
+      { name: 'Lucas R.', city: 'Caçapava', plan: 'Individual' },
+      { name: 'Ana B.', city: 'Pindamonhangaba', plan: 'Família' },
+      { name: 'Marcos S.', city: 'São José dos Campos', plan: 'Office' },
+      { name: 'Juliana T.', city: 'Tremembé', plan: 'Individual' },
+      { name: 'Fernando L.', city: 'Taubaté', plan: 'Família' },
+      { name: 'Camila D.', city: 'São José dos Campos', plan: 'Individual' },
+      { name: 'Roberto N.', city: 'Jacareí', plan: 'Família' }
+    ];
+    var socialActions = [
+      'acabou de assinar o plano',
+      'renovou a assinatura do plano',
+      'fez upgrade para o plano',
+      'assinou o plano anual'
+    ];
+    var socialTimes = ['agora mesmo', 'há 2 min', 'há 5 min', 'há 8 min'];
+    var toastContainer = document.getElementById('socialToastContainer');
+    var toastActive = false;
+
+    function showSocialToast() {
+      if (toastActive) return;
+      toastActive = true;
+      var person = socialNames[Math.floor(Math.random() * socialNames.length)];
+      var action = socialActions[Math.floor(Math.random() * socialActions.length)];
+      var time = socialTimes[Math.floor(Math.random() * socialTimes.length)];
+
+      var toast = document.createElement('div');
+      toast.className = 'social-toast';
+      toast.innerHTML =
+        '<div class="social-toast-icon">&#128092;</div>' +
+        '<div class="social-toast-text"><strong>' + person.name + '</strong> de ' + person.city + ' ' + action + ' ' + person.plan + '.' +
+        '<div class="social-toast-time">' + time + '</div></div>';
+      toastContainer.appendChild(toast);
+
+      setTimeout(function() {
+        toast.classList.add('hiding');
+        setTimeout(function() {
+          if (toast.parentNode) toast.parentNode.removeChild(toast);
+          toastActive = false;
+        }, 500);
+      }, 5000);
+    }
+
+    setTimeout(function() {
+      showSocialToast();
+      setInterval(function() {
+        showSocialToast();
+      }, 25000 + Math.floor(Math.random() * 15000));
+    }, 10000);
+  }
+
+  // ---- FAQ ACCORDION ----
+  function initFaq() {
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function(item) {
+      var btn = item.querySelector('.faq-question');
+      var answer = item.querySelector('.faq-answer');
+      btn.addEventListener('click', function() {
+        var isActive = item.classList.contains('active');
+        faqItems.forEach(function(fi) {
+          fi.classList.remove('active');
+          fi.querySelector('.faq-answer').style.maxHeight = '0';
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+
+  // ---- INTERSECTION OBSERVER (scroll animations) ----
+  function initReveal() {
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function(el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function(el) { el.classList.add('visible'); });
+    }
+  }
+
+  // ---- SMOOTH SCROLL ----
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  // ---- ANALYTICS HOOKS ----
+  function initAnalytics() {
+    document.querySelectorAll('.hero-cta-primary, .plan-cta, .final-cta, .header-cta, .midpage-cta-btn, .order-summary-cta, .sticky-bottom-cta, .pix-cta').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'cta_click', {
+            event_category: 'planos',
+            event_label: btn.textContent.trim().substring(0, 40)
+          });
+        }
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', { content_name: 'plano_mensal' });
+        }
+      });
+    });
+  }
+
+  // ---- INIT ALL ----
+  initBillingToggle();
+  initAddons();
+  initPlanCtaTracking();
+  initLiveCounters();
+  initPixPopup();
+  initStickyBottom();
+  initLeadForm();
+  initPhoneMask();
+  initSocialToasts();
+  initFaq();
+  initReveal();
+  initSmoothScroll();
+  initAnalytics();
+  updatePrices();
+  updateOrderSummary();
+
+})();
+</script>
+</body>
+</html>
